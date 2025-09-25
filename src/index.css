@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #ffbf2a;
+  --color-background: #e3eee5;
+  --color-primary-light: #417f56;
+  --color-heading: #212121;
+  --color-secondary: #417f56;
+  --color-secondary-light: #fcf4f0;
+  --color-accent: #fff;
+  --color-paragraph: #424242;
+  --color-border: #E9EAEC;
+  --color-unique:#E7F2C9;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-background);
+  color: var(--color-paragraph);
+  margin: 0;
+  padding: 0;
+}
+
+
+@layer utilities {
+
+  .text-stroke {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-paragraph);
+  }
+
+
+  .linear-gradient {
+    background: linear-gradient(137deg, #E7F2C9 -5.9%, #FFF 110.57%);
+  }
+
+  .gradient-text {
+    background: linear-gradient(90deg, #4e7df2, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .radial-gradient {
+    background: radial-gradient(circle, #2FBCBC00, #2F45BC);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+}
