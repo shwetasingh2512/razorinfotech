@@ -136,6 +136,7 @@ export default function InboundServices() {
                     <p className="mt-4 max-w-2xl text-base text-white/90 md:text-lg">
                         From inquiries to issue resolution, we provide fast, reliable inbound services that keep your customers engaged and satisfied.
                     </p>
+                    
                 </div>
             </section>
             <section className="p-10 bg-accent">
