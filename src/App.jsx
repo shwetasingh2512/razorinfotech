@@ -15,6 +15,8 @@ import CustomerSupport from './components/Our-Expertise/CustomerSupport';
 import EmailSupport from './components/Our-Expertise/EmailSupport';
 import InboundServices from './components/Our-Expertise/InboundServices';
 import ContentModeration from './components/Our-Expertise/ContentModeration';
+import DataEntery from './components/Our-Expertise/DataEntery';
+import ItHelpDesk from './components/ItHelpDesk';
 
 export default function App() {
 
@@ -78,6 +80,14 @@ export default function App() {
     {
       path: '/content-moderation-services',
       component: ContentModeration,
+    },
+    {
+      path: '/data-entry',
+      component: DataEntery,
+    },
+    {
+      path: '/it-help-desk',
+      component: ItHelpDesk,
     },
   ]
 

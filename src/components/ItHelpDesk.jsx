@@ -1,32 +1,55 @@
 import { Link } from "react-router-dom"
-import { ArrowRight } from "lucide-react"
-import Faq from "../../reusable/Faq";
+import { ArrowRight, CheckCircle2 } from "lucide-react"
+import Faq from "../reusable/Faq";
 
-export default function ContentModeration() {
-    const cards2 = [
+export default function ItHelpDesk() {
+
+    const services = [
+        "Ticketing System Management",
+        "IT Asset & Inventory Management",
+        "Application Support",
+        "Network Connectivity Support",
+        "Password Resets & User Access Control",
+        "Virus & Malware Removal",
+        "System Monitoring & Alert Management",
+        "Hardware & Software Troubleshooting",
+    ];
+
+    const cards = [
         {
-            title: "Protect Brand Reputation",
+            id: "01",
+            title: "Small & SMEs",
             desc:
-                "Unmoderated media can risk hosting offensive or harmful content that can damage the reputation of the brand. Moderation keeps your digital presence clean and brand-safe.",
-            image: "/images/content-creation/third-section-bg-1.png",
-            dark: true,
+                "Small and medium-sized businesses often lack a full in-house IT team. Outsourcing help desk is affordable and professional tech support.",
+            img: "/images/It-help-desk/Small-SMEs.png",
         },
         {
-            title: "Improve User Trust & Safety",
+            id: "02",
+            title: "Healthcare Providers",
             desc:
-                "A safe online environment encourages more interaction and builds community trust. Users feel confident sharing content and engaging on your platform.",
+                "Organizations in the healthcare sector heavily rely on outsourced IT system support to ensure the protection of patient data and support critical software uptime.",
+            img: "/images/It-help-desk/Healthcare.png",
         },
         {
-            title: "Legal & Regulatory Compliance",
+            id: "03",
+            title: "Educational Institutions",
             desc:
-                "Ensure compliance with local and international content policies, data protection laws, and platform-specific regulations with active content screening.",
+                "Educational institutions such as schools, colleges, and coaching centers require an IT help desk for fast tech support.",
+            img: "/images/It-help-desk/Educational.png",
         },
         {
-            title: "Prevent Spam & Abuse",
+            id: "04",
+            title: "Finance & Legal Firms",
             desc:
-                "Content moderation helps eliminate spam, scams, bots, and abusive behavior, which helps in improving the overall platform experience and user retention.",
-            image: "/images/content-creation/third-section-bg-2.png",
-            dark: true,
+                "The finance and legal sector demand secure, compliant IT help desk support that ensures a strong focus on data protection and regulatory standards.",
+            img: "/images/It-help-desk/Finance.png",
+        },
+        {
+            id: "05",
+            title: "E-commerce Businesses",
+            desc:
+                "In e-commerce, downtime means losing sales. The IT help desk keeps the brand’s POS systems and internal tools running smoothly.",
+            img: "/images/It-help-desk/E-commerce.png",
         },
     ];
 
@@ -74,32 +97,23 @@ export default function ContentModeration() {
         },
     ];
 
-
-    const cards = [
-        { id: "01", title: "Text-Based Content", desc: "Comments, reviews, chat messages, and posts across websites, forums, and social platforms.", img: "/images/content-moderation/Text-Based.png", variant: "hero" },
-        { id: "02", title: "Image Moderation", desc: "Scans and reviews of images to detect explicit, offensive, or brand-damaging visuals.", img: "/images/content-moderation/Image-moderation.png", variant: "light" },
-        { id: "03", title: "Video Moderation", desc: "Inspection and moderation of user-uploaded videos for violence, nudity, or policy violations.", img: "/images/content-moderation/Video-Moderation.png", variant: "light" },
-        { id: "04", title: "Live Stream Monitoring", desc: "Real-time moderation of live content streams to prevent policy breaches as they happen.", img: "/images/content-moderation/Live-Stream.png", variant: "hero" },
-        { id: "05", title: "Profile & User Moderation", desc: "Review of usernames, bios, and profile pictures to ensure community compliance.", img: "/images/content-moderation/Profile.png", variant: "dark" },
-        { id: "06", title: "Marketplace Listings", desc: "Moderation of product listings to avoid fake, misleading, or prohibited items on e-commerce platforms.", img: "/images/content-moderation/Marketplace.png", variant: "dark" },
-    ];
     return (
         <>
             <section className="px-6 py-12">
-                <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 lg:grid-cols-2">
+                <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 lg:grid-cols-2">
                     <div className="flex flex-col justify-center gap-4">
-                        <h1 className="text-4xl font-semibold text-heading md:text-5xl max-w-[80%]">
-                            Safe, Consistent, & Positive User Experience
+                        <h1 className="text-3xl font-semibold text-heading md:text-4xl max-w-[90%]">
+                            Resolving Tech Issues Fast & Minimizing Downtime
                         </h1>
-                        <p className="text-paragraph/80 text-lg max-w-[80%]">
-                            Our content moderation services help businesses make sure that all the user-generated content aligns with community standards and brand values. Our team of trained and experienced individuals uses tools to monitor and filter content across platforms.
+                        <p className="text-paragraph/80 text-md max-w-[80%]">
+                            Razor Infotech's IT Help Desk is your frontline support system for all the technical queries, issues, and troubleshooting. We ensure that your business operations face minimal disruption with our rapid resolutions for hardware, software, and system-related problems.
                         </p>
                         <Link
                             to="#"
-                            className="inline-flex w-fit items-center gap-3 rounded-full bg-secondary px-5 py-3 font-bold text-white"
+                            className="inline-flex w-fit items-center gap-3 rounded-full bg-secondary px-4 py-2 text-white"
                         >
                             <span>Talk To An Expert</span>
-                            <span className="rounded-full bg-white/20 p-3">
+                            <span className="rounded-full bg-white/20 p-2">
                                 <ArrowRight />
                             </span>
                         </Link>
@@ -107,16 +121,46 @@ export default function ContentModeration() {
 
                     <div>
                         <img
-                            src="/images/content-moderation/content-moderation-hero.png"
+                            src="/images/It-help-desk/It-help-desk-hero.png"
                             alt="Content creation hero"
                             className="h-auto w-full rounded-2xl object-cover"
                         />
                     </div>
                 </div>
             </section>
+            <section className="bg-accent px-6 py-14">
+                <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 md:grid-cols-2">
+                    <div className="overflow-hidden rounded-xl">
+                        <img
+                            src="/images/It-help-desk/Our-IT-Help.png"
+                            alt="IT Help Desk Services"
+                            className="h-auto w-4/5 object-cover"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div>
+                        <h2 className="text-2xl font-semibold text-[var(--color-heading)] md:text-3xl">
+                            Our IT Help Desk Services Include
+                        </h2>
 
+                        <ul className="mt-6 space-y-4">
+                            {services.map((s, i) => (
+                                <li
+                                    key={i}
+                                    className="flex items-center gap-3 text-[var(--color-heading)]"
+                                >
+                                    <span className="grid h-6 w-6 place-items-center rounded-full bg-[var(--color-secondary)]/15 text-[var(--color-secondary)]">
+                                        <CheckCircle2 className="h-4 w-4" />
+                                    </span>
+                                    <span className="text-lg">{s}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            </section>
             <section className="bg-gradient-to-b from-[var(--color-unique)] to-[var(--color-accent)] px-6 py-12 md:py-16">
-                <div className="mx-auto max-w-7xl">
+                <div className="mx-auto max-w-6xl">
                     <div className="flex flex-col items-center gap-3 text-center">
                         <span className="inline-flex items-center rounded-full border border-[var(--color-paragraph)]/20 bg-[var(--color-accent)] px-3 py-1 text-xs font-medium text-[var(--color-paragraph)]/70">
                             Building Success Together
@@ -131,7 +175,7 @@ export default function ContentModeration() {
                             <article
                                 key={id}
                                 className={`relative isolate h-48 overflow-hidden rounded-2xl sm:h-52 lg:h-56 
-        ${id === "01" || id === "04" ? "lg:col-span-2" : "lg:col-span-1"}`}
+        ${id === "01" || id === "04" || id === "05" ? "lg:col-span-2" : "lg:col-span-1"}`}
                                 style={{
                                     backgroundImage: `url(${img})`,
                                     backgroundSize: "cover",
@@ -171,59 +215,11 @@ export default function ContentModeration() {
 
                 </div>
             </section>
-            <section className="px-6 py-12 bg-accent">
-                <div className="mx-auto max-w-6xl">
-                    <h2 className="text-center text-2xl font-semibold text-[var(--color-heading)] md:text-3xl">
-                        Why Businesses Need Content Moderation Services
-                    </h2>
-
-                    <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2">
-                        {cards2.map((c, i) => (
-                            <article
-                                key={i}
-                                className={`relative overflow-hidden rounded-2xl ring-1 ring-[var(--color-paragraph)]/10 ${c.image ? "p-0" : "bg-[var(--color-background)] p-6"
-                                    }`}
-                            >
-                                {c.image && (
-                                    <>
-                                        <img
-                                            src={c.image}
-                                            alt=""
-                                            className="h-44 w-full object-cover md:h-48"
-                                            loading="lazy"
-                                            decoding="async"
-                                        />
-                                        <div className="absolute inset-0 bg-black/45" />
-                                        <div className="absolute inset-0 p-5">
-                                            <h3 className="text-lg font-semibold text-white">
-                                                {c.title}
-                                            </h3>
-                                            <p className="mt-2 text-sm leading-6 text-white/85 max-w-[48ch]">
-                                                {c.desc}
-                                            </p>
-                                        </div>
-                                    </>
-                                )}
-
-                                {!c.image && (
-                                    <div>
-                                        <h3 className="text-lg font-semibold text-[var(--color-heading)]">
-                                            {c.title}
-                                        </h3>
-                                        <p className="mt-2 text-sm leading-6 text-[var(--color-paragraph)]/80">
-                                            {c.desc}
-                                        </p>
-                                    </div>
-                                )}
-                            </article>
-                        ))}
-                    </div>
-                </div>
-            </section>
             <section className="p-16 bg-gradient-to-b from-unique to-accent">
-                <div className="py-8 px-52">
+               <div className="max-w-6xl mx-auto">
+                 <div className="py-8 px-4">
                     <h3 className="text-4xl font-semibold text-heading">Why Choose Razor Infotech</h3>
-                    <p className="text-lg text-paragraph mt-5 max-w-[30%]">We go beyond being just a service provider - we become your long-term partner. Our approach combines expertise, technology, and strategy tailored to your unique needs. With us, you gain solutions that scale as your business grows.</p>
+                    <p className="text-md text-paragraph mt-5 max-w-[45%]">We go beyond being just a service provider - we become your long-term partner. Our approach combines expertise, technology, and strategy tailored to your unique needs. With us, you gain solutions that scale as your business grows.</p>
                 </div>
                 <div className="flex gap-20 max-w-8xl justify-center">
                     <div className="p-4">
@@ -234,15 +230,16 @@ export default function ContentModeration() {
                             points.map((e, i) => (
                                 <div>
                                     <div className="h-12 w-12 flex justify-center items-center bg-background p-2 text-secondary font-bold rounded-br-3xl">{i + 1}</div>
-                                    <h4 className="text-2xl font-semibold text-heading mt-4">{e.title}</h4>
-                                    <p className="text-lg text-paragraph mt-4 max-w-[40ch]">{e.description}</p>
+                                    <h4 className="text-xl font-semibold text-heading mt-4">{e.title}</h4>
+                                    <p className="text-sm text-paragraph mt-4 max-w-[40ch]">{e.description}</p>
                                 </div>
                             ))
                         }
                     </div>
                 </div>
+               </div>
             </section>
-            <Faq faqs={faqs}/>
+            <Faq faqs={faqs} />
         </>
     )
 }
