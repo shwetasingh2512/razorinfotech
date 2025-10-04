@@ -3,6 +3,7 @@ import { IoArrowForwardOutline } from "react-icons/io5";
 import { BarChart3, Sliders, MonitorSmartphone, Layers } from "lucide-react";
 import { Lightbulb, Palette, Code2, Wrench, Rocket, RefreshCw } from "lucide-react";
 import Faq from "../../reusable/Faq";
+import WhychooseSection from "../../reusable/WhychooseSection";
 
 
 
@@ -108,25 +109,28 @@ export default function AppDevelopement() {
     ];
 
 
-    const points = [
+    const points ={
+        background: "bg-gradient-to-r from-unique to-accent",
+        image:"/images/App-developement/y-choose-us.png",
+        child: [
         {
             title: "Customized for Your Goals",
-            description: "Every solution is custom-built around specific business needs, for a better and much friendlier interface."
+            desc: "Every solution is custom-built around specific business needs, for a better and much friendlier interface."
         },
         {
             title: "Long- Term Support",
-            description: "From idea to launch, we provide continuous monitoring, maintenance, and upgrades even after deployment."
+            desc: "From idea to launch, we provide continuous monitoring, maintenance, and upgrades even after deployment."
         },
         {
             title: "User- First Support",
-            description: "Providing a clean, engaging UI/UX that enhances customer satisfaction with every tap into the application."
+            desc: "Providing a clean, engaging UI/UX that enhances customer satisfaction with every tap into the application."
         },
         {
             title: "Proven Reliability",
-            description: "We take pride in the on-time delivery of every custom application without compromising performance or quality."
+            desc: "We take pride in the on-time delivery of every custom application without compromising performance or quality."
         },
     ]
-
+}
 
     const faqs = [
         {
@@ -177,10 +181,10 @@ export default function AppDevelopement() {
 
                         <Link
                             to="#"
-                            className="mt-6 inline-flex items-center gap-3 rounded-full bg-secondary px-5 py-3 text-white hover:opacity-90"
+                            className="mt-6 inline-flex items-center gap-3 rounded-full bg-secondary px-5 py-2 group hover:bg-transparent hover:text-secondary hover:border border-secondary text-white hover:opacity-90"
                         >
                             Start Your Free Trial
-                            <span className="grid place-items-center rounded-full bg-white/20 p-2">
+                            <span className="grid place-items-center rounded-full group-hover:bg-secondary text-white bg-white/20 p-2">
                                 <IoArrowForwardOutline />
                             </span>
                         </Link>
@@ -188,8 +192,8 @@ export default function AppDevelopement() {
                 </div>
             </section>
             <section className="bg-[var(--color-background)] px-6 py-14">
-                <div className="mx-auto max-w-6xl">
-                    <h2 className="text-center text-3xl font-semibold text-[var(--color-heading)] md:text-4xl">
+                <div className="mx-auto max-w-7xl">
+                    <h2 className="text-center text-3xl leading-14 font-semibold text-[var(--color-heading)] md:text-4xl">
                         Designed with Innovation,<br className="hidden sm:block" />
                         Coded for Growth
                     </h2>
@@ -202,8 +206,8 @@ export default function AppDevelopement() {
                 </div>
             </section>
             <section className=" bg-accent px-6 py-14 md:py-16">
-                <div className="mx-auto max-w-6xl">
-                    <h2 className="text-center text-3xl font-semibold text-[var(--color-heading)] md:text-5xl">
+                <div className="mx-auto max-w-7xl">
+                    <h2 className="text-center text-3xl font-semibold text-[var(--color-heading)] md:text-4xl">
                         Our Workflow in the Making of an Application
                     </h2>
                     <p className="mx-auto mt-4 max-w-3xl text-center text-[var(--color-paragraph)]/80">
@@ -229,28 +233,7 @@ export default function AppDevelopement() {
                     </div>
                 </div>
             </section>
-            <section className="p-16 linear-gradient">
-                <div className="py-8 px-52">
-                    <h3 className="text-4xl font-semibold text-heading">Why Choose Razor Infotech</h3>
-                    <p className="text-lg text-paragraph mt-5 max-w-[38%]">We go beyond being just a service provider - we become your long-term partner. Our approach combines expertise, technology, and strategy tailored to your unique needs. With us, you gain solutions that scale as your business grows.</p>
-                </div>
-                <div className="flex gap-20 max-w-8xl justify-center">
-                    <div className="p-4">
-                        <img src="/images/Software-developement/y-choose-us.png" alt="Why Choose Razor Infotech" />
-                    </div>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 ">
-                        {
-                            points.map((e, i) => (
-                                <div>
-                                    <div className="h-12 w-12 flex justify-center items-center bg-accent p-2 text-xl text-secondary font-bold rounded-br-2xl">0{i + 1}</div>
-                                    <h4 className="text-2xl font-semibold text-heading mt-4">{e.title}</h4>
-                                    <p className="text-lg text-paragraph mt-4 max-w-[40ch]">{e.description}</p>
-                                </div>
-                            ))
-                        }
-                    </div>
-                </div>
-            </section>
+            <WhychooseSection points={points}/>
             <Faq faqs={faqs}/>
         </>
     )

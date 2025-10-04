@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { FaDotCircle } from "react-icons/fa";
 import Faq from "../../reusable/Faq";
+import BackgroundImagesection from "../../reusable/BackgroundImagesection";
 
 
 export default function EmailSupport() {
@@ -119,29 +120,16 @@ export default function EmailSupport() {
         "Builds Professionalism and Trust",
     ];
 
+    const firstsection ={
+        title:" Email Support Service",
+        description:` Our email support service method provides business support using their email
+                        to address customer inquiries, issues, and offer assistance.`,
+        image:"/images/Email-support/Email-support-background.png"
+    }
+
     return (
         <>
-            <section className="relative">
-                <div className="absolute inset-0">
-                    <img
-                        src="/images/Email-support/Email-support-background.png"
-                        alt="Email Support Background"
-                        className="h-full w-full object-cover"
-                        loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-black/60" />
-                </div>
-
-                <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center justify-center px-6 py-24 text-center">
-                    <h2 className="text-3xl font-semibold text-white md:text-4xl">
-                        Email Support Service
-                    </h2>
-                    <p className="mt-4 max-w-2xl text-base text-white/90 md:text-lg">
-                        Our email support service method provides business support using their email
-                        to address customer inquiries, issues, and offer assistance.
-                    </p>
-                </div>
-            </section>
+            <BackgroundImagesection items={firstsection}/>
             <section className="p-10 bg-accent">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center p-20 mx-auto max-w-7xl">
                     <div>

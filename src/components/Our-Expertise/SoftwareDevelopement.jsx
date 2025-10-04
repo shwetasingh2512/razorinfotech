@@ -2,6 +2,7 @@ import { IoArrowForwardOutline } from "react-icons/io5";
 import { FiArrowUpRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import Faq from "../../reusable/Faq";
+import WhychooseSection from "../../reusable/WhychooseSection";
 
 
 
@@ -97,25 +98,28 @@ export default function SoftwareDevelopement() {
         },
     ]
 
-    const points = [
-        {
-            title: "Skilled Team",
-            description: "We have skilled and trained industry experts in our team to provide top-notch services."
-        },
-        {
-            title: "Reliable Services",
-            description: "We provide our clients with the industry's best services with our expert team."
-        },
-        {
-            title: "Custom Development",
-            description: "We believe in providing each of our clients, from SMEs to big enterprises, with custom solutions."
-        },
-        {
-            title: "Post Development",
-            description: "Apart from developing, we also provide maintenance and support for the software."
-        },
-    ]
-
+    const points = {
+        background: "bg-gradient-to-r from-unique to-accent",
+        image: "/images/Software-developement/y-choose-us.png",
+        child: [
+            {
+                title: "Skilled Team",
+                desc: "We have skilled and trained industry experts in our team to provide top-notch services."
+            },
+            {
+                title: "Reliable Services",
+                desc: "We provide our clients with the industry's best services with our expert team."
+            },
+            {
+                title: "Custom Development",
+                desc: "We believe in providing each of our clients, from SMEs to big enterprises, with custom solutions."
+            },
+            {
+                title: "Post Development",
+                desc: "Apart from developing, we also provide maintenance and support for the software."
+            },
+        ]
+    }
 
     const faqs = [
         {
@@ -144,7 +148,7 @@ export default function SoftwareDevelopement() {
     return (
         <>
             <section className='p-10'>
-                <div className="grid grid-cols-1  lg:grid-cols-2 max-w-7xl h-100 mx-auto bg-accent rounded-2xl overflow-hidden">
+                <div className="grid grid-cols-1 lg:grid-cols-2 max-w-7xl h-100 mx-auto bg-accent rounded-2xl overflow-hidden">
                     <div className="p-8 place-content-center">
                         <h1 className="text-4xl leading-16 font-semibold  text-heading">Software Development</h1>
                         <p className="text-xl text-paragraph mt-5 max-w-4/5">Creating, Maintaining, and Enhancing Software For Every Business's Specific Needs or Requirements.</p>
@@ -158,13 +162,13 @@ export default function SoftwareDevelopement() {
                         <img
                             src="/images/Software-developement/diverse-friends-using-digital-devices 1.png"
                             alt="Empowering Businesses with Confidence & Technology"
-                            className="w-4/5 h-auto rounded-2xl object-cover"
+                            className="h-auto rounded-2xl object-cover"
                             loading="lazy"
                         />
                     </div>
 
                     <div>
-                        <h2 className="text-4xl font-semibold text-heading md:text-4xl max-w-[100%]">
+                        <h2 className="text-4xl font-semibold text-heading md:text-4xl ">
                             Empowering Businesses with Confidence & Technology
                         </h2>
 
@@ -189,7 +193,7 @@ export default function SoftwareDevelopement() {
             <section className="linear-gradient">
                 <div className="mx-auto max-w-6xl px-6 py-12 md:py-16">
                     <div className="flex flex-col items-center text-center">
-                        <span className="inline-flex items-center gap-2 rounded-full border border-[var(--color-paragraph)]/20 px-3 py-1 text-lg font-medium text-[var(--color-paragraph)]/70">
+                        <span className="inline-flex items-center gap-2 rounded-full border border-[var(--color-paragraph)]/20 px-3 py-1 text-lg text-[var(--color-paragraph)]/70">
                             Our Services
                         </span>
                         <h2 className="mt-4 text-3xl font-semibold text-[var(--color-heading)] sm:text-3xl md:text-4xl">
@@ -201,11 +205,11 @@ export default function SoftwareDevelopement() {
                         {SERVICES.slice(0, 3).map((s) => (
                             <ServiceCard key={s.n} {...s} />
                         ))}
-                        <div className="sm:col-span-2 justify-items-center mt-8 lg:col-span-2 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
-                            {SERVICES.slice(3).map((s) => (
-                                <ServiceCard key={s.n} {...s} />
-                            ))}
-                        </div>
+                    </div>
+                    <div className="max-w-4/5 mx-auto mt-12  grid grid-cols-1 gap-8 lg:grid-cols-2">
+                        {SERVICES.slice(3).map((s) => (
+                            <ServiceCard key={s.n} {...s} />
+                        ))}
                     </div>
                 </div>
             </section>
@@ -215,36 +219,15 @@ export default function SoftwareDevelopement() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 max-w-7xl mx-auto mt-12">
                     {
                         cards.map((e, i) => (
-                            <div className="bg-background p-5 rounded-3xl h-80" key={i}>
-                                <div className="flex gap-5"> <div className="bg-secondary h-12 w-12 flex justify-center items-center font-bold text-white rounded-full p-3">{i + 1}</div> <span className="text-2xl font-semibold">{e.title}</span> </div>
+                            <div className="bg-background p-5 rounded-3xl h-60" key={i}>
+                                <div className="flex gap-5"> <div className="bg-secondary h-10 w-10 flex justify-center items-center font-bold text-white rounded-full p-3">{i + 1}</div> <span className="text-xl font-semibold">{e.title}</span> </div>
                                 <p className="mt-5 text-base">{e.description}</p>
                             </div>
                         ))
                     }
                 </div>
             </section>
-            <section className="p-16 linear-gradient">
-                <div className="py-8 px-52">
-                    <h3 className="text-4xl font-semibold text-heading">Why Choose Razor Infotech</h3>
-                    <p className="text-lg text-paragraph mt-5 max-w-[30%]">We go beyond being just a service provider - we become your long-term partner. Our approach combines expertise, technology, and strategy tailored to your unique needs. With us, you gain solutions that scale as your business grows.</p>
-                </div>
-                <div className="flex gap-20 max-w-8xl justify-center">
-                    <div className="p-4">
-                        <img src="/images/Software-developement/y-choose-us.png" alt="Why Choose Razor Infotech" />
-                    </div>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 ">
-                        {
-                            points.map((e, i) => (
-                                <div>
-                                    <div className="h-12 w-12 flex justify-center items-center bg-accent p-2 text-secondary font-bold rounded-br-3xl">{i + 1}</div>
-                                    <h4 className="text-2xl font-semibold text-heading mt-4">{e.title}</h4>
-                                    <p className="text-lg text-paragraph mt-4 max-w-[40ch]">{e.description}</p>
-                                </div>
-                            ))
-                        }
-                    </div>
-                </div>
-            </section>
+            <WhychooseSection points={points} />
             <Faq faqs={faqs} />
         </>
     )

@@ -9,7 +9,7 @@ export default function Faq({ faqs = [] }) {
     };
 
     return (
-        <section className="relative  bg-accent py-16 px-6 sm:px-10 lg:px-20">
+        <section className="relative  bg-accent py-24 px-6 sm:px-10 lg:px-20">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-center text-heading">FAQ’s</h2>
             <p className=" mb-8 text-center text-paragraph">
                 Most asked questions regarding us for a quick overview of how and what we do.

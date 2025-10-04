@@ -157,9 +157,8 @@ export default function About() {
         connectwithus={false}
       />
 
-      {/* Goals */}
-      <section className="bg-accent px-6 py-12 md:py-16 lg:px-24">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <section className="bg-accent px-5 py-12 md:py-16 lg:px-24">
+        <div className="mx-auto grid max-w-8xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {goals.map((goal, index) => {
             const Icon = goal.icon;
             return (

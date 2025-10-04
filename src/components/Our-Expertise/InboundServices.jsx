@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Inbox, Send, Mail, Link2 } from "lucide-react";
+import BackgroundImagesection from "../../reusable/BackgroundImagesection";
 
 export default function InboundServices() {
 
@@ -83,7 +84,7 @@ export default function InboundServices() {
         },
     ];
 
-     const services = [
+    const services = [
         {
             icon: <Inbox className="w-6 h-6 text-white" />,
             title: "INBOUND SERVICES",
@@ -115,30 +116,16 @@ export default function InboundServices() {
     ];
 
 
+    const firstsection = {
+        title: "Smarter Inbound Support for Your Business",
+        description: `From inquiries to issue resolution, we provide fast, reliable inbound services that keep your customers engaged and satisfied.`,
+        image: "/images/Inbound-services/Inbound-background-hero.png"
+    }
+
 
     return (
         <>
-            <section className="relative py-20">
-                <div className="absolute inset-0">
-                    <img
-                        src="/images/Inbound-services/Inbound-background-hero.png"
-                        alt="Email Support Background"
-                        className="h-full w-full object-cover"
-                        loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-black/60" />
-                </div>
-
-                <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center justify-center px-6 py-24 text-center">
-                    <h2 className="text-3xl font-semibold text-white md:text-4xl">
-                        Smarter Inbound Support for Your Business
-                    </h2>
-                    <p className="mt-4 max-w-2xl text-base text-white/90 md:text-lg">
-                        From inquiries to issue resolution, we provide fast, reliable inbound services that keep your customers engaged and satisfied.
-                    </p>
-                    
-                </div>
-            </section>
+            <BackgroundImagesection items={firstsection}/>
             <section className="p-10 bg-accent">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center p-20 mx-auto max-w-7xl">
                     <div>

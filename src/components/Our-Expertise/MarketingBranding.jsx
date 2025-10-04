@@ -233,7 +233,7 @@ export default function MarketingBranding() {
       <section className="bg-accent p-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 max-w-7xl mx-auto">
           <div>
-            <img src="/images/Marketing-Branding/marketing-hero-image.png" alt="marketing" />
+            <img src="/images/Marketing-Branding/marketing-hero-image.png" alt="marketing"/>
           </div>
           <div className="flex flex-col justify-center">
             <h3 className="font-semibold text-4xl text-heading leading-12 max-w-[80%]">Reach Your Targeted Audience With Data-Driven Digital Marketing</h3>
@@ -250,7 +250,7 @@ export default function MarketingBranding() {
         </div>
       </section>
       <section className="bg-[var(--color-background)] px-6 py-14">
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-7xl">
           <h2 className="text-center text-3xl font-semibold text-[var(--color-heading)] md:text-4xl">
             How We Turn Ideas Into Digital Reality
           </h2>
@@ -263,7 +263,7 @@ export default function MarketingBranding() {
         </div>
       </section>
       <section className="bg-gradient-to-b from-[var(--color-unique)] to-[var(--color-accent)] px-6 py-12 md:py-16">
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-7xl">
           <div className="mb-6 flex items-center justify-between">
             <h2 className="text-2xl font-semibold text-[var(--color-heading)] md:text-4xl">
               Recent blog posts

@@ -208,7 +208,7 @@ function Home() {
         <h2 className="text-4xl text-heading text-center my-4">One-Stop Solutions For All Business Needs</h2>
         <p className="text-center mx-auto text-paragraph/60">From IT solutions and Digital Marketing to BPO and RPO, we offer a vast range of quality services that transform your ideas into real-life results.</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mt-10 px-16 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mt-10 px-20">
           {goals.map((s, i) => (
             <div key={i} className="">
               <div className="bg-background rounded-xl h-89 p-6 flex flex-col gap-4 text-left shadow-md hover:shadow-lg transition">

@@ -17,30 +17,10 @@ const menuData = [
     children: [
       {
         title: "BPO Services",
-        children: [
-          {
-            title: "Customer Support Service",
-            children: [
-              { title: "Inbound Services", path: "/inbound" },
-              { title: "Outbound Services", path: "/outbound" },
-              { title: "Omnichannel Services", path: "/omnichannel" },
-              { title: "Email Support Services", path: "/email-support" },
-            ],
-          },
-          { title: "Back Office Services", path: "/backoffice" },
-          { title: "Content Management Service", path: "/cms" },
-          { title: "IT Help Desk", path: "/helpdesk" },
-          { title: "Backend Outsource Service", path: "/backend" },
-        ],
+        path:"/bpo"
       },
       {
-        title: "HR Outsource",
-        children: [
-          { title: "Recruitment Process Outsourcing", path: "/rpo" },
-          { title: "Training & Developement", path: "/payroll" },
-          { title: "Talent Developement", path: "/benefits" },
-        ],
-      },
+        title: "HR Outsource", path:"/hr-outsource"},
       { title: "IT Solutions", path: "/it-solutions" },
       { title: "Legal Compliance", path: "/legal" },
       { title: "Financial Services", path: "/finance" },
@@ -112,7 +92,7 @@ function Navbar() {
 
   return (
     <header className={` border-b border-white/50 z-50 w-full transition-colors duration-300 bg-white`}>
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3">
+      <div className="mx-auto flex px-16 items-center justify-between py-3">
         <Link to="/" className="flex items-center gap-2">
           <img src={logo} alt="logo" className="w-32" />
         </Link>
@@ -158,7 +138,7 @@ function Navbar() {
                             <li key={j}>
                               {childHasKids ? (
                                 <button
-                                  className={`flex w-full items-center justify-between rounded px-3 py-2 ${activeSubMenu === j ? "bg-secondary" : "hover:bg-gray-700"}`}
+                                  className={`flex w-full items-center justify-between rounded px-3 py-2 ${activeSubMenu === j ? "bg-secondary" : "hover:bg-accent hover:text-secondary"}`}
                                   onClick={(e) => {
                                     e.stopPropagation();
                                     setActiveSubMenu(activeSubMenu === j ? null : j);
@@ -170,7 +150,7 @@ function Navbar() {
                               ) : (
                                 <Link
                                   to={child.path}
-                                  className={`block rounded px-3 py-2 ${activeItem === child.title ? "bg-secondary" : "hover:bg-gray-700"}`}
+                                  className={`block rounded px-3 py-2 ${activeItem === child.title ? "bg-secondary" : "hover:bg-accent hover:text-secondary"}`}
                                   onClick={() => {
                                     setActiveItem(child.title);
                                     setActiveMenu(null);

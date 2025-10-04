@@ -33,28 +33,28 @@ export default function HeroSection({
     ];
 
     return (
-        <div className={`relative px-20 pb-16 overflow-hidden ${bgcolor}`}>
+        <div className={`relative px-5 pb-16 overflow-hidden ${bgcolor}`}>
 
             <div
-                className={`relative flex mt-20 z-10 ${reverse ? "flex-row-reverse" : "flex-row"
+                className={`relative mx-auto max-w-7xl flex mt-20 z-10 ${reverse ? "flex-row-reverse" : "flex-row"
                     }`}
             >
-                <div className="pl-20 flex flex-col  gap-5 w-1/2">
+                <div className="pl-20 flex flex-col  gap-5 w-1/2    ">
                     {abovetitle && (
                         <p className="text-2xl tracking-widest font-medium text-secondary uppercase">
                             {abovetitle}
                         </p>
                     )}
-                    <h1 className="text-5xl leading-tight max-w-4/5 font-semibold text-heading">
+                    <h1 className="text-4xl leading-tight max-w-4/5 font-semibold text-heading">
                         {title}
                     </h1>
-                    <p className="text-lg text-paragraph max-w-4/5">{description}</p>
+                    <p className="text-md text-paragraph max-w-4/5">{description}</p>
                     {buttonText && buttonLink && (
                         <Link
                             to={buttonLink}
-                            className="font-semibold rounded-4xl w-fit pl-5 flex items-center bg-secondary text-white  gap-4 py-3"
+                            className="font-semibold rounded-4xl w-fit pl-5 flex items-center transition-all duration-200 bg-secondary hover:bg-background hover:border border-secondary hover:text-secondary group text-white  gap-4 py-2"
                         >
-                            {buttonText} <span className="bg-accent/30 p-3 rounded-full ml-auto mr-2"><IoArrowForward /></span>
+                            {buttonText} <span className="bg-accent/30 p-2 group-hover:bg-secondary group-hover:text-white rounded-full ml-auto mr-2"><IoArrowForward /></span>
                         </Link>
                     )}
                     {
@@ -69,7 +69,7 @@ export default function HeroSection({
                                         key={index}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-block mr-4 border border-slate-400 rounded-full p-3 text-lg hover:text-primary"
+                                        className="inline-block mr-4 border border-slate-400 rounded-full p-3 text-lg hover:text-secondary hover:border-secondary"
                                     >
                                         {iconItem.icon}
                                     </Link>

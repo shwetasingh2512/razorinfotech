@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Medal, GraduationCap } from "lucide-react";
 import { Inbox, Send, Mail, Link2 } from "lucide-react";
+import WhychooseSection from "../../reusable/WhychooseSection";
 
 function CustomerSupport() {
 
@@ -89,24 +90,27 @@ function CustomerSupport() {
         },
     ];
 
-    const points = [
+    const points ={ 
+        background:"bg-gradient-to-r from-unique to-accent",
+        image:"/images/Software-developement/y-choose-us.png",
+        child:[
         {
             title: "Reliable Expertise of Years",
-            description: "We have experience of over 7+ years in the field and have built a reputation among our clients for delivery of consistent, reliable, and high-quality customer support in multiple industries."
+            desc: "We have experience of over 7+ years in the field and have built a reputation among our clients for delivery of consistent, reliable, and high-quality customer support in multiple industries."
         },
         {
             title: "Trained & Skilled Team",
-            description: "We take pride in our team of professionals, as they aim to deliver swift, accurate, and smooth customer care. Our team is trained to manage high call volumes and resolve complex issues."
+            desc: "We take pride in our team of professionals, as they aim to deliver swift, accurate, and smooth customer care. Our team is trained to manage high call volumes and resolve complex issues."
         },
         {
             title: "Top-Notch Customer Satisfaction",
-            description: "Every business has its own needs and goals, for which our services are designed to be customized to align with your specific brand needs, expectations, and operational structure."
+            desc: "Every business has its own needs and goals, for which our services are designed to be customized to align with your specific brand needs, expectations, and operational structure."
         },
         {
             title: "Customized to Your Needs",
-            description: "AAt Razor Infotech, providing our clients with 100% customer satisfaction is not just a goal; it is a standard. We are committed to building brand loyalty and strong market image for businesses."
+            desc: "AAt Razor Infotech, providing our clients with 100% customer satisfaction is not just a goal; it is a standard. We are committed to building brand loyalty and strong market image for businesses."
         },
-    ]
+    ]}
 
 
     
@@ -244,28 +248,7 @@ function CustomerSupport() {
                     </div>
                 </div>
             </section>
-            <section className="p-16 bg-accent">
-                <div className="py-8 px-52">
-                    <h3 className="text-4xl font-semibold text-heading">Why Choose Razor Infotech</h3>
-                    <p className="text-lg text-paragraph mt-5 max-w-[30%]">We go beyond being just a service provider - we become your long-term partner. Our approach combines expertise, technology, and strategy tailored to your unique needs. With us, you gain solutions that scale as your business grows.</p>
-                </div>
-                <div className="flex gap-20 max-w-8xl justify-center">
-                    <div className="p-4">
-                        <img src="/images/Software-developement/y-choose-us.png" alt="Why Choose Razor Infotech" />
-                    </div>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 ">
-                        {
-                            points.map((e, i) => (
-                                <div>
-                                    <div className="h-12 w-12 flex justify-center items-center bg-background p-2 text-secondary font-bold rounded-br-3xl">{i + 1}</div>
-                                    <h4 className="text-2xl font-semibold text-heading mt-4">{e.title}</h4>
-                                    <p className="text-lg text-paragraph mt-4 max-w-[40ch]">{e.description}</p>
-                                </div>
-                            ))
-                        }
-                    </div>
-                </div>
-            </section>
+            <WhychooseSection points={points}/>
         </>
     )
 }

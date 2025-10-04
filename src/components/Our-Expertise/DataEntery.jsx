@@ -1,6 +1,8 @@
 import { Inbox, Send, Mail, Link2 } from "lucide-react";
 import { CheckCircle2 } from "lucide-react";
 import Faq from "../../reusable/Faq";
+import WhychooseSection from "../../reusable/WhychooseSection";
+import BackgroundImagesection from "../../reusable/BackgroundImagesection";
 
 
 export default function DataEntery() {
@@ -73,32 +75,36 @@ export default function DataEntery() {
         }
     ];
 
-    const points = [
-        {
-            n: "01",
-            title: "Industry Experience",
-            desc:
-                "Members of our team have experience in IT work across various industries for relevant innovation.",
-        },
-        {
-            n: "02",
-            title: "Client-Centric Approach",
-            desc:
-                "We believe in working with our clients as a strategic partner and not just service providers.",
-        },
-        {
-            n: "03",
-            title: "Scalable Solutions",
-            desc:
-                "Our services grow with business needs and scale as per its needs without hassle.",
-        },
-        {
-            n: "04",
-            title: "Data Security",
-            desc:
-                "We follow regular and high standards of data protection and cybersecurity for best practices.",
-        },
-    ];
+    const points = {
+        background: "bg-gradient-to-r from-unique to-accent",
+        image: "/images/data-entry/why-choose.png",
+        child: [
+            {
+                n: "01",
+                title: "Industry Experience",
+                desc:
+                    "Members of our team have experience in IT work across various industries for relevant innovation.",
+            },
+            {
+                n: "02",
+                title: "Client-Centric Approach",
+                desc:
+                    "We believe in working with our clients as a strategic partner and not just service providers.",
+            },
+            {
+                n: "03",
+                title: "Scalable Solutions",
+                desc:
+                    "Our services grow with business needs and scale as per its needs without hassle.",
+            },
+            {
+                n: "04",
+                title: "Data Security",
+                desc:
+                    "We follow regular and high standards of data protection and cybersecurity for best practices.",
+            },
+        ]
+    }
 
 
     const faqs = [
@@ -124,28 +130,16 @@ export default function DataEntery() {
         },
     ];
 
+    const firstsection = {
+        title: "Data Entry Service",
+        description: `This process involves converting information from various sources into a digital format for businesses to manage and organize their data effectively.From inquiries to issue resolution, we provide fast, reliable inbound services that keep your customers engaged and satisfied.`,
+        image: "/images/data-entry/data-entry-background-hero.png"
+    }
+
 
     return (
         <>
-            <section className="relative py-20">
-                <div className="absolute inset-0">
-                    <img
-                        src="/images/data-entry/data-entry-background-hero.png"
-                        alt="Email Support Background"
-                        className="h-full w-full object-cover"
-                        loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-black/60" />
-                </div>
-
-                <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center justify-center px-6 py-24 text-center">
-                    <h2 className="text-3xl font-semibold text-white md:text-4xl">
-                        Data Entry Service
-                    </h2>
-                    <p className="mt-4 max-w-2xl text-base text-white/90 md:text-lg">This process involves converting information from various sources into a digital format for businesses to manage and organize their data effectively.From inquiries to issue resolution, we provide fast, reliable inbound services that keep your customers engaged and satisfied.
-                    </p>
-                </div>
-            </section>
+           <BackgroundImagesection items={firstsection}/>
             <section className="p-10 bg-accent">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center p-20 mx-auto max-w-7xl">
                     <div>
@@ -275,43 +269,8 @@ export default function DataEntery() {
                     </div>
                 </div>
             </section>
-            <section className="bg-gradient-to-b from-unique to-accent">
-                <div className="mx-auto grid max-w-7xl grid-cols-1 gap-16 px-6 py-12 md:py-16 lg:grid-cols-12">
-                    <div className="lg:col-span-5">
-                        <h2 className="text-3xl font-semibold text-[var(--color-heading)] sm:text-4xl">
-                            Why Choose Razor Infotech
-                        </h2>
-                        <p className="mt-3 text-lg max-w-[55ch] text-[var(--color-paragraph)]/80">
-                            We go beyond being just a service provider – we become your
-                            long-term partner. Our approach combines expertise, technology,
-                            and strategy tailored to your unique needs. With us, you gain
-                            solutions that scale as your business grows.
-                        </p>
-
-                        <div className="mt-5">
-                            <img src="/images/data-entry/why-choose.png" alt="why-choose-us" className="w-4/5"/>
-                        </div>
-                    </div>
-                    <div className="lg:col-span-7">
-                        <div className="grid grid-cols-1 gap-x-10 gap-y-12 md:grid-cols-2 mt-36">
-                            {points.map((p, idx) => (
-                                <div key={idx} className="flex flex-col">
-                                    <span className="mb-4 inline-grid h-16 w-16 place-items-center rounded-lg bg-background text-[var(--color-secondary)] text-base font-semibold shadow-[0_8px_24px_rgba(0,0,0,0.06)] ring-1 ring-[var(--color-paragraph)]/10">
-                                        {p.n}
-                                    </span>
-                                    <h3 className="text-2xl font-semibold text-[var(--color-heading)]">
-                                        {p.title}
-                                    </h3>
-                                    <p className="mt-2 text-lg text-[var(--color-paragraph)]/80">
-                                        {p.desc}
-                                    </p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <Faq faqs={faqs}/>
+            <WhychooseSection points={points} />
+            <Faq faqs={faqs} />
         </>
     )
 }

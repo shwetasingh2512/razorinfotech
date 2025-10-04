@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Faq from "../../reusable/Faq";
+import WhychooseSection from "../../reusable/WhychooseSection";
 
 export default function ContentCreationServices() {
     const title = "Types of Content We Create";
@@ -68,7 +69,10 @@ export default function ContentCreationServices() {
         },
     ];
 
-     const points = [
+     const points = {
+        background:"bg-gradient-to-r from-unique to-accent",
+        image:"/images/content-creation/y-choose-image.png",
+        child:[
         {
             title: "Custom Tailored Content",
             description: "Every piece of created content is customized to your brand, audience, and goals."
@@ -86,7 +90,7 @@ export default function ContentCreationServices() {
             description: "We use analytics and performance insights to create our content decisions for better ROI."
         },
     ]
-
+}
 
 
     return (
@@ -196,28 +200,7 @@ export default function ContentCreationServices() {
                     </div>
                 </div>
             </section>
-             <section className="p-16 linear-gradient">
-                <div className="py-8 px-52">
-                    <h3 className="text-4xl font-semibold text-heading">Why Choose Razor Infotech</h3>
-                    <p className="text-base text-paragraph mt-5 max-w-[35%]">We go beyond being just a service provider - we become your long-term partner. Our approach combines expertise, technology, and strategy tailored to your unique needs. With us, you gain solutions that scale as your business grows.</p>
-                </div>
-                <div className="flex gap-20 max-w-8xl justify-center">
-                    <div className="p-4">
-                        <img src="/images/content-creation/y-choose-image.png" alt="Why Choose Razor Infotech" />
-                    </div>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-5 ">
-                        {
-                            points.map((e, i) => (
-                                <div>
-                                    <div className="h-12 w-12 flex justify-center items-center bg-accent p-2 text-secondary font-bold rounded-br-3xl">{i + 1}</div>
-                                    <h4 className="text-2xl font-semibold text-heading mt-4">{e.title}</h4>
-                                    <p className="text-lg text-paragraph mt-4 max-w-[40ch]">{e.description}</p>
-                                </div>
-                            ))
-                        }
-                    </div>
-                </div>
-            </section>
+            <WhychooseSection points={points}/>
             <Faq faqs={faqs}/>
         </>
     );
