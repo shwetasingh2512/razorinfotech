@@ -84,7 +84,6 @@ export default function WebsiteDevelopement() {
             <section className="bg-accent p-10">
                 <div className="mx-auto max-w-6xl">
                     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-6 lg:grid-rows-5">
-                        {/* Card 1 */}
                         <div className="lg:col-span-3 lg:row-span-3 lg:col-start-1 lg:row-start-1 rounded-2xl bg-[var(--color-background)] shadow p-4 flex flex-col">
                             <img
                                 src="/images/Website-developement/Custom-Web-Development.png"
@@ -96,8 +95,6 @@ export default function WebsiteDevelopement() {
                                 Designing and building of a responsive, scalable, and secure websites tailored to specific brand needs and goals.
                             </p>
                         </div>
-
-                        {/* Card 2 */}
                         <div className="lg:col-span-3 lg:row-span-2 lg:col-start-1 lg:row-start-4 rounded-2xl bg-[var(--color-background)] shadow p-4 flex flex-col">
                             <img
                                 src="/images/Website-developement/UIUX-Design.png"
@@ -141,7 +138,7 @@ export default function WebsiteDevelopement() {
             <section className=" bg-accent px-6 py-14 md:py-16">
                 <div className="mx-auto max-w-6xl">
                     <p className="border border-secondary py-2 px-6 rounded-full text-paragraph mx-auto w-fit mb-4">Work Process</p>
-                    <h2 className="text-center text-3xl font-semibold text-[var(--color-heading)] md:text-5xl">
+                    <h2 className="text-center text-3xl font-semibold text-[var(--color-heading)] md:text-4xl">
                         From Concept To Launch
                     </h2>
 
@@ -163,8 +160,8 @@ export default function WebsiteDevelopement() {
                     </div>
                 </div>
             </section>
-            <section className="p-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 max-w-7xl mx-auto p-8">
+            <section className="py-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 max-w-6xl mx-auto p-8">
                     <div>
                         <img src="/images/Website-developement/website-developement-section4.png" alt="Building Websites That Drive Growth" className="rounded-2xl" />
                     </div>

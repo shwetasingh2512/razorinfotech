@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { ArrowRight, CheckCircle2 } from "lucide-react"
-import Faq from "../reusable/Faq";
+import Faq from "../../reusable/Faq";
 
 export default function ItHelpDesk() {
 

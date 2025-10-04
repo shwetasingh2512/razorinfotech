@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { ArrowRight } from "lucide-react"
 import Faq from "../../reusable/Faq";
+import WhychooseSection from "../../reusable/WhychooseSection";
 
 export default function ContentModeration() {
     const cards2 = [
@@ -31,24 +32,27 @@ export default function ContentModeration() {
     ];
 
 
-    const points = [
+    const points ={
+        background:"bg-gradient-to-r from-unique to-accent",
+        image:"/images/Software-developement/y-choose-us.png",
+        child: [
         {
             title: "Platform Versatility",
-            description: "We moderate content across websites, apps, forums, social media, eCommerce platforms, and more."
+            desc: "We moderate content across websites, apps, forums, social media, eCommerce platforms, and more."
         },
         {
             title: "Secure & Confidential",
-            description: "We follow strict data privacy protocols and ensure confidentiality across all moderation processes."
+            desc: "We follow strict data privacy protocols and ensure confidentiality across all moderation processes."
         },
         {
             title: "Scalable Solutions",
-            description: "Whether you're a startup or enterprise, we scale our services to meet your growing content demands."
+            desc: "Whether you're a startup or enterprise, we scale our services to meet your growing content demands."
         },
         {
             title: "Data-Driven Approach",
-            description: "We use analytics and performance insights to create our content decisions for better ROI."
+            desc: "We use analytics and performance insights to create our content decisions for better ROI."
         },
-    ]
+    ]}
 
 
     const faqs = [
@@ -96,10 +100,10 @@ export default function ContentModeration() {
                         </p>
                         <Link
                             to="#"
-                            className="inline-flex w-fit items-center gap-3 rounded-full bg-secondary px-5 py-3 font-bold text-white"
+                            className="inline-flex w-fit items-center gap-3 rounded-full bg-secondary px-5 py-2 group font-semibold hover:border border-secondary hover:text-secondary hover:bg-background text-white"
                         >
                             <span>Talk To An Expert</span>
-                            <span className="rounded-full bg-white/20 p-3">
+                            <span className="rounded-full bg-white/20 p-2 group-hover:bg-secondary text-white">
                                 <ArrowRight />
                             </span>
                         </Link>
@@ -220,28 +224,7 @@ export default function ContentModeration() {
                     </div>
                 </div>
             </section>
-            <section className="p-16 bg-gradient-to-b from-unique to-accent">
-                <div className="py-8 px-52">
-                    <h3 className="text-4xl font-semibold text-heading">Why Choose Razor Infotech</h3>
-                    <p className="text-lg text-paragraph mt-5 max-w-[30%]">We go beyond being just a service provider - we become your long-term partner. Our approach combines expertise, technology, and strategy tailored to your unique needs. With us, you gain solutions that scale as your business grows.</p>
-                </div>
-                <div className="flex gap-20 max-w-8xl justify-center">
-                    <div className="p-4">
-                        <img src="/images/Software-developement/y-choose-us.png" alt="Why Choose Razor Infotech" />
-                    </div>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 ">
-                        {
-                            points.map((e, i) => (
-                                <div>
-                                    <div className="h-12 w-12 flex justify-center items-center bg-background p-2 text-secondary font-bold rounded-br-3xl">{i + 1}</div>
-                                    <h4 className="text-2xl font-semibold text-heading mt-4">{e.title}</h4>
-                                    <p className="text-lg text-paragraph mt-4 max-w-[40ch]">{e.description}</p>
-                                </div>
-                            ))
-                        }
-                    </div>
-                </div>
-            </section>
+            <WhychooseSection points={points}/>
             <Faq faqs={faqs}/>
         </>
     )
