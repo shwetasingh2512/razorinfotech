@@ -15,21 +15,38 @@ const menuData = [
   {
     title: "OUR EXPERTISE",
     children: [
-      {
-        title: "BPO Services",
-        path:"/bpo"
-      },
-      {
-        title: "HR Outsource", path:"/hr-outsource"},
       { title: "IT Solutions", path: "/it-solutions" },
-      { title: "Legal Compliance", path: "/legal" },
-      { title: "Financial Services", path: "/finance" },
-      { title: "Business Consultancy", path: "/consultancy" },
-      { title: "Angel Investors", path: "/investors" },
+      { title: "Software Development", path: "/software-developement" },
+      { title: "App Development", path: "/app-developement" },
+      { title: "Website Development", path: "/website-developement" },
+      { title: "Marketing & Branding", path: "/marketing-branding" },
+      { title: "Content Creation", path: "/content-creation-services" },
+      { title: "Customer Support", path: "/customer-support-services" },
+      { title: "Email Support", path: "/email-support-services" },
+      { title: "Inbound Services", path: "/inbound-services" },
+      { title: "Content Moderation", path: "/content-moderation-services" },
+      { title: "Data Entry", path: "/data-entry" },
+      { title: "IT Help Desk", path: "/it-help-desk" },
+      { title: "SEO", path: "/seo" },
+      { title: "HR Services", path: "/hr-services" },
+      { title: "Talent Development", path: "/talent-developement" },
+      { title: "Training", path: "/training" },
+      { title: "App Store Optimization", path: "/app-store-optimization" },
+      { title: "Legal Compliance", path: "/Legal-complience" },
+      { title: "Angel Investor", path: "/angle-investor" },
+      { title: "Data Management", path: "/data-management" },
+      { title: "Backend Outsource", path: "/backend-outsource" },
+      { title: "Omnichannel", path: "/omnichanel" },
+      { title: "Content Management", path: "/content-management" },
+      { title: "Financial Services", path: "/financial-services" },
+      { title: "Business Consultancy", path: "/business-consultancy" },
+      { title: "YouTube Marketing", path: "/youtube" },
+      { title: "Google My Business", path: "/google-my-business" },
+      { title: "Online Reputation", path: "/online-reputation-market" },
     ],
   },
   { title: "OUR PRODUCTS", path: "/products" },
-  { title: "BLOGS", path: "/blogs" },
+  { title: "CONTACT", path: "/contact" },
 ];
 
 const hasChildren = (node) => Array.isArray(node.children) && node.children.length > 0;
@@ -67,15 +84,8 @@ function Navbar() {
   const [activeMenu, setActiveMenu] = useState(null);
   const [activeSubMenu, setActiveSubMenu] = useState(null);
   const [activeItem, setActiveItem] = useState(null);
-  const [activateNavbarbg, setActivateNavbarbg] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const menuRef = useRef(null);
-
-  useEffect(() => {
-    const onScroll = () => setActivateNavbarbg(window.scrollY > 30);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -91,14 +101,13 @@ function Navbar() {
   const closeMobile = () => setMobileOpen(false);
 
   return (
-    <header className={` border-b border-white/50 z-50 w-full transition-colors duration-300 bg-white`}>
-      <div className="mx-auto flex px-16 items-center justify-between py-3">
+    <header className="border-b border-white/50 z-50 w-full transition-colors duration-300 bg-white">
+      <div className="mx-auto flex px-4 sm:px-6 md:px-10 lg:px-16 items-center justify-between py-2 sm:py-3">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="logo" className="w-32" />
+          <img src={logo} alt="logo" className="w-28 sm:w-32" />
         </Link>
-
-        <nav className="relative hidden md:block" ref={menuRef}>
-          <ul className="flex items-center gap-8">
+        <nav className="relative hidden lg:block" ref={menuRef}>
+          <ul className="flex items-center gap-5 lg:gap-8">
             {menuData.map((menu, i) => {
               const kids = hasChildren(menu);
               return (
@@ -128,7 +137,6 @@ function Navbar() {
                       {kids && <FaChevronDown className={`transition ${activeMenu === i ? "rotate-180" : ""}`} />}
                     </button>
                   )}
-
                   {activeMenu === i && kids && (
                     <div className="absolute left-0 top-full mt-3 z-50 text-white flex gap-6 rounded-lg bg-secondary p-4 shadow-lg">
                       <ul className="min-w-[220px]">
@@ -163,9 +171,8 @@ function Navbar() {
                           );
                         })}
                       </ul>
-
                       {activeSubMenu !== null && hasChildren(menu.children[activeSubMenu]) && (
-                        <ul className="min-w-[240px] rounded bg-gray-700 p-4">
+                        <ul className=" rounded bg-gray-700 p-4">
                           {menu.children[activeSubMenu].children.map((subChild, k) => (
                             <li key={k}>
                               <Link
@@ -190,21 +197,18 @@ function Navbar() {
             })}
           </ul>
         </nav>
-
-        <div className="hidden md:block">
-          <Link to="/contact" className="rounded-full tracking-widest bg-secondary px-8 py-4 text-white hover:bg-primary-light">
+        <div className="hidden lg:block">
+          <Link to="/contact" className="rounded-full tracking-widest bg-secondary px-6 lg:px-8 py-3 sm:py-4 text-white hover:bg-primary-light">
             CONTACT US
           </Link>
         </div>
-
-        <button className="md:hidden" aria-label="Open menu" onClick={() => setMobileOpen((v) => !v)}>
+        <button className="lg:hidden" aria-label="Open menu" onClick={() => setMobileOpen((v) => !v)}>
           {mobileOpen ? <FiX size={24} /> : <FiMenu size={24} />}
         </button>
       </div>
-
       {mobileOpen && (
-        <div className="md:hidden">
-          <div className="mx-auto max-w-7xl px-4 pb-4">
+        <div className="lg:hidden">
+          <div className="mx-auto max-w-2xl px-4 pb-4">
             {menuData.map((node, idx) => (
               <MobileNode key={idx} node={node} closeAll={closeMobile} />
             ))}
