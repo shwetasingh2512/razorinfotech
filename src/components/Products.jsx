@@ -130,17 +130,15 @@ export default function Products() {
         <>
             <HeroSection2 items={items} />
             <HeroSection2 items={items2} />
-
-            <Features items={content} image={phoneImage} />
-
+            <Features items={content} image={phoneImage} imgwidth="w-1/2" />
             <section className="bg-accent px-8 py-16">
                 <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 lg:grid-cols-2">
                     <div className="p-3">
                         <img src="images/Products/phones.png" alt="phones" className="w-full h-auto" />
                     </div>
                     <div>
-                        <h2 className="text-3xl font-semibold text-[var(--color-heading)]">Employee Data Card Management</h2>
-                        <p className="mt-3 max-w-[80%] text-base text-[var(--color-paragraph)] opacity-70">
+                        <h2 className="text-4xl font-semibold text-[var(--color-heading)]">Employee Data Card Management</h2>
+                        <p className="mt-3 lg:max-w-[80%] text-base text-[var(--color-paragraph)] opacity-70">
                             One place for all work information of all the employees in the team across departments at your fingertips.
                         </p>
 
@@ -188,7 +186,7 @@ export default function Products() {
                 <h2 className="mx-auto max-w-[60%] text-center text-3xl font-semibold text-[var(--color-heading)]">
                     Everything You Need to Know Before Choosing Your Next Gadget.
                 </h2>
-                <p className="text-paragraph text-center mx-auto w-3xl mt-8">Discover key tips, features, and comparisons to make a smart tech purchase. Avoid buyer’s remorse by knowing exactly what to look for in your next gadget.</p>
+                <p className="text-paragraph text-center mx-auto lg:w-3xl mt-8">Discover key tips, features, and comparisons to make a smart tech purchase. Avoid buyer’s remorse by knowing exactly what to look for in your next gadget.</p>
 
                 <div className="mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 justify-items-center  ">
                     {defaultItems.map((it, i) => (

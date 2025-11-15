@@ -1,4 +1,4 @@
-export default function Features({ items, image }) {
+export default function Features({ items, image , imgwidth }) {
   return (
     <section className="py-8 sm:py-12 lg:py-16">
       <div className="max-w-full sm:max-w-3xl md:max-w-5xl lg:max-w-7xl mx-auto px-4 sm:px-6">
@@ -32,7 +32,7 @@ export default function Features({ items, image }) {
             <img 
               src={image} 
               alt="feature-image" 
-              className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl h-auto object-cover rounded-2xl"
+              className={`${imgwidth ? imgwidth : 'w-full'} max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl h-auto object-cover rounded-2xl`}
             />
           </div>
         </div>
