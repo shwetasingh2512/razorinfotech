@@ -1,228 +1,294 @@
-import BackgroundImagesection from "../../reusable/BackgroundImagesection"
-import Descriptionsection from "../../reusable/Descriptionsection"
+import { lazy, Suspense } from "react";
+import BackgroundImagesection from "../../reusable/BackgroundImagesection";
+import Descriptionsection from "../../reusable/Descriptionsection";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
-import Faq from "../../reusable/Faq";
 
+const Faq = lazy(() => import("../../reusable/Faq"));
 
-export default function Omnichanel() {
-
+export default function Omnichannel() {
   const firstSection = {
     title: "Omnichannel Support Services",
-    description: "Omnichannel services are a smooth, consistent, and connected way to communicate and enhance customer experience via multiple platforms.",
+    description: "Deliver seamless, consistent customer experiences across phone, email, live chat, social media, and messaging platforms with unified omnichannel support that keeps context across every interaction.",
     image: "/images/omnichanel/omnichanel-hero.png"
-  }
+  };
 
-  const Description = {
-    title: "Smooth, Consistent, and Connected Customer Experiences",
-    description: "Through omnichannel support, businesses are opting for a unified customer service approach. In this, the communication between customers and agents takes place across multiple channels such as calling, email, chat, social media, and more. Under this process, the service provider ensures a consistent and personalized experience to brand customers.",
+  const descriptionSection = {
+    title: "Seamless Customer Experiences Across All Channels",
+    description: "Omnichannel support provides a unified customer service approach where communication flows seamlessly across phone calls, email, live chat, social media, SMS, and messaging apps. Unlike multichannel support, omnichannel integrates all touchpoints into a single system, ensuring agents have complete customer context regardless of the channel used. This creates personalized, consistent experiences that build loyalty, reduce friction, and improve satisfaction while allowing customers to switch channels without repeating information.",
     image: "/images/omnichanel/Smooth.png",
     imgWidth: "w-3/5",
     width: "max-w-7xl",
     background: "bg-background"
-  }
+  };
 
-
-  const benefits = [
+  const keyFeatures = [
     {
       id: 1,
-      title: "Cross-Channel Integration",
-      description:
-        "Unified dashboard for all communications, and consistency among each connection",
+      title: "Unified Cross-Channel Integration",
+      description: "Single dashboard integrating phone, email, chat, social media, and messaging with automatic channel switching and conversation continuity for seamless support."
     },
     {
       id: 2,
       title: "Centralized Customer History",
-      description:
-        "Learn web and app development from scratch and user-friendly websites",
+      description: "Complete customer interaction history across all channels accessible to agents in real-time, enabling personalized service without asking customers to repeat information."
     },
     {
       id: 3,
-      title: "Centralized Customer History",
-      description:
-        "Learn web and app development from scratch and user-friendly websites",
+      title: "Intelligent Routing & Assignment",
+      description: "Smart routing directs customers to the right agent based on expertise, availability, channel preference, and previous interaction history for faster resolution."
     },
     {
       id: 4,
-      title: "Mobile-Ready Support",
-      description:
-        "Omnichannel services are very responsive and mobile-first communication as customers communicate via channels.",
+      title: "Mobile-First Support",
+      description: "Fully responsive omnichannel platform optimized for mobile devices, enabling customers to get support on-the-go with SMS, in-app chat, and mobile-optimized interfaces."
     },
     {
       id: 5,
       title: "Real-Time Analytics & Insights",
-      description:
-        "We track customer interactions, agent performance, and engagement trends with actionable reports to improve efficiency.",
+      description: "Comprehensive dashboards tracking customer interactions, agent performance, channel effectiveness, response times, and CSAT scores with actionable insights for continuous improvement."
     },
     {
       id: 6,
-      title: "Scalable & Flexible System",
-      description:
-        "Whether you’re a growing startup or an enterprise, our omnichannel platform adapts to your business needs with ease.",
+      title: "Scalable & Flexible Platform",
+      description: "Cloud-based infrastructure that scales effortlessly from startups to enterprises, supporting unlimited channels, agents, and customer interactions with flexible pricing models."
     },
   ];
 
-
-  const cards = [
+  const supportedChannels = [
     {
       title: "Phone Support",
-      desc:
-        "We have professionals who handle voice assistance for quick resolutions.",
+      desc: "Professional voice support with IVR integration, call recording, quality monitoring, and seamless transfer capabilities for complex issues requiring personal touch.",
       image: "/images/omnichanel/Phone-Support.jpg",
-      dark: true,
     },
     {
-      title: "Live Chat",
-      desc:
-        "Our team can handle real-time chat with customers to provide instant help.",
+      title: "Live Chat Support",
+      desc: "Real-time website and in-app chat with co-browsing, file sharing, canned responses, and chatbot integration for instant customer assistance and higher conversion rates.",
     },
     {
-      title: "E-mail Support",
-      desc:
-        "For Asynchronous communication for complex issues, we offer email support.",
+      title: "Email Support",
+      desc: "Professional email management with ticketing systems, automated routing, SLA tracking, and templated responses for detailed inquiries requiring comprehensive solutions.",
     },
     {
       title: "Social Media Messaging",
-      desc:
-        "Our team can handle all social media platforms to integrate with your CRM.",
+      desc: "Unified social inbox for Facebook, Instagram, Twitter/X, LinkedIn, and WhatsApp with sentiment analysis, automated responses, and brand monitoring capabilities.",
       image: "/images/omnichanel/Social-Media.jpg",
-      dark: true,
     },
   ];
 
-
-
-  const steps = [
+  const additionalChannels = [
     {
       id: "01",
-      title: "Targeting & Audience Reach",
-      description: "Our service allows businesses to target specific audiences and connect with potential customers based on user behavior, interests, and location."
+      title: "SMS & Text Messaging",
+      description: "Two-way SMS support for appointment reminders, order updates, quick responses, and customer notifications with automated workflows and personalization."
     },
     {
       id: "02",
-      title: "Cost Control",
-      description: "Business just has to pay for the platform only when a user clicks on their ad and visits their website, making it a cost-effective model."
+      title: "Self-Service Portal",
+      description: "Comprehensive knowledge base, FAQs, video tutorials, and community forums empowering customers to find answers independently, reducing support volume by 30-40%."
     },
     {
       id: "03",
-      title: "Flexible Budgets",
-      description: "You can set and control daily or monthly spending limits and adjust your budget in real-time as needed."
+      title: "Video Support",
+      description: "Live video chat and screen sharing for complex technical issues, product demonstrations, personalized consultations, and visual troubleshooting with recording capabilities."
     },
     {
       id: "04",
-      title: "Enhanced Speed & Visibility",
-      description: "Our team makes the ads appear on search engine results pages or social media feeds as soon as the campaign goes live, driving almost instant traffic."
+      title: "Messaging Apps Integration",
+      description: "Support through WhatsApp Business, Telegram, WeChat, and Viber with automated chatbots, rich media sharing, and integration with your CRM system."
     },
     {
       id: "05",
-      title: "Trackable ROI",
-      description: "With every campaign, the business can easily measure the return on investment (ROI) of its campaigns."
+      title: "In-App Messaging",
+      description: "Native mobile and web app messaging with push notifications, proactive engagement, and contextual help based on user behavior and app usage patterns."
     }
   ];
 
-
-  const PPC = [
+  const benefits = [
     {
-      title: "Expert Multichannel Agents",
-      description: "We have trained and skilled agents who work through multichannel support."
+      title: "Expert Omnichannel Agents",
+      description: "Trained specialists proficient in managing multiple channels simultaneously with deep understanding of channel-specific communication styles and customer expectations."
     },
     {
-      title: "Reduced Response Time",
-      description: "Our team uses up-to-date technology for smoother communication and revelation."
+      title: "70% Faster Response Times",
+      description: "Advanced routing, automation, and unified interfaces enable agents to respond 70% faster than traditional multichannel support with context-aware conversations."
     },
     {
-      title: "Smooth Technology Integration",
-      description: "Our team uses up-to-date technology for smoother communication and revelation."
+      title: "Seamless Technology Integration",
+      description: "Integration with leading CRMs (Salesforce, HubSpot, Zendesk), e-commerce platforms, helpdesk software, and custom APIs for complete data synchronization."
     },
     {
-      title: "Improved First-Contact Resolution",
-      description: "With our team, your business gets improved resolution in the first contact, making your brand reputation positive."
+      title: "85% First-Contact Resolution",
+      description: "Complete customer context and intelligent routing result in 85% first-contact resolution rate, significantly improving satisfaction and reducing support costs."
     }
   ];
-
-
 
   const faqs = [
     {
-      question: "What services does Razor Infotech provide?",
-      answer:
-        "We offer end-to-end solutions, including IT services, BPO support, HR management, cloud solutions, cybersecurity, and digital transformation to help businesses scale with confidence.",
+      question: "What is omnichannel support and how is it different from multichannel?",
+      answer: "Omnichannel support integrates all customer communication channels (phone, email, chat, social media, SMS) into a unified system where conversations flow seamlessly across channels with complete context. Unlike multichannel support where channels operate in silos, omnichannel ensures customers can switch channels mid-conversation without repeating information. Agents see complete interaction history regardless of channel used, enabling personalized, consistent experiences that improve satisfaction and loyalty."
     },
     {
-      question: "Who can businesses of different sizes benefit from our services?",
-      answer:
-        "We provide tailored solutions for startups, SMBs, and enterprises, ensuring value at every stage.",
+      question: "What channels are included in your omnichannel support?",
+      answer: "We support phone (voice calls with IVR), live chat (website and in-app), email (ticketing system), social media (Facebook, Instagram, Twitter, LinkedIn, WhatsApp), SMS and text messaging, messaging apps (Telegram, WeChat, Viber), video support (live video chat and screen sharing), self-service portals (knowledge base, FAQs), and in-app messaging with push notifications. All channels integrate into a single platform with unified customer history."
     },
     {
-      question: "How does Razor Infotech ensure quality and security?",
-      answer:
-        "We follow strict compliance, use advanced security practices, and maintain transparency with our clients.",
+      question: "How long does it take to implement omnichannel support?",
+      answer: "Implementation timelines vary based on complexity: Basic setup (2-3 channels) takes 2-4 weeks, standard implementation (4-6 channels with CRM integration) takes 4-6 weeks, and enterprise deployment (all channels, custom integrations, advanced features) takes 8-12 weeks. This includes platform setup, CRM integration, agent training, testing, and gradual rollout with ongoing optimization and support."
     },
     {
-      question: "Can we customize solutions based on your business needs?",
-      answer:
-        "Yes, all our solutions can be customized to fit your unique business goals.",
+      question: "What are the costs and ROI of omnichannel support?",
+      answer: "Costs vary by business size and channels: Small business packages start at $1,500-3,000/month, mid-market solutions range $3,000-8,000/month, and enterprise implementations are $8,000-25,000/month. ROI benefits include 30-40% reduction in support costs through automation, 70% faster response times, 85% first-contact resolution rate, 25% improvement in customer satisfaction, and 35% increase in customer retention through consistent experiences."
     },
   ];
 
-
-
-
   return (
     <>
+      <title>Omnichannel Support Services - Unified Customer Experience Across All Channels | Razor Infotech</title>
+      <meta name="description" content="Professional omnichannel customer support across phone, email, live chat, social media, SMS, and messaging apps. 70% faster response times, 85% first-contact resolution, seamless channel switching." />
+      <meta name="keywords" content="omnichannel support services, omnichannel customer service, multichannel support, unified customer experience, live chat support, social media customer service, integrated support platform, customer engagement platform" />
+      <meta name="author" content="Razor Infotech" />
+      
+      <meta property="og:title" content="Omnichannel Support Services - Seamless Customer Experience" />
+      <meta property="og:description" content="Unified support across all channels: phone, email, chat, social media, SMS. 70% faster responses, 85% first-contact resolution with complete customer context." />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://www.razorinfotech.com/services/omnichannel-support" />
+      <meta property="og:image" content="https://www.razorinfotech.com/images/omnichanel/omnichanel-hero.png" />
+      
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Omnichannel Support Services by Razor Infotech" />
+      <meta name="twitter:description" content="Seamless customer support across all channels. Unified platform, complete context, faster resolution." />
+      <meta name="twitter:image" content="https://www.razorinfotech.com/images/omnichanel/omnichanel-hero.png" />
+      
+      <link rel="canonical" href="https://www.razorinfotech.com/services/omnichannel-support" />
+      
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "serviceType": "Omnichannel Customer Support Services",
+          "provider": {
+            "@type": "Organization",
+            "name": "Razor Infotech",
+            "url": "https://www.razorinfotech.com"
+          },
+          "description": "Professional omnichannel customer support services integrating phone, email, live chat, social media, SMS, messaging apps, and video support with unified customer history, intelligent routing, and real-time analytics for seamless customer experiences.",
+          "areaServed": "Worldwide",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Omnichannel Support Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Phone Support"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Live Chat Support"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Email Support"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Social Media Messaging"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "SMS & Messaging Apps"
+                }
+              }
+            ]
+          }
+        })}
+      </script>
+
       <BackgroundImagesection items={firstSection} />
-      <Descriptionsection items={Description} />
-      <section className="px-6 py-16 bg-white">
-        <p className="text-center text-sm border border-light-green rounded-full px-4 py-1 w-fit mx-auto text-light-green mb-6">
-          Features
-        </p>
-        <h2 className="text-center text-3xl md:text-4xl font-bold text-heading mb-12">
-          Key Features of Razor Infotech’s Omnichannel Service
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {benefits.map((b) => (
-            <div
-              key={b.id}
-              className="bg-background rounded-2xl p-6 shadow-sm"
-            >
-              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-secondary text-white font-bold mb-4">
-                {b.id}
-              </div>
-              <h3 className="text-lg font-semibold text-heading mb-2">
-                {b.title}
-              </h3>
-              <p className="text-paragraph text-sm leading-6">{b.description}</p>
-            </div>
-          ))}
+      <Descriptionsection items={descriptionSection} />
+
+      <section className="px-6 py-16 bg-white" aria-labelledby="features-heading">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-sm border border-secondary rounded-full px-4 py-1 inline-block text-secondary mb-4 font-medium">
+              Key Features
+            </span>
+            <h2 id="features-heading" className="text-3xl md:text-4xl font-bold text-heading">
+              Core Features of Our Omnichannel Platform
+            </h2>
+            <p className="text-paragraph mt-4 max-w-3xl mx-auto">
+              Advanced capabilities that deliver seamless customer experiences across every touchpoint
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {keyFeatures.map((b) => (
+              <article
+                key={b.id}
+                className="bg-background rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div 
+                  className="w-8 h-8 flex items-center justify-center rounded-full bg-secondary text-white font-bold mb-4"
+                  aria-label={`Feature ${b.id}`}
+                >
+                  {b.id}
+                </div>
+                <h3 className="text-lg font-semibold text-heading mb-2">
+                  {b.title}
+                </h3>
+                <p className="text-paragraph text-sm leading-6">{b.description}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
-      <section className="px-6 py-12 bg-accent">
+
+      <section className="px-6 py-12 bg-accent" aria-labelledby="channels-heading">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-center text-2xl font-semibold text-[var(--color-heading)] md:text-3xl">
-            What Channels Do We Support
+          <h2 id="channels-heading" className="text-center text-2xl font-semibold text-[var(--color-heading)] md:text-3xl mb-3">
+            Primary Communication Channels We Support
           </h2>
+          <p className="text-center text-[var(--color-paragraph)]/80 max-w-3xl mx-auto mb-8">
+            Comprehensive support across all major customer communication channels
+          </p>
 
           <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
-            {cards.map((c, i) => (
+            {supportedChannels.map((c, i) => (
               <article
                 key={i}
-                className={`relative overflow-hidden rounded-2xl ring-1 ring-[var(--color-paragraph)]/10 ${c.image ? "p-0" : "bg-[var(--color-background)] p-6"
-                  }`}
+                className={`relative overflow-hidden rounded-2xl ring-1 ring-[var(--color-paragraph)]/10 ${
+                  c.image ? "p-0 min-h-[200px]" : "bg-[var(--color-background)] p-6"
+                }`}
               >
                 {c.image && (
                   <>
                     <img
                       src={c.image}
-                      alt=""
-                      className="h-44 w-full object-cover md:h-48"
+                      alt={`${c.title} illustration`}
+                      className="h-full w-full object-cover"
                       loading="lazy"
                       decoding="async"
+                      width="400"
+                      height="200"
                     />
-                    <div className="absolute inset-0 bg-black/45" />
-                    <div className="absolute inset-0 p-5">
-                      <h3 className="text-lg font-semibold text-white">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30" />
+                    <div className="absolute inset-0 p-5 flex flex-col justify-end">
+                      <h3 className="text-lg font-semibold text-white mb-2">
                         {c.title}
                       </h3>
-                      <p className="mt-2 text-sm leading-6 text-white/85 max-w-[48ch]">
+                      <p className="text-sm leading-6 text-white/90">
                         {c.desc}
                       </p>
                     </div>
@@ -231,10 +297,10 @@ export default function Omnichanel() {
 
                 {!c.image && (
                   <div>
-                    <h3 className="text-lg font-semibold text-[var(--color-heading)]">
+                    <h3 className="text-lg font-semibold text-[var(--color-heading)] mb-2">
                       {c.title}
                     </h3>
-                    <p className="mt-2 text-sm leading-6 text-[var(--color-paragraph)]/80">
+                    <p className="text-sm leading-6 text-[var(--color-paragraph)]/80">
                       {c.desc}
                     </p>
                   </div>
@@ -244,70 +310,73 @@ export default function Omnichanel() {
           </div>
         </div>
       </section>
-      <section className="bg-gradient-to-b from-unique to-accent py-16 px-4 flex justify-center">
-        <div className="max-w-6xl w-full">
-          <div className="flex items-start justify-center gap-6 text-center mb-6">
-            <div>
-              <div className="inline-flex items-center px-4 py-1 rounded-full text-sm border border-light-green mb-4">
-                Our Features
-              </div>
-              <h2 className="text-heading font-bold">
-                Key Features of Our PPC Service
-              </h2>
-              <p className="text-paragraph max-w-3xl mb-10 mt-4">
-                Our data-driven PPC process turns targeted ads into measurable results and every click into real business growth.
-              </p>
-            </div>
 
+      <section className="bg-gradient-to-b from-unique to-accent py-16 px-6" aria-labelledby="additional-channels-heading">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <span className="inline-flex items-center px-4 py-1 rounded-full text-sm border border-secondary text-secondary mb-4 font-medium">
+              Extended Support
+            </span>
+            <h2 id="additional-channels-heading" className="text-3xl md:text-4xl text-heading font-bold mb-4">
+              Additional Support Channels & Features
+            </h2>
+            <p className="text-paragraph max-w-3xl mx-auto">
+              Comprehensive support ecosystem including modern messaging platforms and self-service tools
+            </p>
           </div>
 
-
-
           <div className="space-y-8">
-            {steps.map((s) => (
-              <div
+            {additionalChannels.map((s) => (
+              <article
                 key={s.id}
-                className="grid grid-cols-1 md:grid-cols-12 items-start gap-6"
+                className="grid grid-cols-1 md:grid-cols-12 items-start gap-6 bg-background rounded-2xl p-6 hover:shadow-md transition-shadow"
               >
                 <div className="md:col-span-5 flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-light-green flex items-center justify-center text-white font-semibold">
+                  <div 
+                    className="w-10 h-10 flex-shrink-0 rounded-full bg-secondary flex items-center justify-center text-white font-semibold"
+                    aria-label={`Channel ${s.id}`}
+                  >
                     {s.id}
                   </div>
                   <h3 className="text-heading font-semibold">{s.title}</h3>
                 </div>
 
                 <div className="md:col-span-7">
-                  <p className="text-paragraph">{s.description}</p>
+                  <p className="text-paragraph text-sm leading-relaxed">{s.description}</p>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-accent p-10">
+      <section className="bg-accent p-10" aria-labelledby="benefits-heading">
         <div className="max-w-6xl mx-auto">
-          <div className="head">
-            <h3 className="text-3xl text-heading text-center font-semibold">Benefits of Choosing Razor Infotech for Omnichannel Support</h3>
-          </div>
+          <h3 id="benefits-heading" className="text-3xl text-heading text-center font-semibold mb-3">
+            Benefits of Choosing Razor Infotech for Omnichannel Support
+          </h3>
+          <p className="text-center text-paragraph max-w-3xl mx-auto mb-8">
+            Strategic advantages that improve customer satisfaction while reducing operational costs
+          </p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mx-auto mt-8">
-            {
-              PPC.map((e, i) => (
-                <div className="p-5 bg-background rounded-2xl">
-                  <div className="flex gap-5 items-center">
-                    <IoIosCheckmarkCircleOutline className="text-secondary" />
-                    <span className="text-heading font-semibold">{e.title}</span>
+            {benefits.map((e, i) => (
+              <article key={i} className="p-6 bg-background rounded-2xl hover:shadow-md transition-shadow">
+                <div className="flex gap-4 items-start">
+                  <IoIosCheckmarkCircleOutline className="text-secondary text-2xl flex-shrink-0 mt-1" aria-hidden="true" />
+                  <div>
+                    <h4 className="text-heading font-semibold mb-2">{e.title}</h4>
+                    <p className="text-paragraph text-sm leading-relaxed">{e.description}</p>
                   </div>
-                  <p className="text-paragraph text-base mt-4">{e.description}</p>
                 </div>
-              ))
-            }
+              </article>
+            ))}
           </div>
         </div>
       </section>
-      <Faq faqs={faqs} />
 
-
+      <Suspense fallback={<div className="text-center py-10 text-paragraph">Loading FAQs...</div>}>
+        <Faq faqs={faqs} />
+      </Suspense>
     </>
-  )
+  );
 }

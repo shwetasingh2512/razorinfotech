@@ -11,7 +11,7 @@ const testimonials = [
   },
   {
     name: "Hasan",
-    role: "Developer, Company", 
+    role: "Developer, Company",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face",
     rating: 4,
     review:
@@ -37,95 +37,59 @@ const testimonials = [
 
 export default function TestimonialCarousel() {
   const duplicatedTestimonials = [...testimonials, ...testimonials, ...testimonials];
-
   return (
-    <>
+    <div className="py-10">
+      <div className="overflow-x-hidden relative w-full mb-4">
+        <div
+          className="flex gap-6 animate-scroll-left"
+          style={{ minWidth: "max-content" }}
+        >
+          {duplicatedTestimonials.map((testimonial, index) => (
+            <Card key={`top-${index}`} {...testimonial} />
+          ))}
+        </div>
+      </div>
+      <div className="overflow-x-hidden relative w-full mt-12">
+        <div
+          className="flex gap-6 animate-scroll-right"
+          style={{ minWidth: "max-content" }}
+        >
+          {duplicatedTestimonials.map((testimonial, index) => (
+            <Card key={`bottom-${index}`} {...testimonial} />
+          ))}
+        </div>  
+      </div>
       <style>
         {`
-          .carousel-container {
-            overflow: hidden;
-            position: relative;
-            width: 100%;
-            margin-bottom: 1rem;
+          @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-33.333%); }
           }
-
-          .carousel-track {
-            display: flex;
-            gap: 2rem;
-            width: calc(350px * ${duplicatedTestimonials.length});
-            animation-duration: 30s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
+          @keyframes scroll-right {
+            0% { transform: translateX(-33.333%); }
+            100% { transform: translateX(0); }
           }
-
-          .carousel-track-left {
-            animation-name: scroll-left-seamless;
+          .animate-scroll-left {
+            animation: scroll-left 30s linear infinite;
           }
-
-          .carousel-track-right {
-            animation-name: scroll-right-seamless;
+          .animate-scroll-right {
+            animation: scroll-right 30s linear infinite;
           }
-
-          @keyframes scroll-left-seamless {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(calc(-350px * ${testimonials.length} - 1rem * ${testimonials.length}));
-            }
-          }
-
-          @keyframes scroll-right-seamless {
-            0% {
-              transform: translateX(calc(-350px * ${testimonials.length} - 1rem * ${testimonials.length}));
-            }
-            100% {
-              transform: translateX(0);
-            }
-          }
-
-          .carousel-container:hover .carousel-track {
+          .overflow-x-hidden:hover .animate-scroll-left,
+          .overflow-x-hidden:hover .animate-scroll-right {
             animation-play-state: paused;
-          }
-
-          .testimonial-card {
-            width: 400px;
-            height: 250px;
-            flex-shrink: 0;
-            display: flex;
-            flex-direction: column;
           }
         `}
       </style>
-      
-      <div className="py-10">
-        {/* Top row - left to right */}
-        <div className="carousel-container">
-          <div className="carousel-track carousel-track-left">
-            {duplicatedTestimonials.map((testimonial, index) => (
-              <Card key={`top-${index}`} {...testimonial} />
-            ))}
-          </div>
-        </div>
-
-        {/* Bottom row - right to left */}
-        <div className="carousel-container mt-12">
-          <div className="carousel-track carousel-track-right">
-            {duplicatedTestimonials.map((testimonial, index) => (
-              <Card key={`bottom-${index}`} {...testimonial} />
-            ))}
-          </div>
-        </div>
-      </div>
-    </>
+    </div>
   );
 }
 
 function Card({ name, role, image, rating, review }) {
   return (
-    <div className="testimonial-card bg-accent rounded-xl p-5 text-heading">
+    <div className="bg-accent rounded-xl p-4 md:p-5 text-heading flex flex-col justify-between w-72 sm:w-80 md:w-96 h-60 sm:h-56 md:h-64 flex-shrink-0">
       <div className="flex items-center gap-2 mb-3">
-        <img src={image} alt={name} className="w-12 h-12 rounded-full object-cover flex-shrink-0" />
+        <img src={image} alt={name} className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover flex-shrink-0" />
         <div className="flex-grow min-w-0">
           <h4 className="font-semibold text-sm truncate">{name}</h4>
           <p className="text-xs text-paragraph truncate">{role}</p>
@@ -136,10 +100,9 @@ function Card({ name, role, image, rating, review }) {
           ))}
         </div>
       </div>
-
       <FaQuoteLeft className="text-lg text-secondary mb-2" />
       <div className="flex-grow overflow-hidden">
-        <p className="text-paragraph text-sm leading-relaxed line-clamp-6">{review}</p>
+        <p className="text-paragraph text-xs sm:text-sm leading-relaxed line-clamp-5">{review}</p>
       </div>
     </div>
   );

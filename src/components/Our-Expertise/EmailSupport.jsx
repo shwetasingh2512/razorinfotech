@@ -1,178 +1,233 @@
+import { lazy, Suspense } from "react";
 import { ArrowRight } from "lucide-react";
 import { FaDotCircle } from "react-icons/fa";
-import Faq from "../../reusable/Faq";
+import { Link } from "react-router-dom";
 import BackgroundImagesection from "../../reusable/BackgroundImagesection";
 
+const Faq = lazy(() => import("../../reusable/Faq"));
 
 export default function EmailSupport() {
-
-    const STEPS = [
+    const processSteps = [
         {
             n: 1,
-            title: "Get the Customer's Email",
-            desc:
-                "The client sends a support request or email query to the assigned support email address.",
+            title: "Ticket Receipt & Categorization",
+            desc: "Customer emails are received through dedicated support addresses, automatically categorized by urgency and topic, and assigned to specialized agents.",
         },
         {
             n: 2,
-            title: "Analysis of Issues",
-            desc:
-                "Our Email support specialists thoroughly examine the problems to determine the reasons for them.",
+            title: "Issue Analysis & Research",
+            desc: "Support specialists thoroughly examine the inquiry, review account history, and research solutions using knowledge bases and internal documentation.",
         },
         {
             n: 3,
-            title: "Fix Problems",
-            desc:
-                "Then our team provides a response based on the complexity of the problem.",
+            title: "Solution Development & Response",
+            desc: "Agents craft clear, comprehensive responses with step-by-step solutions, relevant resources, and personalized recommendations based on complexity.",
         },
         {
             n: 4,
-            title: "The Rise of Issues",
-            desc:
-                "For more complicated problems, the team refers the issue to specialist teams or higher-level support.",
+            title: "Escalation Management",
+            desc: "Complex or technical issues are escalated to specialized teams or senior support levels with complete context transfer for seamless resolution.",
         },
         {
             n: 5,
-            title: "Observation & Verification",
-            desc:
-                "After the issue has been fixed, our team contacts the client again to find out how satisfied they are.",
+            title: "Follow-Up & Verification",
+            desc: "After resolution, our team proactively follows up to confirm issue resolution, gather feedback, and ensure complete customer satisfaction.",
         },
         {
             n: 6,
-            title: "Records",
-            desc:
-                "Details of the email exchange and its resolution are documented for future use and monitoring.",
+            title: "Documentation & Analytics",
+            desc: "All interactions are logged in CRM systems for tracking, quality assurance, knowledge base updates, and continuous improvement analysis.",
         },
     ];
 
     function StepCard({ n, title, desc }) {
         return (
-            <article className="rounded-2xl bg-[var(--color-background)] p-12 ring-1 ring-[var(--color-paragraph)]/10">
-                <div className="flex gap-4 items-center">
-                    <span className="grid h-7 w-7 place-items-center rounded-full bg-[var(--color-secondary)] text-[var(--color-accent)] text-sm font-semibold">
+            <article className="rounded-2xl bg-[var(--color-background)] p-8 ring-1 ring-[var(--color-paragraph)]/10 hover:shadow-md transition-shadow">
+                <div className="flex gap-4 items-center mb-3">
+                    <span className="grid h-8 w-8 flex-shrink-0 place-items-center rounded-full bg-[var(--color-secondary)] text-[var(--color-accent)] text-sm font-semibold" aria-label={`Step ${n}`}>
                         {n}
                     </span>
-                    <h3 className=" text-[var(--color-heading)] font-semibold">{title}</h3>
+                    <h3 className="text-[var(--color-heading)] font-semibold text-base">{title}</h3>
                 </div>
-                <p className="mt-2 text-[var(--color-paragraph)]/80 text-sm leading-6">{desc}</p>
+                <p className="text-[var(--color-paragraph)]/80 text-sm leading-6">{desc}</p>
             </article>
         );
     }
 
-
-    const items = [
+    const benefits = [
         {
-            title: "Reliability",
-            desc:
-                "At Razor Infotech, our team provides a stable and dependable email support for your business. With our service, businesses that are less proficient with modern technology can provide enhanced customer support. We protect the data and privacy of each business and customer. Our team goes through the attached files to offer a more thorough solution to customer queries or issues.",
+            title: "99.5% Accuracy & Reliability",
+            desc: "Our team provides stable, dependable email support with rigorous quality checks. We protect data privacy with enterprise-grade security, analyze attachments for context, and deliver thorough, accurate solutions to every customer inquiry.",
         },
         {
-            title: "Accessibility",
-            desc:
-                "Email is accessible to each and every person, whether it is for personal or business use. This compatibility of the platforms makes it easy for customers to raise queries through email. Our team provides them compatibility with all devices. Email is something that customers can easily access at any time and from any location as they are configured into smart devices.",
+            title: "Universal Accessibility",
+            desc: "Email support is accessible to everyone across all devices and platforms—smartphones, tablets, desktops. Customers can reach out anytime, from anywhere, without technical barriers or platform restrictions, ensuring inclusive support.",
         },
         {
-            title: "Easy to Track",
-            desc:
-                "Every email record of clients and customers is followed up and tracked by our support team. As these emails are an easy, traceable source in identifying issues and providing a much better solution, as a result of research. Moreover, our staff can also review the exchange in case the same issue arises with a different client in the future.",
+            title: "Complete Audit Trail",
+            desc: "Every customer interaction is tracked and documented, creating searchable records for issue resolution, quality assurance, and trend analysis. Historical context enables faster problem-solving and knowledge base enrichment.",
         },
         {
-            title: "IGiving Authority to Customers",
-            desc:
-                "Through email, customers get the authority to raise complaints to businesses whenever convenient for them, rather than waiting on lengthy call holds. Under this, customers/clients have greater control over their schedule when using email assistance. While they wait for a resolution or respond, they can simply take care of other personal matters rather than remaining on the line.",
+            title: "Customer Empowerment",
+            desc: "Customers control when they reach out—no phone queues or hold times. They can respond at their convenience while handling other tasks, creating a stress-free, flexible support experience that respects their time.",
         },
         {
-            title: "Scalable",
-            desc:
-                "Our team of skilled agents can manage several issues at once and provide high-quality assistance. Additionally, it is simple to combine our support with your company's email support system, which uses other channels, like voice or chat help, so your business can provide omnichannel assistance without breaking the bank.",
+            title: "Scalable & Cost-Effective",
+            desc: "Our agents efficiently handle multiple inquiries simultaneously, maintaining quality across high volumes. Email support integrates seamlessly with chat, phone, and social channels for omnichannel service at lower cost than voice-only support.",
         },
     ];
 
     const faqs = [
         {
-            question: "What services does Razor Infotech provide?",
-            answer:
-                "We offer end-to-end solutions, including IT services, BPO support, HR management, cloud solutions, cybersecurity, and digital transformation to help businesses scale with confidence.",
+            question: "What types of issues can email support handle?",
+            answer: "Email support handles account inquiries, technical troubleshooting, billing questions, product information requests, order status updates, feature guidance, bug reports, and general customer service. Complex technical issues may be escalated to specialized teams.",
         },
         {
-            question: "Who can businesses of different sizes benefit from our services?",
-            answer:
-                "We provide tailored solutions for startups, SMBs, and enterprises, ensuring value at every stage.",
+            question: "What are your email support response times?",
+            answer: "Standard responses within 4-8 hours during business hours, priority inquiries within 2-4 hours, and urgent escalations within 1 hour. We offer 24/7 email support with global coverage across time zones for enterprise clients.",
         },
         {
-            question: "How does Razor Infotech ensure quality and security?",
-            answer:
-                "We follow strict compliance, use advanced security practices, and maintain transparency with our clients.",
+            question: "How do you ensure email support quality and accuracy?",
+            answer: "We maintain quality through agent training and certification, response templates and knowledge bases, multi-level quality assurance reviews, customer satisfaction surveys (CSAT), performance metrics tracking, and continuous feedback loops for improvement.",
         },
         {
-            question: "Can we customize solutions based on your business needs?",
-            answer:
-                "Yes, all our solutions can be customized to fit your unique business goals.",
+            question: "Can email support integrate with our existing systems?",
+            answer: "Yes, we integrate with leading CRM platforms (Salesforce, HubSpot, Zendesk), help desk software, ticketing systems, e-commerce platforms, and custom APIs. This enables seamless data flow, unified customer views, and automated workflows.",
         },
     ];
 
-
-    const POINTS = [
+    const keyBenefits = [
         "Scalable for Growing Businesses",
-        "Record Keeping and Documentation",
-        "Cost-Effective Solution",
-        "Enables Detailed Communication",
-        "Builds Professionalism and Trust",
+        "Complete Record Keeping & Documentation",
+        "Cost-Effective Support Solution",
+        "Enables Detailed, Thorough Communication",
+        "Builds Professionalism and Customer Trust",
     ];
 
-    const firstsection ={
-        title:" Email Support Service",
-        description:` Our email support service method provides business support using their email
-                        to address customer inquiries, issues, and offer assistance.`,
-        image:"/images/Email-support/Email-support-background.png"
-    }
+    const firstsection = {
+        title: "Professional Email Support Services",
+        description: "Deliver exceptional customer experiences through professional email support. Our trained specialists provide timely, accurate, and personalized assistance—handling inquiries, resolving issues, and building lasting customer relationships through efficient email communication.",
+        image: "/images/Email-support/Email-support-background.png"
+    };
 
     return (
         <>
-            <BackgroundImagesection items={firstsection}/>
-            <section className="p-10 bg-accent">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center p-20 mx-auto max-w-7xl">
+            <title>Email Support Services - 24/7 Customer Email Support Outsourcing | Razor Infotech</title>
+            <meta name="description" content="Professional email support services with 4-8 hour response times. Handle customer inquiries, technical issues, and support tickets efficiently. Scale your email support while reducing costs 40-50%." />
+            <meta name="keywords" content="email support services, customer email support, email support outsourcing, help desk email support, technical email support, customer service email, email ticket management, 24/7 email support, email response services" />
+            <meta name="author" content="Razor Infotech" />
+            
+            <meta property="og:title" content="Email Support Services - Professional Customer Support via Email" />
+            <meta property="og:description" content="Outsource email support to trained specialists. Fast response times, complete documentation, and scalable solutions for businesses of all sizes." />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.razorinfotech.com/services/email-support" />
+            <meta property="og:image" content="https://www.razorinfotech.com/images/Email-support/Email-support-background.png" />
+            
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="Email Support Services by Razor Infotech" />
+            <meta name="twitter:description" content="Professional email support with fast response times. Reduce costs while improving customer satisfaction with expert email support outsourcing." />
+            <meta name="twitter:image" content="https://www.razorinfotech.com/images/Email-support/Email-support-background.png" />
+            
+            <link rel="canonical" href="https://www.razorinfotech.com/services/email-support" />
+            
+            <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Service",
+                    "serviceType": "Email Support Services",
+                    "provider": {
+                        "@type": "Organization",
+                        "name": "Razor Infotech",
+                        "url": "https://www.razorinfotech.com"
+                    },
+                    "description": "Professional email support outsourcing services providing timely responses to customer inquiries, technical support, billing questions, and general assistance with complete documentation and quality assurance.",
+                    "areaServed": "Worldwide",
+                    "hasOfferCatalog": {
+                        "@type": "OfferCatalog",
+                        "name": "Email Support Services",
+                        "itemListElement": [
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Customer Email Support"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Technical Email Support"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Email Ticket Management"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "24/7 Email Support Coverage"
+                                }
+                            }
+                        ]
+                    }
+                })}
+            </script>
+
+            <BackgroundImagesection items={firstsection} />
+
+            <section className="p-10 bg-accent" aria-labelledby="overview-heading">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center lg:p-20 mx-auto max-w-7xl">
                     <div>
                         <img
                             src="/images/Email-support/Difference.png"
-                            alt="Email Support"
+                            alt="Professional email support team responding to customer inquiries"
                             className="w-full rounded-2xl object-cover"
+                            loading="lazy"
+                            width="600"
+                            height="400"
                         />
                     </div>
                     <div className="flex flex-col justify-center">
-                        <h2 className="text-heading mb-4 text-4xl font-semibold">
+                        <h2 id="overview-heading" className="text-heading mb-4 text-2xl md:text-4xl font-semibold">
                             Email Support That Makes A Difference
                         </h2>
-                        <p className="text-paragraph mb-6">
-                            With email, clients or customers of your business can send an inquiry
-                            whenever it's convenient to them and get a response as soon as
-                            possible. Through email, the customers are freed up from long,
-                            frustrating phone calls or waiting on hold. Both client and business
-                            have email records on themselves through which they can manually track
-                            problems and go back to earlier exchanges.
+                        <p className="text-paragraph mb-6 text-base lg:text-lg">
+                            With professional email support, customers send inquiries on their schedule and receive timely, comprehensive responses—no frustrating hold times or rushed phone calls. Complete email records enable accurate tracking, detailed documentation, and reference to previous interactions for consistent, high-quality support experiences.
                         </p>
-                        <button className="flex items-center gap-2 pl-6 py-3 rounded-full bg-secondary text-white font-medium w-fit hover:opacity-90 transition">
+                        <Link
+                            to="/contact"
+                            className="flex items-center gap-2 pl-6 py-3 rounded-full bg-secondary text-white font-medium w-fit hover:opacity-90 transition"
+                            aria-label="Contact our email support specialists"
+                        >
                             Talk to Our Support Specialists
-                            <div className="bg-white/20 rounded-full p-3 mr-2"><ArrowRight className="w-5 h-5" /></div>
-                        </button>
+                            <div className="bg-white/20 rounded-full p-3 mr-2" aria-hidden="true">
+                                <ArrowRight className="w-5 h-5" />
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </section>
-            <section className="bg-[var(--color-background)] px-6 py-16">
+
+            <section className="bg-[var(--color-background)] px-6 py-16" aria-labelledby="benefits-heading">
                 <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 md:grid-cols-2">
                     <div>
-                        <h2 className="text-3xl font-semibold leading-tight text-[var(--color-heading)] md:text-4xl">
-                            Benefits of Choosing Our Email
-                            <br /> Support Services
+                        <h2 id="benefits-heading" className="text-3xl font-semibold leading-tight text-[var(--color-heading)] md:text-4xl">
+                            Key Benefits of Email Support Services
                         </h2>
 
-                        <ul className="mt-8 space-y-4">
-                            {POINTS.map((p) => (
-                                <li key={p} className="flex items-center gap-3 text-[var(--color-heading)]">
-                                    <span className="grid h-6 w-6 place-items-center rounded-full bg-[var(--color-secondary)]/15 text-[var(--color-secondary)]">
+                        <ul className="mt-8 space-y-4" role="list">
+                            {keyBenefits.map((p, index) => (
+                                <li key={index} className="flex items-center gap-3 text-[var(--color-heading)]">
+                                    <span className="grid h-6 w-6 flex-shrink-0 place-items-center rounded-full bg-[var(--color-secondary)]/15 text-[var(--color-secondary)]" aria-hidden="true">
                                         <FaDotCircle className="h-4 w-4 text-secondary" />
                                     </span>
-                                    <span className="text-lg">{p}</span>
+                                    <span className="text-base lg:text-lg">{p}</span>
                                 </li>
                             ))}
                         </ul>
@@ -181,52 +236,64 @@ export default function EmailSupport() {
                     <div className="overflow-hidden rounded-[20px]">
                         <img
                             src="/images/Email-support/Frame 2085666931.png"
-                            alt="Typing on keyboard"
+                            alt="Email support specialist providing customer assistance"
                             className="h-auto w-full object-cover"
                             loading="lazy"
+                            width="600"
+                            height="400"
                         />
                     </div>
                 </div>
             </section>
-            <section className="bg-gradient-to-b from-[var(--color-unique)] to-[var(--color-accent)] px-6 py-14">
+
+            <section className="bg-gradient-to-b from-[var(--color-unique)] to-[var(--color-accent)] px-6 py-14" aria-labelledby="detailed-benefits-heading">
                 <div className="mx-auto max-w-5xl">
-                    <h2 className="text-center text-2xl font-semibold text-[var(--color-heading)] md:text-3xl">
-                        Benefits of Choosing Our Email Support Services
+                    <h2 id="detailed-benefits-heading" className="text-center text-2xl font-semibold text-[var(--color-heading)] md:text-3xl mb-3">
+                        Why Choose Our Email Support Services
                     </h2>
+                    <p className="text-center text-[var(--color-paragraph)]/80 max-w-3xl mx-auto mb-10">
+                        Professional email management that enhances customer satisfaction and operational efficiency
+                    </p>
 
                     <div className="mt-10 space-y-10">
-                        {items.map((it, idx) => (
-                            <div key={idx} className="space-y-3">
-                                <span className="text-[var(--color-secondary)] font-medium text-2xl">
+                        {benefits.map((it, idx) => (
+                            <article key={idx} className="space-y-3">
+                                <span className="text-[var(--color-secondary)] font-medium text-xl" aria-label={`Benefit ${idx + 1}`}>
                                     {String(idx + 1).padStart(2, "0")}
                                 </span>
                                 <h3 className="text-lg font-semibold text-[var(--color-heading)]">
                                     {it.title}
                                 </h3>
-                                <p className="max-w-[78ch] text-[var(--color-paragraph)]/80">
+                                <p className="max-w-[85ch] text-[var(--color-paragraph)]/80">
                                     {it.desc}
                                 </p>
-                                <hr className="mt-4 border-[var(--color-paragraph)]/20" />
-                            </div>
+                                <hr className="mt-4 border-[var(--color-paragraph)]/20" aria-hidden="true" />
+                            </article>
                         ))}
                     </div>
                 </div>
             </section>
-            <section className="px-6 py-14 bg-accent">
-                <div className="mx-auto max-w-6xl">
-                    <h2 className="text-center text-2xl font-semibold text-[var(--color-heading)] md:text-3xl">
-                        Working Process of Our Email
-                        <br />Support Service
-                    </h2>
 
-                    <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                        {STEPS.map((s) => (
+            <section className="px-6 py-14 bg-background" aria-labelledby="process-heading">
+                <div className="mx-auto max-w-6xl">
+                    <h2 id="process-heading" className="text-center text-2xl font-semibold text-[var(--color-heading)] md:text-3xl mb-3">
+                        Our Email Support Process
+                    </h2>
+                    <p className="text-center text-[var(--color-paragraph)]/80 max-w-3xl mx-auto mb-10">
+                        A systematic 6-step workflow ensuring accurate, timely, and professional email support
+                    </p>
+
+                    <ol className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 list-none">
+                        {processSteps.map((s) => (
                             <StepCard key={s.n} {...s} />
                         ))}
-                    </div>
+                    </ol>
                 </div>
             </section>
-            <Faq faqs={faqs} />
+
+            <Suspense fallback={<div className="text-center py-10 text-paragraph">Loading FAQs...</div>}>
+                <Faq faqs={faqs} />
+            </Suspense>
         </>
-    )
+    );
 }

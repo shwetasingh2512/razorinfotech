@@ -1,182 +1,293 @@
+import { lazy, Suspense } from "react";
 import { ArrowRight } from "lucide-react";
-import { Inbox, Send, Mail, Link2 } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Headset, LifeBuoy, Phone, Clock } from "lucide-react";
 import BackgroundImagesection from "../../reusable/BackgroundImagesection";
 
-export default function InboundServices() {
+const Faq = lazy(() => import("../../reusable/Faq"));
 
-    const cards = [
+export default function InboundServices() {
+    const inboundServices = [
         {
-            title: "Customer Service ",
-            desc:
-                "Our experienced telemarketing team contacts potential customers, introduces your products or services, and schedules qualified appointments for your sales team",
+            title: "Customer Service & Support",
+            desc: "Professional handling of customer inquiries, product information requests, order status updates, account management, complaint resolution, and general assistance to ensure positive customer experiences.",
             image: "/images/Inbound-services/Customer.png",
-            dark: true,
         },
         {
             title: "Technical Support",
-            desc:
-                "With helpdesk, the business is provided with comprehensive support for customer needs. This includes software support, product information, and general inquiries that customers might encounter.",
+            desc: "Specialized technical assistance for software troubleshooting, product setup, system diagnostics, bug reporting, and complex issue resolution with trained IT support professionals.",
         },
         {
-            title: "Helpdesk",
-            desc:
-                "Technical Support offers clients specialized support to help the customer with any technical issues with products or services. The professionals first diagnose the problems, then provide solutions and guidance to customers in a complex tech process.",
+            title: "Helpdesk Services",
+            desc: "Comprehensive first-level support covering IT helpdesk, product information, warranty inquiries, billing questions, and general customer service across multiple channels.",
         },
         {
-            title: "Scheduling Appointment",
-            desc:
-                "Scheduling appointment services caters to clients' plans and helps manage appointments and reservations. Under this service, they provide handling booking, confirming, and rescheduling to maintain the calendar.",
+            title: "Appointment Scheduling",
+            desc: "Professional calendar management including appointment booking, confirmation calls, rescheduling, reminder services, and cancellation handling to optimize your business operations.",
             image: "/images/Inbound-services/Scheduling.png",
-            dark: true,
+        },
+        {
+            title: "Order Processing",
+            desc: "Efficient order taking, payment processing, order confirmation, tracking updates, and modification handling to streamline your sales operations and improve customer satisfaction.",
+        },
+        {
+            title: "Emergency Hotlines",
+            desc: "24/7 urgent call handling for emergency services, roadside assistance, healthcare hotlines, and crisis management with immediate response protocols and escalation procedures.",
         },
     ];
 
-
-    const items = [
+    const industries = [
         {
-            title: "E-commerce Companies",
-            desc:
-                "These companies use inbound services to answer customers' questions, take orders, and assist customers with problems that arise during their purchases.",
+            title: "E-commerce & Retail",
+            desc: "Handle product inquiries, order processing, returns and refunds, shipping questions, payment issues, and customer complaints to maintain high satisfaction and repeat purchases.",
         },
         {
-            title: "Telecom Businesses",
-            desc:
-                "Telecom companies through our inbound call center service are helped in managing customer service concerns like service and payment, IT support, and problem-solving. ",
+            title: "Telecommunications",
+            desc: "Manage service activations, billing inquiries, technical troubleshooting, plan upgrades, network issues, and account management for telecom providers and ISPs.",
         },
         {
-            title: "Healthcare Organization",
-            desc:
-                "In healthcare organizations, inbound services are mostly used by hospitals, clinics, and medical centers to help with appointments, patient support, billing, and diagnosis.",
+            title: "Healthcare Organizations",
+            desc: "Provide appointment scheduling, patient inquiries, insurance verification, prescription refills, billing questions, and HIPAA-compliant support for hospitals, clinics, and medical practices.",
         },
         {
-            title: "Hospitality Services",
-            desc:
-                "The travel and tourism industry can outsource call center services to handle reservations, customer inquiries, and resolve any issues related to customers.",
-        }
+            title: "Travel & Hospitality",
+            desc: "Handle reservations, booking modifications, cancellations, travel inquiries, loyalty programs, and customer service for hotels, airlines, travel agencies, and tourism businesses.",
+        },
+        {
+            title: "Financial Services",
+            desc: "Manage account inquiries, transaction support, fraud alerts, loan applications, credit card services, and secure customer authentication for banks and financial institutions.",
+        },
+        {
+            title: "Technology & SaaS",
+            desc: "Provide product onboarding, subscription management, technical support, feature inquiries, and upgrade assistance for software companies and tech startups.",
+        },
     ];
 
-    const rows = [
+    const comparisonRows = [
         {
             aspect: "Main Function",
-            inbound: "Handling of incoming calls from customers.",
-            outbound: "Making outgoing calls to customers.",
+            inbound: "Receiving and handling incoming calls from customers",
+            outbound: "Making proactive outgoing calls to prospects/customers",
         },
         {
             aspect: "Call Initiation",
-            inbound: "Customer-initiated",
-            outbound: "Agent-initiated",
+            inbound: "Customer-initiated contact",
+            outbound: "Business/agent-initiated contact",
         },
         {
-            aspect: "Purpose",
-            inbound: "Sorting out customer issues, provide information, support.",
-            outbound: "Generating leads, sell services/products, conduct surveys",
+            aspect: "Primary Purpose",
+            inbound: "Resolve issues, provide support, answer questions, process orders",
+            outbound: "Generate leads, conduct sales, surveys, follow-ups, appointments",
         },
         {
             aspect: "Call Nature",
-            inbound: "Mainly reactive based off customer needs.",
-            outbound: "Proactive as per business strategy.",
+            inbound: "Reactive - responding to customer needs",
+            outbound: "Proactive - driving business objectives",
         },
         {
-            aspect: "Technology Used",
-            inbound:
-                "Interactive Voice Response (IVR), Customer Relationship Management (CRM)",
-            outbound: "Sales techniques, convincing, compliance",
+            aspect: "Key Technologies",
+            inbound: "IVR, ACD, CRM, ticketing systems, knowledge bases",
+            outbound: "Predictive dialers, CRM, sales automation, compliance tools",
+        },
+        {
+            aspect: "Success Metrics",
+            inbound: "First call resolution, average handle time, customer satisfaction",
+            outbound: "Conversion rate, contact rate, revenue generated, appointments set",
         },
     ];
 
-    const services = [
+    const benefits = [
         {
-            icon: <Inbox className="w-6 h-6 text-white" />,
-            title: "INBOUND SERVICES",
-            description:
-                "From inquiries to issue resolution, we provide fast, reliable inbound services that keep your customers engaged and satisfied.",
-            link: "#"
+            icon: <Headset className="w-6 h-6 text-white" />,
+            title: "24/7 Availability",
+            description: "Round-the-clock inbound support ensures customers can reach you anytime, improving satisfaction and capturing opportunities across time zones.",
         },
         {
-            icon: <Send className="w-6 h-6 text-white" />,
-            title: "OUTBOUND SERVICES",
-            description:
-                "Upgrade your business level with top-quality outbound call services. We are offering enhanced outbound support to businesses of every size.",
-            link: "#"
+            icon: <LifeBuoy className="w-6 h-6 text-white" />,
+            title: "Trained Professionals",
+            description: "Experienced agents with industry-specific training handle calls professionally, ensuring consistent quality and positive brand representation.",
         },
         {
-            icon: <Link2 className="w-6 h-6 text-white" />,
-            title: "OMNICHANNEL SUPPORT SERVICES",
-            description:
-                "Omnichannel services are a smooth, consistent, and connected way to communicate and enhance customer experience via multiple platforms.",
-            link: "#"
+            icon: <Phone className="w-6 h-6 text-white" />,
+            title: "Scalable Capacity",
+            description: "Easily scale call handling capacity during peak seasons, product launches, or campaigns without infrastructure investment or hiring delays.",
         },
         {
-            icon: <Mail className="w-6 h-6 text-white" />,
-            title: "EMAIL SUPPORT SERVICES",
-            description:
-                "Our email support service method provides business support using their email to address customer inquiries, issues, and offer assistance.",
-            link: "#"
-        }
+            icon: <Clock className="w-6 h-6 text-white" />,
+            title: "Reduced Response Time",
+            description: "Advanced routing, IVR systems, and optimized workflows ensure customers reach the right agent quickly, improving first-call resolution by 35%.",
+        },
     ];
 
+    const faqs = [
+        {
+            question: "What is inbound call center service?",
+            answer: "Inbound call center service involves receiving and managing incoming calls from customers who need support, information, or assistance. This includes customer service inquiries, technical support, order processing, appointment scheduling, helpdesk support, and complaint resolution. Agents are trained to handle customer needs professionally, resolve issues efficiently, and provide positive experiences that build loyalty."
+        },
+        {
+            question: "What industries benefit most from inbound services?",
+            answer: "Virtually all customer-facing industries benefit, especially e-commerce and retail (order support, returns), healthcare (appointment scheduling, patient inquiries), telecommunications (technical support, billing), financial services (account management, fraud alerts), travel and hospitality (reservations, bookings), technology and SaaS (technical support, onboarding), and insurance (claims, policy inquiries)."
+        },
+        {
+            question: "How do you ensure quality in inbound call handling?",
+            answer: "We maintain quality through comprehensive agent training, regular quality monitoring and call audits, customer satisfaction surveys (CSAT/NPS), first-call resolution tracking, adherence to service level agreements (SLAs), ongoing coaching and feedback, CRM integration for context, and performance metrics dashboards with continuous improvement processes."
+        },
+        {
+            question: "Can inbound services integrate with our existing systems?",
+            answer: "Yes, we integrate with leading CRM platforms (Salesforce, HubSpot, Zendesk), helpdesk software (Freshdesk, ServiceNow), e-commerce platforms (Shopify, WooCommerce), telephony systems, ticketing tools, and custom APIs. This ensures seamless data flow, unified customer views, automated workflows, and comprehensive reporting across your business systems."
+        },
+    ];
 
     const firstsection = {
-        title: "Smarter Inbound Support for Your Business",
-        description: `From inquiries to issue resolution, we provide fast, reliable inbound services that keep your customers engaged and satisfied.`,
+        title: "Professional Inbound Call Center Services",
+        description: "Deliver exceptional customer experiences with expert inbound support. From inquiries and technical issues to order processing and appointments, we provide fast, reliable service that keeps customers engaged and builds lasting loyalty.",
         image: "/images/Inbound-services/Inbound-background-hero.png"
-    }
-
+    };
 
     return (
         <>
-            <BackgroundImagesection items={firstsection}/>
-            <section className="p-10 bg-accent">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center p-20 mx-auto max-w-7xl">
+            <title>Inbound Call Center Services - 24/7 Customer Support & Tech Support | Razor Infotech</title>
+            <meta name="description" content="Professional inbound call center services with 24/7 availability. Handle customer inquiries, technical support, order processing, and appointments. Improve first-call resolution by 35%." />
+            <meta name="keywords" content="inbound call center services, inbound customer service, inbound support, technical support call center, customer service outsourcing, helpdesk services, 24/7 call center, appointment scheduling services" />
+            <meta name="author" content="Razor Infotech" />
+            
+            <meta property="og:title" content="Inbound Call Center Services - Expert Customer Support 24/7" />
+            <meta property="og:description" content="Professional inbound support for customer service, technical help, order processing, and more. Scale easily with trained agents and advanced technology." />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.razorinfotech.com/services/inbound-services" />
+            <meta property="og:image" content="https://www.razorinfotech.com/images/Inbound-services/Inbound-background-hero.png" />
+            
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="Inbound Call Center Services by Razor Infotech" />
+            <meta name="twitter:description" content="24/7 inbound support with trained professionals. Improve customer satisfaction and first-call resolution." />
+            <meta name="twitter:image" content="https://www.razorinfotech.com/images/Inbound-services/Inbound-background-hero.png" />
+            
+            <link rel="canonical" href="https://www.razorinfotech.com/services/inbound-services" />
+            
+            <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Service",
+                    "serviceType": "Inbound Call Center Services",
+                    "provider": {
+                        "@type": "Organization",
+                        "name": "Razor Infotech",
+                        "url": "https://www.razorinfotech.com"
+                    },
+                    "description": "Professional inbound call center services including customer service, technical support, helpdesk, appointment scheduling, order processing, and emergency hotlines with 24/7 availability and trained professionals.",
+                    "areaServed": "Worldwide",
+                    "hasOfferCatalog": {
+                        "@type": "OfferCatalog",
+                        "name": "Inbound Call Center Services",
+                        "itemListElement": [
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Customer Service & Support"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Technical Support"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Helpdesk Services"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Appointment Scheduling"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Order Processing"
+                                }
+                            }
+                        ]
+                    }
+                })}
+            </script>
+
+            <BackgroundImagesection items={firstsection} />
+
+            <section className="p-10 bg-accent" aria-labelledby="overview-heading">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center lg:p-20 mx-auto max-w-7xl">
                     <div>
                         <img
                             src="/images/Inbound-services/Experience.png"
-                            alt="Inbound services"
+                            alt="Customer service representative providing inbound support"
                             className="w-full rounded-2xl object-cover"
+                            loading="lazy"
+                            width="600"
+                            height="400"
                         />
                     </div>
                     <div className="flex flex-col justify-center">
-                        <h2 className="text-heading mb-4 text-4xl font-semibold">
-                            Increase Customer Retention with Exceptional Customer Experience
+                        <h2 id="overview-heading" className="text-heading mb-4 text-2xl lg:text-4xl font-semibold">
+                            Increase Customer Retention with Exceptional Service
                         </h2>
-                        <p className="text-paragraph text-lg mb-6">
-                            With inbound services, you are offered professionals handling incoming calls from customers with queries, issues, or requiring assistance. The service helps in better and faster customer handling in an effective manner leading them to trust in the business. Inbound service leads to positive business and hence enhanced customer loyalty.
+                        <p className="text-paragraph text-base lg:text-lg mb-6">
+                            Professional inbound services ensure every customer inquiry, issue, or request is handled promptly and expertly. Our trained agents provide consistent, high-quality support that resolves problems on the first call, builds trust, and turns customers into loyal advocates for your brand.
                         </p>
-                        <button className="flex items-center gap-2 pl-6 py-3 rounded-full bg-secondary text-white font-medium w-fit hover:opacity-90 transition">
-                            Improve my data accuracy
-                            <div className="bg-white/20 rounded-full p-3 mr-2"><ArrowRight className="w-5 h-5" /></div>
-                        </button>
+                        <Link
+                            to="/contact"
+                            className="flex items-center gap-2 pl-6 lg:py-3 py-2 rounded-full bg-secondary text-white font-medium w-fit hover:opacity-90 transition"
+                            aria-label="Get inbound services consultation"
+                        >
+                            Improve Customer Experience
+                            <div className="bg-white/20 rounded-full p-3 mr-2" aria-hidden="true">
+                                <ArrowRight className="w-5 h-5" />
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </section>
-            <section className="px-6 py-12 bg-accent">
-                <div className="mx-auto max-w-6xl">
-                    <h2 className="text-center text-2xl font-semibold text-[var(--color-heading)] md:text-3xl">
-                        Types of Inbound Call Services with Us
-                    </h2>
 
-                    <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
-                        {cards.map((c, i) => (
+            <section className="px-6 py-12 bg-background" aria-labelledby="services-heading">
+                <div className="mx-auto max-w-7xl">
+                    <h2 id="services-heading" className="text-center text-2xl font-semibold text-[var(--color-heading)] md:text-3xl mb-3">
+                        Comprehensive Inbound Call Center Services
+                    </h2>
+                    <p className="text-center text-[var(--color-paragraph)]/80 max-w-3xl mx-auto mb-8">
+                        End-to-end inbound support solutions for every customer interaction
+                    </p>
+
+                    <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                        {inboundServices.map((c, i) => (
                             <article
                                 key={i}
-                                className={`relative overflow-hidden rounded-2xl ring-1 ring-[var(--color-paragraph)]/10 ${c.image ? "p-0" : "bg-[var(--color-background)] p-6"
-                                    }`}
+                                className={`relative overflow-hidden rounded-2xl ring-1 ring-[var(--color-paragraph)]/10 ${
+                                    c.image ? "p-0 min-h-[220px]" : "bg-[var(--color-accent)] p-6"
+                                }`}
                             >
                                 {c.image && (
                                     <>
                                         <img
                                             src={c.image}
-                                            alt=""
-                                            className="h-44 w-full object-cover md:h-48"
+                                            alt={`${c.title} service illustration`}
+                                            className="h-full w-full object-cover"
                                             loading="lazy"
-                                            decoding="async"
+                                            width="400"
+                                            height="220"
                                         />
-                                        <div className="absolute inset-0 bg-black/45" />
-                                        <div className="absolute inset-0 p-5">
-                                            <h3 className="text-lg font-semibold text-white">
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30" />
+                                        <div className="absolute inset-0 p-5 flex flex-col justify-end">
+                                            <h3 className="text-lg font-semibold text-white mb-2">
                                                 {c.title}
                                             </h3>
-                                            <p className="mt-2 text-sm leading-6 text-white/85 max-w-[48ch]">
+                                            <p className="text-sm leading-6 text-white/90">
                                                 {c.desc}
                                             </p>
                                         </div>
@@ -185,10 +296,10 @@ export default function InboundServices() {
 
                                 {!c.image && (
                                     <div>
-                                        <h3 className="text-lg font-semibold text-[var(--color-heading)]">
+                                        <h3 className="text-lg font-semibold text-[var(--color-heading)] mb-2">
                                             {c.title}
                                         </h3>
-                                        <p className="mt-2 text-sm leading-6 text-[var(--color-paragraph)]/80">
+                                        <p className="text-sm leading-6 text-[var(--color-paragraph)]/80">
                                             {c.desc}
                                         </p>
                                     </div>
@@ -199,37 +310,41 @@ export default function InboundServices() {
                 </div>
             </section>
 
-            <section className="bg-accent px-6 py-14">
-                <div className="mx-auto max-w-7xl">
-                    <h2 className="text-center text-2xl font-semibold text-[var(--color-heading)] md:text-3xl">
-                        Kinds of Businesses We Cater to
+            <section className="bg-accent px-6 py-14" aria-labelledby="industries-heading">
+                <div className="mx-auto max-w-6xl">
+                    <h2 id="industries-heading" className="text-center text-2xl font-semibold text-[var(--color-heading)] md:text-3xl mb-3">
+                        Industries We Serve
                     </h2>
+                    <p className="text-center text-[var(--color-paragraph)]/80 max-w-3xl mx-auto mb-10">
+                        Specialized inbound support tailored to your industry requirements
+                    </p>
 
                     <div className="mt-10 space-y-10">
-                        {items.map((it, idx) => (
-                            <div key={idx} className="space-y-3">
-                                <span className="text-[var(--color-secondary)] font-medium text-2xl">
+                        {industries.map((it, idx) => (
+                            <article key={idx} className="space-y-3">
+                                <span className="text-[var(--color-secondary)] font-medium text-xl" aria-label={`Industry ${idx + 1}`}>
                                     {String(idx + 1).padStart(2, "0")}
                                 </span>
                                 <h3 className="text-lg font-semibold text-[var(--color-heading)]">
                                     {it.title}
                                 </h3>
-                                <p className="max-w-[100ch] text-[var(--color-paragraph)]/80">
+                                <p className="max-w-[85ch] text-[var(--color-paragraph)]/80">
                                     {it.desc}
                                 </p>
-                                <hr className="mt-4 border-[var(--color-paragraph)]/20" />
-                            </div>
+                                <hr className="mt-4 border-[var(--color-paragraph)]/20" aria-hidden="true" />
+                            </article>
                         ))}
                     </div>
                 </div>
             </section>
-            <section className="bg-gradient-to-b from-[var(--color-unique)] to-[var(--color-accent)] px-6 py-14">
+
+            <section className="bg-gradient-to-b from-[var(--color-unique)] to-[var(--color-accent)] px-6 py-14" aria-labelledby="comparison-heading">
                 <div className="mx-auto max-w-6xl">
-                    <h2 className="text-center text-3xl font-semibold text-[var(--color-heading)] md:text-4xl">
-                        Difference Between Inbound &<br /> Outbound Services
+                    <h2 id="comparison-heading" className="text-center text-3xl font-semibold text-[var(--color-heading)] md:text-4xl mb-10">
+                        Inbound vs Outbound Services
                     </h2>
 
-                    <div className="mt-10 overflow-hidden rounded-lg ring-1 ring-[var(--color-paragraph)]/15">
+                    <div className="mt-10 overflow-hidden rounded-lg ring-1 ring-[var(--color-paragraph)]/15 bg-background">
                         <table className="hidden w-full table-fixed md:table">
                             <thead className="bg-[var(--color-background)]/70">
                                 <tr>
@@ -245,8 +360,8 @@ export default function InboundServices() {
                                 </tr>
                             </thead>
                             <tbody>
-                                {rows.map((r, i) => (
-                                    <tr key={i} className="">
+                                {comparisonRows.map((r, i) => (
+                                    <tr key={i}>
                                         <td className="border-t border-[var(--color-paragraph)]/15 px-6 py-6 align-top font-semibold text-[var(--color-heading)]">
                                             {r.aspect}
                                         </td>
@@ -261,27 +376,27 @@ export default function InboundServices() {
                             </tbody>
                         </table>
 
-                        <div className="grid gap-6 md:hidden ">
-                            {rows.map((r, i) => (
+                        <div className="grid gap-6 p-6 md:hidden">
+                            {comparisonRows.map((r, i) => (
                                 <div
                                     key={i}
-                                    className="rounded-lg  p-5 ring-1 ring-[var(--color-paragraph)]/15"
+                                    className="rounded-lg bg-background p-5 ring-1 ring-[var(--color-paragraph)]/15"
                                 >
-                                    <h3 className="text-sm font-semibold text-[var(--color-heading)]">
+                                    <h3 className="text-sm font-semibold text-[var(--color-heading)] mb-3">
                                         {r.aspect}
                                     </h3>
-                                    <div className="mt-3 grid grid-cols-1 gap-4">
+                                    <div className="grid grid-cols-1 gap-4">
                                         <div>
-                                            <div className="text-xs font-semibold text-[var(--color-heading)]/80">
+                                            <div className="text-xs font-semibold text-[var(--color-heading)]/80 mb-1">
                                                 Inbound Services
                                             </div>
-                                            <p className="text-[var(--color-paragraph)]/80">{r.inbound}</p>
+                                            <p className="text-sm text-[var(--color-paragraph)]/80">{r.inbound}</p>
                                         </div>
                                         <div>
-                                            <div className="text-xs font-semibold text-[var(--color-heading)]/80">
+                                            <div className="text-xs font-semibold text-[var(--color-heading)]/80 mb-1">
                                                 Outbound Services
                                             </div>
-                                            <p className="text-[var(--color-paragraph)]/80">{r.outbound}</p>
+                                            <p className="text-sm text-[var(--color-paragraph)]/80">{r.outbound}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -290,34 +405,37 @@ export default function InboundServices() {
                     </div>
                 </div>
             </section>
-            <section className="py-20">
-                <h2 className="text-4xl font-semibold text-center">Benefits of Choosing Razor Infotech</h2>
-                <p className="text-base text-center my-3 mx-auto">Razor Infotech delivers innovative, high-quality solutions that drive business success.</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6  max-w-7xl mx-auto">
-                    {services.map((service, index) => (
-                        <div
+
+            <section className="py-20 px-6 bg-background" aria-labelledby="benefits-heading">
+                <h2 id="benefits-heading" className="text-3xl md:text-4xl font-semibold text-center text-heading mb-3">
+                    Benefits of Professional Inbound Services
+                </h2>
+                <p className="text-base text-center mb-10 mx-auto max-w-3xl text-paragraph">
+                    Strategic advantages that improve customer satisfaction while reducing operational costs
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
+                    {benefits.map((service, index) => (
+                        <article
                             key={index}
-                            className="flex flex-col md:flex-row items-start gap-4 p-16 bg-accent rounded-4xl shadow-sm hover:shadow-md transition"
+                            className="flex flex-col md:flex-row items-start gap-4 p-8 bg-accent rounded-2xl shadow-sm hover:shadow-md transition"
                         >
-                            <div className="flex items-center justify-center w-12 h-12 bg-secondary rounded-lg  flex-shrink-0">
+                            <div className="flex items-center justify-center w-12 h-12 bg-secondary rounded-lg flex-shrink-0" aria-hidden="true">
                                 {service.icon}
                             </div>
                             <div>
-                                <h3 className="text-lg font-semibold text-heading">
+                                <h3 className="text-lg font-semibold text-heading mb-2">
                                     {service.title}
                                 </h3>
-                                <p className="text-paragraph text-sm mt-1">{service.description}</p>
-                                <a
-                                    href={service.link}
-                                    className="text-green-700 text-sm font-medium mt-2 inline-block hover:underline"
-                                >
-                                    Learn More
-                                </a>
+                                <p className="text-paragraph text-sm leading-relaxed">{service.description}</p>
                             </div>
-                        </div>
+                        </article>
                     ))}
                 </div>
             </section>
+
+            <Suspense fallback={<div className="text-center py-10 text-paragraph">Loading FAQs...</div>}>
+                <Faq faqs={faqs} />
+            </Suspense>
         </>
-    )
+    );
 }
