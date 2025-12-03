@@ -34,6 +34,7 @@ import BusinessConsultancy from './components/Our-Expertise/BusinessConsultancy'
 import Youtube from './components/Our-Expertise/Youtube';
 import Googlemybusiness from './components/Our-Expertise/Googlemybusiness';
 import OnlineReputaionMarket from './components/Our-Expertise/OnlineReputaionMarket';
+import NotFound from './components/NotFound';
 
 export default function App() {
 
@@ -187,6 +188,8 @@ export default function App() {
               <Route key={index} path={r.path} element={<r.component />} />
             ))
           }
+          {/* catch-all 404 route */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer/>
       </Router>

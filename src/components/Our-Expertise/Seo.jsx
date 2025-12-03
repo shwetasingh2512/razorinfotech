@@ -1,160 +1,225 @@
+import { lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { FaDotCircle } from "react-icons/fa";
-import Faq from "../../reusable/Faq";
 
+const Faq = lazy(() => import("../../reusable/Faq"));
 
 export default function Seo() {
+    const keyBenefits = [
+        "85% of Clicks on First Page",
+        "3x More Leads Than Paid Ads",
+        "Sustainable Long-Term Growth",
+        "Build Trust & Authority",
+    ];
 
-    const headpoints = [
-        "Visibility at the Right Time",
-        "Long-Term ROI",
-        "Scalable impact",
-        "Build Credibility"
-    ]
-
-
-    const features = [
+    const seoFeatures = [
         {
             id: "01",
             title: "Comprehensive SEO Audit",
-            desc: "Identifying growth and performance gaps with web analysis.",
+            desc: "In-depth technical analysis identifying issues affecting rankings, crawlability, site speed, mobile usability, and opportunities for optimization and growth.",
         },
         {
             id: "02",
-            title: "On-Page Optimization",
-            desc: "Optimization of content, meta tags, and structure for search visibility.",
+            title: "On-Page SEO Optimization",
+            desc: "Strategic optimization of titles, meta descriptions, headers, content quality, internal linking, keyword placement, and schema markup for maximum search visibility.",
         },
         {
             id: "03",
             title: "Technical SEO",
-            desc: "Enhance speed, mobile usability, and indexing for stronger site performance.",
+            desc: "Enhance site speed (Core Web Vitals), mobile responsiveness, XML sitemaps, robots.txt, HTTPS security, canonical tags, and structured data for better indexing and crawling.",
         },
         {
             id: "04",
             title: "Off-Page SEO & Link Building",
-            desc: "Building authority with quality backlinks, outreach, and digital PR strategies.",
+            desc: "Building domain authority through high-quality backlink acquisition, guest posting, digital PR, influencer outreach, and ethical white-hat link building strategies.",
         },
         {
             id: "05",
-            title: "Performance Tracking & Reporting",
-            desc: "Reporting insights on traffic, rankings, and measurable ROI.",
+            title: "Keyword Research & Strategy",
+            desc: "Data-driven keyword research identifying high-value search terms with optimal search volume, competition, and commercial intent aligned with business goals.",
         },
         {
             id: "06",
-            title: "Local SEO",
-            desc: "Offering services that help in optimizing local searches to attract customers.",
+            title: "Local SEO Optimization",
+            desc: "Optimize Google Business Profile, local citations, location-specific keywords, reviews, and NAP consistency to dominate local search results and attract nearby customers.",
+        },
+        {
+            id: "07",
+            title: "Content Strategy & Optimization",
+            desc: "Create SEO-optimized content including blog posts, landing pages, and pillar content that answers search intent, targets keywords, and drives organic traffic.",
+        },
+        {
+            id: "08",
+            title: "Performance Tracking & Reporting",
+            desc: "Comprehensive analytics tracking rankings, organic traffic, conversions, ROI, and competitor performance with monthly reports and actionable insights for continuous improvement.",
         },
     ];
 
-
-    const steps = [
+    const seoProcess = [
         {
             id: "01",
             title: "SEO Audit & Research",
-            desc:
-                "Our team starts with a detailed website audit, competitor analysis, and keyword research to identify opportunities for growth.",
+            desc: "Comprehensive website audit analyzing technical issues, on-page factors, backlink profile, competitor strategies, and keyword research to identify growth opportunities and quick wins.",
         },
         {
             id: "02",
-            title: "Development of Strategy",
-            desc:
-                "Based on the research and audits, we create a tailored SEO roadmap designed to boost rankings and increase ROI.",
+            title: "Custom Strategy Development",
+            desc: "Based on audit findings, we create a tailored SEO roadmap with prioritized action items, keyword targets, content plans, and technical fixes designed to boost rankings and maximize ROI.",
         },
         {
             id: "03",
-            title: "On-Page & Technical Optimization",
-            desc:
-                "Our team then works on optimizing site structure, content, and technical elements to improve visibility and user experience.",
+            title: "On-Page & Technical Implementation",
+            desc: "Execute on-page optimization (titles, meta tags, content, internal linking) and fix technical issues (speed, mobile, indexing, schema) to improve visibility and user experience.",
         },
         {
             id: "04",
-            title: "Off-Page SEO",
-            desc:
-                "We create and build high-quality backlinks that strengthen brand authority through ethical outreach practices for growth.",
+            title: "Content Creation & Off-Page SEO",
+            desc: "Develop high-quality, SEO-optimized content targeting strategic keywords, while building authoritative backlinks through ethical outreach, guest posting, and digital PR campaigns.",
         },
         {
             id: "05",
-            title: "Monitoring & Reporting",
-            desc:
-                "Our team does regular performance monitoring to keep track with clear reports, ensuring transparency and measurable progress.",
+            title: "Monitoring, Reporting & Optimization",
+            desc: "Continuous performance tracking with Google Analytics and Search Console, monthly reports showing rankings, traffic, conversions, and ongoing optimization based on data insights.",
         },
     ];
 
-    const reasons = [
+    const whyChooseUs = [
         {
             id: "01",
-            title: "Data-Driven Strategies",
-            desc: "Each and every step of our work process is backed by in-depth research, analytics, and market insights to maximize results.",
+            title: "Proven Results & Case Studies",
+            desc: "Track record of achieving 150-300% traffic growth, first-page rankings for competitive keywords, and measurable ROI increases for clients across industries.",
         },
         {
             id: "02",
-            title: "Focus on ROI & Growth",
-            desc: "Our ultimate goal is not just higher rankings, but measurable business growth through more leads and conversions.",
+            title: "White-Hat, Future-Proof SEO",
+            desc: "Ethical strategies following Google guidelines that build sustainable rankings, avoiding risky shortcuts that could result in penalties or algorithm updates.",
         },
         {
             id: "03",
-            title: "Proven Expertise & Experience",
-            desc: "With skills and expertise in the field, our team combines technical skills and business insights to deliver strategies that work.",
+            title: "Transparent Reporting & Communication",
+            desc: "Clear monthly reports showing keyword rankings, traffic growth, conversion metrics, and ROI with regular strategy calls and responsive support.",
         },
         {
             id: "04",
-            title: "Tailored Solutions for Every Business",
-            desc: "We use analytics and performance insights to create our content decisions for better ROI.",
+            title: "Customized for Your Industry",
+            desc: "Tailored SEO strategies adapted to your specific industry, business model, target audience, competitive landscape, and unique growth objectives.",
         },
     ];
 
     const faqs = [
         {
-            question: "What services does Razor Infotech provide?",
-            answer:
-                "We offer end-to-end solutions, including IT services, BPO support, HR management, cloud solutions, cybersecurity, and digital transformation to help businesses scale with confidence.",
+            question: "What SEO services does Razor Infotech provide?",
+            answer: "We offer comprehensive SEO services including technical SEO audits, on-page optimization (content, meta tags, internal linking), off-page SEO and link building, keyword research and strategy, local SEO optimization, content creation and optimization, e-commerce SEO, mobile SEO, competitor analysis, penalty recovery, and ongoing monitoring and reporting with Google Analytics and Search Console integration.",
         },
         {
-            question: "Who can businesses of different sizes benefit from our services?",
-            answer:
-                "We provide tailored solutions for startups, SMBs, and enterprises, ensuring value at every stage.",
+            question: "How long does it take to see SEO results?",
+            answer: "SEO is a long-term strategy with varying timelines: Initial improvements (technical fixes, on-page optimization) show results in 4-6 weeks, noticeable ranking improvements for low-competition keywords in 2-3 months, significant traffic growth and competitive keyword rankings in 6-12 months, and full SEO maturity with dominant market position in 12-18 months. We provide monthly progress reports tracking rankings, traffic, and conversions throughout the journey.",
         },
         {
-            question: "How does Razor Infotech ensure quality and security?",
-            answer:
-                "We follow strict compliance, use advanced security practices, and maintain transparency with our clients.",
+            question: "What's included in your SEO pricing?",
+            answer: "Our SEO packages include: Basic SEO ($800-1,500/month) - audit, on-page optimization, 5-10 target keywords, monthly reporting; Standard SEO ($1,500-3,500/month) - all basic features plus content creation, link building, local SEO, 10-30 keywords; Advanced SEO ($3,500-8,000/month) - comprehensive strategy, aggressive link building, content marketing, 30-100 keywords, dedicated account manager; Enterprise SEO ($8,000+/month) - custom solutions, multiple locations/languages, competitive markets, unlimited keywords.",
         },
         {
-            question: "Can we customize solutions based on your business needs?",
-            answer:
-                "Yes, all our solutions can be customized to fit your unique business goals.",
+            question: "How do you measure SEO success and ROI?",
+            answer: "We track comprehensive metrics including organic traffic growth (sessions, users, page views), keyword rankings (top 3, top 10, first page), conversion rates (leads, sales, form submissions), revenue attribution from organic search, backlink quality and quantity, domain authority improvements, click-through rates (CTR) from search results, engagement metrics (bounce rate, time on site), and competitive visibility compared to rivals. Monthly reports show clear ROI with traffic value calculations.",
         },
     ];
 
     return (
         <>
-            <section className="px-6 py-12">
-                <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 lg:grid-cols-2">
-                    <div className="flex flex-col justify-center gap-4">
-                        <h1 className="text-3xl font-semibold text-heading md:text-4xl max-w-[90%]">
-                            Get Found By Your Targeted Customers
-                        </h1>
-                        <p className="text-paragraph/80 text-md max-w-[80%]">
-                            SEO strategies help your website to rank higher on search engine results such as Google, which contributes to attracting qualified traffic and generating more leads. If your business isn’t showing up there, you require our expert help.
-                        </p>
-                        <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-5">
+            <title>SEO Services - Increase Organic Traffic & Rankings by 150-300% | Razor Infotech</title>
+            <meta name="description" content="Professional SEO services: technical audits, on-page optimization, link building, local SEO, and content strategy. Achieve first-page rankings, 3x more leads, and sustainable organic growth." />
+            <meta name="keywords" content="SEO services, search engine optimization, SEO agency, organic search optimization, local SEO, technical SEO, link building, keyword research, SEO audit, Google rankings, SEO consultant" />
+            <meta name="author" content="Razor Infotech" />
+            
+            <meta property="og:title" content="SEO Services - Drive Organic Traffic & First-Page Rankings" />
+            <meta property="og:description" content="Expert SEO services that increase rankings, traffic, and conversions. White-hat strategies, proven results, transparent reporting." />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.razorinfotech.com/services/seo" />
+            <meta property="og:image" content="https://www.razorinfotech.com/images/seo/seo-hero.png" />
+            
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="SEO Services by Razor Infotech" />
+            <meta name="twitter:description" content="Professional SEO: technical optimization, link building, content strategy. Achieve sustainable organic growth." />
+            <meta name="twitter:image" content="https://www.razorinfotech.com/images/seo/seo-hero.png" />
+            
+            <link rel="canonical" href="https://www.razorinfotech.com/services/seo" />
+            
+            <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Service",
+                    "serviceType": "Search Engine Optimization (SEO) Services",
+                    "provider": {
+                        "@type": "Organization",
+                        "name": "Razor Infotech",
+                        "url": "https://www.razorinfotech.com"
+                    },
+                    "description": "Professional SEO services including technical audits, on-page optimization, off-page SEO and link building, keyword research, local SEO, content strategy, and performance tracking to increase organic traffic, rankings, and conversions.",
+                    "areaServed": "Worldwide",
+                    "hasOfferCatalog": {
+                        "@type": "OfferCatalog",
+                        "name": "SEO Services",
+                        "itemListElement": [
                             {
-                                headpoints.map((e, i) => (
-                                    <div className="flex gap-4 items-center">
-                                        <span><FaDotCircle /></span>
-                                        <span className="text-base">{e}</span>
-                                    </div>
-                                ))
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Technical SEO Audit & Optimization"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "On-Page SEO"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Off-Page SEO & Link Building"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Local SEO"
+                                }
                             }
+                        ]
+                    }
+                })}
+            </script>
+
+            <section className="px-4 sm:px-6 py-8 sm:py-12 bg-background" aria-labelledby="hero-heading">
+                <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 lg:grid-cols-2">
+                    <div className="flex flex-col justify-center gap-6">
+                        <h1 id="hero-heading" className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-heading max-w-xl">
+                            Get Found By Your Target Customers on Google
+                        </h1>
+                        <p className="text-paragraph/80 text-base max-w-xl leading-relaxed">
+                            Professional SEO strategies that help your website rank higher on Google search results, attract qualified organic traffic, and generate more leads. If your business isn't showing up on the first page, you're missing 85% of potential customers.
+                        </p>
+                        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            {keyBenefits.map((point, idx) => (
+                                <div key={idx} className="flex gap-3 items-center">
+                                    <FaDotCircle className="text-secondary flex-shrink-0" aria-hidden="true" />
+                                    <span className="text-sm sm:text-base text-heading">{point}</span>
+                                </div>
+                            ))}
                         </div>
                         <Link
-                            to="#"
-                            className="inline-flex w-fit items-center gap-3 rounded-full bg-secondary px-4 py-2 text-white"
+                            to="/contact"
+                            className="mt-6 inline-flex w-fit items-center gap-3 rounded-full bg-secondary px-5 py-3 text-white hover:opacity-90 transition"
+                            aria-label="Get SEO consultation"
                         >
-                            <span>Talk To An Expert</span>
-                            <span className="rounded-full bg-white/20 p-2">
-                                <ArrowRight />
+                            <span>Talk To An SEO Expert</span>
+                            <span className="rounded-full bg-white/20 p-2" aria-hidden="true">
+                                <ArrowRight className="w-4 h-4" />
                             </span>
                         </Link>
                     </div>
@@ -162,152 +227,173 @@ export default function Seo() {
                     <div>
                         <img
                             src="/images/seo/seo-hero.png"
-                            alt="Content creation hero"
-                            className="h-auto w-full rounded-2xl object-cover"
+                            alt="SEO services showing search engine rankings and organic traffic growth"
+                            className="w-full h-48 sm:h-64 md:h-80 rounded-2xl object-cover"
+                            loading="eager"
+                            width="800"
+                            height="320"
                         />
                     </div>
                 </div>
             </section>
-            <section className="bg-gradient-to-b from-unique to-accent p-20">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap- max-w-6xl mx-auto">
-                    <div>
-                        <img src="/images/seo/SEO-Matters.png" alt="seo-matter" className="w-4/5" />
-                    </div>
-                    <div className="place-content-center">
-                        <h2 className="text-heading text-3xl">Why SEO Matters in Business Growth?</h2>
-                        <p className="text-paragraph text-base mt-4 max-w-[60ch]">SEO matters for any type of business because it increases the online visibility and organic traffic on the website, which drives sales. From higher conversion rates to more qualified leads, SEO is the tool and strategy that helps by improving business ranking in search results, building credibility, and brand awareness. SEO provides a significant return on investment over time and offers valuable market insights on what potential customers are searching for. </p>
+
+            <section className="bg-gradient-to-b from-unique to-accent p-8 md:p-20" aria-labelledby="why-seo-heading">
+                <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto gap-12 items-center">
+                    <img
+                        src="/images/seo/SEO-Matters.png"
+                        alt="Why SEO matters for business growth and online visibility"
+                        className="md:w-4/5 mx-auto md:mx-0 rounded-2xl"
+                        loading="lazy"
+                        width="600"
+                        height="400"
+                    />
+                    <div className="flex flex-col justify-center">
+                        <h2 id="why-seo-heading" className="text-heading text-3xl md:text-4xl mb-4 font-semibold">
+                            Why SEO Matters for Business Growth?
+                        </h2>
+                        <p className="text-paragraph text-base leading-relaxed">
+                            SEO is essential for business growth because it increases online visibility, drives qualified organic traffic, and generates leads without ongoing ad spend. 85% of clicks go to organic results, and SEO delivers 3x more leads than paid advertising.
+                        </p>
+                        <p className="text-paragraph text-base leading-relaxed mt-4">
+                            From higher conversion rates to building brand credibility, SEO improves search rankings, establishes authority, and provides sustainable long-term growth that compounds over time, making it one of the highest ROI marketing investments.
+                        </p>
                     </div>
                 </div>
             </section>
-            <section className="bg-accent py-16 px-4 flex justify-center">
-                <div className="max-w-6xl w-full text-center">
-                    <div className="inline-flex items-center px-4 py-1 rounded-full bg-green-700 text-white text-sm shadow mb-4">
-                        Our Features
+
+            <section className="bg-accent py-12 px-4" aria-labelledby="features-heading">
+                <div className="max-w-7xl w-full text-center mx-auto">
+                    <div className="inline-flex items-center px-4 py-1 rounded-full bg-secondary text-white text-sm shadow mb-4 justify-center mx-auto max-w-max font-medium">
+                        Our Services
                     </div>
-                    <h2 className="text-heading font-bold mb-2">
-                        Main Features of Our SEO Services
+                    <h2 id="features-heading" className="text-2xl sm:text-3xl font-bold mb-4 text-heading">
+                        Comprehensive SEO Solutions
                     </h2>
                     <p className="text-paragraph max-w-3xl mx-auto mb-10">
-                        With a team of skilled experts, we work together with businesses to
-                        improve search engine rankings, drive qualified traffic, increase
-                        visibility, and ultimately generate more leads and revenue for your
-                        business.
+                        Our expert team delivers end-to-end SEO services that improve search rankings, drive qualified organic traffic, increase brand visibility, and generate measurable leads and revenue.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {features.map((feature) => (
-                            <div
+                        {seoFeatures.map((feature) => (
+                            <article
                                 key={feature.id}
-                                className="flex gap-4 p-5 bg-background rounded-xl shadow"
+                                className="flex gap-4 p-6 bg-background rounded-xl shadow hover:shadow-md transition-shadow text-left"
                             >
                                 <div className="flex-shrink-0">
-
-                                    <span className="w-12 h-12 rounded-2xl bg-green-700 text-white flex items-center justify-center text-sm font-bold">
+                                    <span 
+                                        className="w-12 h-12 rounded-2xl bg-secondary text-white flex items-center justify-center text-sm font-bold shadow-sm"
+                                        aria-label={`Service ${feature.id}`}
+                                    >
                                         {feature.id}
                                     </span>
                                 </div>
-                                <div className="text-left">
-                                    <h4 className="text-heading font-semibold mb-1">
-                                        {feature.title}
-                                    </h4>
-                                    <p className="text-paragraph">{feature.desc}</p>
+                                <div>
+                                    <h3 className="text-heading font-semibold mb-2">{feature.title}</h3>
+                                    <p className="text-paragraph text-sm leading-relaxed">{feature.desc}</p>
                                 </div>
-                            </div>
+                            </article>
                         ))}
                     </div>
                 </div>
             </section>
 
-            <section className="bg-accent py-16 px-4 flex justify-center">
-                <div className="max-w-6xl w-full">
-                    <div className="flex items-start justify-between gap-6 mb-6">
-                        <div>
-                            <div className="inline-flex items-center px-4 py-1 rounded-full bg-secondary text-white text-sm shadow mb-4">
+            <section className="bg-background py-12 px-4" aria-labelledby="process-heading">
+                <div className="max-w-7xl w-full mx-auto">
+                    <div className="flex items-start gap-6 mb-10 flex-col md:flex-row justify-between">
+                        <div className="max-w-full md:max-w-3xl">
+                            <span className="inline-flex items-center px-4 py-1 rounded-full bg-secondary text-white text-sm shadow mb-4 font-medium">
                                 Our Process
-                            </div>
-                            <h2 className="text-heading font-bold">
-                                How Our SEO Service Working Process Goes
+                            </span>
+                            <h2 id="process-heading" className="text-3xl md:text-4xl text-heading font-bold mb-4">
+                                Our Proven SEO Process
                             </h2>
-                            <p className="text-paragraph max-w-3xl mb-10 mt-4">
-                                At Razor Infotech, we provide tailored solutions that are designed to
-                                be clear, strategic, and result-driven. Each step of our work process
-                                ensures your website gains higher visibility, attracts the right
-                                audience, and delivers measurable business growth.
+                            <p className="text-paragraph max-w-3xl">
+                                At Razor Infotech, we follow a clear, strategic, and data-driven SEO process. Each step ensures higher search visibility, qualified organic traffic, and measurable business growth with transparent reporting.
                             </p>
                         </div>
 
                         <img
-                            src={"/images/seo/illusteration.png"}
-                            alt="Process Illustration"
-                            className="hidden md:block w-1/5 h-auto object-contain"
+                            src="/images/seo/illusteration.png"
+                            alt="SEO process illustration"
+                            className="hidden md:block w-32 md:w-48 lg:w-56 h-auto object-contain"
+                            loading="lazy"
+                            width="224"
+                            height="224"
                         />
-
                     </div>
 
-
-
                     <div className="space-y-8">
-                        {steps.map((s) => (
-                            <div
+                        {seoProcess.map((s) => (
+                            <article
                                 key={s.id}
-                                className="grid grid-cols-1 md:grid-cols-12 items-start gap-6"
+                                className="grid grid-cols-1 md:grid-cols-12 items-start gap-6 bg-accent p-6 rounded-2xl"
                             >
                                 <div className="md:col-span-5 flex items-center gap-4">
-                                    <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-white font-semibold">
+                                    <div 
+                                        className="w-10 h-10 flex-shrink-0 rounded-full bg-secondary flex items-center justify-center text-white font-semibold"
+                                        aria-label={`Step ${s.id}`}
+                                    >
                                         {s.id}
                                     </div>
                                     <h3 className="text-heading font-semibold">{s.title}</h3>
                                 </div>
 
                                 <div className="md:col-span-7">
-                                    <p className="text-paragraph">{s.desc}</p>
+                                    <p className="text-paragraph text-sm leading-relaxed">{s.desc}</p>
                                 </div>
-                            </div>
+                            </article>
                         ))}
                     </div>
                 </div>
             </section>
-            <section className="py-16 px-4 bg-gradient-to-b from-unique to-accent">
-                <div className="max-w-6xl mx-auto items-center">
-                    <div>
-                        <h2 className="text-heading font-bold mb-3">
-                            Why Choose Razor Infotech
-                        </h2>
-                        <p className="text-paragraph mb-8 max-w-lg">
-                            We go beyond being just a service provider – we become your
-                            long-term partner. Our approach combines expertise, technology, and
-                            strategy tailored to your unique needs. With us, you gain solutions
-                            that scale as your business grows.
-                        </p>
 
+            <section className="py-16 px-4 bg-gradient-to-b from-unique to-accent" aria-labelledby="why-choose-heading">
+                <div className="max-w-7xl mx-auto">
+                    <div className="mb-10">
+                        <h2 id="why-choose-heading" className="text-3xl md:text-4xl text-heading font-bold mb-4">
+                            Why Choose Razor Infotech for SEO?
+                        </h2>
+                        <p className="text-paragraph max-w-2xl">
+                            We go beyond rankings—we become your strategic growth partner. Our approach combines proven SEO expertise, cutting-edge technology, and custom strategies tailored to your industry, competitors, and business objectives.
+                        </p>
                     </div>
-                    <div className="flex gap-32">
+
+                    <div className="space-y-12">
                         <img
                             src="/images/seo/why-choose.png"
-                            alt="Why Choose Razor Infotech"
-                            className="rounded-xl object-cover w-full h-64 md:h-80 lg:h-[22rem]"
+                            alt="Why choose Razor Infotech for SEO services"
+                            className="rounded-2xl object-cover w-full h-64 md:h-80 lg:h-[22rem] shadow-lg"
+                            loading="lazy"
+                            width="1200"
+                            height="352"
                         />
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            {reasons.map((reason) => (
-                                <div key={reason.id} className="flex gap-4">
+                            {whyChooseUs.map((reason) => (
+                                <article key={reason.id} className="flex gap-4">
                                     <div className="flex-shrink-0">
-                                        <div className="w-12 h-12 rounded-md bg-green-100 flex items-center justify-center text-green-700 font-bold shadow-sm">
+                                        <div 
+                                            className="w-12 h-12 rounded-md bg-background flex items-center justify-center text-secondary font-bold shadow-sm"
+                                            aria-label={`Reason ${reason.id}`}
+                                        >
                                             {reason.id}
                                         </div>
                                     </div>
                                     <div>
-                                        <h3 className="text-heading font-semibold mb-1">
+                                        <h3 className="text-heading font-semibold mb-2">
                                             {reason.title}
                                         </h3>
-                                        <p className="text-paragraph">{reason.desc}</p>
+                                        <p className="text-paragraph text-sm leading-relaxed">{reason.desc}</p>
                                     </div>
-                                </div>
+                                </article>
                             ))}
                         </div>
                     </div>
                 </div>
             </section>
-            <Faq faqs={faqs} />
+
+            <Suspense fallback={<div className="text-center py-10 text-paragraph">Loading FAQs...</div>}>
+                <Faq faqs={faqs} />
+            </Suspense>
         </>
-    )
+    );
 }

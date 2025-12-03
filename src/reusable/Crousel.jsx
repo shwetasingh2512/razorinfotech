@@ -14,14 +14,16 @@ export default function Crousel({ images }) {
 
   return (
     <div className="relative w-full">
+      
+      {/* Slider */}
       <div
         ref={sliderRef}
-        className="flex gap-6 overflow-x-scroll no-scrollbar scroll-smooth p-4"
+        className="flex gap-4 sm:gap-6 overflow-x-scroll no-scrollbar scroll-smooth snap-x snap-mandatory p-4"
       >
         {images.map((img, i) => (
           <div
             key={i}
-            className="flex-shrink-0 w-[260px] h-[334px] rounded-xl overflow-hidden"
+            className="flex-shrink-0 snap-start w-[200px] sm:w-[240px] md:w-[260px] h-[260px] sm:h-[300px] md:h-[340px] rounded-xl overflow-hidden"
           >
             <img
               src={img}
@@ -31,15 +33,19 @@ export default function Crousel({ images }) {
           </div>
         ))}
       </div>
+
+      {/* Left Button */}
       <button
         onClick={scrollLeft}
-        className="absolute left-[45%] top-100 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-2 rounded-full"
+        className="absolute top-1/2 -translate-y-1/2 left-2 sm:left-4 bg-black/30 hover:bg-black/50 text-white p-2 sm:p-3 rounded-full"
       >
         <FaChevronLeft />
       </button>
+
+      {/* Right Button */}
       <button
         onClick={scrollRight}
-        className="absolute right-[45%] top-100 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-2 rounded-full"
+        className="absolute top-1/2 -translate-y-1/2 right-2 sm:right-4 bg-black/30 hover:bg-black/50 text-white p-2 sm:p-3 rounded-full"
       >
         <FaChevronRight />
       </button>

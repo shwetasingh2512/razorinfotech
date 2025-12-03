@@ -1,182 +1,293 @@
-import BelowImageSection from "../../reusable/BelowImageSection"
+import { lazy, Suspense } from "react";
+import BelowImageSection from "../../reusable/BelowImageSection";
 import { Lightbulb, Palette, Code2, Wrench, Rocket, RefreshCw } from "lucide-react";
 import { FaDotCircle } from "react-icons/fa";
-import Faq from "../../reusable/Faq";
 
+const Faq = lazy(() => import("../../reusable/Faq"));
 
-export default function WebsiteDevelopement() {
-
-    const items = {
-        title: "Giving A Creative Spark To Your Website",
-        description: "From eye-pleasing visuals to smooth performance, we design and develop website that a combination of creativity and functionality.",
+export default function WebsiteDevelopment() {
+    const heroSection = {
+        title: "Custom Website Development That Drives Results",
+        description: "From stunning visuals to lightning-fast performance—we design and develop responsive, secure websites that combine creativity with powerful functionality to achieve your business goals.",
         image: "/images/Website-developement/website-developement-hero-image.png",
-        alt: "Showcase image",
+        alt: "Custom website development services with responsive design",
         bgcolor: "bg-accent"
-    }
+    };
 
-    const faqs = [
-        {
-            question: "What services does Razor Infotech provide?",
-            answer:
-                "We offer end-to-end solutions, including IT services, BPO support, HR management, cloud solutions, cybersecurity, and digital transformation to help businesses scale with confidence.",
-        },
-        {
-            question: "Who can businesses of different sizes benefit from our services?",
-            answer:
-                "We provide tailored solutions for startups, SMBs, and enterprises, ensuring value at every stage.",
-        },
-        {
-            question: "How does Razor Infotech ensure quality and security?",
-            answer:
-                "We follow strict compliance, use advanced security practices, and maintain transparency with our clients.",
-        },
-        {
-            question: "Can we customize solutions based on your business needs?",
-            answer:
-                "Yes, all our solutions can be customized to fit your unique business goals.",
-        },
-    ];
-
-
-    const STEPS = [
+    const developmentProcess = [
         {
             Icon: Lightbulb,
-            title: "Understanding Your Needs",
-            desc:
-                "Define goals, target users, and core features..",
+            title: "Discovery & Requirements",
+            desc: "Deep dive into your business goals, target audience, brand identity, competitor analysis, and technical requirements to build the foundation for success.",
         },
         {
             Icon: Palette,
-            title: "UI & UX Design",
-            desc:
-                "Create visually appealing and user-friendly interfaces.",
+            title: "UI/UX Design",
+            desc: "Create visually stunning, user-centric interfaces with wireframes, mockups, prototypes, and design systems that ensure seamless user experiences across all devices.",
         },
         {
             Icon: Code2,
-            title: "Development ",
-            desc:
-                "Build the app with the latest technologies for smooth performance.",
+            title: "Development & Coding",
+            desc: "Build responsive, fast-loading websites using modern frameworks (React, Next.js, WordPress), clean code, SEO best practices, and performance optimization.",
         },
         {
             Icon: Wrench,
-            title: "Testing And Q&A",
-            desc:
-                "Identify and fix bugs for a flawless user experience.",
+            title: "Testing & Quality Assurance",
+            desc: "Comprehensive testing across devices, browsers, and screen sizes—functional testing, performance optimization, security audits, and bug fixes before launch.",
         },
         {
             Icon: Rocket,
-            title: "Deployment & Integration",
-            desc:
-                "Launch the app on App Store and Play Store",
+            title: "Launch & Deployment",
+            desc: "Seamless deployment to production servers with DNS configuration, SSL setup, performance monitoring, search engine submission, and post-launch optimization.",
         },
         {
             Icon: RefreshCw,
-            title: "Maintenance & Updates",
-            desc:
-                "Regular improvements and support for long-term success.",
+            title: "Maintenance & Support",
+            desc: "Ongoing updates, security patches, performance monitoring, content updates, feature enhancements, and 24/7 technical support for long-term success.",
         },
     ];
 
+    const keyBenefits = [
+        "Responsive design optimized for all devices",
+        "SEO-friendly architecture for better rankings",
+        "Fast loading speeds (under 3 seconds)",
+        "Secure HTTPS with regular security updates",
+        "Scalable infrastructure that grows with you",
+        "Ongoing support and maintenance included"
+    ];
+
+    const faqs = [
+        {
+            question: "What website development services does Razor Infotech provide?",
+            answer: "We provide comprehensive website development services including custom website design and development (HTML/CSS, React, Next.js, WordPress), responsive web design for mobile/tablet/desktop, e-commerce development (WooCommerce, Shopify, custom solutions), UI/UX design and prototyping, website redesign and modernization, CMS development (WordPress, Drupal, custom), landing page development, progressive web apps (PWA), website maintenance and support, speed optimization, SEO optimization, and security implementation. All websites are mobile-responsive, SEO-friendly, and built with conversion optimization in mind.",
+        },
+        {
+            question: "How long does it take to build a website and what's the process?",
+            answer: "Timeline varies by complexity: Simple brochure website (4-6 weeks) - 5-10 pages, basic functionality; Business website (6-10 weeks) - 10-20 pages, custom design, CMS integration; E-commerce website (10-16 weeks) - product catalog, payment gateway, inventory management; Custom web application (12-24+ weeks) - complex functionality, integrations, custom features. Process includes: Discovery (1-2 weeks), design (2-4 weeks), development (4-12 weeks), testing (1-2 weeks), launch (1 week), and ongoing optimization. We provide weekly progress updates and milestone deliverables throughout.",
+        },
+        {
+            question: "What does website development cost?",
+            answer: "Pricing varies based on complexity and features: Basic website ($3,000-$8,000) - 5-10 pages, responsive design, CMS, contact forms; Business website ($8,000-$20,000) - custom design, 10-20 pages, blog, SEO optimization, integrations; E-commerce website ($15,000-$50,000) - product catalog, shopping cart, payment gateway, inventory management, customer accounts; Custom web application ($30,000-$100,000+) - complex features, custom functionality, integrations, scalability. Monthly maintenance typically costs $200-$1,000 depending on website size and support level. We provide detailed proposals with itemized pricing after initial consultation.",
+        },
+        {
+            question: "Will my website be mobile-friendly, secure, and SEO-optimized?",
+            answer: "Yes, absolutely. Every website we build includes: Mobile Responsiveness - fully responsive design tested across all devices and screen sizes with mobile-first approach; Security - HTTPS/SSL certificates, regular security updates, malware protection, secure hosting, data encryption, GDPR compliance; SEO Optimization - clean code structure, fast loading speeds (under 3 seconds), semantic HTML, meta tags, schema markup, XML sitemaps, Google Analytics integration, Search Console setup. We also provide: Speed optimization (image compression, caching, CDN), cross-browser compatibility (Chrome, Firefox, Safari, Edge), accessibility standards (WCAG compliance), and ongoing performance monitoring to maintain rankings and security.",
+        },
+    ];
 
     return (
         <>
-            <BelowImageSection items={items} />
-            <section className="bg-accent p-10">
-                <div className="mx-auto max-w-6xl">
+            <title>Website Development Services - Custom, Responsive & SEO-Optimized Websites | Razor Infotech</title>
+            <meta name="description" content="Professional website development: custom design, responsive layouts, e-commerce, CMS integration, SEO optimization. Fast, secure websites that convert visitors into customers." />
+            <meta name="keywords" content="website development, web design, custom website, responsive web design, e-commerce development, WordPress development, web application development, website redesign, UI/UX design, SEO-friendly websites" />
+            <meta name="author" content="Razor Infotech" />
+            
+            <meta property="og:title" content="Website Development Services - Build Your Online Presence" />
+            <meta property="og:description" content="Custom website development with responsive design, e-commerce solutions, SEO optimization, and ongoing support. Transform your digital presence." />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.razorinfotech.com/services/website-development" />
+            <meta property="og:image" content="https://www.razorinfotech.com/images/Website-developement/website-developement-hero-image.png" />
+            
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="Website Development Services by Razor Infotech" />
+            <meta name="twitter:description" content="Custom websites, e-commerce solutions, responsive design, SEO optimization. Build your digital presence." />
+            <meta name="twitter:image" content="https://www.razorinfotech.com/images/Website-developement/website-developement-hero-image.png" />
+            
+            <link rel="canonical" href="https://www.razorinfotech.com/services/website-development" />
+            
+            <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Service",
+                    "serviceType": "Website Development Services",
+                    "provider": {
+                        "@type": "Organization",
+                        "name": "Razor Infotech",
+                        "url": "https://www.razorinfotech.com"
+                    },
+                    "description": "Professional website development services including custom design, responsive web development, e-commerce solutions, CMS integration, UI/UX design, SEO optimization, and ongoing maintenance and support.",
+                    "areaServed": "Worldwide",
+                    "hasOfferCatalog": {
+                        "@type": "OfferCatalog",
+                        "name": "Website Development Services",
+                        "itemListElement": [
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Custom Web Development"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "E-Commerce Development"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "UI/UX Design"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Website Maintenance & Support"
+                                }
+                            }
+                        ]
+                    }
+                })}
+            </script>
+
+            <BelowImageSection items={heroSection} />
+            
+            <section className="bg-accent p-6 sm:p-10" aria-labelledby="services-heading">
+                <div className="mx-auto max-w-7xl">
+                    <div className="text-center mb-10">
+                        <h2 id="services-heading" className="text-3xl md:text-4xl font-semibold text-heading mb-4">
+                            Comprehensive Website Development Solutions
+                        </h2>
+                        <p className="text-paragraph max-w-3xl mx-auto">
+                            From simple business websites to complex e-commerce platforms—we deliver solutions that drive results
+                        </p>
+                    </div>
+
                     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-6 lg:grid-rows-5">
-                        <div className="lg:col-span-3 lg:row-span-3 lg:col-start-1 lg:row-start-1 rounded-2xl bg-[var(--color-background)] shadow p-4 flex flex-col">
+                        <article className="lg:col-span-3 lg:row-span-3 lg:col-start-1 lg:row-start-1 rounded-2xl bg-[var(--color-background)] shadow hover:shadow-md transition p-6 flex flex-col">
                             <img
                                 src="/images/Website-developement/Custom-Web-Development.png"
-                                alt="Custom Web Development"
+                                alt="Custom web development with modern frameworks"
                                 className="h-40 w-full rounded-xl object-cover"
+                                loading="lazy"
+                                width="400"
+                                height="160"
                             />
-                            <h3 className="mt-4 font-semibold text-[var(--color-heading)]">Custom Web Development</h3>
-                            <p className="mt-2 text-sm text-[var(--color-paragraph)]/80">
-                                Designing and building of a responsive, scalable, and secure websites tailored to specific brand needs and goals.
+                            <h3 className="mt-4 font-semibold text-lg text-[var(--color-heading)]">Custom Web Development</h3>
+                            <p className="mt-2 text-sm text-[var(--color-paragraph)]/80 leading-relaxed">
+                                Build fully customized, responsive, scalable, and secure websites using modern technologies (React, Next.js, Node.js) tailored to your unique brand identity, business goals, and target audience needs.
                             </p>
-                        </div>
-                        <div className="lg:col-span-3 lg:row-span-2 lg:col-start-1 lg:row-start-4 rounded-2xl bg-[var(--color-background)] shadow p-4 flex flex-col">
+                        </article>
+                        
+                        <article className="lg:col-span-3 lg:row-span-2 lg:col-start-1 lg:row-start-4 rounded-2xl bg-[var(--color-background)] shadow hover:shadow-md transition p-6 flex flex-col">
                             <img
                                 src="/images/Website-developement/UIUX-Design.png"
-                                alt="UI/UX Design"
+                                alt="UI/UX design and user experience optimization"
                                 className="h-28 w-full rounded-xl object-cover"
+                                loading="lazy"
+                                width="400"
+                                height="112"
                             />
-                            <h3 className="mt-4 font-semibold text-[var(--color-heading)]">UI/UX Design</h3>
-                            <p className="mt-2 text-sm text-[var(--color-paragraph)]/80">
-                                Designing aesthetically pleasing interfaces that offer smooth user journeys and keep them engaged from first-click.
+                            <h3 className="mt-4 font-semibold text-lg text-[var(--color-heading)]">UI/UX Design</h3>
+                            <p className="mt-2 text-sm text-[var(--color-paragraph)]/80 leading-relaxed">
+                                Design beautiful, intuitive interfaces with seamless user journeys, conversion-optimized layouts, and engaging interactions that keep visitors exploring and drive measurable business results.
                             </p>
-                        </div>
+                        </article>
 
-                        {/* Card 3 */}
-                        <div className="lg:col-span-3 lg:row-span-2 lg:col-start-4 lg:row-start-1 rounded-2xl bg-[var(--color-background)] shadow p-4 flex flex-col">
+                        <article className="lg:col-span-3 lg:row-span-2 lg:col-start-4 lg:row-start-1 rounded-2xl bg-[var(--color-background)] shadow hover:shadow-md transition p-6 flex flex-col">
                             <img
                                 src="/images/Website-developement/E-Commerce-Development.png"
-                                alt="E-Commerce Development"
+                                alt="E-commerce website development and online store solutions"
                                 className="h-28 w-full rounded-xl object-cover"
+                                loading="lazy"
+                                width="400"
+                                height="112"
                             />
-                            <h3 className="mt-4 font-semibold text-[var(--color-heading)]">E-Commerce Development</h3>
-                            <p className="mt-2 text-sm text-[var(--color-paragraph)]/80">
-                                Building user-friendly and powerful online stores that help drive sales, improve customer experience, and scale business.
+                            <h3 className="mt-4 font-semibold text-lg text-[var(--color-heading)]">E-Commerce Development</h3>
+                            <p className="mt-2 text-sm text-[var(--color-paragraph)]/80 leading-relaxed">
+                                Launch powerful online stores with product catalogs, secure payment gateways (Stripe, PayPal), inventory management, customer accounts, and conversion-optimized checkout flows that drive sales.
                             </p>
-                        </div>
+                        </article>
 
-                        {/* Card 4 */}
-                        <div className="lg:col-span-3 lg:row-span-3 lg:col-start-4 lg:row-start-3 rounded-2xl bg-[var(--color-background)] shadow p-4 flex flex-col">
+                        <article className="lg:col-span-3 lg:row-span-3 lg:col-start-4 lg:row-start-3 rounded-2xl bg-[var(--color-background)] shadow hover:shadow-md transition p-6 flex flex-col">
                             <img
                                 src="/images/Website-developement/Website-Maintenance-Support.png"
-                                alt="Website Maintenance & Support"
+                                alt="Website maintenance and technical support services"
                                 className="h-40 w-full rounded-xl object-cover"
+                                loading="lazy"
+                                width="400"
+                                height="160"
                             />
-                            <h3 className="mt-4 font-semibold text-[var(--color-heading)]">Website Maintenance & Support</h3>
-                            <p className="mt-2 text-sm text-[var(--color-paragraph)]/80">
-                                Our team ensures that your website stays fast, secure, and up-to-date with ongoing support and optimization for performance.
+                            <h3 className="mt-4 font-semibold text-lg text-[var(--color-heading)]">Website Maintenance & Support</h3>
+                            <p className="mt-2 text-sm text-[var(--color-paragraph)]/80 leading-relaxed">
+                                Keep your website fast, secure, and current with ongoing maintenance—security updates, performance optimization, content updates, bug fixes, uptime monitoring, and 24/7 technical support.
                             </p>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </section>
-            <section className=" bg-accent px-6 py-14 md:py-16">
-                <div className="mx-auto max-w-6xl">
-                    <p className="border border-secondary py-2 px-6 rounded-full text-paragraph mx-auto w-fit mb-4">Work Process</p>
-                    <h2 className="text-center text-3xl font-semibold text-[var(--color-heading)] md:text-4xl">
-                        From Concept To Launch
-                    </h2>
+
+            <section className="bg-background px-6 py-14 md:py-16" aria-labelledby="process-heading">
+                <div className="mx-auto max-w-7xl">
+                    <div className="text-center mb-10">
+                        <span className="inline-block border border-secondary py-2 px-6 rounded-full text-paragraph font-medium mb-4">
+                            Work Process
+                        </span>
+                        <h2 id="process-heading" className="text-3xl font-semibold text-[var(--color-heading)] md:text-4xl">
+                            From Concept To Launch & Beyond
+                        </h2>
+                        <p className="text-paragraph mt-4 max-w-3xl mx-auto">
+                            Our proven 6-step process ensures your website launches on time, on budget, and exceeds expectations
+                        </p>
+                    </div>
 
                     <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                        {STEPS.map(({ Icon, title, desc }, i) => (
-                            <div
+                        {developmentProcess.map(({ Icon, title, desc }) => (
+                            <article
                                 key={title}
-                                className="rounded-[22px] bg-[var(--color-accent)] p-6 text-center shadow-sm ring-1 ring-[var(--color-paragraph)]/15"
+                                className="rounded-2xl bg-accent p-6 text-center shadow-sm ring-1 ring-[var(--color-paragraph)]/15 hover:shadow-md transition"
                             >
-                                <div className="mx-auto mb-4 grid h-10 w-10 place-items-center rounded-full bg-[var(--color-secondary)] text-[var(--color-accent)]">
-                                    <Icon className="h-4 w-4" />
+                                <div className="mx-auto mb-4 grid h-12 w-12 place-items-center rounded-full bg-[var(--color-secondary)] text-white" aria-hidden="true">
+                                    <Icon className="h-5 w-5" />
                                 </div>
-                                <h3 className="text-base font-semibold text-[var(--color-heading)]">{title}</h3>
-                                <p className="mx-auto mt-3 max-w-[36ch] text-sm leading-6 text-[var(--color-paragraph)]/80">
+                                <h3 className="text-base font-semibold text-[var(--color-heading)] mb-3">{title}</h3>
+                                <p className="mx-auto max-w-[40ch] text-sm leading-6 text-[var(--color-paragraph)]/80">
                                     {desc}
                                 </p>
-                            </div>
+                            </article>
                         ))}
                     </div>
                 </div>
             </section>
-            <section className="py-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 max-w-6xl mx-auto p-8">
+
+            <section className="py-12 sm:py-16 bg-gradient-to-b from-unique to-accent" aria-labelledby="why-choose-heading">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto px-6 sm:px-8 items-center">
                     <div>
-                        <img src="/images/Website-developement/website-developement-section4.png" alt="Building Websites That Drive Growth" className="rounded-2xl" />
+                        <img 
+                            src="/images/Website-developement/website-developement-section4.png" 
+                            alt="Professional website development team creating high-performance websites" 
+                            className="rounded-2xl w-full h-auto"
+                            loading="lazy"
+                            width="600"
+                            height="400"
+                        />
                     </div>
                     <div className="flex flex-col justify-center">
-                        <h2 className="text-4xl font-semibold text-heading max-w-[80%]">Building Websites That Drive Growth</h2>
-                        <p className="text-paragraph text-base mt-3 max-w-[70%]">At Razor Infotech, our team of industry expert developers and designers aim to craft each website with uniqueness of every brand. We combine the creativity and functionality to bring a visually pleasing and smooth interface that are user-friendly.</p>
-                        <ul className="mt-5">
-                            <li className="flex gap-5 items-center mt-4 text-xl"><span><FaDotCircle className="text-secondary" /></span><span>Creative designs tailored to your brand identity.</span></li>
-                            <li className="flex gap-5 items-center mt-4 text-xl"><span><FaDotCircle className="text-secondary" /></span><span>Dedicated support & fostering long-term partnership.</span></li>
-                            <li className="flex gap-5 items-center mt-4 text-xl"><span><FaDotCircle className="text-secondary" /></span><span>Fast, secure, and scalable solutions.</span></li>
+                        <h2 id="why-choose-heading" className="text-3xl sm:text-4xl font-semibold text-heading mb-4">
+                            Building Websites That Drive Growth
+                        </h2>
+                        <p className="text-paragraph text-base leading-relaxed">
+                            At Razor Infotech, our expert developers and designers craft unique websites that reflect your brand identity. We combine stunning creativity with powerful functionality to deliver fast, secure, and user-friendly experiences that convert visitors into customers and drive measurable business results.
+                        </p>
+                        <ul className="mt-6 space-y-4">
+                            {keyBenefits.map((benefit, index) => (
+                                <li key={index} className="flex gap-4 items-start text-base sm:text-lg">
+                                    <FaDotCircle className="text-secondary flex-shrink-0 mt-1.5" aria-hidden="true" />
+                                    <span className="text-heading">{benefit}</span>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>
             </section>
-            <Faq faqs={faqs} />
+
+            <Suspense fallback={<div className="text-center py-10 text-paragraph">Loading FAQs...</div>}>
+                <Faq faqs={faqs} />
+            </Suspense>
         </>
-    )
+    );
 }

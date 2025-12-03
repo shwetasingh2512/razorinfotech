@@ -57,7 +57,7 @@ export default function TestimonialCarousel() {
           {duplicatedTestimonials.map((testimonial, index) => (
             <Card key={`bottom-${index}`} {...testimonial} />
           ))}
-        </div>
+        </div>  
       </div>
       <style>
         {`

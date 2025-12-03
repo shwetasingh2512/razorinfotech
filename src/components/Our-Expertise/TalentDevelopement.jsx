@@ -1,130 +1,206 @@
+import { lazy, Suspense } from "react";
 import BackgroundImagesection from "../../reusable/BackgroundImagesection";
 import Descriptionsection from "../../reusable/Descriptionsection";
-import Faq from "../../reusable/Faq";
 import ProcessSection from "../../reusable/ProcessSection";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 
+const Faq = lazy(() => import("../../reusable/Faq"));
 
-
-export default function TalentDevelopement() {
-
-
-    const firstsection = {
+export default function TalentDevelopment() {
+    const firstSection = {
         title: "Growing Talent, Growing Business",
-        description: `Empowering people with the right skills and opportunities to innovate, perform, and drive sustainable business growth.`,
+        description: "Empower your workforce with strategic talent development programs that build leadership skills, enhance performance, and drive sustainable business growth through continuous learning and career advancement.",
         image: "/images/talent-developement/talent-developement-hero.png"
     };
 
-    const secondsection = {
+    const secondSection = {
         background: "bg-accent",
-        title: "Empowering Startups and Businesses to Succeed",
-        description: "We help ambitious startups and growing businesses unlock their true potential with tailored strategies, smart funding solutions, and expert guidance. From building strong foundations to scaling operations, our mission is to provide the tools, knowledge, and partnerships needed to thrive in a competitive market. With us as your trusted partner, success isn’t just a goal — it’s the journey we take together.",
+        title: "Empowering Teams to Reach Their Full Potential",
+        description: "We help ambitious startups and growing businesses unlock their workforce's true potential with tailored talent development strategies, leadership training, and continuous learning programs. From building foundational skills to developing future leaders, our mission is to provide the expertise, frameworks, and support needed to create high-performing teams that drive business success. With us as your strategic partner, talent development becomes a competitive advantage that fuels innovation, engagement, and sustainable growth.",
         image: "/images/talent-developement/Empowering-Startups.png",
-        btn: "Scheduled a Consultation",
+        btn: "Schedule a Consultation",
         width: "max-w-6xl"
-    }
+    };
 
-
-    const thirdsection = {
+    const talentPrograms = {
         background: "bg-gradient-to-b from-unique to-accent",
-        head: "Leadership Development Programs",
-        paragraph: " Our training programs are designed to strengthen leadership, enhance soft skills, upskill talent, and improve sales performance — ensuring your team is prepared for today and ready for tomorrow.",
+        head: "Comprehensive Talent Development Solutions",
+        paragraph: "Our training programs strengthen leadership capabilities, enhance critical soft skills, upskill technical talent, and improve team performance—ensuring your workforce is prepared for today's challenges and ready for tomorrow's opportunities.",
         child: [
             {
                 image: "/images/talent-developement/Leadership-Developmen.jpg",
                 title: "Leadership Development Programs",
-                description: "Prepare future leaders with the skills to inspire, guide, and drive organizational success. Our programs focus on strategic thinking, decision-making, and people management to build strong leaders at every level."
+                description: "Build future leaders with comprehensive training in strategic thinking, emotional intelligence, decision-making, change management, and people leadership. Our programs develop strong leaders at every organizational level who can inspire teams and drive results."
             },
             {
                 image: "/images/talent-developement/Career-Pathing.jpg",
-                title: "Career Pathing & Employee Growth",
-                description: "Help your workforce see a clear path to success. We design structured career roadmaps, development plans, and skill-building initiatives that keep employees motivated and engaged."
+                title: "Career Pathing & Growth Planning",
+                description: "Design clear career progression pathways with structured development plans, skill matrices, promotion frameworks, and succession planning. Keep employees engaged and motivated by showing tangible growth opportunities within your organization."
             },
             {
                 image: "/images/talent-developement/Coaching.jpg",
-                title: "Coaching & Mentorship",
-                description: "Provide employees with one-on-one guidance from experienced coaches and mentors. From performance improvement to personal growth, our coaching programs foster confidence, accountability, and long-term success."
+                title: "Executive Coaching & Mentorship",
+                description: "Provide personalized one-on-one guidance from experienced executive coaches and industry mentors. From performance optimization to leadership transition, our coaching programs build confidence, accountability, and sustainable behavioral change."
             },
             {
                 image: "/images/talent-developement/Continuous-Learning.jpg",
-                title: "Continuous Learning & Workshops",
-                description: "Keep teams future-ready with ongoing learning opportunities, interactive workshops, and upskilling programs. We tailor training to industry trends and organizational needs, ensuring your people remain competitive in a fast-changing business world."
+                title: "Continuous Learning & Upskilling",
+                description: "Keep teams future-ready with ongoing learning opportunities, interactive workshops, microlearning modules, and certification programs. We tailor training to emerging industry trends, technological advances, and organizational priorities."
             }
         ]
     };
 
-
-    const faqs = [
+    const whyChooseUs = [
         {
-            question: "What services does Razor Infotech provide?",
-            answer:
-                "We offer end-to-end solutions, including IT services, BPO support, HR management, cloud solutions, cybersecurity, and digital transformation to help businesses scale with confidence.",
+            title: "Proven Learning Methodologies",
+            description: "Evidence-based training approaches combining adult learning theory, experiential learning, micro-credentials, and competency frameworks proven to increase knowledge retention by 65% and application by 55%."
         },
         {
-            question: "Who can businesses of different sizes benefit from our services?",
-            answer:
-                "We provide tailored solutions for startups, SMBs, and enterprises, ensuring value at every stage.",
+            title: "Customized Development Programs",
+            description: "Tailored talent strategies aligned with your industry, organizational culture, business objectives, and workforce demographics—from frontline employees to C-suite executives across all departments."
         },
         {
-            question: "How does Razor Infotech ensure quality and security?",
-            answer:
-                "We follow strict compliance, use advanced security practices, and maintain transparency with our clients.",
+            title: "Measurable ROI & Impact",
+            description: "Comprehensive metrics tracking skill development, behavioral change, performance improvement, engagement scores, retention rates, and business impact with quarterly assessment reports and KPI dashboards."
         },
         {
-            question: "Can we customize solutions based on your business needs?",
-            answer:
-                "Yes, all our solutions can be customized to fit your unique business goals.",
+            title: "Blended Learning Approach",
+            description: "Flexible delivery combining in-person workshops, virtual instructor-led training, self-paced e-learning, microlearning, coaching sessions, and on-the-job application for maximum effectiveness and accessibility."
         },
     ];
 
-
-
-    const PPC = [
+    const faqs = [
         {
-            title: "Proven Expertise Across Industries",
-            description: "With exports in our team, we understand what works best for different audiences."
+            question: "What talent development services does Razor Infotech provide?",
+            answer: "We provide comprehensive talent development services including leadership development programs (emerging leaders, mid-level management, executive leadership), career pathing and succession planning, executive coaching and mentorship, soft skills training (communication, emotional intelligence, teamwork), technical upskilling and reskilling programs, onboarding and new hire training, performance management training, diversity and inclusion workshops, continuous learning platforms, and customized learning paths with certifications and assessments.",
         },
         {
-            title: "End-to-End PPC Campaign Management",
-            description: "Our team handles every aspect of your PPC campaigns, driving results that matter."
+            question: "How do you measure talent development ROI and effectiveness?",
+            answer: "We measure success through multiple metrics: Pre and post-training assessments (knowledge gain), behavioral change observations (manager feedback, 360 reviews), performance improvement metrics (productivity, quality, efficiency), employee engagement and satisfaction scores, retention rates and internal promotion rates, business impact metrics (revenue per employee, customer satisfaction), learning completion and application rates, and cost savings from reduced turnover. We provide quarterly reports showing these KPIs with clear ROI calculations.",
         },
         {
-            title: "Transparent Reporting",
-            description: "We believe in complete transparency, so you always know how campaigns are performing."
+            question: "What is the typical timeline and investment for talent development?",
+            answer: "Investment varies by scope: Individual coaching ($3,000-8,000 per person for 6-month engagement), team workshops ($5,000-15,000 per session for 20-30 participants), leadership development programs ($25,000-75,000 for 12-month cohort-based program), enterprise-wide talent strategy ($50,000-250,000+ annually for comprehensive programs). Timeline: Needs assessment (2-4 weeks), program design (4-6 weeks), pilot rollout (1-3 months), full deployment (3-12 months), ongoing optimization (continuous). Most organizations see measurable improvements within 6 months.",
         },
         {
-            title: "Tailored Strategies ",
-            description: "We create personalized PPC strategies that match your objectives for better growth."
+            question: "How do you customize programs for different industries and roles?",
+            answer: "We customize through: Industry-specific case studies and scenarios (healthcare, finance, tech, manufacturing, retail), role-based competency frameworks (technical skills for engineers, soft skills for managers), organizational culture alignment (startup agility vs corporate structure), learning style preferences (Gen Z microlearning vs Boomer structured courses), regulatory and compliance requirements (HIPAA, SOX, GDPR training), language and regional customization, and integration with existing HR systems (LMS, HRIS, performance management platforms). Every program includes pre-assessment to identify specific gaps and priorities.",
         },
-
-    ]
+    ];
 
     return (
         <>
-            <BackgroundImagesection items={firstsection} />
-            <Descriptionsection items={secondsection} />
-            <ProcessSection items={thirdsection} />
-            <section className="bg-accent p-10">
-                <div className="max-w-6xl mx-auto">
-                    <div className="head">
-                        <h3 className="text-3xl text-heading text-center font-semibold">Why Choose Razor Infotech for PPC?</h3>
+            <title>Talent Development Services - Leadership Training & Employee Growth Programs | Razor Infotech</title>
+            <meta name="description" content="Professional talent development: leadership programs, career pathing, executive coaching, continuous learning. Improve performance 55%, retention 40%, and build future-ready teams." />
+            <meta name="keywords" content="talent development, leadership development programs, employee training, executive coaching, career development, workforce training, learning and development, upskilling programs, succession planning, corporate training" />
+            <meta name="author" content="Razor Infotech" />
+            
+            <meta property="og:title" content="Talent Development Services - Build High-Performing Teams" />
+            <meta property="og:description" content="Strategic talent development: leadership training, coaching, career pathing, continuous learning. Measurable ROI and performance improvement." />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.razorinfotech.com/services/talent-development" />
+            <meta property="og:image" content="https://www.razorinfotech.com/images/talent-developement/talent-developement-hero.png" />
+            
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="Talent Development Services by Razor Infotech" />
+            <meta name="twitter:description" content="Leadership development, coaching, upskilling programs. Build capabilities that drive business growth." />
+            <meta name="twitter:image" content="https://www.razorinfotech.com/images/talent-developement/talent-developement-hero.png" />
+            
+            <link rel="canonical" href="https://www.razorinfotech.com/services/talent-development" />
+            
+            <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Service",
+                    "serviceType": "Talent Development and Training Services",
+                    "provider": {
+                        "@type": "Organization",
+                        "name": "Razor Infotech",
+                        "url": "https://www.razorinfotech.com"
+                    },
+                    "description": "Professional talent development services including leadership development programs, career pathing, executive coaching and mentorship, continuous learning and upskilling, soft skills training, and performance improvement programs with measurable ROI.",
+                    "areaServed": "Worldwide",
+                    "hasOfferCatalog": {
+                        "@type": "OfferCatalog",
+                        "name": "Talent Development Services",
+                        "itemListElement": [
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Leadership Development Programs"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Career Pathing & Growth Planning"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Executive Coaching & Mentorship"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Continuous Learning & Upskilling"
+                                }
+                            }
+                        ]
+                    }
+                })}
+            </script>
+
+            <BackgroundImagesection items={firstSection} />
+            <Descriptionsection items={secondSection} />
+            <ProcessSection items={talentPrograms} />
+
+            <section className="bg-accent py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="why-choose-heading">
+                <div className="mx-auto max-w-7xl">
+                    <div className="text-center mb-10">
+                        <h2 id="why-choose-heading" className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-heading mb-4">
+                            Why Choose Razor Infotech for Talent Development?
+                        </h2>
+                        <p className="text-paragraph max-w-3xl mx-auto">
+                            Strategic learning solutions that deliver measurable business impact and workforce transformation
+                        </p>
                     </div>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mx-auto my-8">
-                        {
-                            PPC.map((e, i) => (
-                                <div className="p-5 bg-background rounded-2xl">
-                                    <div className="flex gap-5 items-center">
-                                        <IoIosCheckmarkCircleOutline className="text-secondary" />
-                                        <span className="text-heading font-semibold">{e.title}</span>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+                        {whyChooseUs.map((e, i) => (
+                            <article
+                                key={i}
+                                className="p-6 bg-background rounded-2xl shadow-sm transition hover:shadow-md"
+                            >
+                                <div className="flex items-start gap-4">
+                                    <IoIosCheckmarkCircleOutline 
+                                        className="text-secondary text-3xl flex-shrink-0 mt-1" 
+                                        aria-hidden="true"
+                                    />
+                                    <div>
+                                        <h3 className="font-semibold text-heading text-lg sm:text-xl mb-2">
+                                            {e.title}
+                                        </h3>
+                                        <p className="text-paragraph text-sm leading-relaxed">
+                                            {e.description}
+                                        </p>
                                     </div>
-                                    <p className="text-paragraph text-base mt-4">{e.description}</p>
                                 </div>
-                            ))
-                        }
+                            </article>
+                        ))}
                     </div>
                 </div>
             </section>
-            <Faq faqs={faqs} />
+
+            <Suspense fallback={<div className="text-center py-10 text-paragraph">Loading FAQs...</div>}>
+                <Faq faqs={faqs} />
+            </Suspense>
         </>
-    )
+    );
 }

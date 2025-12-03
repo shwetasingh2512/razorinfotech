@@ -139,38 +139,119 @@ function Navbar() {
                   )}
                   {activeMenu === i && kids && (
                     <div className="absolute left-0 top-full mt-3 z-50 text-white flex gap-6 rounded-lg bg-secondary p-4 shadow-lg">
-                      <ul className="min-w-[220px]">
-                        {menu.children.map((child, j) => {
-                          const childHasKids = hasChildren(child);
+                      {/* If this is the Our Expertise menu, split children into two columns */}
+                      {menu.title === "OUR EXPERTISE" ? (
+                        (() => {
+                          const half = Math.ceil(menu.children.length / 2);
+                          const left = menu.children.slice(0, half);
+                          const right = menu.children.slice(half);
                           return (
-                            <li key={j}>
-                              {childHasKids ? (
-                                <button
-                                  className={`flex w-full items-center justify-between rounded px-3 py-2 ${activeSubMenu === j ? "bg-secondary" : "hover:bg-accent hover:text-secondary"}`}
-                                  onClick={(e) => {
-                                    e.stopPropagation();
-                                    setActiveSubMenu(activeSubMenu === j ? null : j);
-                                    setActiveItem(child.title);
-                                  }}
-                                >
-                                  {child.title} <FaChevronRight />
-                                </button>
-                              ) : (
-                                <Link
-                                  to={child.path}
-                                  className={`block rounded px-3 py-2 ${activeItem === child.title ? "bg-secondary" : "hover:bg-accent hover:text-secondary"}`}
-                                  onClick={() => {
-                                    setActiveItem(child.title);
-                                    setActiveMenu(null);
-                                  }}
-                                >
-                                  {child.title}
-                                </Link>
-                              )}
-                            </li>
+                            <>
+                              <ul className="min-w-[220px]">
+                                {left.map((child, j) => {
+                                  const originalIndex = j; // original index in menu.children
+                                  const childHasKids = hasChildren(child);
+                                  return (
+                                    <li key={originalIndex}>
+                                      {childHasKids ? (
+                                        <button
+                                          className={`flex w-full items-center justify-between rounded px-3 py-2 ${activeSubMenu === originalIndex ? "bg-secondary" : "hover:bg-accent hover:text-secondary"}`}
+                                          onClick={(e) => {
+                                            e.stopPropagation();
+                                            setActiveSubMenu(activeSubMenu === originalIndex ? null : originalIndex);
+                                            setActiveItem(child.title);
+                                          }}
+                                        >
+                                          {child.title} <FaChevronRight />
+                                        </button>
+                                      ) : (
+                                        <Link
+                                          to={child.path}
+                                          className={`block rounded px-3 py-2 ${activeItem === child.title ? "bg-secondary" : "hover:bg-accent hover:text-secondary"}`}
+                                          onClick={() => {
+                                            setActiveItem(child.title);
+                                            setActiveMenu(null);
+                                          }}
+                                        >
+                                          {child.title}
+                                        </Link>
+                                      )}
+                                    </li>
+                                  );
+                                })}
+                              </ul>
+
+                              <ul className="min-w-[220px]">
+                                {right.map((child, j) => {
+                                  const originalIndex = half + j;
+                                  const childHasKids = hasChildren(child);
+                                  return (
+                                    <li key={originalIndex}>
+                                      {childHasKids ? (
+                                        <button
+                                          className={`flex w-full items-center justify-between rounded px-3 py-2 ${activeSubMenu === originalIndex ? "bg-secondary" : "hover:bg-accent hover:text-secondary"}`}
+                                          onClick={(e) => {
+                                            e.stopPropagation();
+                                            setActiveSubMenu(activeSubMenu === originalIndex ? null : originalIndex);
+                                            setActiveItem(child.title);
+                                          }}
+                                        >
+                                          {child.title} <FaChevronRight />
+                                        </button>
+                                      ) : (
+                                        <Link
+                                          to={child.path}
+                                          className={`block rounded px-3 py-2 ${activeItem === child.title ? "bg-secondary" : "hover:bg-accent hover:text-secondary"}`}
+                                          onClick={() => {
+                                            setActiveItem(child.title);
+                                            setActiveMenu(null);
+                                          }}
+                                        >
+                                          {child.title}
+                                        </Link>
+                                      )}
+                                    </li>
+                                  );
+                                })}
+                              </ul>
+                            </>
                           );
-                        })}
-                      </ul>
+                        })()
+                      ) : (
+                        <ul className="min-w-[220px]">
+                          {menu.children.map((child, j) => {
+                            const childHasKids = hasChildren(child);
+                            return (
+                              <li key={j}>
+                                {childHasKids ? (
+                                  <button
+                                    className={`flex w-full items-center justify-between rounded px-3 py-2 ${activeSubMenu === j ? "bg-secondary" : "hover:bg-accent hover:text-secondary"}`}
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      setActiveSubMenu(activeSubMenu === j ? null : j);
+                                      setActiveItem(child.title);
+                                    }}
+                                  >
+                                    {child.title} <FaChevronRight />
+                                  </button>
+                                ) : (
+                                  <Link
+                                    to={child.path}
+                                    className={`block rounded px-3 py-2 ${activeItem === child.title ? "bg-secondary" : "hover:bg-accent hover:text-secondary"}`}
+                                    onClick={() => {
+                                      setActiveItem(child.title);
+                                      setActiveMenu(null);
+                                    }}
+                                  >
+                                    {child.title}
+                                  </Link>
+                                )}
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      )}
+
                       {activeSubMenu !== null && hasChildren(menu.children[activeSubMenu]) && (
                         <ul className=" rounded bg-gray-700 p-4">
                           {menu.children[activeSubMenu].children.map((subChild, k) => (
