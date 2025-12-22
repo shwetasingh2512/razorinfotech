@@ -279,7 +279,7 @@ function Navbar() {
           </ul>
         </nav>
         <div className="hidden lg:block">
-          <Link to="/contact" className="rounded-full tracking-widest bg-secondary px-6 lg:px-8 py-3 sm:py-4 text-white hover:bg-primary-light">
+          <Link to="/contact" className="rounded-full tracking-widest bg-secondary border px-6 lg:px-8 py-2 sm:py-3 text-white hover:bg-accent hover:text-secondary border-secondary ">
             CONTACT US
           </Link>
         </div>

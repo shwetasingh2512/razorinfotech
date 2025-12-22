@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import BelowImageSection from "../reusable/BelowImageSection";
 import Crousel from "../reusable/Crousel";
 import { BadgeCheck, Users, BarChart3, Cpu } from "lucide-react";
+import Jobs from "../reusable/Jobs";
 
 // Lazy load FAQ component
 const Faq = lazy(() => import("../reusable/Faq"));
@@ -21,9 +22,15 @@ export default function Career() {
     "/images/Home/Team-3.png",
     "/images/Home/Team-4.png",
     "/images/Home/Team-5.png",
+    "/images/Home/Team-1.png",
+    "/images/Home/Team-2.png",
+    "/images/Home/Team-3.png",
+    "/images/Home/Team-4.png",
+    "/images/Home/Team-5.png",
   ];
 
   const items = [
+
     {
       Icon: BadgeCheck,
       title: "Excellence in Outsourcing",
@@ -335,6 +342,9 @@ export default function Career() {
             </div>
           </div>
         </div>
+      </section>
+      <section>
+        <Jobs />
       </section>
 
       <Suspense fallback={<div className="text-center py-10 text-paragraph">Loading FAQs...</div>}>

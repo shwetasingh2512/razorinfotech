@@ -9,14 +9,19 @@ const Faq = lazy(() => import("../../reusable/Faq"));
 export default function HrServices() {
     const firstsection = {
         title: "Recruitment Process Outsourcing (RPO)",
-        description: "Streamline your hiring with end-to-end recruitment process outsourcing. From talent sourcing and screening to onboarding, we deliver qualified candidates faster while reducing costs by up to 40% and improving quality of hire.",
+        description: "Recruitment Process Outsourcing (RPO) has a broad set of options associated with direct customer interactions, including handling issues, specific queries, and sales-related questions.",
         image: "/images/hr-services/hr-services-hero.png"
     };
 
     const secondsection = {
         background: "bg-background",
-        title: "Strategic Recruitment That Drives Business Growth",
-        description: "We provide comprehensive RPO solutions that transform your hiring process through data-driven talent acquisition, expert candidate assessment, and seamless integration with your HR team. Our approach reduces time-to-hire by 50%, improves candidate quality, and allows you to scale recruitment efforts efficiently while focusing on core business objectives.",
+        title: "Your Partner in Customer Success",
+        description: "We provide smart customer support designed to help your business grow. We focus on what truly matters:",
+        points: [
+            "Builds customer relationships, boosts engagement",
+            "Helps the brands to grow with a support team",
+            "Offers fast and easy solutions for your customers"
+        ],
         image: "/images/hr-services/Empowering.png",
         btn: "Schedule a Consultation",
         width: "max-w-6xl"
@@ -24,28 +29,28 @@ export default function HrServices() {
 
     const thirdsection = {
         background: "bg-gradient-to-b from-unique to-accent",
-        head: "Comprehensive Recruitment Services for Every Hiring Need",
-        paragraph: "Full-cycle recruitment outsourcing from initial sourcing to final onboarding, ensuring efficiency, quality, and the right talent for sustained business growth.",
+        head: "Tired of Recruiting Top Talent?",
+        paragraph: "We manage your hiring from start to finish. Our goal is to make it fast, accurate, and find the perfect fit for your team.",
         child: [
             {
                 image: "/images/hr-services/Inbound-Services.jpg",
-                title: "Full-Cycle RPO",
-                description: "End-to-end recruitment management including workforce planning, employer branding, sourcing, screening, interviewing, offer management, and onboarding for complete hiring solutions."
+                title: "Inbound Services",
+                description: "Our inbound support makes your customer feel valued. We offer quick, personal help that builds trust and turns them into loyal customers. "
             },
             {
                 image: "/images/hr-services/Outbound-Services.jpg",
-                title: "Project-Based Hiring",
-                description: "Flexible recruitment support for specific projects, seasonal demands, or expansion initiatives with dedicated teams that scale based on your immediate hiring needs."
+                title: "Outbound Services",
+                description: "Our outbound services actively reach out to customers to generate new leads, gather valuable feedback, and build strong relationships that drive growth."
             },
             {
                 image: "/images/hr-services/Omnichannel-Support-Services.jpg",
-                title: "Executive Search",
-                description: "Specialized recruitment for senior leadership and executive positions using targeted headhunting, comprehensive assessments, and confidential search processes."
+                title: "Integrated Channel Services/ Multiple Support System (Use any one) ",
+                description: "Our integrated channel operates on a single platform, facilitating interactions through phone, email, chat, and social media for a hassle-free experience and quicker resolutions. "
             },
             {
                 image: "/images/hr-services/Email-Support-Services.jpg",
-                title: "Volume Hiring",
-                description: "Mass recruitment campaigns for high-volume positions with streamlined processes, automated screening, and efficient candidate pipeline management to fill multiple roles quickly."
+                title: "Email Support Services",
+                description: "Our continuous email support offers personalized responses that bridge the gap between customers and the company, ensuring quick resolutions and enhanced satisfaction."
             }
         ]
     };
@@ -54,32 +59,32 @@ export default function HrServices() {
         {
             id: "1",
             title: "Requirement Analysis",
-            desc: "We conduct in-depth consultations to understand your hiring needs, company culture, role requirements, and business goals to build a tailored recruitment strategy.",
+            desc: "We understand your hiring needs, business goals, and job role requirements to build an outstanding recruitment strategy.",
         },
         {
             id: "2",
             title: "Talent Sourcing",
-            desc: "Our team leverages job boards, LinkedIn, social media, employee referrals, and proprietary talent databases to identify and attract top candidates from multiple channels.",
+            desc: "Our team utilizes multiple channels to identify, attract, and engage the right candidates.",
         },
         {
             id: "3",
             title: "Screening & Assessment",
-            desc: "We conduct detailed resume reviews, skill assessments, background checks, reference verification, and initial interviews to filter and shortlist qualified candidates.",
+            desc: "We conduct detailed assessments, background checks, and initial interviews to hire talented candidates.",
         },
         {
             id: "4",
             title: "Interview Coordination",
-            desc: "We manage complete interview scheduling, candidate communication, feedback collection, and coordination between candidates and hiring managers for seamless execution.",
+            desc: "For a smooth interviewing process, we schedule communication between candidates and managers.",
         },
         {
             id: "5",
             title: "Selection & Offer Management",
-            desc: "We support final candidate evaluation, salary negotiation, offer letter preparation, and acceptance follow-up to ensure successful candidate closure.",
+            desc: "We support final candidate selection, salary negotiation, and offer rollout to ensure acceptance.",
         },
         {
             id: "6",
             title: "Onboarding Support",
-            desc: "We facilitate smooth transitions with documentation assistance, pre-joining engagement, orientation coordination, and initial integration support to reduce early attrition.",
+            desc: "Stop losing great talent after the offer letter. We deliver an onboarding experience that makes them stay.",
         },
     ];
 
@@ -88,40 +93,40 @@ export default function HrServices() {
         image: "/images/Software-developement/y-choose-us.png",
         child: [
             {
-                title: "Proven Recruitment Expertise",
-                desc: "Experienced recruitment specialists with industry-specific knowledge across IT, finance, healthcare, retail, and manufacturing sectors."
+                title: "Certified IT Professionals",
+                desc: "We have a team of trained and professional support agents who are certified to handle technical issues."
             },
             {
-                title: "Reduce Time-to-Hire by 50%",
-                desc: "Streamlined processes, automation, and dedicated recruiters accelerate hiring cycles while maintaining candidate quality and cultural fit."
+                title: "Regular Monitoring",
+                desc: "Our team anticipates and aims to prevent issues before they might impact your operations, rather than just taking action afterwards."
             },
             {
-                title: "Cost Savings of 30-40%",
-                desc: "Eliminate overhead costs of in-house recruitment teams, expensive job postings, and inefficient hiring processes while improving ROI."
+                title: "Secure & Compliant",
+                desc: "We follow the best industry practices to keep the data of our clients protected and ensure regulatory compliance."
             },
             {
-                title: "Quality Candidates & Retention",
-                desc: "Rigorous screening methodologies and cultural fit assessments result in higher-quality hires with 25% better retention rates."
+                title: "Custom SLA’s",
+                desc: "We use analytics and performance insights to create our content decisions for better ROI."
             },
         ]
     };
 
     const faqs = [
         {
-            question: "What is Recruitment Process Outsourcing (RPO)?",
-            answer: "RPO is when a company outsources all or part of its recruitment function to an external provider. The RPO provider acts as an extension of your HR team, managing the entire hiring process from job posting and candidate sourcing to interviews, offers, and onboarding. This allows businesses to access expert recruiters, reduce hiring costs, and improve quality of hire."
+            question: "What services does Razor Infotech provide?",
+            answer: "We offer numerous solutions, such as IT services, HR management, cloud solutions, cybersecurity, and digital transformation to take your business to a high level."
         },
         {
-            question: "How much can we save with RPO services?",
-            answer: "Most businesses save 30-40% on recruitment costs through RPO by eliminating expenses for in-house recruiters, job board subscriptions, applicant tracking systems, and recruitment advertising. You also save indirect costs through reduced time-to-hire (50% faster), lower employee turnover (25% improvement), and better resource allocation for strategic initiatives."
+            question: "How do our services benefit companies of different sizes?",
+            answer: "Razor Infotech is beneficial for both small and large-scale companies by offering cost-effective solutions, improving efficiency, and enabling focus on core business development."
         },
         {
-            question: "What industries do you recruit for?",
-            answer: "We provide RPO services across multiple industries including Information Technology (developers, engineers, IT support), Finance & Banking (analysts, accountants), Healthcare (nurses, doctors, administrators), Retail & E-commerce (store managers, customer service), Manufacturing (engineers, production staff), and Professional Services (consultants, analysts). We customize our approach based on industry-specific requirements."
+            question: "How does Razor Infotech ensure quality and security?",
+            answer: "At Razor Infotech, quality and security are ensured by following certain protocols, safeguarding your data and systems."
         },
         {
-            question: "How do you ensure quality of hire?",
-            answer: "We maintain quality through multi-stage screening (resume review, skill assessments, technical tests), behavioral interviews assessing cultural fit, thorough background and reference checks, structured evaluation scorecards, hiring manager collaboration at every stage, and post-hire performance tracking to continuously refine our selection criteria."
+            question: "Can we customize solutions based on your business needs?",
+            answer: "Yes, you can customize solutions based on the specific needs by adopting software development and IT-based solutions."
         },
     ];
 
@@ -205,11 +210,11 @@ export default function HrServices() {
                     </div>
 
                     <h2 id="process-heading" className="text-heading font-bold text-2xl sm:text-3xl md:text-4xl">
-                        6-Step Recruitment Process
+                        How Our Recruitment Process Works? 
                     </h2>
 
                     <p className="text-paragraph mt-3 max-w-2xl mx-auto">
-                        Our systematic approach ensures efficient hiring from requirement analysis to successful onboarding
+                       Our approach to finding the right candidate
                     </p>
 
                     <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">

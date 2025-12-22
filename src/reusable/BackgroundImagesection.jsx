@@ -1,7 +1,6 @@
 function BackgroundImagesection({ items }) {
   return (
     <section className="relative">
-      {/* Background Image */}
       <div className="absolute inset-0">
         <img
           src={items.image}

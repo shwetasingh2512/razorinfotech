@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './components/context/AuthContext';
+import ProtectedRoute from './components/ProtectedRoute';
 import Home from './components/Home';
 import Navbar from './Layout/Navbar';
 import About from './components/About';
@@ -35,164 +37,85 @@ import Youtube from './components/Our-Expertise/Youtube';
 import Googlemybusiness from './components/Our-Expertise/Googlemybusiness';
 import OnlineReputaionMarket from './components/Our-Expertise/OnlineReputaionMarket';
 import NotFound from './components/NotFound';
+import AdminLogin from './components/AdminLogin';
+import Jobcreate from './components/Jobcreate';
+import Admin from './components/Admin';
+import Job from './components/Job';
 
 export default function App() {
+  const publicRoutes = [
+    { path: '/', component: Home },
+    { path: '/about', component: About },
+    { path: '/contact', component: Contact },
+    { path: '/products', component: Products },
+    { path: '/it-solutions', component: ITSolution },
+    { path: '/software-developement', component: SoftwareDevelopement },
+    { path: '/app-developement', component: AppDevelopement },
+    { path: '/website-developement', component: WebsiteDevelopement },
+    { path: '/marketing-branding', component: MarketingBranding },
+    { path: '/content-creation-services', component: ContentCreationServices },
+    { path: '/customer-support-services', component: CustomerSupport },
+    { path: '/email-support-services', component: EmailSupport },
+    { path: '/inbound-services', component: InboundServices },
+    { path: '/content-moderation-services', component: ContentModeration },
+    { path: '/data-entry', component: DataEntery },
+    { path: '/it-help-desk', component: ItHelpDesk },
+    { path: '/seo', component: Seo },
+    { path: '/hr-services', component: HrServices },
+    { path: '/talent-developement', component: TalentDevelopement },
+    { path: '/training', component: Training },
+    { path: '/career', component: Career },
+    { path: '/app-store-optimization', component: AppstoreOptimization },
+    { path: '/Legal-complience', component: LegalComplience },
+    { path: '/angle-investor', component: AngleInvester },
+    { path: '/data-management', component: DataManagement },
+    { path: '/backend-outsource', component: BackendOutsource },
+    { path: '/omnichanel', component: Omnichanel },
+    { path: '/content-management', component: ContentManagement },
+    { path: '/financial-services', component: FinancialServices },
+    { path: '/business-consultancy', component: BusinessConsultancy },
+    { path: '/youtube', component: Youtube },
+    { path: '/google-my-business', component: Googlemybusiness },
+    { path: '/online-reputation-market', component: OnlineReputaionMarket },
+    { path: '/job/:id', component: Job },
+  ];
 
-  const routes = [
-    {
-      path: '/',
-      component: Home,
-    },
-    {
-      path: '/about',
-      component: About,
-    },
-    {
-      path: '/contact',
-      component: Contact,
-    },
-    {
-      path: '/products',
-      component: Products,
-    },
-    {
-      path: '/it-solutions',
-      component: ITSolution,
-    },
-    {
-      path: '/software-developement',
-      component: SoftwareDevelopement,
-    },
-    {
-      path: '/app-developement',
-      component: AppDevelopement,
-    },
-    {
-      path: '/app-developement',
-      component: AppDevelopement,
-    },
-    {
-      path: '/website-developement',
-      component: WebsiteDevelopement,
-    },
-    {
-      path: '/marketing-branding',
-      component: MarketingBranding,
-    },
-    {
-      path: '/content-creation-services',
-      component: ContentCreationServices,
-    },
-    {
-      path: '/customer-support-services',
-      component: CustomerSupport,
-    },
-    {
-      path: '/email-support-services',
-      component: EmailSupport,
-    },
-    {
-      path: '/inbound-services',
-      component: InboundServices,
-    },
-    {
-      path: '/content-moderation-services',
-      component: ContentModeration,
-    },
-    {
-      path: '/data-entry',
-      component: DataEntery,
-    },
-    {
-      path: '/it-help-desk',
-      component: ItHelpDesk,
-    },
-    {
-      path: '/seo',
-      component: Seo,
-    },
-    {
-      path: '/hr-services',
-      component: HrServices,
-    },
-    {
-      path: '/talent-developement',
-      component: TalentDevelopement,
-    },
-    {
-      path: '/training',
-      component: Training,
-    },
-    {
-      path: '/career',
-      component: Career,
-    },
-    {
-      path: '/app-store-optimization',
-      component: AppstoreOptimization,
-    },
-    {
-      path: '/Legal-complience',
-      component: LegalComplience,
-    },
-    {
-      path: '/angle-investor',
-      component: AngleInvester,
-    },
-    {
-      path: '/data-management',
-      component: DataManagement,
-    },
-    {
-      path: '/backend-outsource',
-      component: BackendOutsource,
-    },
-    {
-      path: '/omnichanel',
-      component: Omnichanel,
-    },
-    {
-      path: '/content-management',
-      component: ContentManagement,
-    },
-    {
-      path: '/financial-services',
-      component: FinancialServices,
-    },
-    {
-      path: '/business-consultancy',
-      component: BusinessConsultancy,
-    },
-    {
-      path: '/youtube',
-      component: Youtube,
-    },
-    {
-      path: '/google-my-business',
-      component: Googlemybusiness,
-    },
-    {
-      path: '/online-reputation-market',
-      component: OnlineReputaionMarket,
-    },
-  ]
-
+  const protectedRoutes = [
+    { path: '/admin', component: Admin },
+    { path: '/jobscreate', component: Jobcreate },
+  ];
 
   return (
-    <>
-      <Router>
+    <Router>
+      <AuthProvider>
         <Navbar />
         <Routes>
-          {
-            routes.map((r, index) => (
-              <Route key={index} path={r.path} element={<r.component />} />
-            ))
-          }
-          {/* catch-all 404 route */}
+          {/* Public Routes */}
+          {publicRoutes.map((r, index) => (
+            <Route key={index} path={r.path} element={<r.component />} />
+          ))}
+
+          {/* Admin Login Route (No Navbar/Footer) */}
+          <Route path="/admin-login" element={<AdminLogin />} />
+
+          {/* Protected Routes */}
+          {protectedRoutes.map((r, index) => (
+            <Route
+              key={`protected-${index}`}
+              path={r.path}
+              element={
+                <ProtectedRoute>
+                  <r.component />
+                </ProtectedRoute>
+              }
+            />
+          ))}
+
+          {/* 404 Route */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer/>
-      </Router>
-    </>
-  )
+        <Footer />
+      </AuthProvider>
+    </Router>
+  );
 }

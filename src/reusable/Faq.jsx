@@ -17,7 +17,7 @@ export default function Faq({ faqs = [] }) {
       <p className="text-center text-paragraph mx-auto max-w-prose mb-6 sm:mb-8">
         Most asked questions regarding us for a quick overview of how and what we do.
       </p>
-      <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-2xl md:max-w-3xl lg:max-w-5xl items-start">
+      <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-2xl md:max-w-3xl lg:max-w-5xl items-center">
         <div className="flex justify-center">
           <img
             src="/images/Faq/Faq.jpg"

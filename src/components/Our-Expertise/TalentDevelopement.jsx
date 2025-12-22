@@ -8,8 +8,8 @@ const Faq = lazy(() => import("../../reusable/Faq"));
 
 export default function TalentDevelopment() {
     const firstSection = {
-        title: "Growing Talent, Growing Business",
-        description: "Empower your workforce with strategic talent development programs that build leadership skills, enhance performance, and drive sustainable business growth through continuous learning and career advancement.",
+        title: "Building Capability, Delivering Results",
+        description: "Your growth is built by your people. We make sure they have the skills to build it successfully.",
         image: "/images/talent-developement/talent-developement-hero.png"
     };
 
