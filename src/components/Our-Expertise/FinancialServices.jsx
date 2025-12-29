@@ -8,67 +8,59 @@ const Faq = lazy(() => import("../../reusable/Faq"));
 export default function FinancialServices() {
     const services = [
         {
-            title: "Bookkeeping & Accounting",
-            desc: "Maintain accurate financial records with error-free bookkeeping and structured accounting. Track every transaction for complete clarity and control over your business finances.",
+            title: "Accounting and Bookkeeping",
+            desc: "Keep accurate, well-organized financial records that are suited to the expansion of a startup. We provide timely, organized accounting so you can always see your finances in a clear and trustworthy manner.",
             image: "/images/financial-services/Book-keeping.png",
         },
         {
             title: "Cash Flow Management",
-            desc: "Monitor income and expenses with smart cash flow tracking. Prevent shortages, optimize working capital, and ensure your business has the liquidity to operate and grow.",
+            desc: "We assist in managing your finances, projecting what's to come, ensuring that your funds are adequate to run your business, pay your bills, and take advantage of opportunities.",
         },
         {
             title: "Tax Filing & Compliance",
-            desc: "Simplify tax planning and filing while ensuring compliance with all regulations. Avoid penalties, reduce liabilities, and maximize deductions with expert guidance.",
+            desc: "Simplify tax planning, preparation, and filing. We take care of the regulations on your behalf, ensuring that you avoid penalties, save cash, and remain tax-compliant so that you can concentrate on your business.`",
         },
         {
             title: "Budgeting & Forecasting",
-            desc: "Plan confidently with realistic budgets and financial forecasts. Allocate resources wisely, prepare for investments, and navigate growth opportunities and challenges strategically.",
+            desc: "Plan your spending and predict your finances with real numbers. We'll help you build useful budgets and forecasts, so you can use your money well, grow your business confidently, and handle unexpected turns smoothly.",
             image: "/images/financial-services/Budgeting.png",
-        },
-        {
-            title: "Financial Reporting & Analysis",
-            desc: "Gain actionable insights with comprehensive financial reports and analytics. Understand profitability, identify trends, and make data-driven decisions to improve performance.",
-        },
-        {
-            title: "Payroll Management",
-            desc: "Streamline payroll processing with accurate, timely payments and tax compliance. Handle deductions, benefits, and reporting while ensuring employee satisfaction.",
         },
     ];
 
     const whyChooseUs = [
         {
-            title: "Certified Financial Experts",
-            description: "CPAs and financial analysts with expertise in startup accounting, tax planning, and financial strategy across industries."
+            title: "Smart Creativity",
+            description: "We create a smart strategy with a creative approach to design visuals that look stunning and achieve results."
         },
         {
-            title: "Cost-Effective Solutions",
-            description: "Reduce overhead by 50-70% compared to hiring full-time financial staff while accessing expert-level financial management."
+            title: "Quick Response",
+            description: "Results are delivered quickly, so your projects stay on schedule without compromising. "
         },
         {
-            title: "Scalable Services",
-            description: "Flexible solutions that grow with your business—from basic bookkeeping for startups to comprehensive CFO services for scaling companies."
+            title: "Flexible Pricing",
+            description: "Budget-friendly and transparent pricing options for a hassle-free experience. "
         },
         {
-            title: "Compliance & Security",
-            description: "Bank-level security protocols, encrypted data handling, and strict compliance with tax regulations and financial standards."
+            title: "Diverse Experience",
+            description: "We’ve designed for wide sectors from startups to global brands based on their needs."
         },
     ];
 
     const faqs = [
         {
-            question: "What financial services does Razor Infotech provide for startups?",
-            answer: "We provide comprehensive financial services including bookkeeping and accounting, cash flow management, tax filing and compliance, budgeting and forecasting, financial reporting and analysis, payroll processing, accounts payable/receivable management, and fractional CFO services for strategic financial planning."
+            question: "What are financial solutions?",
+            answer: "Financial solutions are the tools, support, and plans created to help people and businesses handle, protect, and grow their money."
         },
         {
-            question: "How much do your financial services cost?",
-            answer: "Our pricing is customized based on your business size, transaction volume, and service needs. Typical packages range from $500-1,500/month for basic bookkeeping to $2,000-5,000/month for comprehensive financial management. This represents 50-70% savings compared to hiring full-time financial staff."
+            question: "What does a financial advisor do?",
+            answer: "The main role of a financial advisor is to help in creating a personal plan for your money. It basically saves your time by handling the details, gives you clear and unbiased advice, and protects you from financial risks."
         },
         {
-            question: "What accounting software do you work with?",
-            answer: "We work with all major accounting platforms including QuickBooks Online, Xero, FreshBooks, Wave, Zoho Books, NetSuite, and Sage. We can also help you choose and set up the right software for your business needs and integrate it with your existing systems."
+            question: "What are the advantages of financial solutions?",
+            answer: "It provides convenience, accessibility, reduces costs, and provides personalized experiences for better money management, risk protection, and drives growth for individuals and firms."
         },
         {
-            question: "How do you ensure accuracy and compliance?",
+            question: "What are the 4 types of financial services? ",
             answer: "We maintain accuracy through certified accountants, double-entry bookkeeping, monthly reconciliations, automated error detection, and multi-level review processes. Compliance is ensured through continuous monitoring of tax regulations, timely filings, proper documentation, and adherence to GAAP/IFRS standards."
         },
     ];
@@ -170,17 +162,17 @@ export default function FinancialServices() {
                     </div>
                     <div className="flex flex-col justify-center gap-4">
                         <h1 id="hero-heading" className="text-2xl font-semibold text-heading md:text-4xl">
-                            Comprehensive Financial Solutions for Growing Businesses
+                            A Complete Financial Solution for Startups & MNCs
                         </h1>
                         <p className="text-paragraph/80 text-base lg:max-w-[85%]">
-                            At Razor Infotech, we make managing finances easier for startups and SMBs with simplified, affordable, and transparent solutions. From bookkeeping and tax compliance to budgeting and strategic financial planning, we provide end-to-end support that ensures healthy cash flow, informed decisions, and the confidence to scale sustainably.
+                           Razor Infotech manages finances more easily for startups and multinational companies by delivering affordable, simplified, and transparent solutions. We provide a top-level of service, including bookkeeping and tax compliance, to budgeting and financial planning that ensures cash flow, smarter decisions, and the confidence to save your business with sustainability. 
                         </p>
                         <Link
                             to="/contact"
                             className="inline-flex w-fit items-center gap-3 rounded-full bg-secondary pl-4 pr-2 lg:py-2 py-1 text-white hover:opacity-90 transition-opacity"
                             aria-label="Get financial services consultation"
                         >
-                            <span>Streamline My Finances Now</span>
+                            <span>Book your demo</span>
                             <span className="rounded-full bg-white/20 p-2" aria-hidden="true">
                                 <ArrowRight />
                             </span>
@@ -195,13 +187,10 @@ export default function FinancialServices() {
                         Our Services
                     </p>
                     <h2 id="services-heading" className="text-center text-2xl font-semibold text-[var(--color-heading)] md:text-3xl mb-3">
-                        Financial Services for Startups & SMBs
+                       Our Financial Services For Startup
                     </h2>
-                    <p className="text-center text-[var(--color-paragraph)]/80 max-w-3xl mx-auto mb-8">
-                        Complete financial management solutions to support your business growth
-                    </p>
 
-                    <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
                         {services.map((c, i) => (
                             <article
                                 key={i}
@@ -251,10 +240,10 @@ export default function FinancialServices() {
                 <div className="max-w-6xl mx-auto">
                     <header>
                         <h2 id="why-choose-heading" className="text-3xl text-heading text-center font-semibold">
-                            Why Choose Razor Infotech for Financial Services?
+                            Why Choose Razor Infotech ?
                         </h2>
                         <p className="text-center text-paragraph mt-5 max-w-3xl mx-auto">
-                            Expert financial management that saves costs while providing enterprise-level service and strategic insights
+                          We deliver innovation, high-quality solutions that drive business success.
                         </p>
                     </header>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mx-auto mt-8">

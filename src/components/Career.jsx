@@ -9,9 +9,9 @@ const Faq = lazy(() => import("../reusable/Faq"));
 
 export default function Career() {
   const firstsectionobject = {
-    title: "Build Your Future With Us",
+    title: "Career Development For Future Success",
     description:
-      "At our core, we believe that careers are more than just jobs - they're journeys of growth, learning, and impact. Join a team that empowers you to achieve your full potential while making a difference in the world.",
+      "We see a career as a journey of growth. Here, you’re encouraged to grow, learn, and to build a legacy that matters. Join us and achieve your full potential to change the world’s perspective.",
     image: "/images/career/career-hero.png",
     bgcolor: "bg-background",
   };
@@ -33,90 +33,84 @@ export default function Career() {
 
     {
       Icon: BadgeCheck,
-      title: "Excellence in Outsourcing",
-      desc: "Outsourcing with Razor Infotech goes beyond cost savings—it's about reliability, efficiency, and results. We streamline operations while maintaining uncompromised quality and security.",
+      title: "Great Outsourcing",
+      desc: "We provide an excellent outsourcing service at a budget without compromising the quality. ",
     },
     {
       Icon: Users,
-      title: "People-Centric Approach",
-      desc: "We believe in empowering human potential. By focusing on talent, collaboration, and customer-first strategies, we create meaningful experiences for businesses and their customers.",
+      title: "Focus on people",
+      desc: "Our main focus is on the individual, not just on the role. We invest in your long-term success, ongoing check-ins, progress reviews, and strategy updates. ",
     },
     {
       Icon: BarChart3,
-      title: "Growth Through Partnership",
-      desc: "We see ourselves as more than just service providers—we're growth partners. Our scalable solutions and cross-industry expertise ensure long-term success for every client we serve.",
+      title: "Trusted Partnership",
+      desc: "We provide services by building a reliable partnership with the organization. Our services are delivered consistently alongside support and guidance. ",
     },
     {
       Icon: Cpu,
-      title: "Technology-Driven Innovation",
-      desc: "From IT solutions to digital transformation, we harness the power of cutting-edge tools and technologies to help companies scale smarter and stay future-ready.",
+      title: "Modern Tools & Technology",
+      desc: "We use smart tools, AI-driven assessments, interactive learning platforms, and progress analytics to make your development more targeted and efficient for achieving the desired results.",
     },
   ];
 
   const steps = [
     {
       number: "01",
-      title: "Find a role that suits you",
-      description: "Discover open positions and find your desired one in the Razor Infotech website, job listings or social media.",
+      title: "Find the Job Role",
+      description: "You can explore the job openings at the Razor Infotech career page, job portals, and social media platforms for your required position.",
       position: "right",
     },
     {
       number: "02",
-      title: "Send your application",
-      description: "Some simple questions should be answered and your contact information is required",
+      title: "Submit Your Job Application",
+      description: "Fill in the required details, including personal information, current CTC, and position, so that our management can gain real insights. ",
       position: "left",
     },
     {
       number: "03",
-      title: "Receive your interview invite",
-      description: "We review all applications within 3 working days and send invitation to candidates.",
+      title: "Review your Application",
+      description: "The team reviews every application within 3 working days. Our team will contact you for an interview invitation. ",
       position: "right",
     },
     {
       number: "04",
-      title: "Choose an interview slot",
-      description: "You will have a friendly discussion with the CEO and your supervisor to talk about the work, life and etc.",
+      title: " Interview Phase",
+      description: "You have to attend the face-to-face interview round with our manager and a team leader. They will inquire about your background, experience, job responsibilities, and salary discussions. ",
       position: "left",
     },
     {
       number: "05",
-      title: "Preliminary Interview",
-      description: "Sometimes, we ask candidates to participate in some technical challenge that is designated to demonstrate candidates' proficiency.",
+      title: "Final Assessment",
+      description: "You have to complete the specific tasks assigned by the manager. If selected, Razor Infotech will send a formal offer letter to your email. ",
       position: "right",
     },
     {
       number: "06",
-      title: "Meet your teammates",
-      description: "To us is crucial to make sure all team members feel comfortable. It is why we do try to have diverse but culturally fitted team members.",
+      title: "Join the Team",
+      description: "You have to submit the required documents to the manager or HR. Our team will welcome you and make you feel comfortable. ",
       position: "left",
-    },
-    {
-      number: "07",
-      title: "Interview with our CEO",
-      description: "Your colleagues are waiting for you to say a warm welcome.",
-      position: "right",
     },
   ];
 
   const faqs = [
     {
-      question: "What types of positions does Razor Infotech hire for?",
+      question: "How can I apply for job at Razor Infotech?",
       answer:
-        "We hire across multiple domains including IT development, BPO operations, HR management, digital marketing, business consulting, and more. Check our careers portal for current openings.",
+        "You can apply for the job role at the career’s page on the official webiste of Razor Infotech",
     },
     {
-      question: "What is the interview process like?",
+      question: "How much time does recruitment process usually take?",
       answer:
-        "Our interview process typically includes application review, preliminary screening, technical assessment (if applicable), team interviews, and a final discussion with leadership. The entire process usually takes 2-3 weeks.",
+        "The average time for the recuritement process approximately takes 2-4 weeks.",
     },
     {
-      question: "Does Razor Infotech offer remote work options?",
+      question: "Is remote work allowed?",
       answer:
-        "Yes, we offer flexible work arrangements including hybrid and remote options depending on the role and team requirements. Work-life balance is a priority for us.",
+        "It usually depends on the job role and requirements.",
     },
     {
-      question: "What benefits and perks do employees receive?",
-      answer: "We offer competitive compensation, health benefits, flexible schedules, professional development opportunities, mentorship programs, and a supportive work culture focused on growth and well-being.",
+      question: "Can I update my application? ",
+      answer: "Yes, you can log into your profile and make neccsary changes as per your needs.",
     },
   ];
 
@@ -173,11 +167,11 @@ export default function Career() {
           <div className="lg:col-span-3 lg:row-span-2 p-4">
             <span className="rounded-full border border-light-green py-2 px-5 inline-block mb-3">WHY JOIN US</span>
             <h2 id="why-join-heading" className="text-3xl font-semibold text-heading">
-              Experience a workplace that values your <br />
-              <span className="text-secondary">growth, creativity, and well being.</span>
+              Join an environment that supports professional <br />
+              <span className="text-secondary">growth, creativity, & Well-being.</span>
             </h2>
             <p className="text-base text-paragraph mt-4 max-w-[50ch]">
-              Experience a fulfilling career with growth, flexibility, and a supportive team culture.
+              A work culture for your career growth, flexibility,  and a cooperative team 
             </p>
           </div>
 
@@ -185,7 +179,7 @@ export default function Career() {
             <div className="flex-1">
               <h3 className="text-heading text-xl block mb-2">Growth & Learning</h3>
               <p className="text-base text-paragraph">
-                We invest in your professional development with mentorship, training programs, and continuous learning opportunities so you can keep growing at every stage of your career.
+               We are committed to your growth, providing mentorship, training, and continuous learning opportunities to help you.  
               </p>
             </div>
             <img 
@@ -205,12 +199,13 @@ export default function Career() {
             />
             <h3 className="text-xl text-heading">Work-Life Balance</h3>
             <p className="text-paragraph text-base mt-2">
-              Your well-being matters. We support flexible schedules, hybrid options, and wellness initiatives to help you thrive both at work and at home.
+             We support you with flexible schedules, hybrid arrangements, and wellness initiatives for balancing your personal and work life. 
             </p>
           </article>
 
           <article className="lg:col-span-2 lg:row-span-2 lg:row-start-4 rounded-3xl border border-light-green p-5 flex flex-col items-center text-center">
             <h3 className="text-xl text-heading">Rewards & Recognition</h3>
+            <p> We celebrate success and recognize contributions with competitive benefits, career advancement opportunities, and meaningful appreciation.</p>
             <img 
               src="/images/career/Rewards.png" 
               alt="Employee rewards and recognition program" 
@@ -222,7 +217,7 @@ export default function Career() {
           <div className="lg:col-span-3 lg:row-start-5 flex gap-6 flex-col md:flex-row">
             <article className="border border-light-green p-5 rounded-3xl flex-1">
               <h3 className="text-xl text-heading block mb-2">Impactful Purpose</h3>
-              <p className="text-paragraph">Be part of exciting projects that push boundaries, encourage creativity, and let you contribute ideas that make a real difference.</p>
+              <p className="text-paragraph">Contribute to exciting projects, where your creativity is valued, and your ideas and new thoughts are displayed in innovative ways. </p>
             </article>
             <article className="border border-light-green p-5 rounded-3xl flex-1">
               <h3 className="text-xl text-heading block mb-2">Innovative Work</h3>
@@ -239,10 +234,10 @@ export default function Career() {
 
       <section className="bg-gradient-to-b from-unique to-accent relative p-16 sm:p-20" aria-labelledby="team-heading">
         <h2 id="team-heading" className="text-center font-primary text-4xl text-heading font-semibold mb-5">
-          Our People, Our Strength
+         Your Vision, Our Mission
         </h2>
         <p className="text-center text-lg text-paragraph/70 max-w-3xl mx-auto mb-10">
-          Meet the talented professionals whose skills, passion, and dedication drive our company's success
+         Meet our talented professional, whose skills and passion drive the company's success. 
         </p>
         <Crousel images={images} />
       </section>
@@ -250,10 +245,10 @@ export default function Career() {
       <section className="px-4 sm:px-6 lg:px-8 py-16 bg-accent mx-auto" aria-labelledby="values-heading">
         <div className="text-center max-w-4xl mx-auto">
           <h2 id="values-heading" className="text-heading font-bold text-3xl sm:text-4xl mb-4">
-            What Our Service Stands For
+            How do We Help Our Clients? 
           </h2>
           <p className="text-paragraph max-w-2xl mx-auto mb-10">
-            The principles that guide our work, inspire innovation, and shape every solution we deliver.
+           We work on principles, inspire innovation, and deliver results.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -274,10 +269,11 @@ export default function Career() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 sm:mb-20">
             <h2 id="interview-heading" className="text-3xl sm:text-4xl font-semibold text-gray-800 mb-4 sm:mb-6">
-              Our Interview Process
+             How does Our Interview Process work?
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed px-4">
-              From the first hello to the final decision, we aim to make the process collaborative, supportive, and a true reflection of our culture
+             Here is our step-by-step interview process for a smooth hiring and onboarding. 
+
             </p>
           </div>
 

@@ -17,109 +17,113 @@ export default function Youtube() {
     const youtubeServices = [
         {
             icon: PlaySquare,
-            title: "YouTube Channel Strategy",
-            desc: "Comprehensive channel audit, content strategy, audience research, competitor analysis, and growth roadmap tailored to your business objectives and target demographics.",
+            title: "Strategic Video Planning",
+            desc: "We develop a content blueprint that is aligned with your brand’s goals that ensuring every video has a purpose. ",
         },
         {
             icon: Video,
             title: "Professional Video Production",
-            desc: "High-quality video creation including scripting, filming, editing, motion graphics, sound design, and thumbnail design that captures attention and engages viewers.",
+            desc: "Produce high-quality, engaging videos that reflect your brand’s reputation. ",
         },
         {
             icon: Settings2,
-            title: "Channel Optimization",
-            desc: "Optimize channel layout, branding, playlists, titles, descriptions, tags, custom thumbnails, end screens, and cards for maximum visibility and subscriber growth.",
+            title: "Channel & Content Optimization",
+            desc: "We create compelling thumbnails, titles, and descriptions to increase their reach and drive clicks. ",
         },
         {
             icon: Search,
-            title: "YouTube SEO & Keyword Research",
-            desc: "Data-driven keyword research, video SEO optimization, title/description optimization, tags strategy, and closed captions to improve rankings on YouTube and Google search.",
+            title: "Strategic SEO & Keyword Targeting",
+            desc: "Use advanced research to target potential keywords, higher ranking, and attract organic search traffic.",
         },
         {
             icon: Target,
-            title: "YouTube Ads & Campaigns",
-            desc: "Targeted TrueView ads, bumper ads, display ads, and remarketing campaigns that reach the right audience, maximize ROI, and drive conversions at scale.",
+            title: "Youtube Advertising",
+            desc: "Create and manage ad campaigns to promote your content and reach new audiences. ",
         },
         {
             icon: BarChart3,
             title: "Analytics & Performance Tracking",
-            desc: "Comprehensive YouTube Analytics monitoring, audience insights, watch time analysis, engagement metrics, conversion tracking, and monthly reports with actionable recommendations.",
+            desc: "Monitor key metrics from watch time to conversions that provide transparent reports and insights for continuous improvement. ",
         },
     ];
 
     const youtubeProcess = [
         {
-            title: "Channel Audit & Strategy",
-            desc: "Comprehensive analysis of your current channel, competitor research, audience insights, content gap analysis, and custom strategy development aligned with business goals.",
+            title: "Content Strategy",
+            desc: "Plan videos as per your audience’s requirements, and make sure every video serves a purpose and supports your goals. ",
         },
         {
-            title: "Content Planning & Production",
-            desc: "Strategic content calendar creation, professional video production with scripting, filming, editing, motion graphics, and thumbnail design that captures attention.",
+            title: "Creative Production",
+            desc: "We produce high-quality videos that reflect the brand’s image and tell your story with impact. ",
         },
         {
-            title: "Optimization & Publishing",
-            desc: "SEO-optimized titles, descriptions, tags, custom thumbnails, closed captions, playlists organization, and strategic publishing schedule for maximum visibility.",
+            title: "Video Optimization",
+            desc: "Create the best keywords, eye-catching thumbnails, titles, and screen prompts to continue the video flow. Video optimization helps the business to maximize views and engagement. ",
         },
         {
-            title: "Promotion & Growth",
-            desc: "Multi-channel promotion including YouTube ads, social media sharing, email marketing, influencer collaborations, community engagement, and subscriber growth campaigns.",
+            title: "Growth & Engagement",
+            desc: "Build a community by crafting the content across channels, encouraging likes, shares, comments, and subscriptions. We also collaborate with influencers and explore paid advertising.   ",
+        },
+        {
+            title: "Evaluation & Analysis",
+            desc: "We track the results by evaluating the watch time, audience retention, and traffic sources for continuous improvement.  ",
         },
     ];
 
     const whyYouTubeMatters = [
         {
-            title: "Massive Audience Reach",
-            desc: "YouTube has 2.5+ billion monthly active users watching over 1 billion hours of video daily, making it the world's second-largest search engine after Google.",
+            title: "Increased Views ",
+            desc: "We help in driving more views to your videos with our excellent YouTube Marketing Services.",
         },
         {
-            title: "Superior Engagement & Trust",
-            desc: "Video content generates 1200% more shares than text and images combined. 88% of consumers trust video reviews as much as personal recommendations.",
+            title: "Higher Engagement ",
+            desc: "Create HD, resourceful, and engaging videos to attract audiences and followers. ",
         },
         {
-            title: "Long-Term Organic Traffic",
-            desc: "Unlike social media posts that disappear in hours, YouTube videos continue generating views, subscribers, and leads for months or years through search traffic.",
+            title: "Financial Growth",
+            desc: "By monetizing your channel, you can earn online through video creation. ",
         },
         {
-            title: "Conversion & Revenue Growth",
-            desc: "Adding video to landing pages increases conversions by 86%. YouTube viewers are 4x more likely to use Google to research products featured in videos.",
+            title: "Trust & Reliability",
+            desc: "Massive followers and engagement build a channel and brand reputation. Customers get attracted to well-established channels. ",
         },
     ];
 
     const whyChooseUs = [
         {
-            title: "YouTube Certified Experts",
-            description: "Certified YouTube specialists with 8+ years experience growing channels from zero to 100K+ subscribers across diverse industries with proven strategies."
+            title: "Proven Results",
+            description: "We offer training development solutions that drive innovation, improve your team productivity, and increase your business outcomes."
         },
         {
-            title: "End-to-End Video Production",
-            description: "Complete video marketing service from strategy and scripting to filming, editing, optimization, promotion, and analytics—no need for multiple vendors."
+            title: "Continuous Support",
+            description: "Razor Infotech is here with you at every step to enhance your team’s growth. "
         },
         {
-            title: "Data-Driven Growth Strategies",
-            description: "Advanced analytics, A/B testing, audience insights, and performance tracking ensuring every video decision is backed by data for maximum ROI."
+            title: "Expert Trainers",
+            description: "Now, gain hands-on experience and practical tips from the industry-experienced professionals who have overcome daily tech challenges. "
         },
         {
-            title: "Proven Subscriber & Revenue Growth",
-            description: "Track record of achieving 200-500% subscriber growth, 5-10x increase in watch time, and measurable revenue impact through YouTube marketing campaigns."
+            title: "Customized Solutions",
+            description: "At first, we analyze your specific needs and then build a learning path that aligns with your projects, tech stack, and business goals. "
         },
     ];
 
     const faqs = [
         {
-            question: "What YouTube marketing services does Razor Infotech provide?",
-            answer: "We provide comprehensive YouTube marketing services including channel strategy and audit, professional video production (scripting, filming, editing, motion graphics), YouTube SEO and keyword research, channel optimization (branding, thumbnails, playlists), YouTube advertising (TrueView ads, bumper ads, remarketing), content calendar planning, community management, influencer collaborations, subscriber growth campaigns, and detailed analytics with monthly performance reports. We handle everything from initial strategy to ongoing optimization for sustained growth.",
+            question: "What is YouTube Video Marketing?",
+            answer: " YouTube Video Marketing is the strategy that involves the use of the social media platform to promote your brand.",
         },
         {
-            question: "How long does it take to grow a YouTube channel and see results?",
-            answer: "Growth timelines vary based on niche, competition, and resources: Initial traction (3-6 months) - 100-1,000 subscribers with consistent quality content; Steady growth (6-12 months) - 1,000-10,000 subscribers with optimized strategy; Significant momentum (12-24 months) - 10,000-100,000+ subscribers with established authority. Key factors: posting frequency (minimum 2-4 videos/month), video quality, SEO optimization, promotion, and niche competition. We typically see measurable improvements in views and engagement within 60-90 days, with subscriber growth accelerating as channel authority builds.",
+            question: "What is the 30-second rule on YouTube?",
+            answer: "The 30-second rule is a critical approach used by both influencers and YouTube as a guideline that keeps viewers engaged by changing visuals or adding interest every 30 seconds.",
         },
         {
-            question: "What does YouTube marketing cost and what's the ROI?",
-            answer: "Pricing varies by service level: Basic package ($2,000-4,000/month) - monthly video production, basic optimization, analytics reporting; Standard package ($4,000-8,000/month) - weekly videos, comprehensive SEO, ads management, community engagement; Premium package ($8,000-15,000+/month) - multiple weekly videos, aggressive ad campaigns, influencer collaborations, dedicated account manager. ROI benefits include organic traffic for years (unlike social media), 86% higher conversion rates with video, subscriber base becoming email list asset, authority positioning, and measurable lead generation with proper tracking.",
+            question: " How to do YouTube video marketing? ",
+            answer: "YouTube video marketing is the strategy used for interacting with your audience. You can use video descriptions and banners to encourage users to engage by liking the video and subscribing to the channel.",
         },
         {
-            question: "Do you help with video production or just strategy and optimization?",
-            answer: "We provide end-to-end video production services including: Pre-production (concept development, scripting, storyboarding), production (professional filming, lighting, sound, interviews, B-roll), post-production (editing, color grading, sound mixing, motion graphics, visual effects, thumbnail design), optimization (SEO, titles, descriptions, tags, closed captions), and distribution (publishing strategy, social promotion, paid ads). We can handle complete video creation or work with your existing footage to optimize for YouTube success. Our production team has experience across educational content, product demos, vlogs, interviews, animations, and promotional videos.",
+            question: "What are the 5 C’s of marketing Strategy?",
+            answer: "The main 5 C’s of marketing strategy are: \n1. Company \n 2. Customers \n 3. Competitors \n 4. Collaborators \n 5. Climate",
         },
     ];
 
@@ -196,13 +200,13 @@ export default function Youtube() {
                 <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 lg:grid-cols-2">
                     <div className="flex flex-col justify-center gap-4">
                         <h1 id="hero-heading" className="text-3xl font-semibold text-heading md:text-4xl lg:text-5xl">
-                            Engage, Inspire, and Convert with YouTube Marketing
+                           Engage, Inspire & Collaborate With YouTube Video Marketing
                         </h1>
                         <p className="text-paragraph/80 text-base leading-relaxed">
-                            YouTube isn't just a video platform—it's the world's second-largest search engine with 2.5+ billion monthly users watching over 1 billion hours daily. It offers brands an unparalleled opportunity to connect with audiences through the power of video storytelling.
+                            Over 122 million people actively search and watch videos on YouTube. Audiences are not only scrolling, but they are actively engaging with the billions of content available online. It creates an opportunity for the brands to showcase their story, highlight their expertise, and build trust with potential customers. 
                         </p>
                         <p className="text-paragraph/80 text-base leading-relaxed">
-                            Video content drives 1200% more shares than text and images combined. Through strategic YouTube marketing, businesses showcase their expertise, build trust with potential customers, and generate sustainable organic traffic that continues delivering results for years—not hours like social media posts.
+                            Video content engages the audience by asking questions, seeking reviews through the comment section, and community posts. It has the power to inform, inspire, and innovate in the competitive market.
                         </p>
                         <Link
                             to="/contact"
@@ -235,10 +239,10 @@ export default function Youtube() {
                             Our Services
                         </span>
                         <h2 id="services-heading" className="text-3xl md:text-4xl font-semibold text-heading">
-                            Comprehensive YouTube Marketing Solutions
+                           Grow Your Audience With Our Content Marketing
                         </h2>
                         <p className="text-paragraph mt-4 max-w-3xl mx-auto">
-                            Six powerful pillars of YouTube success—from strategy to analytics
+                           Our YouTube marketing services turn video into your most powerful channel for growth. 
                         </p>
                     </div>
 
@@ -279,13 +283,10 @@ export default function Youtube() {
                     </div>
                     <div className="flex flex-col justify-center gap-4">
                         <h2 id="why-youtube-heading" className="text-3xl font-semibold text-heading md:text-4xl">
-                            Why YouTube Marketing Matters
+                          Why It Matters ?
                         </h2>
                         <p className="text-paragraph/80 text-base leading-relaxed">
-                            YouTube is the world's second-largest search engine with 2.5+ billion monthly users, generating massive organic reach that compounds over time. Unlike social media posts that disappear in hours, YouTube videos continue driving traffic, leads, and sales for months or years through search visibility and recommendations.
-                        </p>
-                        <p className="text-paragraph/80 text-base leading-relaxed">
-                            Video marketing isn't optional anymore—88% of consumers trust video reviews as much as personal recommendations, and adding video to landing pages increases conversions by 86%. YouTube provides sustainable competitive advantage through authority positioning, brand storytelling, and measurable ROI that far exceeds traditional advertising.
+                            YouTube is a platform that offers customers the opportunity to learn, explore, and make decisions. Basically, we turn viewers into customers by creating video content that is seen and resourceful.  It is significant- <br/> Provides a massive audience and reach. <br/> Boost SEO and search visibility. <br/> Drives engagement.<br/> Increase the online authority of the business.
                         </p>
                     </div>
                 </div>
@@ -294,7 +295,7 @@ export default function Youtube() {
             <section className="px-6 py-12 bg-background" aria-labelledby="benefits-heading">
                 <div className="mx-auto max-w-7xl">
                     <h2 id="benefits-heading" className="text-center text-2xl font-semibold text-heading md:text-3xl mb-10">
-                        Strategic Benefits of YouTube Marketing
+                       Our YouTube Marketing Services Helps in Achieving
                     </h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -318,7 +319,7 @@ export default function Youtube() {
             <section className="bg-gradient-to-b from-unique to-accent px-6 py-14" aria-labelledby="process-heading">
                 <div className="mx-auto max-w-7xl">
                     <h2 id="process-heading" className="text-center text-2xl font-semibold text-heading md:text-3xl mb-10">
-                        Our YouTube Marketing Process
+                       Our Process for YouTube Video Marketing
                     </h2>
 
                     <div className="space-y-10 max-w-5xl mx-auto">
@@ -349,10 +350,10 @@ export default function Youtube() {
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-10">
                         <h3 id="why-choose-heading" className="text-3xl text-heading font-semibold mb-3">
-                            Why Choose Razor Infotech for YouTube Marketing?
+                           Why Choose Razor Infotech?
                         </h3>
                         <p className="text-paragraph max-w-3xl mx-auto">
-                            Expert YouTube specialists delivering measurable channel growth and revenue impact
+                           Razor Infotech delivers innovative, high-quality solutions that drive business success.
                         </p>
                     </div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mx-auto">

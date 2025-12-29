@@ -7,96 +7,92 @@ const Faq = lazy(() => import("../../reusable/Faq"));
 
 export default function GoogleMyBusiness() {
     const benefits = [
-        "Increase Local Search Visibility by 200%+",
-        "Generate More Customer Calls & Store Visits",
-        "Build Trust with Verified Reviews",
-        "Dominate Google Maps Rankings",
-        "Strengthen Community Engagement",
+        "Instant availability of phones, address, hours, and website. ",
+        "Post updates and offers right on your Google listing, like a social media page.",
+        "Beat your competitors with unoptimized listings. ",
+        "Acts like free advertising that works 24/7. ",
+        "SCollect customer reviews to build reputation and attract more business. ",
     ];
 
     const services = [
         {
             title: "Profile Setup & Verification",
-            desc: "Complete GMB profile creation, business verification with Google, category optimization, and accurate NAP (Name, Address, Phone) setup to ensure your business appears correctly across Google Search and Maps.",
+            desc: "We create your GMB profile and verify and review whether your business appears correctly on Google search and maps.",
             image: "/images/googlemybusiness/Profile.jpg",
         },
         {
             title: "Information Optimization",
-            desc: "Comprehensive optimization of business hours, service areas, attributes, categories, high-quality photos, and detailed descriptions to maximize visibility and attract more qualified local customers.",
+            desc: "We optimize every small detail from photos and services into powerful assets for attracting local customers. ",
         },
         {
             title: "Review & Reputation Management",
-            desc: "Proactive review generation strategies, professional response management, sentiment monitoring, and reputation building to showcase social proof and increase customer trust.",
+            desc: "Promote positive reviews, manage customer feedback, and build trust by showcasing a strong brand reputation.",
         },
         {
-            title: "Posts & Updates Management",
+            title: "Update & Manage Posts",
             desc: "Regular posting of offers, events, updates, and announcements to keep your profile active, engage customers, and signal freshness to Google's algorithm for better rankings.",
             image: "/images/googlemybusiness/Posts.png",
         },
         {
             title: "Local SEO Integration",
-            desc: "Keyword research for local searches, citation building across directories, backlink strategies, and integration with your website to strengthen overall local SEO performance.",
-        },
-        {
-            title: "Analytics & Reporting",
-            desc: "Monthly performance reports tracking views, clicks, calls, direction requests, and search queries. Data-driven insights to continuously improve your GMB strategy.",
+            desc: "We ensure that your profile stays updated. Therefore, we regularly manage and track posts and videos to engage your targeted customers and highlight the business.",
         },
     ];
 
     const gmbProcess = [
         {
-            title: "Audit & Analysis",
-            desc: "We audit your current GMB profile (if existing), analyze competitors, identify gaps, and develop a customized optimization strategy aligned with your local market and business goals.",
+            title: "Research & Strategy",
+            desc: "We analyze your business goals, potential customers, and competitive strategies. This action forms the foundations for the video strategy, which is designed to achieve your specific goals.",
         },
         {
-            title: "Profile Optimization",
-            desc: "Complete profile setup or enhancement including verification, business information, categories, attributes, service areas, hours, and high-quality visual content that converts searchers into customers.",
+            title: "Content Creation",
+            desc: "We handle all the aspects from script writing to editing. Our objective is to produce professional videos that is basically designed to connect with people for more interactions. ",
         },
         {
-            title: "Review Management",
-            desc: "Implement review generation campaigns, respond professionally to all feedback (positive and negative), monitor review platforms, and build a strong reputation that influences purchase decisions.",
+            title: "Optimization & Promotion",
+            desc: "After uploading the videos, we use small tactics like keywords and attractive visuals to help your video get found and watched by the right audience. ",
         },
         {
-            title: "Ongoing Management & Growth",
-            desc: "Continuous posting, Q&A monitoring, photo updates, performance tracking, and strategic refinements to maintain visibility, engage customers, and outperform local competitors consistently.",
+            title: "Anaylsis And Growth",
+            desc: "We track performance through detailed analytics, refining strategies to ensure consistent improvement and long-term channel growth.",
         },
     ];
 
     const whyChooseUs = [
         {
-            title: "Local SEO Specialists",
-            description: "Google-certified experts with proven track record of ranking businesses #1 in local map packs across competitive markets."
+            title: "Creative Strategy",
+            description: "We combine creativity with strategy to design visuals that look stunning to achieve results. "
         },
         {
-            title: "Data-Driven Approach",
-            description: "Strategic optimization based on analytics, competitor research, and Google's ranking factors—not guesswork."
+            title: "Faster Delivery",
+            description: "We aim to deliver designs quickly without compromising any quality. "
         },
         {
-            title: "Comprehensive Management",
-            description: "Full-service GMB management from setup to ongoing optimization, review management, and monthly reporting."
+            title: "Affordable & Transparent Pricing",
+            description: "Get professional design with clear and budget-friendly pricing."
         },
         {
-            title: "Proven ROI",
-            description: "Average clients see 150-300% increase in GMB visibility, calls, and direction requests within 90 days."
+            title: "Experience Across Industries",
+            description: "From new startups to large international organizations, our service is designed for all business types and niches. "
         },
     ];
 
     const faqs = [
         {
-            question: "What is Google My Business (GMB) and why is it important?",
-            answer: "Google My Business (now Google Business Profile) is a free tool that lets you manage how your business appears on Google Search and Maps. It's crucial for local SEO because 46% of Google searches have local intent, and 76% of people who search for something nearby visit a business within 24 hours. A well-optimized GMB profile increases visibility, builds trust, and drives more customers to your business."
+            question: "What is Google My Business Optimization?",
+            answer: "It is the process of refining a business’s Google Business Profile to improve its visibility in local searches on Google Search and Maps."
         },
         {
-            question: "How long does it take to see results from GMB optimization?",
-            answer: "Initial improvements typically appear within 2-4 weeks as Google indexes your optimized profile. Significant ranking improvements usually occur within 60-90 days of consistent optimization, posting, and review management. Long-term dominance requires ongoing management, but most businesses see measurable increases in views, calls, and direction requests within the first month."
+            question: "How to rank GMB fast?",
+            answer: "You can rank your Google Business Profile, by using different strategies such as adding relevant keywords in your descriptions and business name. "
         },
         {
-            question: "What's included in your GMB optimization service?",
-            answer: "Our service includes complete profile setup and verification, business information optimization, category and attribute selection, professional photo uploads, regular post creation (2-4 per week), review monitoring and response management, Q&A monitoring, citation building, monthly performance reports, and ongoing strategic refinements based on analytics and competitor activity."
+            question: "Is 4.7 a good Google review?",
+            answer: "Yes, generally 4.7 is a good review on Google"
         },
         {
-            question: "How do you improve GMB rankings in the local map pack?",
-            answer: "We optimize using Google's three primary ranking factors: Relevance (accurate categories, keywords, and business info), Distance (proper location settings and service areas), and Prominence (reviews, citations, website authority, and engagement signals). We also focus on Google Posts, Q&A, photos, review velocity, and NAP consistency across the web to boost rankings."
+            question: "Can I remove a 1-star rating on Google?",
+            answer: "No, you can’t remove  1-star rating on Google."
         },
     ];
 
@@ -180,11 +176,10 @@ export default function GoogleMyBusiness() {
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                     <div className="order-2 md:order-1">
                         <h1 id="hero-heading" className="text-3xl md:text-4xl font-semibold text-heading">
-                            Google My Business Optimization Services
+                            Google My Business (GMB) Optimization
                         </h1>
 
-                        <p className="text-paragraph mt-4 max-w-xl text-base lg:text-lg">
-                            Dominate local search results with expert GMB optimization that drives visibility, credibility, and real customer engagement.
+                        <p className="text-paragraph mt-4 max-w-xl text-base lg:text-lg">Professional Google Business Profile Optimization to Drive Local Visibility.  Dominate local search results with expert GMB optimization that drives visibility, credibility, and real customer engagement.
                         </p>
 
                         <ul className="mt-6 space-y-4" role="list">
@@ -239,16 +234,16 @@ export default function GoogleMyBusiness() {
                     </div>
                     <div className="flex flex-col gap-4 justify-center">
                         <h2 id="why-matters-heading" className="text-heading font-semibold text-3xl">
-                            Why Google My Business Matters
+                            Why is Google Business Profile important?
                         </h2>
                         <p className="text-paragraph text-base leading-relaxed">
-                            In today's digital-first world, 97% of customers search online to find local businesses. A fully optimized Google My Business profile ensures your company appears in local searches and Google Maps—exactly where customers are looking.
+                            These days, everyone uses Google to find nearby shops and services. If your Google Business listing is set up right, you’ll pop up when people search for what you do. It puts you on the map literally.
                         </p>
                         <p className="text-paragraph text-base leading-relaxed">
-                            GMB builds immediate trust and credibility. Verified profiles with accurate details, positive reviews, and regular updates increase customer confidence by 70% and help you stand out among competitors.
+                           A complete profile makes people trust you. When they see your correct hours, photos of your work, and good reviews from others, they’re more likely to choose you.
                         </p>
                         <p className="text-paragraph text-base leading-relaxed">
-                            Most importantly, GMB drives real business results—more phone calls, website visits, direction requests, and in-store foot traffic. It connects you directly with high-intent local customers who are ready to make a purchase decision.
+                           It drives real results, whether it's more calls, website visits, or in-store foot traffic. GMB connects you directly with the targeted audiences.
                         </p>
                     </div>
                 </div>
@@ -260,12 +255,8 @@ export default function GoogleMyBusiness() {
                         Our Services
                     </p>
                     <h2 id="services-heading" className="text-center text-2xl font-semibold text-[var(--color-heading)] md:text-3xl mb-3">
-                        Google My Business Optimization Services
+                       Our You Tube Marketing Services
                     </h2>
-                    <p className="text-center text-[var(--color-paragraph)]/80 max-w-3xl mx-auto mb-8">
-                        Comprehensive GMB management to maximize your local search presence
-                    </p>
-
                     <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                         {services.map((c, i) => (
                             <article
@@ -315,11 +306,9 @@ export default function GoogleMyBusiness() {
             <section className="bg-gradient-to-b from-unique to-accent px-6 py-14" aria-labelledby="process-heading">
                 <div className="mx-auto max-w-5xl">
                     <h2 id="process-heading" className="text-center text-2xl font-semibold text-[var(--color-heading)] md:text-3xl mb-3">
-                        Our GMB Optimization Process
+                        A Streamlined Approach to Video Marketing
                     </h2>
-                    <p className="text-center text-[var(--color-paragraph)]/80 max-w-3xl mx-auto mb-10">
-                        Strategic approach to maximizing your local search visibility and customer engagement
-                    </p>
+                  
 
                     <div className="mt-10 space-y-10">
                         {gmbProcess.map((it, idx) => (

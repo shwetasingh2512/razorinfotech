@@ -8,20 +8,15 @@ const Faq = lazy(() => import("../../reusable/Faq"));
 
 export default function HrServices() {
     const firstsection = {
-        title: "Recruitment Process Outsourcing (RPO)",
-        description: "Recruitment Process Outsourcing (RPO) has a broad set of options associated with direct customer interactions, including handling issues, specific queries, and sales-related questions.",
+        title: "Recruitment Process Outsourcing",
+        description: "Recruitment Process Outsourcings offer a wide range of operational tasks associated with direct customer interactions regarding issues, queries, and sales related to products or services.",
         image: "/images/hr-services/hr-services-hero.png"
     };
 
     const secondsection = {
         background: "bg-background",
-        title: "Your Partner in Customer Success",
-        description: "We provide smart customer support designed to help your business grow. We focus on what truly matters:",
-        points: [
-            "Builds customer relationships, boosts engagement",
-            "Helps the brands to grow with a support team",
-            "Offers fast and easy solutions for your customers"
-        ],
+        title: "Empowering Your Business with Expert HR Solutions",
+        description: "We provide smart support solutions that strengthen customer relationships through seamless interactions, fast resolutions, and lasting engagement. Our approach enhances loyalty, drives business growth, and empowers brands to connect more effectively while scaling with confidence.",
         image: "/images/hr-services/Empowering.png",
         btn: "Schedule a Consultation",
         width: "max-w-6xl"
@@ -29,28 +24,28 @@ export default function HrServices() {
 
     const thirdsection = {
         background: "bg-gradient-to-b from-unique to-accent",
-        head: "Tired of Recruiting Top Talent?",
-        paragraph: "We manage your hiring from start to finish. Our goal is to make it fast, accurate, and find the perfect fit for your team.",
+        head: "Streamlined Hiring Through Expert Recruitment Process Outsourcing",
+        paragraph: "We streamline recruitment from sourcing to onboarding, ensuring efficiency, accuracy, and the right talent for your business growth.",
         child: [
             {
                 image: "/images/hr-services/Inbound-Services.jpg",
                 title: "Inbound Services",
-                description: "Our inbound support makes your customer feel valued. We offer quick, personal help that builds trust and turns them into loyal customers. "
+                description: "Our inbound services ensure seamless customer support with quick responses, personalized interactions, and efficient solutions to enhance satisfaction and loyalty. "
             },
             {
                 image: "/images/hr-services/Outbound-Services.jpg",
                 title: "Outbound Services",
-                description: "Our outbound services actively reach out to customers to generate new leads, gather valuable feedback, and build strong relationships that drive growth."
+                description: "Our outbound services drive growth through proactive customer engagement, lead generation, feedback collection, and tailored communication that strengthens relationships and boosts business success."
             },
             {
                 image: "/images/hr-services/Omnichannel-Support-Services.jpg",
-                title: "Integrated Channel Services/ Multiple Support System (Use any one) ",
-                description: "Our integrated channel operates on a single platform, facilitating interactions through phone, email, chat, and social media for a hassle-free experience and quicker resolutions. "
+                title: "Omnichannel Support Services",
+                description: "Our omnichannel support service unifies customer interactions across phone, email, chat, and social media, ensuring seamless experiences, faster resolutions, and improved satisfaction."
             },
             {
                 image: "/images/hr-services/Email-Support-Services.jpg",
                 title: "Email Support Services",
-                description: "Our continuous email support offers personalized responses that bridge the gap between customers and the company, ensuring quick resolutions and enhanced satisfaction."
+                description: "Our email support services provide timely, professional, and personalized responses to customer queries, ensuring clear communication, quick resolutions, and enhanced customer satisfaction."
             }
         ]
     };
@@ -59,22 +54,22 @@ export default function HrServices() {
         {
             id: "1",
             title: "Requirement Analysis",
-            desc: "We understand your hiring needs, business goals, and job role requirements to build an outstanding recruitment strategy.",
+            desc: "We understand your hiring needs, business goals, and job role requirements to build a tailored recruitment strategy.",
         },
         {
             id: "2",
             title: "Talent Sourcing",
-            desc: "Our team utilizes multiple channels to identify, attract, and engage the right candidates.",
+            desc: "Our team leverages multiple channels to identify, attract, and engage the right candidates.",
         },
         {
             id: "3",
-            title: "Screening & Assessment",
-            desc: "We conduct detailed assessments, background checks, and initial interviews to hire talented candidates.",
+            title: "Screening & Shortlisting",
+            desc: "We conduct detailed assessments, background checks, and initial interviews to filter top-quality candidates.",
         },
         {
             id: "4",
             title: "Interview Coordination",
-            desc: "For a smooth interviewing process, we schedule communication between candidates and managers.",
+            desc: "We manage scheduling and communication between candidates and hiring managers for a smooth interview process.",
         },
         {
             id: "5",
@@ -84,7 +79,7 @@ export default function HrServices() {
         {
             id: "6",
             title: "Onboarding Support",
-            desc: "Stop losing great talent after the offer letter. We deliver an onboarding experience that makes them stay.",
+            desc: "We support final candidate selection, salary negotiation, and offer rollout to ensure acceptance.",
         },
     ];
 
@@ -97,8 +92,8 @@ export default function HrServices() {
                 desc: "We have a team of trained and professional support agents who are certified to handle technical issues."
             },
             {
-                title: "Regular Monitoring",
-                desc: "Our team anticipates and aims to prevent issues before they might impact your operations, rather than just taking action afterwards."
+                title: "Proactive Monitoring",
+                desc: "Our team anticipates and aims to prevent issues before they might impact your operations rather than just taking action afterwards."
             },
             {
                 title: "Secure & Compliant",
@@ -206,15 +201,15 @@ export default function HrServices() {
             <section className="px-4 sm:px-6 lg:px-8 py-14 lg:py-20 bg-white" aria-labelledby="process-heading">
                 <div className="mx-auto max-w-7xl text-center">
                     <div className="inline-flex items-center rounded-full bg-green-100 text-green-900 px-4 py-1 text-sm font-medium mb-3">
-                        Our Proven Process
+                       Building Success Together
                     </div>
 
                     <h2 id="process-heading" className="text-heading font-bold text-2xl sm:text-3xl md:text-4xl">
-                        How Our Recruitment Process Works? 
+                        Our Recruitment Process Explained
                     </h2>
 
                     <p className="text-paragraph mt-3 max-w-2xl mx-auto">
-                       Our approach to finding the right candidate
+                      Our step-by-step process ensures your vision becomes a flawless reality.
                     </p>
 
                     <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
