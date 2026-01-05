@@ -41,6 +41,9 @@ import AdminLogin from './components/AdminLogin';
 import Jobcreate from './components/Jobcreate';
 import Admin from './components/Admin';
 import Job from './components/Job';
+import Blogs from './components/Blogs';
+import AdminBlogs from './components/AdminBlogs';
+import CreateBlogs from './components/CreateBlogs';
 
 export default function App() {
   const publicRoutes = [
@@ -78,7 +81,11 @@ export default function App() {
     { path: '/google-my-business', component: Googlemybusiness },
     { path: '/online-reputation-market', component: OnlineReputaionMarket },
     { path: '/job/:id', component: Job },
+    { path: '/blogs', component: Blogs },
+    { path: '/admin-blogs', component: AdminBlogs },
+    { path: '/create-blog', component: CreateBlogs },
   ];
+
 
   const protectedRoutes = [
     { path: '/admin', component: Admin },

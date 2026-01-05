@@ -118,6 +118,13 @@ function Admin() {
             </div>
             <div className="flex gap-3">
               <button
+                onClick={() => navigate('/admin-blogs')}
+                className="bg-[#6b8e6b] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#547054] focus:outline-none focus:ring-2 focus:ring-[#6b8e6b] focus:ring-offset-2 transform transition-all hover:scale-[1.02] shadow-md flex items-center gap-2"
+              >
+                Blogs
+                
+              </button>
+              <button
                 onClick={() => navigate('/jobscreate')}
                 className="bg-[#6b8e6b] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#547054] focus:outline-none focus:ring-2 focus:ring-[#6b8e6b] focus:ring-offset-2 transform transition-all hover:scale-[1.02] shadow-md flex items-center gap-2"
               >

@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import { useNavigate } from "react-router-dom";
 import Features from "../reusable/Features";
 import HeroSection2 from "../reusable/HeroSection2";
 import { AiFillDollarCircle } from "react-icons/ai";
@@ -18,6 +19,7 @@ const Faq = lazy(() => import("../reusable/Faq"));
 const TestimonialCarousel = lazy(() => import("../reusable/TestimonialCarousel"));
 
 export default function Products() {
+    const navigate = useNavigate();
     const faqs = [
         { 
             question: "What is Human Maximizer?", 
@@ -53,6 +55,7 @@ export default function Products() {
         description:
             "Human Maximizer combines hiring, payroll, performance, and culture-building into one powerful platform designed for growing teams. You can scale faster, work smarter, and keep your people at the heart of your business.",
         btn: "Know More",
+        link: "/products",
         image: "/images/Products/second-section-image.png",
         headmaxwidth: "max-w-prose",
         parawidth: "max-w-prose",
@@ -208,6 +211,7 @@ export default function Products() {
                         <button 
                             className="mx-auto mt-6 flex items-center gap-3 rounded-4xl border border-white pl-5 py-2 text-white bg-secondary hover:opacity-90 transition"
                             aria-label="Learn more about Gadgetfobia"
+                            onClick={() => navigate('/products')}
                         >
                             Learn more <span className="p-3 mr-2 rounded-full bg-white/30" aria-hidden="true"><FaArrowRightLong /></span>
                         </button>

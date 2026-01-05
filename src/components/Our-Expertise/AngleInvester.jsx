@@ -17,6 +17,7 @@ export default function AngelInvestor() {
         description: "We link startups with angel investors who bring capital, experience, and connections. But do you know how we help startups scale? We mainly focus on three pillars:- \n The right funding \n Advice from experts \n  Powerful partnerships \n By combining these gives you get everything you need to build a successful, high-growth business.",
         background: "bg-accent",
         btn: "Get Funded Today",
+        link: "/contact",
         imgWidth: "w-3/5"
     };
 

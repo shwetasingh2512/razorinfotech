@@ -19,6 +19,7 @@ export default function HrServices() {
         description: "We provide smart support solutions that strengthen customer relationships through seamless interactions, fast resolutions, and lasting engagement. Our approach enhances loyalty, drives business growth, and empowers brands to connect more effectively while scaling with confidence.",
         image: "/images/hr-services/Empowering.png",
         btn: "Schedule a Consultation",
+        link: "/contact",
         width: "max-w-6xl"
     };
 

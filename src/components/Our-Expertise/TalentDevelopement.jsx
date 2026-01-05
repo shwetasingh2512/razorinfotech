@@ -19,6 +19,7 @@ export default function TalentDevelopment() {
         description: "We understand that every organization has different business requirements and needs. Therefore, Razor Infotech delivers the training that is suitable for all sizes. From startups to well-established companies, Razor Infotech partners with a designed development plan that perfectly matches the business goals, tech stack, and team’s capacity.\n Basically, at the initial phase, we understand your challenges and then create a blueprint that can change your team’s potential into measurable performances.",
         image: "/images/talent-developement/Empowering-Startups.png",
         btn: "Schedule a Consultation",
+        link: "/contact",
         width: "max-w-6xl"
     };
 

@@ -20,6 +20,7 @@ export default function Training() {
 To help individuals and organizations achieve their business goals through engaging workshops, practical learning, and continuous improvement initiatives. Our main approach is to offer targeted talent development solutions to emerging companies to stay competitive in the market. `,
     image: "/images/talent-developement/Empowering-Startups.png",
     btn: "Consult Now",
+    link: "/contact",
     width: "max-w-7xl",
   };
 
