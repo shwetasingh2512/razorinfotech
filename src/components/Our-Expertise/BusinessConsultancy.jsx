@@ -8,39 +8,39 @@ const Faq = lazy(() => import("../../reusable/Faq"));
 export default function BusinessConsultancy() {
     const consultancyBenefits = [
         {
-            title: "Industry Expertise",
-            description: "Our experienced consultants bring deep industry knowledge and proven strategies to help you navigate complex business challenges and opportunities."
+            title: "Proven Results",
+            description: "We offer training development solutions that drive innovation, improve your team productivity, and increase your business outcomes. "
         },
         {
-            title: "Customized Strategies",
-            description: "We develop tailored business strategies aligned with your specific goals, market position, and growth objectives—not one-size-fits-all solutions."
+            title: "Expert Trainers",
+            description: "Now, gain hands-on experience and practical tips from the industry-experienced professionals who have overcome daily tech challenges. "
         },
         {
-            title: "Data-Driven Insights",
-            description: "We leverage analytics and market research to provide actionable insights that inform strategic decisions and minimize business risks."
+            title: "Continuous Support",
+            description: "Razor Infotech is here with you at every step to enhance your team’s growth. "
         },
         {
-            title: "End-to-End Support",
-            description: "From strategy development to implementation and ongoing optimization, we partner with you throughout your entire business transformation journey."
+            title: "Customized Solutions",
+            description: "At first, we analyze your specific needs and then build a learning path that aligns with your projects, tech stack, and business goals. "
         },
     ];
 
     const faqs = [
         {
-            question: "What is business consultancy?",
-            answer: "Business consultancy involves expert advisory services that help organizations improve performance, solve problems, and achieve growth objectives. Our consultants analyze your business, identify opportunities, and develop strategic recommendations for operations, finance, marketing, technology, and organizational development."
+            question: "What is the Business Consultancy?",
+            answer: "A business consultancy acts as an external expert that provides advice and solutions to companies to improve performance, solve problems, and achieve business goals."
         },
         {
-            question: "What types of businesses can benefit from consultancy services?",
-            answer: "We provide consultancy for startups seeking market validation and growth strategies, SMBs looking to scale operations, and established enterprises undergoing digital transformation or market expansion. Our services are tailored to each business stage and industry."
+            question: "What does a business consultancy do?",
+            answer: "A business consultancy provides expert advice to help startups and established organizations improve performance, solve problems, and achieve goals by analyzing their operations."
         },
         {
-            question: "How long does a typical consultancy engagement last?",
-            answer: "Engagement duration varies based on project scope. Short-term projects like market research or process audits may take 4-8 weeks, while comprehensive transformation initiatives can span 6-12 months. We provide flexible engagement models including project-based, retainer, and hourly consulting."
+            question: " How much does a business consultancy charge per day?",
+            answer: "The charging amount ranges widely and depends on the consultancy."
         },
         {
-            question: "What makes Razor Infotech's consultancy services different?",
-            answer: "We combine deep industry expertise with technology implementation capabilities. Unlike traditional consultancies that only provide recommendations, we also help execute strategies through our IT, BPO, and digital services—ensuring your business transformation moves from planning to results."
+            question: "What are the 7 C’s of consultancy?",
+            answer: "The 7 C’s of consultancy are client, clarify, create, change, confirm, continue, and close."
         },
     ];
 
@@ -50,20 +50,20 @@ export default function BusinessConsultancy() {
             <meta name="description" content="Expert business consultancy for startups, SMBs, and enterprises. Strategic planning, market research, process optimization, financial advisory, and digital transformation services to drive sustainable growth." />
             <meta name="keywords" content="business consultancy, strategic consulting, business advisory, management consulting, growth strategy, business transformation, market research, process optimization, financial consulting, digital transformation consulting" />
             <meta name="author" content="Razor Infotech" />
-            
+
             <meta property="og:title" content="Business Consultancy Services - Strategic Advisory & Growth Solutions" />
             <meta property="og:description" content="Professional business consultancy helping organizations optimize operations, develop growth strategies, and achieve sustainable success. From startups to enterprises." />
             <meta property="og:type" content="website" />
             <meta property="og:url" content="https://www.razorinfotech.com/services/business-consultancy" />
             <meta property="og:image" content="https://www.razorinfotech.com/images/business-consultancy/business-consultancy-hero.png" />
-            
+
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content="Business Consultancy Services by Razor Infotech" />
             <meta name="twitter:description" content="Strategic business advisory, market research, and growth consulting for businesses at every stage. Expert guidance for sustainable success." />
             <meta name="twitter:image" content="https://www.razorinfotech.com/images/business-consultancy/business-consultancy-hero.png" />
-            
+
             <link rel="canonical" href="https://www.razorinfotech.com/services/business-consultancy" />
-            
+
             <script type="application/ld+json">
                 {JSON.stringify({
                     "@context": "https://schema.org",
@@ -124,17 +124,17 @@ export default function BusinessConsultancy() {
                 <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 lg:grid-cols-2">
                     <div className="flex flex-col justify-center gap-4">
                         <h1 id="hero-heading" className="text-3xl font-semibold text-heading md:text-4xl lg:max-w-[90%]">
-                            Strategic Business Consultancy for Sustainable Growth
+                            Reliable Business Consultancy for Modern Business
                         </h1>
                         <p className="text-paragraph/80 text-base lg:max-w-[80%]">
-                            Expert business consultancy services that help organizations optimize operations, overcome challenges, and achieve ambitious growth objectives. From strategic planning and market research to process optimization and digital transformation, we provide actionable insights and hands-on support at every stage of your business journey.
+                            We understand that operating a business is a complex decision and requires strategic planning. It’s easy to get pulled in every direction between daily operations, market shifts, and long-term goals.  Razor Infotech recognizes core challenges and designs actionable strategies, and implements the systems that you need to grow with confidence. Our approach is built on collaboration, practical actions, highly focused on your success.
                         </p>
                         <Link
                             to="/contact"
                             className="inline-flex w-fit items-center gap-3 rounded-full bg-secondary px-4 py-2 text-white hover:opacity-90 transition-opacity"
                             aria-label="Schedule a consultation"
                         >
-                            <span>Schedule a Consultation</span>
+                            <span>View Our Services</span>
                             <span className="rounded-full bg-white/20 p-2" aria-hidden="true">
                                 <ArrowRight />
                             </span>
@@ -166,21 +166,20 @@ export default function BusinessConsultancy() {
                         />
                     </div>
                     <div className="flex flex-col justify-center gap-4">
-                        <p className="text-base text-light-green font-semibold border border-light-green py-2 px-5 rounded-full w-fit">
-                            Business Consultancy
-                        </p>
                         <h2 id="services-heading" className="text-3xl font-semibold text-heading md:text-4xl lg:max-w-[90%]">
-                            Comprehensive Advisory for Every Stage
+                            Turn Market Challenges into Productivity & Growth
                         </h2>
                         <p className="text-paragraph/80 text-base lg:max-w-[90%]">
-                            At Razor Infotech, we provide strategic business consultancy for every stage—supporting startups and established companies alike. From market research and process optimization to financial advisory and digital transformation, we deliver actionable strategies and expert guidance that help businesses overcome challenges, seize opportunities, and achieve sustainable growth.
+                            At Razor Infotech, we consider market challenges as an opportunity to innovate, streamline, and move forward.
+                            Market changes create a gap in workflows and communication. Therefore, we redesign your processes and implement the right digital tools, so your team can work smartly, without any uncertainty and disruption.
+
                         </p>
                         <Link
                             to="/contact"
                             className="inline-flex w-fit items-center gap-3 rounded-full bg-secondary px-4 py-2 text-white hover:opacity-90 transition-opacity"
                             aria-label="Discuss your business challenges with our consultants"
                         >
-                            <span>Talk to Our Consultants</span>
+                            <span>Talk to Our Support Specialists</span>
                             <span className="rounded-full bg-white/20 p-2" aria-hidden="true">
                                 <ArrowRight />
                             </span>
@@ -193,18 +192,18 @@ export default function BusinessConsultancy() {
                 <div className="max-w-6xl mx-auto">
                     <header>
                         <h2 id="why-choose-heading" className="text-3xl text-heading text-center font-semibold">
-                            Why Choose Razor Infotech for Business Consultancy?
+                            Why Choose Razor Infotech?
                         </h2>
                         <p className="text-center text-paragraph mt-5">
-                            Combining strategic expertise with implementation capabilities to deliver results, not just recommendations
+                           Razor Infotech delivers innovative, high-quality solutions that drive business success.
                         </p>
                     </header>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mx-auto mt-8">
                         {consultancyBenefits.map((e, i) => (
                             <article key={i} className="p-5 bg-background rounded-2xl hover:shadow-md transition-shadow">
                                 <div className="flex gap-5 items-center">
-                                    <IoIosCheckmarkCircleOutline 
-                                        className="text-secondary text-2xl flex-shrink-0" 
+                                    <IoIosCheckmarkCircleOutline
+                                        className="text-secondary text-2xl flex-shrink-0"
                                         aria-hidden="true"
                                     />
                                     <h3 className="text-heading font-semibold">{e.title}</h3>

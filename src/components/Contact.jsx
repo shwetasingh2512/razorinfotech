@@ -1,6 +1,8 @@
 import { FaPhoneAlt, FaFacebook, FaInstagramSquare, FaLinkedin, FaWhatsappSquare } from "react-icons/fa";
 import { IoMail, IoLocationSharp, IoShareSocial } from "react-icons/io5";
 import { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const company = [
   { 
@@ -41,27 +43,33 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
-
     const data = new FormData(e.currentTarget);
     const payload = {
-      name: data.get("name"),
-      email: data.get("email"),
-      message: data.get("message"),
-      agree: !!data.get("agree"),
+      name: data.get('name'),
+      email: data.get('email'),
+      message: data.get('message'),
+      agree: !!data.get('agree'),
     };
 
     try {
-      // Replace with your actual form submission endpoint
-      console.log("Contact form:", payload);
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      setSubmitStatus("success");
+      const res = await fetch('http://localhost:3000/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        credentials: 'include',
+      });
+
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(text || 'Failed to send message');
+      }
+      setSubmitStatus('success');
+      toast.success("Thank you for contacting us! We'll get back to you soon.");
       e.currentTarget.reset();
     } catch (error) {
-      console.error("Form submission error:", error);
-      setSubmitStatus("error");
+      console.error('Form submission error:', error);
+      setSubmitStatus('error');
+      toast.error('Something went wrong. Please try again or email us directly.');
     } finally {
       setIsSubmitting(false);
     }
@@ -210,17 +218,7 @@ export default function Contact() {
                 </label>
               </div>
 
-              {submitStatus === "success" && (
-                <div className="rounded-lg bg-green-50 p-4 text-sm text-green-800" role="alert">
-                  Thank you for contacting us! We'll get back to you soon.
-                </div>
-              )}
-
-              {submitStatus === "error" && (
-                <div className="rounded-lg bg-red-50 p-4 text-sm text-red-800" role="alert">
-                  Something went wrong. Please try again or email us directly.
-                </div>
-              )}
+                      { /* Inline status messages are retained for accessibility, toasts are primary UX */ }
 
               <div className="pt-2">
                 <button
@@ -232,6 +230,8 @@ export default function Contact() {
                 </button>
               </div>
             </form>
+
+            <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
 
             <div className="relative -order-1 md:order-none">
               <div className="relative overflow-hidden rounded-3xl border border-[var(--color-paragraph)]/15 bg-[var(--color-secondary-light)] shadow-2xl">

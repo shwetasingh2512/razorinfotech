@@ -5,18 +5,16 @@ function Descriptionsection({ items }) {
   return (
     <section className={`px-4 sm:px-8 py-8 sm:py-12 lg:py-16 ${items.background}`}>
       <div
-        className={`mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 ${
-          items.width ? items.width : "max-w-full md:max-w-5xl lg:max-w-6xl"
-        }`}
+        className={`mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 ${items.width ? items.width : "max-w-full md:max-w-5xl lg:max-w-6xl"
+          }`}
       >
         {/* Image */}
         <div className="flex justify-center items-center">
           <img
             src={items.image}
             alt={items.title}
-            className={`rounded-2xl object-cover w-full max-w-[90%] sm:max-w-sm md:max-w-md lg:max-w-lg h-auto ${
-              items.imgWidth || ""
-            }`}
+            className={`rounded-2xl object-cover w-full max-w-[90%] sm:max-w-sm md:max-w-md lg:max-w-lg h-auto ${items.imgWidth || ""
+              }`}
           />
         </div>
 
@@ -29,6 +27,20 @@ function Descriptionsection({ items }) {
           <p className="text-paragraph text-sm sm:text-base max-w-prose">
             {items.description}
           </p>
+          {items.points && (
+            <ul className="list-disc list-inside space-y-2 mt-2">
+              {items.points.map((point, index) => (
+                <li
+                  key={index
+                  }
+                  className="text-paragraph text-sm sm:text-base"
+                >
+                  {point}
+                </li>
+              ))}
+            </ul>
+          )
+          }
 
           {items.btn && (
             <Link

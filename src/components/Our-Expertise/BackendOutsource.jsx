@@ -12,6 +12,7 @@ export default function BackendOutsource() {
         description: "Backend outsourcing services allow businesses to offload time-consuming, technical, or repetitive processes to a dedicated team of professionals. From server management and database handling to backend development and admin support, we take care of the heavy lifting while you focus on growth and innovation.",
         image: "/images/backend-outsource/backend-outsource-hero.png",
         btn: "Outsource My Backend Today",
+        link: "/contact",
         background: "bg-accent",
         imgWidth: "w-4/5",
         width: "max-w-6xl"

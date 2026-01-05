@@ -7,21 +7,22 @@ const Faq = lazy(() => import("../../reusable/Faq"));
 
 export default function LegalCompliance() {
   const firstSection = {
-    title: "Trusted Legal & Compliance Solutions for Every Business",
+    title: "Reliable Legal & Compliance Solutions for Growing Business",
     description:
-      "Expert legal guidance, regulatory compliance, and risk management services to protect your business, ensure transparency, and enable sustainable growth with confidence.",
+      "We help businesses manage their rules and risks. This makes it easier for them to grow safely and succeed in the long run",
     image: "/images/Legal-comlience/Legal-complience-hero.png",
     bgcolor: "bg-accent",
   };
 
   const secondSection = {
     background: "bg-background",
-    title: "Legal & Compliance Services That Safeguard Your Business",
-    description: `In today's complex regulatory environment, businesses face evolving compliance requirements, data protection regulations, and legal challenges. Our Legal & Compliance Services provide proactive protection, ensuring your operations meet all regulatory obligations while minimizing risk exposure.
+    title: "Protect Your Business From Risk With Legal & Compliance Services",
+    description: `With the introduction of digitalization and modernization, today’s legal and appliance environment is not only about following the sets of rules and regulations. Now we have to manage the efficiency, consistency, build trust, and enable sustainable growth.  \n
 
-From contract management and corporate governance to regulatory compliance and data protection (GDPR, HIPAA, SOX), we deliver end-to-end solutions tailored to your industry. Our experienced legal professionals stay ahead of regulatory changes, providing strategic guidance that protects your interests and builds stakeholder trust.
-
-With comprehensive legal support, you can navigate complex regulations confidently, strengthen your reputation, mitigate risks, and focus on sustainable business growth without legal concerns holding you back.`,
+    With our legal and compliance solutions, organizations can: \n
+     \nOverlook critical business content with informational governance solutions.
+     \nTranslate dense regulations into clear action plans and empower the team with the knowledge they need.
+    \n Make sure that every framework supports your growth objectives, which turns compliance into a competitive advantage.`,
     image: "/images/Legal-comlience/Compliance-Services.png",
     width: "max-w-6xl",
     imgWidth: "w-4/5",
@@ -31,15 +32,15 @@ With comprehensive legal support, you can navigate complex regulations confident
     {
       id: 1,
       title: "Regulatory Compliance",
-      description: "Ensure adherence to GDPR, HIPAA, SOX, PCI DSS, and industry-specific regulations to avoid penalties, legal risks, and reputational damage.",
+      description: "Reduce risk and penalties to stay aligned with the local and international laws",
       image: "/images/Legal-comlience/Regulatory.png",
       layout: "vertical",
       link: "/services/regulatory-compliance"
     },
     {
       id: 2,
-      title: "Contract Management",
-      description: "Expert drafting, reviewing, negotiation, and lifecycle management of business contracts with legal precision and risk mitigation.",
+      title: "Corporate Governance",
+      description: "We follow the sets of rules and regulations to ensure transparency and accountability.",
       image: "/images/Legal-comlience/Contract.png",
       layout: "horizontal",
       link: "/services/contract-management"
@@ -64,43 +65,39 @@ With comprehensive legal support, you can navigate complex regulations confident
 
   const benefits = [
     {
-      title: "Reduce Legal Costs by 40-60%",
-      desc: "Outsourcing legal and compliance functions eliminates the overhead of full-time legal staff, office space, and infrastructure while accessing expert-level services at a fraction of the cost.",
+      title: "Regulatory Compliance Management",
+      desc: "We help you to understand and follow the guidelines that apply to your business locally, nationally, and internationally to avoid costly fines and keep the operations smooth. ",
     },
     {
-      title: "Access Specialized Legal Expertise",
-      desc: "Gain immediate access to experienced legal professionals with expertise in corporate law, regulatory compliance, contract law, intellectual property, and industry-specific regulations without lengthy hiring processes.",
+      title: "Contact Safety Net",
+      desc: "We focus on making every agreement clear, fair, and legally solid to protect your business from unexpected risks. ",
     },
     {
-      title: "Proactive Risk Management",
-      desc: "Stay ahead of regulatory changes with continuous compliance monitoring, risk assessments, and strategic legal guidance that prevents issues before they escalate into costly problems or litigation.",
+      title: "Better Business Practices",
+      desc: "Set up clear, honest, and responsible ways of running your business. This actually builds trust with investors and makes your company's reputation stronger and more reliable. ",
     },
     {
-      title: "Enhanced Business Agility",
-      desc: "Scale legal support based on business needs—from startups requiring basic compliance to enterprises needing comprehensive legal infrastructure—with flexible engagement models that adapt to your growth.",
-    },
-    {
-      title: "Focus on Core Business",
-      desc: "Free internal resources from complex legal matters to concentrate on strategic initiatives, product development, and customer acquisition while experts handle compliance and legal protection.",
-    },
+      title: "Spot Risk & Fix",
+      desc: "Our team helps to identify where your business might be at risk. We create simple, practical plans to fic those weak spots and keep your business safe.",
+    }
   ];
 
   const faqs = [
     {
-      question: "What legal and compliance services does Razor Infotech provide?",
-      answer: "We provide comprehensive legal and compliance services including regulatory compliance (GDPR, HIPAA, SOX, PCI DSS), contract drafting and management, corporate governance and policy development, risk assessment and mitigation, data protection and privacy compliance, intellectual property protection, employment law compliance, vendor and supplier agreement management, compliance audits and reporting, and ongoing legal advisory services.",
+      question: "What service Razor offer?",
+      answer: "We help businesses to follow the laws and manage their risk. Consider us a guide for our legal paperwork, government regulations, and company policies, so that you can focus on running your business with peace of mind.",
     },
     {
-      question: "What industries do you serve for legal and compliance support?",
-      answer: "We serve diverse industries including healthcare (HIPAA compliance), financial services (SOX, PCI DSS), technology and SaaS (GDPR, data privacy), e-commerce and retail (consumer protection, PCI), manufacturing (safety regulations, environmental compliance), telecommunications, pharmaceuticals (FDA regulations), real estate, and professional services with industry-specific legal expertise and regulatory knowledge.",
+      question: " Is our business information safe with Razor?",
+      answer: "Yes, your business is safe with us. We secure systems for all documents and communications. Before beginning our process, we sign a Non-Disclosure Agreement (NDA) to protect your data.",
     },
     {
-      question: "How do you ensure ongoing compliance with changing regulations?",
-      answer: "We maintain compliance through continuous regulatory monitoring, subscription to legal update services, regular compliance audits and assessments, automated compliance tracking systems, periodic policy reviews and updates, training programs for your team, documented compliance procedures, and proactive communication about regulatory changes affecting your business with actionable recommendations.",
+      question: "Are legal and compliance solutions for big companies? ",
+      answer: "No, we work with all types of companies. We provide the right level of support for both small startups and established companies within a budget.",
     },
     {
-      question: "What are the costs and how long does implementation take?",
-      answer: "Costs vary based on business size and needs: Basic compliance support ($2,000-5,000/month), comprehensive legal services ($5,000-15,000/month), enterprise-level support (custom pricing). Implementation timelines: Compliance assessment (2-4 weeks), policy development (4-6 weeks), full compliance program (3-6 months). We offer flexible packages that reduce legal costs by 40-60% compared to in-house teams.",
+      question: "How do you stay updated on changing laws?",
+      answer: "Our team continuously monitors legal and regulatory updates and provides ongoing clients with clear summaries and actionable steps to maintain compliance effortlessly.",
     },
   ];
 
@@ -177,10 +174,10 @@ With comprehensive legal support, you can navigate complex regulations confident
 
       <section className="p-6 sm:p-8 lg:p-10 bg-accent flex flex-col items-center" aria-labelledby="services-heading">
         <h2 id="services-heading" className="text-2xl sm:text-3xl lg:text-4xl text-heading font-semibold text-center">
-          Comprehensive Legal & Compliance Solutions
+          Discover Our Legal & Compliance Solutions
         </h2>
         <p className="text-paragraph text-base text-center mt-3 max-w-2xl">
-          Protect your business with expert legal guidance, regulatory compliance, and proactive risk management tailored to your industry
+          We make compliance and risk management simple. Our expertise helps to ensure sustainable growth and long-term success. 
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8 max-w-7xl w-full justify-items-center">
           {complianceServices.map((service) => (
@@ -247,11 +244,8 @@ With comprehensive legal support, you can navigate complex regulations confident
       <section className="bg-gradient-to-b from-[var(--color-unique)] to-[var(--color-accent)] px-6 py-14" aria-labelledby="benefits-heading">
         <div className="mx-auto max-w-6xl">
           <h2 id="benefits-heading" className="text-center text-2xl font-semibold text-[var(--color-heading)] md:text-3xl mb-3">
-            Benefits of Outsourcing Legal & Compliance Services
+            Securing Your Business Integrity With Legal & Compliance
           </h2>
-          <p className="text-center text-[var(--color-paragraph)]/80 max-w-3xl mx-auto mb-10">
-            Strategic advantages that protect your business while reducing costs and improving agility
-          </p>
 
           <div className="mt-10 space-y-10">
             {benefits.map((item, idx) => (

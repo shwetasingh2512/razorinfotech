@@ -8,83 +8,84 @@ const Faq = lazy(() => import("../../reusable/Faq"));
 
 export default function TalentDevelopment() {
     const firstSection = {
-        title: "Growing Talent, Growing Business",
-        description: "Empower your workforce with strategic talent development programs that build leadership skills, enhance performance, and drive sustainable business growth through continuous learning and career advancement.",
+        title: "Turn Your Skills into Growth With Our Talent Development Solutions",
+        description: "We provide solutions that are designed to increase productivity, innovation, and retention for business operations",
         image: "/images/talent-developement/talent-developement-hero.png"
     };
 
     const secondSection = {
         background: "bg-accent",
-        title: "Empowering Teams to Reach Their Full Potential",
-        description: "We help ambitious startups and growing businesses unlock their workforce's true potential with tailored talent development strategies, leadership training, and continuous learning programs. From building foundational skills to developing future leaders, our mission is to provide the expertise, frameworks, and support needed to create high-performing teams that drive business success. With us as your strategic partner, talent development becomes a competitive advantage that fuels innovation, engagement, and sustainable growth.",
+        title: "Learning Path & Skill Development",
+        description: "We understand that every organization has different business requirements and needs. Therefore, Razor Infotech delivers the training that is suitable for all sizes. From startups to well-established companies, Razor Infotech partners with a designed development plan that perfectly matches the business goals, tech stack, and team’s capacity.\n Basically, at the initial phase, we understand your challenges and then create a blueprint that can change your team’s potential into measurable performances.",
         image: "/images/talent-developement/Empowering-Startups.png",
         btn: "Schedule a Consultation",
+        link: "/contact",
         width: "max-w-6xl"
     };
 
     const talentPrograms = {
         background: "bg-gradient-to-b from-unique to-accent",
-        head: "Comprehensive Talent Development Solutions",
-        paragraph: "Our training programs strengthen leadership capabilities, enhance critical soft skills, upskill technical talent, and improve team performance—ensuring your workforce is prepared for today's challenges and ready for tomorrow's opportunities.",
+        head: "Implementation & Execution Support",
+        paragraph: "Our professional will guide with the strategic steps on the emerging technologies, skills, and team structuring to make informed decisions about where to invest in talent development for maximum ROI.",
         child: [
             {
                 image: "/images/talent-developement/Leadership-Developmen.jpg",
-                title: "Leadership Development Programs",
-                description: "Build future leaders with comprehensive training in strategic thinking, emotional intelligence, decision-making, change management, and people leadership. Our programs develop strong leaders at every organizational level who can inspire teams and drive results."
+                title: "Training Workshops & Seminars ",
+                description: "Our trainers are practicing experts who understand the development challenges faced by organizations and deliver practical, project-based learning tips. "
             },
             {
                 image: "/images/talent-developement/Career-Pathing.jpg",
-                title: "Career Pathing & Growth Planning",
-                description: "Design clear career progression pathways with structured development plans, skill matrices, promotion frameworks, and succession planning. Keep employees engaged and motivated by showing tangible growth opportunities within your organization."
+                title: "Career Pathing & Employee Growth",
+                description: "We transform uncertainty into clarity. By building structured career roadmaps and development plans, we allow your employees and secure a talent pipeline."
             },
             {
                 image: "/images/talent-developement/Coaching.jpg",
-                title: "Executive Coaching & Mentorship",
-                description: "Provide personalized one-on-one guidance from experienced executive coaches and industry mentors. From performance optimization to leadership transition, our coaching programs build confidence, accountability, and sustainable behavioral change."
+                title: "Tools & Platform Optimization",
+                description: "We make sure your team has every tool that they need to succeed. Our right learning tools help organizations with LMS platforms, coding environments for your business growth."
             },
             {
                 image: "/images/talent-developement/Continuous-Learning.jpg",
-                title: "Continuous Learning & Upskilling",
-                description: "Keep teams future-ready with ongoing learning opportunities, interactive workshops, microlearning modules, and certification programs. We tailor training to emerging industry trends, technological advances, and organizational priorities."
+                title: "Track Performance Analytics",
+                description: "Our clear metrics and dashboards allow you to track skill progression, performance, knowledge retention, and their impact on the business. "
             }
         ]
     };
 
     const whyChooseUs = [
         {
-            title: "Proven Learning Methodologies",
-            description: "Evidence-based training approaches combining adult learning theory, experiential learning, micro-credentials, and competency frameworks proven to increase knowledge retention by 65% and application by 55%."
+            title: "Proven Results",
+            description: "We offer training development solutions that drive innovation, improve your team productivity, and increase your business outcomes."
         },
         {
-            title: "Customized Development Programs",
-            description: "Tailored talent strategies aligned with your industry, organizational culture, business objectives, and workforce demographics—from frontline employees to C-suite executives across all departments."
+            title: "Continuous Support",
+            description: "Razor Infotech is here with you at every step to enhance your team’s growth. "
         },
         {
-            title: "Measurable ROI & Impact",
-            description: "Comprehensive metrics tracking skill development, behavioral change, performance improvement, engagement scores, retention rates, and business impact with quarterly assessment reports and KPI dashboards."
+            title: "Expert Trainers",
+            description: "Now, gain hands-on experience and practical tips from the industry-experienced professionals who have overcome daily tech challenges. "
         },
         {
-            title: "Blended Learning Approach",
-            description: "Flexible delivery combining in-person workshops, virtual instructor-led training, self-paced e-learning, microlearning, coaching sessions, and on-the-job application for maximum effectiveness and accessibility."
+            title: "Customized Solutions",
+            description: "At first, we analyze your specific needs and then build a learning path that aligns with your projects, tech stack, and business goals. "
         },
     ];
 
     const faqs = [
         {
-            question: "What talent development services does Razor Infotech provide?",
-            answer: "We provide comprehensive talent development services including leadership development programs (emerging leaders, mid-level management, executive leadership), career pathing and succession planning, executive coaching and mentorship, soft skills training (communication, emotional intelligence, teamwork), technical upskilling and reskilling programs, onboarding and new hire training, performance management training, diversity and inclusion workshops, continuous learning platforms, and customized learning paths with certifications and assessments.",
+            question: "What do you mean by talent management?",
+            answer: "Talent management is the strategic process of attracting, developing, retaining, and deploying employees to meet an organization’s objectives.",
         },
         {
-            question: "How do you measure talent development ROI and effectiveness?",
-            answer: "We measure success through multiple metrics: Pre and post-training assessments (knowledge gain), behavioral change observations (manager feedback, 360 reviews), performance improvement metrics (productivity, quality, efficiency), employee engagement and satisfaction scores, retention rates and internal promotion rates, business impact metrics (revenue per employee, customer satisfaction), learning completion and application rates, and cost savings from reduced turnover. We provide quarterly reports showing these KPIs with clear ROI calculations.",
+            question: "What are the main functions of talent management?",
+            answer: "The core functions of talent management are : \n 1 . Identify and attract top talent \n 2 . Maximize organizational performance \n 3 . Boost the organization’s brand and reputation.  \n 4 . Grow, enhance, and diversify employees' skills.",
         },
         {
-            question: "What is the typical timeline and investment for talent development?",
-            answer: "Investment varies by scope: Individual coaching ($3,000-8,000 per person for 6-month engagement), team workshops ($5,000-15,000 per session for 20-30 participants), leadership development programs ($25,000-75,000 for 12-month cohort-based program), enterprise-wide talent strategy ($50,000-250,000+ annually for comprehensive programs). Timeline: Needs assessment (2-4 weeks), program design (4-6 weeks), pilot rollout (1-3 months), full deployment (3-12 months), ongoing optimization (continuous). Most organizations see measurable improvements within 6 months.",
+            question: " What is the role of HR in talent management?",
+            answer: "HR’s role in talent management is strategically aligning talent initiatives with business goals and managing the employee lifecycle from attracting and recruiting to developing, engaging, and retaining talent.",
         },
         {
-            question: "How do you customize programs for different industries and roles?",
-            answer: "We customize through: Industry-specific case studies and scenarios (healthcare, finance, tech, manufacturing, retail), role-based competency frameworks (technical skills for engineers, soft skills for managers), organizational culture alignment (startup agility vs corporate structure), learning style preferences (Gen Z microlearning vs Boomer structured courses), regulatory and compliance requirements (HIPAA, SOX, GDPR training), language and regional customization, and integration with existing HR systems (LMS, HRIS, performance management platforms). Every program includes pre-assessment to identify specific gaps and priorities.",
+            question: " What are the 3 C's of talent management?",
+            answer: "The 3 C’s of talent management are competency, commitment, and culture.",
         },
     ];
 
@@ -165,10 +166,11 @@ export default function TalentDevelopment() {
                 <div className="mx-auto max-w-7xl">
                     <div className="text-center mb-10">
                         <h2 id="why-choose-heading" className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-heading mb-4">
-                            Why Choose Razor Infotech for Talent Development?
+                            Why Choose Razor Infotech?
+
                         </h2>
                         <p className="text-paragraph max-w-3xl mx-auto">
-                            Strategic learning solutions that deliver measurable business impact and workforce transformation
+                            Delivers innovative, high-quality results for business growth
                         </p>
                     </div>
 
