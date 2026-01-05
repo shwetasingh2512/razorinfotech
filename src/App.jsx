@@ -56,7 +56,7 @@ export default function App() {
       component: Products,
     },
     {
-      path: '/it-solutions',
+      path: '/it-solution',
       component: ITSolution,
     },
     {
@@ -76,7 +76,7 @@ export default function App() {
       component: WebsiteDevelopement,
     },
     {
-      path: '/marketing-branding',
+      path: '/marketing-and-branding',
       component: MarketingBranding,
     },
     {
@@ -88,19 +88,19 @@ export default function App() {
       component: CustomerSupport,
     },
     {
-      path: '/email-support-services',
+      path: '/email-support-service',
       component: EmailSupport,
     },
     {
-      path: '/inbound-services',
+      path: '/inbound-service',
       component: InboundServices,
     },
     {
-      path: '/content-moderation-services',
+      path: '/content-moderation-service',
       component: ContentModeration,
     },
     {
-      path: '/data-entry',
+      path: '/data-entry-service',
       component: DataEntery,
     },
     {
@@ -108,7 +108,7 @@ export default function App() {
       component: ItHelpDesk,
     },
     {
-      path: '/seo',
+      path: '/seo-services',
       component: Seo,
     },
     {
@@ -120,7 +120,7 @@ export default function App() {
       component: TalentDevelopement,
     },
     {
-      path: '/training',
+      path: '/training-and-development',
       component: Training,
     },
     {
@@ -132,27 +132,27 @@ export default function App() {
       component: AppstoreOptimization,
     },
     {
-      path: '/Legal-complience',
+      path: '/legal-compliance',
       component: LegalComplience,
     },
     {
-      path: '/angle-investor',
+      path: '/angel-investor',
       component: AngleInvester,
     },
     {
-      path: '/data-management',
+      path: '/data-management-service',
       component: DataManagement,
     },
     {
-      path: '/backend-outsource',
+      path: '/backend-outsourcing-services',
       component: BackendOutsource,
     },
     {
-      path: '/omnichanel',
+      path: '/omnichannel-support',
       component: Omnichanel,
     },
     {
-      path: '/content-management',
+      path: '/content-management-services',
       component: ContentManagement,
     },
     {
