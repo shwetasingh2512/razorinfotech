@@ -121,20 +121,20 @@ export default function InboundServices() {
 
     const faqs = [
         {
-            question: "What is inbound call center service?",
-            answer: "Inbound call center service involves receiving and managing incoming calls from customers who need support, information, or assistance. This includes customer service inquiries, technical support, order processing, appointment scheduling, helpdesk support, and complaint resolution. Agents are trained to handle customer needs professionally, resolve issues efficiently, and provide positive experiences that build loyalty."
+            question: "What are Inbound Services?",
+            answer: "Inbound services are the practice by customers who initiate contact with a business for support, information, or to resolve issues through phone, email, chat, or social media to help potential clients with orders, complaints, or technical issues. "
         },
         {
-            question: "What industries benefit most from inbound services?",
-            answer: "Virtually all customer-facing industries benefit, especially e-commerce and retail (order support, returns), healthcare (appointment scheduling, patient inquiries), telecommunications (technical support, billing), financial services (account management, fraud alerts), travel and hospitality (reservations, bookings), technology and SaaS (technical support, onboarding), and insurance (claims, policy inquiries)."
+            question: "What are the factors to consider while selecting a reliable inbound service provider?",
+            answer: "While selecting a reliable inbound service provider, always consider its expertise and prior experience in your industry. Other factors that affect are reputation, technology, security, capabilities, and pricing plans."
         },
         {
-            question: "How do you ensure quality in inbound call handling?",
-            answer: "We maintain quality through comprehensive agent training, regular quality monitoring and call audits, customer satisfaction surveys (CSAT/NPS), first-call resolution tracking, adherence to service level agreements (SLAs), ongoing coaching and feedback, CRM integration for context, and performance metrics dashboards with continuous improvement processes."
+            question: "What are the benefits of inbound call center services?",
+            answer: "The benefits of an inbound call center are: \nIt improves customer servic \nHelps in boosting customer loyalty \nOffers 24/7 support to customers for various time zones."
         },
         {
-            question: "Can inbound services integrate with our existing systems?",
-            answer: "Yes, we integrate with leading CRM platforms (Salesforce, HubSpot, Zendesk), helpdesk software (Freshdesk, ServiceNow), e-commerce platforms (Shopify, WooCommerce), telephony systems, ticketing tools, and custom APIs. This ensures seamless data flow, unified customer views, automated workflows, and comprehensive reporting across your business systems."
+            question: "What kinds of businesses are supported by Razor Infotech for inbound call services?",
+            answer: "Razor Infotech serves diverse businesses such as e-commerce companies, telecom businesses, healthcare organizations, and hospitality services. "
         },
     ];
 

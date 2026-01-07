@@ -109,20 +109,20 @@ export default function Seo() {
 
     const faqs = [
         {
-            question: "What SEO services does Razor Infotech provide?",
-            answer: "We offer comprehensive SEO services including technical SEO audits, on-page optimization (content, meta tags, internal linking), off-page SEO and link building, keyword research and strategy, local SEO optimization, content creation and optimization, e-commerce SEO, mobile SEO, competitor analysis, penalty recovery, and ongoing monitoring and reporting with Google Analytics and Search Console integration.",
+            question: "What does SEO mean?",
+            answer: "The practice of improving a website’s quality, content, and structure to rank higher in organic search engine results, like Google. ",
         },
         {
-            question: "How long does it take to see SEO results?",
-            answer: "SEO is a long-term strategy with varying timelines: Initial improvements (technical fixes, on-page optimization) show results in 4-6 weeks, noticeable ranking improvements for low-competition keywords in 2-3 months, significant traffic growth and competitive keyword rankings in 6-12 months, and full SEO maturity with dominant market position in 12-18 months. We provide monthly progress reports tracking rankings, traffic, and conversions throughout the journey.",
+            question: "What are the 4 types of SEO?",
+            answer: "The main types of SEO are on-page, off-page, technical seo, and local seo.",
         },
         {
-            question: "What's included in your SEO pricing?",
-            answer: "Our SEO packages include: Basic SEO ($800-1,500/month) - audit, on-page optimization, 5-10 target keywords, monthly reporting; Standard SEO ($1,500-3,500/month) - all basic features plus content creation, link building, local SEO, 10-30 keywords; Advanced SEO ($3,500-8,000/month) - comprehensive strategy, aggressive link building, content marketing, 30-100 keywords, dedicated account manager; Enterprise SEO ($8,000+/month) - custom solutions, multiple locations/languages, competitive markets, unlimited keywords.",
+            question: "Can ChatGPT do SEO?",
+            answer: "Yes, ChatGPT can significantly help with SEO by automating tasks like keyword research, content outlining, meta tag generation, and schema markup.",
         },
         {
-            question: "How do you measure SEO success and ROI?",
-            answer: "We track comprehensive metrics including organic traffic growth (sessions, users, page views), keyword rankings (top 3, top 10, first page), conversion rates (leads, sales, form submissions), revenue attribution from organic search, backlink quality and quantity, domain authority improvements, click-through rates (CTR) from search results, engagement metrics (bounce rate, time on site), and competitive visibility compared to rivals. Monthly reports show clear ROI with traffic value calculations.",
+            question: "What is the cost of SEO services?",
+            answer: "The cost of SEO services depends on the type of SEO and the project type",
         },
     ];
 

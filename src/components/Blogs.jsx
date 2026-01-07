@@ -159,7 +159,7 @@ function Blogs() {
         setLoading(true);
         setError(null);
 
-        const response = await fetch("http://localhost:3000/api/blogs/get-blogs");
+        const response = await fetch("https://api.razorinfotech.com/api/blogs/get-blogs");
         
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

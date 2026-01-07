@@ -35,7 +35,7 @@ function AdminLogin() {
 
     try {
       const response = await axios.post(
-        'http://localhost:3000/api/user/login',
+        'https://api.razorinfotech.com/api/user/login',
         {
           username: formData.username,
           password: formData.password

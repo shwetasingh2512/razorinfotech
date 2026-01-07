@@ -79,20 +79,20 @@ export default function EmailSupport() {
 
     const faqs = [
         {
-            question: "What types of issues can email support handle?",
-            answer: "Email support handles account inquiries, technical troubleshooting, billing questions, product information requests, order status updates, feature guidance, bug reports, and general customer service. Complex technical issues may be escalated to specialized teams.",
+            question: "What are email support services?",
+            answer: "Email support services are a communication service method used by companies to communicate with customers through emails to resolve inquiries, deal with complaints, and address technical issues for acknowledgement and convenience.",
         },
         {
-            question: "What are your email support response times?",
-            answer: "Standard responses within 4-8 hours during business hours, priority inquiries within 2-4 hours, and urgent escalations within 1 hour. We offer 24/7 email support with global coverage across time zones for enterprise clients.",
+            question: "What are the key benefits of email support services?",
+            answer: "Email support services are beneficial for companies and organizations as they reduce costs, offer easy scaling during peak times, and minimize waiting times.",
         },
         {
-            question: "How do you ensure email support quality and accuracy?",
-            answer: "We maintain quality through agent training and certification, response templates and knowledge bases, multi-level quality assurance reviews, customer satisfaction surveys (CSAT), performance metrics tracking, and continuous feedback loops for improvement.",
+            question: "What if the agent can’t help?",
+            answer: "In case the agents are unable to provide solutions, emails can be forwarded to a specialist, or the conversation can be transferred via call or live chat.",
         },
         {
-            question: "Can email support integrate with our existing systems?",
-            answer: "Yes, we integrate with leading CRM platforms (Salesforce, HubSpot, Zendesk), help desk software, ticketing systems, e-commerce platforms, and custom APIs. This enables seamless data flow, unified customer views, and automated workflows.",
+            question: "What is the 3 email rule?",
+            answer: "If the query is not resolved within three emails, individuals can directly communicate via phone call, live chat, or through the help desk center. ",
         },
     ];
 

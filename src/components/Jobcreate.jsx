@@ -34,7 +34,7 @@ function Jobcreate() {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:3000/api/jobs', formData);
+      const response = await axios.post('https://api.razorinfotech.com/api/jobs', formData);
       
       if (response.status === 201) {
         alert('Job posted successfully!');

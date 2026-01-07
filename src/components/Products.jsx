@@ -22,20 +22,20 @@ export default function Products() {
     const navigate = useNavigate();
     const faqs = [
         { 
-            question: "What is Human Maximizer?", 
-            answer: "Human Maximizer is an all-in-one HR management platform that combines payroll, attendance tracking, performance management, and employee engagement tools to help businesses scale efficiently." 
+            question: "What product does Razor Infotech provide?", 
+            answer: "Razor Infotech provides an HRMS software, Human Maximizer, that automates the entire HR process from handling payroll to assigning tasks to engaging with employees" 
         },
         { 
-            question: "What features does Human Maximizer offer?", 
-            answer: "Our platform includes payroll management, attendance tracking, productivity monitoring, leave management, performance reviews, employee data management, and real-time analytics dashboards." 
+            question: "What are the core features of Human Maximizer?", 
+            answer: "The core features of Human Maximizer are payroll management, leave management, performance management, productivity lens, task management, and geo-fencing. " 
         },
         { 
-            question: "What is Gadgetfobia?", 
-            answer: "Gadgetfobia is your ultimate encyclopedia of gadgets, providing in-depth expert reviews, comparisons, usage tips, and performance analysis to help you make informed tech purchase decisions." 
+            question: "What makes Human Maximizer unique from other software?", 
+            answer: "Human Maximizer automates HR tasks efficiently and offers a productivity lens feature that tracks the overall activity of workforce management. It bridges the communication between employees and admin with a synergy feature." 
         },
         { 
-            question: "Can these products be customized for my business?", 
-            answer: "Yes, both Human Maximizer and Gadgetfobia can be customized to fit your specific business requirements and workflows." 
+            question: "What are the benefits of choosing Human Maximizer?", 
+            answer: "The benefits of choosing Human Maximizer are: \nManages employee personal information and work life together \nGenerates dashboards with real-time metrics \nEnables live chat, video & voice calls \nPost announcements and share feedback" 
         },
     ];
 
