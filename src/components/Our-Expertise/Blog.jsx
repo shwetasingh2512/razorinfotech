@@ -13,7 +13,7 @@ function Blog() {
     if (!id) return;
     const fetchBlog = async () => {
       try {
-        const res = await fetch(`http://localhost:3000/api/blogs/get-blog/${id}`);
+        const res = await fetch(`https://api.razorinfotech.com/api/blogs/get-blog/${id}`);
         if (!res.ok) throw new Error('Failed to fetch blog');
         const data = await res.json();
         setBlog(data.blog);

@@ -11,7 +11,7 @@ function Job() {
     const fetchJob = async () => {
         console.log("Fetching job with ID:", id);
       try {
-        const response = await axios.get(`http://localhost:3000/api/jobs/${id}`);
+        const response = await axios.get(`https://api.razorinfotech.com/api/jobs/${id}`);
         console.log("Fetched job:", response.data);
         setJob(response.data);
         setLoading(false);

@@ -11,7 +11,7 @@ function AdminBlogs() {
     try {
       setLoading(true);
       setError("");
-      const res = await axios.get("http://localhost:3000/api/blogs/get-blogs"); 
+      const res = await axios.get("https://api.razorinfotech.com/api/blogs/get-blogs"); 
       setBlogs(res.data?.blogs ?? res.data ?? []);
     } catch (e) {
       setError(e?.response?.data?.message || e?.message || "Failed to fetch blogs");
@@ -30,7 +30,7 @@ function AdminBlogs() {
 
     setDeletingId(id);
     try {
-      await axios.delete(`http://localhost:3000/api/blogs/delete-blog/${id}`);
+      await axios.delete(`https://api.razorinfotech.com/api/blogs/delete-blog/${id}`);
       setBlogs((prev) => prev.filter((b) => b._id !== id && b.id !== id)); 
     } catch (e) {
       alert(e?.response?.data?.message || e?.message || "Delete failed");

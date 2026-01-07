@@ -11,7 +11,7 @@ export default function Jobs() {
     useEffect(() => {
         const fetchJobs = async () => {
             try {
-                const res= await axios.get('http://localhost:3000/api/jobs');
+                const res= await axios.get('https://api.razorinfotech.com/api/jobs');
                 console.log("Fetched jobs:", res.data);
                 setJobs(res.data);
 

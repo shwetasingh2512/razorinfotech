@@ -25,7 +25,7 @@ function Admin() {
 
   const fetchJobs = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/jobs', {
+      const response = await axios.get('https://api.razorinfotech.com/api/jobs', {
         withCredentials: true
       });
       setJobs(response.data);
@@ -62,7 +62,7 @@ function Admin() {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this job posting?')) {
       try {
-        await axios.delete(`http://localhost:3000/api/jobs/${id}`, {
+        await axios.delete(`https://api.razorinfotech.com/api/jobs/${id}`, {
           withCredentials: true
         });
         alert('Job deleted successfully!');
