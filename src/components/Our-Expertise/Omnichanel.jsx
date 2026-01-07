@@ -124,20 +124,26 @@ export default function Omnichannel() {
 
   const faqs = [
     {
-      question: "What is omnichannel support and how is it different from multichannel?",
-      answer: "Omnichannel support integrates all customer communication channels (phone, email, chat, social media, SMS) into a unified system where conversations flow seamlessly across channels with complete context. Unlike multichannel support where channels operate in silos, omnichannel ensures customers can switch channels mid-conversation without repeating information. Agents see complete interaction history regardless of channel used, enabling personalized, consistent experiences that improve satisfaction and loyalty."
+      question: "What channels are supported by Razor Infotech?",
+      answer: "Razor Infotech provides support actress various channels, such as via chat, email, phone, and social media platforms in one place. "
     },
     {
-      question: "What channels are included in your omnichannel support?",
-      answer: "We support phone (voice calls with IVR), live chat (website and in-app), email (ticketing system), social media (Facebook, Instagram, Twitter, LinkedIn, WhatsApp), SMS and text messaging, messaging apps (Telegram, WeChat, Viber), video support (live video chat and screen sharing), self-service portals (knowledge base, FAQs), and in-app messaging with push notifications. All channels integrate into a single platform with unified customer history."
+      question: "What is the difference between multichannel and omnichannel?",
+      answer: "Multichannel focuses on different separate channels, whereas omnichannel involves the customer interaction through a single channel, including chats, email, and calls"
     },
     {
-      question: "How long does it take to implement omnichannel support?",
-      answer: "Implementation timelines vary based on complexity: Basic setup (2-3 channels) takes 2-4 weeks, standard implementation (4-6 channels with CRM integration) takes 4-6 weeks, and enterprise deployment (all channels, custom integrations, advanced features) takes 8-12 weeks. This includes platform setup, CRM integration, agent training, testing, and gradual rollout with ongoing optimization and support."
+      question: "What are the benefits of omnichannel support?",
+      answer: `There are different benefits of implementing omnichannel support, such as:
+
+        \nEnhancing customer experience and satisfaction
+        \nShaping the brand’s reputation
+        \nFaster resolutions
+        \nDeeper customer insights
+`
     },
     {
-      question: "What are the costs and ROI of omnichannel support?",
-      answer: "Costs vary by business size and channels: Small business packages start at $1,500-3,000/month, mid-market solutions range $3,000-8,000/month, and enterprise implementations are $8,000-25,000/month. ROI benefits include 30-40% reduction in support costs through automation, 70% faster response times, 85% first-contact resolution rate, 25% improvement in customer satisfaction, and 35% increase in customer retention through consistent experiences."
+      question: "How can we link different channels for omnichannel support?",
+      answer: "Businesses can integrate different channels fr omnichannel support via email, chats, messages, social media, and self-service portals. This process includes connecting support channels with customer relationship management systems for a unified customer interaction."
     },
   ];
 

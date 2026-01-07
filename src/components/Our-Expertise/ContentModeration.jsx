@@ -52,20 +52,20 @@ export default function ContentModeration() {
 
     const faqs = [
         {
-            question: "What is content moderation and why do businesses need it?",
-            answer: "Content moderation is the process of monitoring, reviewing, and filtering user-generated content to ensure it meets community guidelines, legal requirements, and brand standards. Businesses need it to protect brand reputation, ensure user safety, maintain legal compliance, prevent spam/abuse, and create a positive platform experience."
+            question: "What do you mean by content moderation?",
+            answer: "It is the process that platforms use to review, filter, and manage user-generated content, including posts, images, and videos, to ensure it follows their specific guidelines, community standards, and laws."
         },
         {
-            question: "What types of content can Razor Infotech moderate?",
-            answer: "We moderate text (comments, reviews, chats), images, videos, live streams, user profiles, marketplace listings, and more across websites, social media, forums, gaming platforms, dating apps, and eCommerce sites. We handle both reactive and proactive moderation."
+            question: "What types of content are moderated by Razor Infotech?",
+            answer: "Razor Infotech moderates a wide range of services across different platforms, such as images, text, and video, to ensure compliance, safety, and quality. "
         },
         {
-            question: "How quickly can moderated content be reviewed?",
-            answer: "Response times depend on moderation tier: real-time monitoring for critical platforms (seconds to minutes), standard review within 2-4 hours, and batch processing for lower-priority content. We offer 24/7 coverage for platforms requiring continuous monitoring."
+            question: "How does content moderation work?",
+            answer: "Generally, content moderation works by using a combination of automated AI tools and human reviewers to filter user-generated content such as text, images, videos, and audio."
         },
         {
-            question: "Do you use AI or human moderators?",
-            answer: "We use a hybrid approach combining AI automation for initial filtering and escalation with trained human moderators for nuanced decisions requiring context, cultural sensitivity, and subjective judgment. This ensures both speed and accuracy."
+            question: "Are you transparent about your moderation actions?",
+            answer: "Yes, we are committed to transparency. We publish regular reports that help to identify the volume of content removed, reasons for removal, and appeal outcomes."
         },
     ];
 

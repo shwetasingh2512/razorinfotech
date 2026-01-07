@@ -105,20 +105,20 @@ function CustomerSupport() {
 
     const faqs = [
         {
-            question: "What customer support services does Razor Infotech provide?",
-            answer: "We provide comprehensive customer support including inbound call handling, outbound customer outreach, email support, live chat, omnichannel support, technical helpdesk, order processing, complaint resolution, and customer feedback management—available 24/7 across multiple channels."
+            question: "What are customer support services?",
+            answer: "Customer support is the team of skilled people who resolve issues of clients who are facing trouble with a company’s product or services. "
         },
         {
-            question: "How quickly can you set up customer support for my business?",
-            answer: "Setup time varies by complexity: basic support (1-2 weeks), standard omnichannel support (3-4 weeks), and complex technical support with custom integrations (4-6 weeks). We provide detailed onboarding timelines during consultation."
+            question: "What are the main functions of customer support?",
+            answer: "The main problem of customer support is solving specific technical product-related issues and services, gathering and reporting on customer feedback, and internal communication"
         },
         {
-            question: "What industries do you provide customer support for?",
-            answer: "We serve eCommerce, SaaS, healthcare, financial services, telecommunications, travel & hospitality, education, retail, and more. Our agents receive industry-specific training to understand your products, compliance requirements, and customer expectations."
+            question: "What are the qualities of good customer service?",
+            answer: "The qualities of good customer service are good communication, patience, active listening, time management, and adaptability. "
         },
         {
-            question: "How do you ensure quality and customer satisfaction?",
-            answer: "We maintain quality through rigorous agent training, call monitoring and QA audits, customer satisfaction surveys (CSAT/NPS), performance metrics tracking, regular reporting, and continuous improvement processes based on feedback and analytics."
+            question: "What are the 7 C’s of customer service?",
+            answer: "The 7 C’s of customer service are: \nContext \nCustomization \nCollaboration \nConnection \nCommunication \nCustomer Service \nCulture"
         },
     ];
 
