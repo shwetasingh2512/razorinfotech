@@ -41,58 +41,48 @@ export default function AppDevelopment() {
     const STEPS = [
         {
             Icon: Lightbulb,
-            title: "Discovery & Strategy",
-            desc: "The first step in the flow is to understand the vision, goals, and requirements of our clients.",
+            title: "Expert Trainers",
+            desc: "Now, gain hands-on experience and practical tips from the industry-experienced professionals who have overcome daily tech challenges. ",
         },
         {
             Icon: Palette,
-            title: "UI & UX Design",
-            desc: "With this understanding, our team creates intuitive and engaging user experiences.",
+            title: "Customized Solutions",
+            desc: "At first, we analyze your specific needs and then build a learning path that aligns with your projects, tech stack, and business goals. ",
         },
         {
             Icon: Code2,
-            title: "Development",
-            desc: "Coding is what brings the design and idea into reality using the best practices and framework.",
+            title: "Continuous Support",
+            desc: "Razor Infotech is here with you at every step to enhance your team’s growth. ",
         },
         {
             Icon: Wrench,
-            title: "Testing And Q&A",
-            desc: "When done with the coding, the app is tested to check for any bugs or performance issues.",
-        },
-        {
-            Icon: Rocket,
-            title: "Deployment & Integration",
-            desc: "When fixed and made error-free, the application is then launched/deployed across platforms.",
-        },
-        {
-            Icon: RefreshCw,
-            title: "Maintenance & Updates",
-            desc: "We offer support in the continuous updates, monitoring, and improvements after the launch.",
-        },
+            title: "Proven Results",
+            desc: "We offer training development solutions that drive innovation, improve your team productivity, and increase your business outcomes. ",
+        }
     ];
 
     const FEATURES = [
         {
-            title: "Performance Optimization",
-            desc: "Our team works to provide what your business needs for fast, reliable, and bug-free experiences.",
+            title: "Mobile App Integration",
+            desc: "We offer consistent data, enhanced features, and unified experience, and simpler workflows. ",
             img: "/images/App-developement/Performance-Optimization.png",
             Icon: BarChart3,
         },
         {
-            title: "User-Friendly Design",
-            desc: "We design an interface that is clean, engaging, and conversion-focused UI/UX for a better experience.",
+            title: "Custom Mobile App Development",
+            desc: "Create a mobile app from ideation to deployment that engages the users and helps in delivering the measurable results. ",
             img: "/images/App-developement/User-Friendly -Design.png",
             Icon: Sliders,
         },
         {
-            title: "Cross-Platform Compatibility",
-            desc: "Providing an app that works smoothly across iOS, Android, and the web with a great user-friendly interface.",
+            title: "Mobile App Modernization",
+            desc: "Update outdated applications with modern technology to improve their functionality, scalability, to stay competitive with the latest technologies and the trends in the market. ",
             img: "/images/App-developement/Cross-Platform-Compatibility .png",
             Icon: MonitorSmartphone,
         },
         {
-            title: "Scalable Structure",
-            desc: "Offering app solutions that grow and scale as your business expands, with no major need for re-do.",
+            title: "Cross-Platform App Development",
+            desc: "Achieve a uniform experience across both iOS and Android, optimize efficiency and performance, reduce development costs, and reach a wider user base.",
             img: "/images/App-developement/Scalable-Structure.png",
             Icon: Layers,
         },
@@ -123,20 +113,20 @@ export default function AppDevelopment() {
 
     const faqs = [
         {
-            question: "What types of mobile apps does Razor Infotech develop?",
-            answer: "We develop native iOS apps, native Android apps, cross-platform apps (React Native, Flutter), progressive web apps (PWAs), and enterprise mobile solutions tailored to your business needs."
+            question: "What is Mobile App Development ?",
+            answer: "Mobile App Development is the process of making software for tablets, smartphones for the Android and iOS operating systems"
         },
         {
-            question: "How long does it take to develop a mobile application?",
-            answer: "Development timelines vary based on app complexity. Simple apps take 2-3 months, medium complexity apps take 4-6 months, and complex enterprise apps may take 6-12 months. We provide detailed timelines during the discovery phase."
+            question: "What are the different types of mobile app development?",
+            answer: "The main types of mobile application development are:\nNative Apps\nHybrid Apps\nWeb Apps \n"
         },
         {
-            question: "Do you provide post-launch support and maintenance?",
-            answer: "Yes, we offer comprehensive post-launch support including bug fixes, performance monitoring, OS updates, feature enhancements, security patches, and continuous optimization to ensure your app stays current."
+            question: "What is a mobile app?",
+            answer: "Mobile applications are the software programs that run on devices such as mobile phones or tablets, which usually enable the user to perform tasks and organize their lives effectively."
         },
         {
-            question: "What is the cost of developing a mobile app?",
-            answer: "App development costs depend on features, complexity, platforms (iOS/Android), and design requirements. We provide transparent pricing after understanding your specific needs during the discovery phase."
+            question: "How is a mobile app developed?",
+            answer: "A mobile app is developed by creating software bundles such as code, binaries, and implementing backend services such as data access with an API, and testing the application on target devices."
         },
     ];
 
@@ -146,20 +136,20 @@ export default function AppDevelopment() {
             <meta name="description" content="Professional mobile app development for iOS, Android, and cross-platform. Custom app solutions with user-friendly design, performance optimization, and scalable architecture. Get your free consultation today." />
             <meta name="keywords" content="mobile app development, iOS app development, Android app development, cross-platform apps, React Native, Flutter, app design, UI/UX design, custom app development, enterprise mobile apps, progressive web apps" />
             <meta name="author" content="Razor Infotech" />
-            
+
             <meta property="og:title" content="Mobile App Development Services - Custom iOS & Android Apps" />
             <meta property="og:description" content="Transform your business with custom mobile applications. Expert app development with performance optimization, user-friendly design, and cross-platform compatibility." />
             <meta property="og:type" content="website" />
             <meta property="og:url" content="https://www.razorinfotech.com/services/app-development" />
             <meta property="og:image" content="https://www.razorinfotech.com/images/App-developement/Performance-Optimization.png" />
-            
+
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content="Mobile App Development by Razor Infotech" />
             <meta name="twitter:description" content="Custom mobile app development for iOS, Android, and cross-platform with scalable architecture and engaging UI/UX design." />
             <meta name="twitter:image" content="https://www.razorinfotech.com/images/App-developement/Performance-Optimization.png" />
-            
+
             <link rel="canonical" href="https://www.razorinfotech.com/services/app-development" />
-            
+
             <script type="application/ld+json">
                 {JSON.stringify({
                     "@context": "https://schema.org",
@@ -224,13 +214,12 @@ export default function AppDevelopment() {
 
                     <div>
                         <h1 id="hero-heading" className="text-3xl font-semibold text-heading md:text-4xl lg:max-w-[100%]">
-                            Empowering Businesses with Confidence & Technology
+                            Turn Your Idea Into a Resourceful App
                         </h1>
 
                         <p className="mt-5 text-lg text-paragraph/80 lg:max-w-[80%]">
-                            With our mobile app development services, we offer the entire process of creating,
-                            maintaining, and enhancing mobile applications to meet specific business needs.
-                            Our team of experts provides services in various technologies and development methodologies.
+                            Now, transform your raw idea into a scalable and secure mobile app with our custom mobile app development services. Razor Infotech is a leading mobile app development company that designs mobile app solutions for Android, iOS, and cross-platform.
+
                         </p>
 
                         <Link
@@ -238,7 +227,7 @@ export default function AppDevelopment() {
                             className="mt-6 inline-flex items-center gap-3 rounded-full bg-secondary px-5 py-2 group hover:bg-transparent hover:text-secondary hover:border border-secondary text-white transition-all duration-300"
                             aria-label="Start your free trial consultation"
                         >
-                            Start Your Free Trial
+                            Start Your Project
                             <span className="grid place-items-center rounded-full group-hover:bg-secondary text-white bg-white/20 p-2 transition-colors" aria-hidden="true">
                                 <IoArrowForwardOutline />
                             </span>
@@ -250,8 +239,7 @@ export default function AppDevelopment() {
             <section className="bg-[var(--color-background)] px-6 py-14" aria-labelledby="features-heading">
                 <div className="mx-auto max-w-7xl">
                     <h2 id="features-heading" className="text-center text-3xl leading-14 font-semibold text-[var(--color-heading)] md:text-4xl">
-                        Designed with Innovation,<br className="hidden sm:block" />
-                        Coded for Growth
+                        Our Mobile App Development Services
                     </h2>
 
                     <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -265,11 +253,10 @@ export default function AppDevelopment() {
             <section className="bg-accent px-6 py-14 md:py-16" aria-labelledby="workflow-heading">
                 <div className="mx-auto max-w-7xl">
                     <h2 id="workflow-heading" className="text-center text-3xl font-semibold text-[var(--color-heading)] md:text-4xl">
-                        Our Workflow in the Making of an Application
+                        Why Choose Razor Infotech?
                     </h2>
                     <p className="mx-auto mt-4 max-w-3xl text-center text-[var(--color-paragraph)]/80">
-                        Our team follows a proper working process to provide a custom-made application tailored to each
-                        business's specific needs and requirements.
+                        Razor Infotech delivers innovative, high-quality solutions that drive business success.
                     </p>
 
                     <ol className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 list-none">
@@ -294,7 +281,7 @@ export default function AppDevelopment() {
             </section>
 
             <WhychooseSection points={points} />
-            
+
             <Suspense fallback={<div className="text-center py-10 text-paragraph">Loading FAQs...</div>}>
                 <Faq faqs={faqs} />
             </Suspense>

@@ -9,7 +9,7 @@ import { IoIosMail } from "react-icons/io";
 import { BiSolidVideos } from "react-icons/bi";
 import { AiOutlineAreaChart } from "react-icons/ai";
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Faq = lazy(() => import("../../reusable/Faq"));
 
@@ -48,6 +48,7 @@ function BlogCard({ post }) {
 }
 
 function ServiceCard({ n, Icon, title, desc }) {
+  const navigate = useNavigate();
   return (
     <article className="relative grid place-items-center rounded-2xl bg-[var(--color-accent)] p-8 text-center ring-1 ring-[var(--color-paragraph)]/15 shadow-sm hover:shadow-md transition-shadow">
       <span
@@ -71,6 +72,7 @@ function ServiceCard({ n, Icon, title, desc }) {
       <button 
         className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-[var(--color-paragraph)]/60 hover:text-[var(--color-secondary)] transition"
         aria-label={`Learn more about ${title}`}
+        onClick={() => navigate('/contact')}
       >
         Learn more <span aria-hidden="true">→</span>
       </button>

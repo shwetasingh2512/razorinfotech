@@ -177,6 +177,7 @@ export default function About() {
         buttonLink="/contact"
         heroImage={heroImage}
         showVector={false}
+        buttonHoverbackground="background"
         vectorImage=""
         reverse={false}
         connectwithus={false}

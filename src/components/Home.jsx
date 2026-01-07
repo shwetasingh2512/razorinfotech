@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useState } from "react";
 import HeroSection from "../reusable/HeroSection";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -8,6 +8,8 @@ import Aboutcompany from "/images/Home/about-company.png";
 import Crousel from "../reusable/Crousel";
 import { FaArrowRightLong, FaEnvelope, FaPhone, FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { IoArrowForwardOutline } from "react-icons/io5";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Lazy load heavy components
 const TestimonialCarousel = lazy(() => import("../reusable/TestimonialCarousel"));
@@ -68,6 +70,11 @@ const images = [
   "/images/Home/Team-3.png",
   "/images/Home/Team-4.png",
   "/images/Home/Team-5.png",
+  "/images/Home/Team-1.png",
+  "/images/Home/Team-2.png",
+  "/images/Home/Team-3.png",
+  "/images/Home/Team-4.png",
+  "/images/Home/Team-5.png",
 ];
 
 export const goals = [
@@ -117,7 +124,8 @@ const faqs = [
 ];
 
 function Home() {
-  // Memoize slider settings
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -137,6 +145,41 @@ function Home() {
         settings: { slidesToShow: 1 },
       },
     ],
+  };
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const payload = {
+      firstName: formData.get('firstName'),
+      lastName: formData.get('lastName'),
+      email: formData.get('email'),
+      message: formData.get('message'),
+    };
+
+    try {
+      const res = await fetch('http://localhost:3000/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        credentials: 'include',
+      });
+
+      if (!res.ok) {
+        const errorData = await res.json().catch(() => ({ error: 'Failed to send message' }));
+        throw new Error(errorData.error || 'Failed to send message');
+      }
+
+      toast.success("Thank you for contacting us! We'll get back to you soon.");
+      e.currentTarget.reset();
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast.error(error.message || 'Something went wrong. Please try again or email us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -167,6 +210,7 @@ function Home() {
           buttonText="Explore Solutions"
           buttonLink="/contact"
           heroImage={heroImage}
+          buttonHoverbackground="background"
           showVector={false}
           reverse={false}
           connectwithus={true}
@@ -209,6 +253,7 @@ function Home() {
           buttonText="View Our Services"
           buttonLink="/contact"
           heroImage={Aboutcompany}
+          buttonHoverbackground="accent"
           showVector={false}
           reverse={true}
           connectwithus={false}
@@ -272,8 +317,8 @@ function Home() {
           <p className="text-paragraph/60 text-lg max-w-3xl mx-auto mb-6 px-4">
             Human Maximizer connects vision and execution, culture and KPIs, people and performance. It replaces fragmented tools with one powerful system that grows with you.
           </p>
-          <button className="bg-secondary border py-2 px-5 flex gap-3 items-center rounded-full mx-auto text-white transition" aria-label="Learn more about Human Maximizer">
-            Learn more <span className="p-3 bg-accent/40 rounded-full" aria-hidden="true"><FaArrowRightLong /></span>
+          <button className="bg-secondary border py-2 pl-5 flex gap-3 items-center rounded-full mx-auto text-white transition group hover:bg-accent hover:text-secondary  " aria-label="Learn more about Human Maximizer">
+            Learn more <span className="p-3 bg-accent/40 group-hover:text-white rounded-full mr-1 group-hover:bg-secondary" aria-hidden="true"><FaArrowRightLong /></span>
           </button>
           <div className="mt-6 p-4">
             <img
@@ -329,7 +374,7 @@ function Home() {
                 <h4 className="font-bold text-center rounded-full bg-white/40 w-fit py-2 px-5 mt-4 text-heading">
                   {b.title}
                 </h4>
-                <p className="text-paragraph/50 max-w-[80%] my-3 mx-auto text-sm sm:text-base">
+                <p className="text-paragraph/50 my-3 mx-auto text-sm sm:text-base">
                   {b.description}
                 </p>
                 <time className="text-paragraph text-base font-bold">{b.dateandtime}</time>
@@ -350,7 +395,7 @@ function Home() {
 
           <div className="bg-accent text-paragraph p-6 sm:p-8 rounded-2xl max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12">
-              <form className="space-y-6" aria-label="Contact form">
+              <form className="space-y-6" aria-label="Contact form" onSubmit={handleFormSubmit}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="text-heading text-lg" htmlFor="firstName">
@@ -413,9 +458,10 @@ function Home() {
 
                 <button
                   type="submit"
-                  className="w-full bg-secondary border border-[#c3c3c3] rounded-full py-2 text-white transition hover:bg-secondary/90"
+                  disabled={isSubmitting}
+                  className="w-full bg-secondary border border-[#c3c3c3] rounded-full py-2 text-white transition hover:bg-secondary/90 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Get started
+                  {isSubmitting ? 'Sending...' : 'Get started'}
                 </button>
               </form>
 
@@ -475,6 +521,17 @@ function Home() {
               </div>
             </div>
           </div>
+          <ToastContainer 
+            position="top-right" 
+            autoClose={5000} 
+            hideProgressBar={false} 
+            newestOnTop={false} 
+            closeOnClick 
+            rtl={false} 
+            pauseOnFocusLoss 
+            draggable 
+            pauseOnHover 
+          />
         </section>
         
         <Suspense fallback={<div className="text-center py-10">Loading FAQs...</div>}>

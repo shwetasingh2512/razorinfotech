@@ -18,6 +18,7 @@ function DataManagement() {
         description: "With over 7 years of experience, Razor Infotech delivers reliable, scalable data management solutions tailored to your business goals. Our certified experts use proven methodologies and cutting-edge technology to manage the entire data lifecycle—from integration and quality assurance to governance and analytics. We serve startups, SMBs, and enterprises across industries, helping them unlock data-driven insights and achieve sustainable growth.",
         image: "/images/data-management/Data-Expertise.png",
         btn: "Optimize My Data Strategy",
+        link: "/contact",
         width: "max-w-7xl"
     };
 

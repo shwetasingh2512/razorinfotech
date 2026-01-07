@@ -7,54 +7,59 @@ const Faq = lazy(() => import('../../reusable/Faq'));
 export default function AngelInvestor() {
     const firstsection = {
         image: '/images/angle-invester/angle-investor-hero.png',
-        title: "Strategic Angel Investment Solutions",
-        description: "Connecting innovative startups with the right investors for sustainable growth. Unlock funding, mentorship, and partnerships to accelerate your journey."
+        title: "Connecting Strategic Angel Capital with High-Growth Ventures",
+        description: "We help promising new businesses find the perfect investors. Get the funding you need, advice from experienced mentors, and a true partner to help your company grow."
     };
 
     const secondsection = {
         image: "/images/angle-invester/Fueling.png",
-        title: "Fueling Startups with Smart Capital",
-        description: "We go beyond traditional funding by linking startups with angel investors who bring capital, experience, and connections. Our approach ensures that entrepreneurs receive not only the financial support they need but also the guidance and strategic partnerships required to scale effectively. By combining smart capital with mentorship, we help innovative startups transform into sustainable, high-growth ventures.",
+        title: "Partnering with Startups through Smart Capital.",
+        description: "We link startups with angel investors who bring capital, experience, and connections. But do you know how we help startups scale? We mainly focus on three pillars:- \n The right funding \n Advice from experts \n  Powerful partnerships \n By combining these gives you get everything you need to build a successful, high-growth business.",
         background: "bg-accent",
         btn: "Get Funded Today",
+        link: "/contact",
         imgWidth: "w-3/5"
     };
 
     const items = [
         {
-            title: "Strategic Capital Deployment",
-            desc: "Angel investors provide more than just funding—they bring strategic capital that's tailored to your startup's specific growth stage and industry needs, ensuring efficient resource allocation."
+            title: "Smart Capital Support",
+            desc: "The first step to scaling your business is finding the right financial partner. We introduce innovative startups to angel investors who provide both funding and a belief in their vision. Whether you’re launching capital, we make sure that your startup gets matched with investors who share your vision."
         },
         {
-            title: "Industry Expertise & Mentorship",
-            desc: "Gain access to experienced investors who have built successful businesses themselves. Their mentorship helps you navigate challenges, avoid common pitfalls, and accelerate your path to profitability."
+            title: "Pitch Perfect Preparation",
+            desc: "Our experts help you to prepare compelling pitch decks, financial projections, and growth strategies that capture investor attention by innovating great ideas and powerful stories. We guide you through every step of becoming an investor, ready with confidence."
         },
         {
-            title: "Network & Partnership Access",
-            desc: "Angel investors open doors to valuable networks including potential customers, partners, and future investors. These connections can be as valuable as the capital itself."
+            title: "Strategic Investor Business Matchmaking",
+            desc: "Choosing the right investor changes everything. We move beyond simple introductions that perfectly match with angels who share your vision and bring relevant industry expertise, connections, and a partnership."
         },
         {
-            title: "Flexible Investment Terms",
-            desc: "Unlike traditional venture capital, angel investors often offer more founder-friendly terms and greater flexibility in deal structures, allowing you to maintain better control of your vision."
+            title: "Proper Guidance",
+            desc: "Our investors act as strategic advisors who offer hands-on mentorship and operational wisdom to help you navigate challenges, avoid pitfalls, and accelerate your path to success."
+        },
+        {
+            title: "Strategic Partnerships",
+            desc: "True growth comes from a strong network. Our focus is on building relationships that accelerate business expansions and long-term success. "
         },
     ];
 
     const faqs = [
         {
-            question: "What is angel investing and how does it work?",
-            answer: "Angel investing is early-stage funding provided by individual investors (angels) to startups in exchange for equity. Angels typically invest their own capital and often provide mentorship and industry connections alongside funding."
+            question: "What is Angel Investment?",
+            answer: "Angel investing is when a wealthy individual provides capital to a business startup in exchange for ownership equity or convertible debt. "
         },
         {
-            question: "What types of startups do you connect with angel investors?",
-            answer: "We work with innovative startups across various industries including tech, healthcare, fintech, e-commerce, and SaaS. We focus on businesses with strong founding teams, scalable business models, and clear growth potential."
+            question: "Is angel a good investment?",
+            answer: "Yes, angel investment is good as it has less risk than taking out a small business loan."
         },
         {
-            question: "How much funding can startups typically secure through angel investment?",
-            answer: "Angel investment amounts typically range from $25,000 to $500,000, though this varies based on the startup's needs, stage, and investor capacity. We help match startups with investors whose investment range aligns with their funding requirements."
+            question: "Who is eligible for an angel investor?",
+            answer: "Anyone who can provide capital for emerging startups for either ownership equity or convertible debt"
         },
         {
-            question: "What do angel investors look for in startups?",
-            answer: "Angel investors typically look for strong founding teams, innovative solutions to real problems, scalable business models, market potential, traction or proof of concept, and clear path to profitability. We help startups prepare compelling pitches that highlight these elements."
+            question: "Who is India’s biggest angel investor?",
+            answer: "Kunal Shah is India’s biggest angel investor. "
         },
     ];
 
@@ -104,8 +109,7 @@ export default function AngelInvestor() {
             <section className="bg-gradient-to-b from-[var(--color-unique)] to-[var(--color-accent)] px-6 py-14" aria-labelledby="benefits-heading">
                 <div className="mx-auto max-w-6xl">
                     <h2 id="benefits-heading" className="text-center text-2xl font-semibold text-[var(--color-heading)] md:text-3xl">
-                        Why Choose Angel Investment for
-                        <br /> Your Startup Growth
+                        Our Angel Investment Approach
                     </h2>
 
                     <div className="mt-10 space-y-10">

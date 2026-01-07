@@ -1,4 +1,5 @@
 import { FaArrowRightLong } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 import vectorImage from "/images/vector/Vector-1.png";
 
 export default function HeroSection2({ items = {} }) {
@@ -51,20 +52,43 @@ export default function HeroSection2({ items = {} }) {
             {description}
           </p>
 
-          {/* Button */}
-          {btn && (
-            <button
-              className={`mt-5 inline-flex items-center gap-3 bg-secondary text-white rounded-full
-                pl-5 pr-2 py-2 border transition hover:bg-secondary-dark group
-                ${center ? "mx-auto" : ""}`}
-            >
-              <span className="font-semibold">{typeof btn === "string" ? btn : btn}</span>
+          {/* Button (supports Link when `items.link` or `btn.to` provided) */}
+          {btn && (() => {
+            const label = typeof btn === "string" ? btn : btn.label || btn;
+            const to = (typeof btn === "object" && (btn.to || btn.href)) || items?.link || items?.btnLink;
 
-              <span className="rounded-full bg-white/20 p-2 sm:p-3 group-hover:bg-white/30 transition">
-                <FaArrowRightLong />
-              </span>
-            </button>
-          )}
+            if (to) {
+              // internal navigation via Link
+              return (
+                <Link
+                  to={to}
+                  className={`mt-5 inline-flex items-center gap-3 bg-secondary text-white rounded-full
+                    pl-5 pr-2 py-2 border transition hover:bg-secondary-dark group
+                    ${center ? "mx-auto" : ""}`}
+                >
+                  <span className="font-semibold">{label}</span>
+
+                  <span className="rounded-full bg-white/20 p-2 sm:p-3 group-hover:bg-white/30 transition">
+                    <FaArrowRightLong />
+                  </span>
+                </Link>
+              );
+            }
+
+            return (
+              <button
+                className={`mt-5 inline-flex items-center gap-3 bg-secondary text-white rounded-full
+                  pl-5 pr-2 py-2 border transition hover:bg-secondary-dark group
+                  ${center ? "mx-auto" : ""}`}
+              >
+                <span className="font-semibold">{label}</span>
+
+                <span className="rounded-full bg-white/20 p-2 sm:p-3 group-hover:bg-white/30 transition">
+                  <FaArrowRightLong />
+                </span>
+              </button>
+            );
+          })()}
         </div>
         {image && (
           <div className="flex items-center justify-center">

@@ -8,10 +8,8 @@ const Faq = lazy(() => import("../../reusable/Faq"));
 export default function AppStoreOptimization() {
     const secondsection = {
         background: "bg-accent",
-        title: "Why ASO Matters?",
-        description: `With millions of apps available on the App Store and Google Play, visibility is everything. Studies show that nearly 65–70% of app downloads come directly from app store searches, which means if your app isn't optimized, it's likely being overlooked. App Store Optimization (ASO) ensures your app ranks higher in search results, attracts the right audience, and turns browsers into loyal users.
-
-ASO doesn't just improve discoverability - it also enhances conversions. Optimized titles, descriptions, screenshots, and reviews build trust and make your app stand out from competitors. Unlike paid ads that stop driving results once the budget ends, ASO creates sustainable, long-term growth by continuously bringing in organic downloads and increasing user engagement.`,
+        title: "Get Discovered in the App Store ",
+        description: `Online visibility plays a crucial role in marketing & branding. There are millions of apps available on the App Store and Google Play.  According to the recent study, nearly 65-70% of app downloads come directly from App Store searches, which means your app is not optimized properly.  App Store Optimization (ASO) assures that your app ranks higher in search results, attracts the target audience, and turns browsers into loyal and reliable customers.  ASO improves conversions and discoverability. Optimized titles, descriptions, screenshots, and reviews help in building trust and make your app stand out from competitors. `,
         image: "/images/app-store-optimization/matters.jpg",
         width: "max-w-6xl",
         imgWidth: "w-5/5"
@@ -19,79 +17,79 @@ ASO doesn't just improve discoverability - it also enhances conversions. Optimiz
 
     const asoServices = [
         {
-            title: "Keyword Research & Optimization",
-            desc: "We identify high-impact keywords your target audience is searching for and strategically integrate them into your app title, subtitle, and description to maximize visibility.",
+            title: "Boost Visibility",
+            desc: "Makes it easier for your potential users to discover the app in the App Store and the Play Store. ",
             image: "/images/app-store-optimization/Boost-Visibility.jpg",
         },
         {
-            title: "Visual Asset Optimization",
-            desc: "Eye-catching app icons, compelling screenshots, and engaging preview videos that showcase your app's best features and drive higher conversion rates from impression to install.",
+            title: "Drive Organic Downloads",
+            desc: "Don’t completely rely on paid ads; attract the quality users with optimized keywords, visuals, and descriptions.",
         },
         {
-            title: "Ratings & Review Management",
-            desc: "Strategic review generation campaigns and prompt responses to user feedback help build trust, improve ratings, and signal quality to app store algorithms.",
+            title: "Data Security & Compliance",
+            desc: "To protect sensitive data, adopt strict rules that align with the industry regulations and compliance standards for a clear state of mind. ",
         },
         {
-            title: "Performance Analytics & A/B Testing",
-            desc: "Continuous monitoring of download metrics, conversion rates, and keyword rankings with data-driven A/B testing to refine and improve your ASO strategy over time.",
+            title: "Data Analysis & Reporting",
+            desc: "With the help of clear reporting and analytics, transform raw data into actionable insights for informed decision-making in the future.",
             image: "/images/app-store-optimization/Data-Analysis.png",
         },
     ];
 
     const asoAdvantages = [
         {
-            title: "Increased Organic Visibility",
-            desc: "ASO improves your app's ranking in search results and category listings, making it easier for potential users to discover your app organically without paid advertising spend.",
+            title: "Improved Visibility",
+            desc: "To increase your visibility on search engines, we optimize our app’s title, keywords, and descriptions to rank higher. ",
         },
         {
-            title: "Higher Conversion Rates",
-            desc: "Optimized visuals, compelling descriptions, and social proof from ratings drive more installs from users who view your app listing, maximizing every impression.",
+            title: "Increased Organic Downloads",
+            desc: "We help you to attract the right audience naturally, by reducing reliance on costly ads through data-driven keywords and engaging visuals. ",
         },
         {
-            title: "Reduced User Acquisition Costs",
-            desc: "By driving organic downloads through search optimization, ASO significantly reduces your customer acquisition cost compared to paid advertising channels.",
+            title: "High Conversion Rates",
+            desc: "We transform store visitors into active users by engaging them with the optimized icons, screenshots, and app previews.",
         },
         {
-            title: "Long-Term Sustainable Growth",
-            desc: "Unlike paid campaigns that end when the budget runs out, ASO provides continuous organic growth as long as your app remains optimized and competitive.",
+            title: "Reputed Brand Recognition",
+            desc: "Through encouraging positive reviews and ratings, we make reliable and trustworthy users.",
         },
     ];
 
     const whyChooseUs = [
         {
-            title: "ASO Expertise Across Platforms",
-            description: "Specialized knowledge of both Apple App Store and Google Play algorithms, ranking factors, and best practices for maximum visibility."
+            title: "Smart Creativity",
+            description: "We create a smart strategy with a creative approach to design visuals that look stunning and achieve results."
         },
         {
-            title: "Data-Driven Optimization",
-            description: "We use advanced analytics tools and A/B testing to make informed decisions that continuously improve your app's performance."
+            title: "Flexible Pricing",
+            description: "Budget-friendly and transparent pricing options for a hassle-free experience."
         },
         {
-            title: "Comprehensive ASO Audits",
-            description: "Complete analysis of your current app store presence with actionable recommendations for keyword, visual, and metadata improvements."
+            title: "Quick Response",
+            description: "Results are delivered quickly, so your projects stay on schedule without compromising."
         },
         {
-            title: "Transparent Reporting",
-            description: "Regular performance reports tracking keyword rankings, downloads, conversion rates, and ROI so you always know your ASO is working."
+            title: "Diverse Experience",
+            description: "We’ve designed for wide sectors from startups to global brands based on their needs."
         },
     ];
 
     const faqs = [
         {
-            question: "What is App Store Optimization (ASO)?",
-            answer: "ASO is the process of optimizing mobile apps to rank higher in app store search results (Apple App Store and Google Play). It involves optimizing keywords, app title, description, visuals, ratings, and reviews to increase visibility and drive more organic downloads."
+            question: "What is App Store Optimization?",
+            answer: "App Store Optimization is the process of improving a mobile app’s visibility and conversion rates in app stores like the Apple Store or Google Play Store to drive organic clicks."
         },
         {
-            question: "How long does it take to see ASO results?",
-            answer: "Initial improvements can be seen within 2-4 weeks after implementing ASO changes. However, significant ranking improvements and download growth typically occur over 2-3 months as app store algorithms recognize your optimizations and user engagement increases."
+            question: "How to increase app store optimization?",
+            answer: "You can increase app store listings by focusing on the keyword-rich titles, subtitles, visuals such as icons, screenshots, videos, and managing ratings. "
         },
         {
-            question: "What's the difference between ASO and SEO?",
-            answer: "ASO optimizes apps for app store search results and focuses on factors like app title, keywords, screenshots, ratings, and downloads. SEO optimizes websites for search engines like Google and focuses on content quality, backlinks, and page speed. Both aim to improve visibility but target different platforms."
+            question: "Is SEO or ASO the same?",
+            answer: "No, basically SEO or ASO is different, but their goals are the same. SEO optimizes a website for search engines like Google. Whereas, ASO optimizes the mobile apps for app stores like the  Apple App Store & Google Play Store."
         },
         {
-            question: "How much does App Store Optimization cost?",
-            answer: "ASO costs vary based on app complexity, competition level, and service scope. We offer customized ASO packages including one-time audits, monthly optimization services, and comprehensive campaigns. Contact us for a free consultation and tailored pricing."
+            question: "What is the full form of SEO and ASO? ",
+            answer: "SEO stands for Search Engine Optimization, and ASO for App Store Optimization"
         },
     ];
 
@@ -101,20 +99,20 @@ ASO doesn't just improve discoverability - it also enhances conversions. Optimiz
             <meta name="description" content="Professional App Store Optimization services for iOS and Android apps. Improve app rankings, increase organic downloads, and boost visibility with expert ASO strategies, keyword research, and visual optimization." />
             <meta name="keywords" content="app store optimization, ASO services, app store SEO, increase app downloads, app ranking, mobile app marketing, app keyword optimization, iOS app optimization, Android app optimization, app store visibility, ASO strategy" />
             <meta name="author" content="Razor Infotech" />
-            
+
             <meta property="og:title" content="App Store Optimization Services - Boost App Rankings & Downloads" />
             <meta property="og:description" content="Expert ASO services to improve app visibility, increase organic downloads, and optimize for App Store and Google Play rankings. Data-driven strategies that deliver results." />
             <meta property="og:type" content="website" />
             <meta property="og:url" content="https://www.razorinfotech.com/services/app-store-optimization" />
             <meta property="og:image" content="https://www.razorinfotech.com/images/app-store-optimization/app-store-optimization-hero.jpg" />
-            
+
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content="App Store Optimization (ASO) Services" />
             <meta name="twitter:description" content="Increase app downloads with professional ASO. Keyword optimization, visual assets, ratings management, and performance analytics." />
             <meta name="twitter:image" content="https://www.razorinfotech.com/images/app-store-optimization/app-store-optimization-hero.jpg" />
-            
+
             <link rel="canonical" href="https://www.razorinfotech.com/services/app-store-optimization" />
-            
+
             <script type="application/ld+json">
                 {JSON.stringify({
                     "@context": "https://schema.org",
@@ -165,9 +163,9 @@ ASO doesn't just improve discoverability - it also enhances conversions. Optimiz
             </script>
 
             <HeroSection
-                title="App Store Optimization: Rank Higher, Get Discovered, Grow Faster"
-                description="Get your app in front of millions of potential users with expert ASO. We optimize your app store presence through strategic keyword research, compelling visuals, and data-driven tactics to increase organic downloads and boost rankings on both Apple App Store and Google Play. From metadata optimization to review management, we help your app stand out in a crowded marketplace."
-                buttonText="Get Free ASO Audit"
+                title="Maximize Your App’s Visibility & Conversion Rate "
+                description={`Great apps should be hidden in the online world. We provide the complete App Store Optimization Service (ASO) to our clients.  \n Now you can increase your app’s organic visibility and download conversion rate on platforms like App Store and Google Play. Here are the services that Razor Infotech offers`}
+                buttonText="Start My Campaign Today"
                 buttonLink="/contact"
                 heroImage="/images/app-store-optimization/app-store-optimization-hero.jpg"
                 showVector={false}
@@ -181,19 +179,15 @@ ASO doesn't just improve discoverability - it also enhances conversions. Optimiz
             <section className="px-6 py-12 bg-accent" aria-labelledby="aso-services-heading">
                 <div className="mx-auto max-w-6xl">
                     <h2 id="aso-services-heading" className="text-center text-2xl font-semibold text-[var(--color-heading)] md:text-3xl">
-                        Our App Store Optimization Services
+                        Turn Clicks into Customers
                     </h2>
-                    <p className="text-center text-[var(--color-paragraph)]/80 mt-3 max-w-3xl mx-auto">
-                        Comprehensive ASO solutions designed to maximize your app's visibility and drive sustainable organic growth
-                    </p>
 
                     <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
                         {asoServices.map((c, i) => (
                             <article
                                 key={i}
-                                className={`relative overflow-hidden rounded-2xl ring-1 ring-[var(--color-paragraph)]/10 ${
-                                    c.image ? "p-0" : "bg-[var(--color-background)] p-6"
-                                }`}
+                                className={`relative overflow-hidden rounded-2xl ring-1 ring-[var(--color-paragraph)]/10 ${c.image ? "p-0" : "bg-[var(--color-background)] p-6"
+                                    }`}
                             >
                                 {c.image && (
                                     <>
@@ -236,11 +230,8 @@ ASO doesn't just improve discoverability - it also enhances conversions. Optimiz
             <section className="bg-gradient-to-b from-[var(--color-unique)] to-[var(--color-accent)] px-6 py-14" aria-labelledby="aso-benefits-heading">
                 <div className="mx-auto max-w-6xl">
                     <h2 id="aso-benefits-heading" className="text-center text-2xl font-semibold text-[var(--color-heading)] md:text-3xl">
-                        Key Benefits of App Store Optimization
+                        Benefits of Choosing Our App Optimization Service
                     </h2>
-                    <p className="text-center text-[var(--color-paragraph)]/80 mt-3 max-w-3xl mx-auto">
-                        Why ASO is essential for every mobile app's growth strategy
-                    </p>
 
                     <div className="mt-10 space-y-10">
                         {asoAdvantages.map((it, idx) => (
@@ -265,10 +256,10 @@ ASO doesn't just improve discoverability - it also enhances conversions. Optimiz
                 <div className="max-w-6xl mx-auto">
                     <header className="head">
                         <h2 id="why-choose-heading" className="text-3xl text-heading text-center font-semibold">
-                            Why Choose Razor Infotech for ASO?
+                            Why Choose Razor Infotech?
                         </h2>
                         <p className="text-center text-paragraph mt-5">
-                            Proven expertise in app store optimization that delivers measurable results and sustainable growth
+                           We deliver innovation, high-quality solutions that drive business success
                         </p>
                     </header>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mx-auto mt-8">
