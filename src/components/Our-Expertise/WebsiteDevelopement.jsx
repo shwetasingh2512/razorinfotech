@@ -58,20 +58,20 @@ export default function WebsiteDevelopment() {
 
     const faqs = [
         {
-            question: "What website development services does Razor Infotech provide?",
-            answer: "We provide comprehensive website development services including custom website design and development (HTML/CSS, React, Next.js, WordPress), responsive web design for mobile/tablet/desktop, e-commerce development (WooCommerce, Shopify, custom solutions), UI/UX design and prototyping, website redesign and modernization, CMS development (WordPress, Drupal, custom), landing page development, progressive web apps (PWA), website maintenance and support, speed optimization, SEO optimization, and security implementation. All websites are mobile-responsive, SEO-friendly, and built with conversion optimization in mind.",
+            question: "What is Web Development? ",
+            answer: "Web development is the process of creating, building, and maintaining websites and web applications that run smoothly online on a browser. ",
         },
         {
-            question: "How long does it take to build a website and what's the process?",
-            answer: "Timeline varies by complexity: Simple brochure website (4-6 weeks) - 5-10 pages, basic functionality; Business website (6-10 weeks) - 10-20 pages, custom design, CMS integration; E-commerce website (10-16 weeks) - product catalog, payment gateway, inventory management; Custom web application (12-24+ weeks) - complex functionality, integrations, custom features. Process includes: Discovery (1-2 weeks), design (2-4 weeks), development (4-12 weeks), testing (1-2 weeks), launch (1 week), and ongoing optimization. We provide weekly progress updates and milestone deliverables throughout.",
+            question: "What are the different stages of web development?",
+            answer: "The different stages of web development are: \n Planning and researching \n Designing \n Creating content \n Development/Coding \n Testing \n Launching \n Maintenance and updates",
         },
         {
-            question: "What does website development cost?",
-            answer: "Pricing varies based on complexity and features: Basic website ($3,000-$8,000) - 5-10 pages, responsive design, CMS, contact forms; Business website ($8,000-$20,000) - custom design, 10-20 pages, blog, SEO optimization, integrations; E-commerce website ($15,000-$50,000) - product catalog, shopping cart, payment gateway, inventory management, customer accounts; Custom web application ($30,000-$100,000+) - complex features, custom functionality, integrations, scalability. Monthly maintenance typically costs $200-$1,000 depending on website size and support level. We provide detailed proposals with itemized pricing after initial consultation.",
+            question: "What are the main types of web development?",
+            answer: "The main types of web development are: \nFront-end development \nBack-end development’ \nFull-stack development",
         },
         {
-            question: "Will my website be mobile-friendly, secure, and SEO-optimized?",
-            answer: "Yes, absolutely. Every website we build includes: Mobile Responsiveness - fully responsive design tested across all devices and screen sizes with mobile-first approach; Security - HTTPS/SSL certificates, regular security updates, malware protection, secure hosting, data encryption, GDPR compliance; SEO Optimization - clean code structure, fast loading speeds (under 3 seconds), semantic HTML, meta tags, schema markup, XML sitemaps, Google Analytics integration, Search Console setup. We also provide: Speed optimization (image compression, caching, CDN), cross-browser compatibility (Chrome, Firefox, Safari, Edge), accessibility standards (WCAG compliance), and ongoing performance monitoring to maintain rankings and security.",
+            question: "What is the main role of a web developer?",
+            answer: "A web developer builds a website and applications from the initial step, from planning and research to coding and maintenance, and updates.",
         },
     ];
 

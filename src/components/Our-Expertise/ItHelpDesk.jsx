@@ -70,20 +70,20 @@ export default function ItHelpDesk() {
 
     const faqs = [
         {
-            question: "What is IT help desk support and what does it include?",
-            answer: "IT help desk support provides frontline technical assistance for employees experiencing technology issues. This includes password resets, software troubleshooting, hardware problems, network connectivity issues, application support, security incident response, system access management, and general IT inquiries. Our support covers desktops, laptops, mobile devices, printers, and enterprise applications through phone, email, chat, and remote desktop assistance."
+            question: "What services does your IT Help Desk provide?",
+            answer: "Our help desk provides comprehensive technical support, including: \nPassword resets and account access issues. \nSoftware installation and troubleshooting \nHardware diagnostics and basic repair guidance \nNetwork connectivity problems, Wi-Fi, VPN, and email."
         },
         {
-            question: "What are your IT help desk response and resolution times?",
-            answer: "Our standard SLAs include: Priority 1 (Critical) - immediate response within 5 minutes, target resolution 1-2 hours; Priority 2 (High) - response within 15 minutes, resolution within 4 hours; Priority 3 (Medium) - response within 30 minutes, resolution within 8 hours; Priority 4 (Low) - response within 2 hours, resolution within 24 hours. We maintain a 90%+ first-call resolution rate."
+            question: "What information should I provide when submitting a ticket?",
+            answer: "You must provide your name, department, and contact information, device type, error messages, and steps you’ve already tried."
         },
         {
-            question: "How do you ensure security and data protection?",
-            answer: "We implement multi-layered security including encrypted remote access tools, secure ticketing systems with audit trails, role-based access controls, regular security training for technicians, NDA agreements, ISO 27001 compliance, GDPR adherence, and industry-specific compliance (HIPAA for healthcare, PCI DSS for finance). All support sessions are logged and monitored for security and quality assurance."
+            question: "What if I have an urgent issue outside of business hours?",
+            answer: "If you have an urgent issue outside business hours, you can connect with the call support for handling your complex tasks. "
         },
         {
-            question: "Can your help desk integrate with our existing IT systems?",
-            answer: "Yes, we integrate with major ticketing systems (ServiceNow, Zendesk, Freshdesk, Jira Service Management), remote support tools (TeamViewer, AnyDesk, ConnectWise), asset management platforms, Active Directory/LDAP, monitoring tools (Nagios, PRTG), and cloud platforms (Microsoft 365, Google Workspace, AWS, Azure). Custom API integrations are available for proprietary systems."
+            question: "What if my equipment breaks or malfunctions?",
+            answer: "If your equipment breaks or malfunctions, you can document the issue, submit a hardware repair ticket."
         },
     ];
 

@@ -85,20 +85,26 @@ export default function BackendOutsource() {
 
     const faqs = [
         {
-            question: "What is backend outsourcing?",
-            answer: "Backend outsourcing is the practice of delegating server-side operations, database management, API development, infrastructure maintenance, and other technical backend tasks to specialized external service providers, allowing your team to focus on core business activities."
+            question: "What is backend process outsourcing?",
+            answer: "Backend process outsourcing is the process of hiring a third-party provider to handle a company’s internal, administrative, and operational tasks like accounting, HR, IT, and data entry. "
         },
         {
-            question: "What backend technologies does Razor Infotech support?",
-            answer: "We work with a wide range of backend technologies including Node.js, Python (Django/Flask), PHP (Laravel), Java (Spring Boot), Ruby on Rails, .NET, and databases like MySQL, PostgreSQL, MongoDB, and Redis. We also handle cloud platforms like AWS, Azure, and Google Cloud."
+            question: "What are the 4 types of outsourcing?",
+            answer: `The main types of outsourcing are: 
+
+            \nBusiness Process Outsourcing
+            \nIT Outsourcing
+            \nManufacturing Outsourcing
+            \nKnowledge Process Outsourcing
+`
         },
         {
-            question: "How does backend outsourcing reduce costs?",
-            answer: "Backend outsourcing eliminates expenses related to hiring, training, and maintaining in-house technical teams. You also save on infrastructure costs, software licenses, and operational overhead while getting access to expert talent at competitive rates."
+            question: "What backend services do you typically outsource?",
+            answer: "At Razor Infotech, we offer backend services for accounting, marketing, sales, IT Management, administrative tasks, and customer service. "
         },
         {
-            question: "Is my data secure with backend outsourcing?",
-            answer: "Yes, we implement industry-standard security measures including encryption, secure API protocols, regular security audits, access controls, and compliance with regulations like GDPR and ISO 27001. We also sign NDAs and ensure data privacy throughout the engagement."
+            question: "How much does it cost?",
+            answer: "The cost of backend services depends on project types."
         },
     ];
 

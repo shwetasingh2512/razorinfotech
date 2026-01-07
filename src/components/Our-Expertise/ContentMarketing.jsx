@@ -134,20 +134,31 @@ export default function ContentMarketing() {
 
     const faqs = [
         {
-            question: "What is content marketing and how does it differ from content creation?",
-            answer: "Content marketing is a strategic approach that involves creating, distributing, and promoting valuable content to attract and engage a target audience, ultimately driving profitable customer action. While content creation focuses on producing individual pieces (blogs, videos, graphics), content marketing encompasses the entire strategy—research, planning, distribution, promotion, and performance analysis—to achieve business goals."
+            question: "What is content marketing?",
+            answer: "Content marketing is a strategic approach for creating and distributing valuable, relevant, and consistent content like blogs, videos, and podcasts to attract and retain a specific audience. "
         },
         {
-            question: "How long does it take to see results from content marketing?",
-            answer: "Content marketing typically requires 3-6 months to show meaningful ROI. SEO-focused content can take 4-6 months to rank and drive organic traffic, while social media and email content may show engagement results within weeks. The compound effect grows over time—quality content continues generating traffic and leads for years after publication."
+            question: "What are the different steps of content marketing?",
+            answer: `The different steps of content marketing are: \nDefine your aims and goals \nPlan and research 
+            \nCreate valuable content
+            \nDistribute across different channels
+            \nAnalyze performance
+`
         },
         {
-            question: "What kind of ROI can I expect from content marketing?",
-            answer: "Content marketing delivers an average return of $3 for every dollar spent, compared to $1.80 for paid advertising. Well-executed B2B content strategies can achieve 4:1 to 13:1 ROI over 3 years. Returns vary by industry and content quality, but content marketing consistently outperforms paid ads in long-term value."
+            question: "What are the 5 C’s of content marketing?",
+            answer: `The 5 C’s of content marketing are:
+
+            \nClarity 
+            \nConsistency
+            \nCreativity
+            \nCustomer centricity
+            \nConversion
+`
         },
         {
-            question: "What content marketing services does Razor Infotech provide?",
-            answer: "We provide comprehensive content marketing including strategy development, SEO-optimized blog writing, website content, social media content creation, email campaigns, video production, infographics, content distribution, promotion, and performance tracking with detailed analytics and reporting."
+            question: "How many types of content marketing are there? ",
+            answer: "There are different types of content marketing, such as eBooks, blog posts, articles, white papers, social media, paid ads, and billboards etc."
         },
     ];
 

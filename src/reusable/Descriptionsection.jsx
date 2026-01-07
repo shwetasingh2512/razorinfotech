@@ -13,7 +13,7 @@ function Descriptionsection({ items }) {
           <img
             src={items.image}
             alt={items.title}
-            className={`rounded-2xl object-cover w-full max-w-[90%] sm:max-w-sm md:max-w-md lg:max-w-lg h-auto ${items.imgWidth || ""
+            className={`rounded-2xl object-cover  max-w-[90%] sm:max-w-sm md:max-w-md lg:max-w-lg h-auto ${items.imgWidth || ""
               }`}
           />
         </div>

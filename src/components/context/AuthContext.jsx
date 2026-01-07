@@ -21,7 +21,7 @@ export const AuthProvider = ({ children }) => {
 
   const checkAuth = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/user/verify', {
+      const response = await axios.get('https://api.razorinfotech.com/api/user/verify', {
         withCredentials: true
       });
       setUser(response.data.user);
@@ -38,7 +38,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = async () => {
     try {
-      await axios.post('http://localhost:3000/api/user/logout', {}, {
+      await axios.post('https://api.razorinfotech.com/api/user/logout', {}, {
         withCredentials: true
       });
       setUser(null);

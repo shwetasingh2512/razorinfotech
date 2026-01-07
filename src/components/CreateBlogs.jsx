@@ -155,7 +155,7 @@ function CreateBlogs() {
       if (thumbnailFile) formData.append("thumbnail", thumbnailFile);
       if (coverFile) formData.append("image", coverFile);
 
-      const res = await fetch("http://localhost:3000/api/blogs/create-blog", {
+      const res = await fetch("https://api.razorinfotech.com/api/blogs/create-blog", {
         method: "POST",
         body: formData,
         // IMPORTANT: do NOT set Content-Type when sending FormData;

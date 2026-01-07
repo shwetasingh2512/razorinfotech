@@ -8,45 +8,44 @@ const Faq = lazy(() => import("../../reusable/Faq"));
 
 export default function HrServices() {
     const firstsection = {
-        title: "Recruitment Process Outsourcing",
-        description: "Recruitment Process Outsourcings offer a wide range of operational tasks associated with direct customer interactions regarding issues, queries, and sales related to products or services.",
+        title: " A Strategic Partner For Modern HR Administration, Compliance & Growth",
+        description: "Welcome to Razor Infotech: We provide complete HR solutions such as managing payroll, compliance, risk, and benefits, so you can lead with clarity and confidence.",
         image: "/images/hr-services/hr-services-hero.png"
     };
 
     const secondsection = {
         background: "bg-background",
-        title: "Empowering Your Business with Expert HR Solutions",
-        description: "We provide smart support solutions that strengthen customer relationships through seamless interactions, fast resolutions, and lasting engagement. Our approach enhances loyalty, drives business growth, and empowers brands to connect more effectively while scaling with confidence.",
+        title: "Complete HR Outsourcing to Attract Talent, Manage Risk & Boost Productivity ",
+        description: "With years of experience, Razor Infotech can be your strategic partner to handle all your HR tasks and needs and leading to a reduction in your workload, compliance risk, so that you can efficiently on your business operations. We manage the complete lifecycle of the employee from talent acquisition to onboarding, engagement, and retention as per your business needs. Our team of HR services provides solutions across diverse industries, roles, and other management practices. ",
         image: "/images/hr-services/Empowering.png",
-        btn: "Schedule a Consultation",
+        btn: "Get Started With HR",
         link: "/contact",
         width: "max-w-6xl"
     };
 
     const thirdsection = {
         background: "bg-gradient-to-b from-unique to-accent",
-        head: "Streamlined Hiring Through Expert Recruitment Process Outsourcing",
-        paragraph: "We streamline recruitment from sourcing to onboarding, ensuring efficiency, accuracy, and the right talent for your business growth.",
+        head: "Our Hr Services",
         child: [
             {
                 image: "/images/hr-services/Inbound-Services.jpg",
-                title: "Inbound Services",
-                description: "Our inbound services ensure seamless customer support with quick responses, personalized interactions, and efficient solutions to enhance satisfaction and loyalty. "
+                title: "End solution for HR Outsourcing",
+                description: "Our HR outsourcing services allow organizations to focus on core business operations in an affordable and cost-effective way. "
             },
             {
                 image: "/images/hr-services/Outbound-Services.jpg",
-                title: "Outbound Services",
-                description: "Our outbound services drive growth through proactive customer engagement, lead generation, feedback collection, and tailored communication that strengthens relationships and boosts business success."
+                title: "Employee Training & Development",
+                description: "We focus on enabling learning and development through simulation. By helping organizations and businesses, we possess a set of skills to meet learning and development needs"
             },
             {
                 image: "/images/hr-services/Omnichannel-Support-Services.jpg",
-                title: "Omnichannel Support Services",
-                description: "Our omnichannel support service unifies customer interactions across phone, email, chat, and social media, ensuring seamless experiences, faster resolutions, and improved satisfaction."
+                title: "Statutory Compliance",
+                description: "We provide complete regulatory compliance solutions. Our team handles all complicated tasks, including the compliance process, to ensure you meet all labour laws and statutory requirements on a unified platform."
             },
             {
                 image: "/images/hr-services/Email-Support-Services.jpg",
-                title: "Email Support Services",
-                description: "Our email support services provide timely, professional, and personalized responses to customer queries, ensuring clear communication, quick resolutions, and enhanced customer satisfaction."
+                title: "Speed & Accuracy",
+                description: "With the team of experts, we offer support and guidance to all types of businesses. You can streamline your business operations by receiving quick, efficient, and accurate support"
             }
         ]
     };
@@ -54,33 +53,33 @@ export default function HrServices() {
     const recruitmentProcess = [
         {
             id: "1",
-            title: "Requirement Analysis",
-            desc: "We understand your hiring needs, business goals, and job role requirements to build a tailored recruitment strategy.",
+            title: "Cost Effective",
+            desc: "You can outsource HR services to improve work efficiency, avoiding the need to hire skilled workers and implement training sessions, thereby preventing overspending on hiring.",
         },
         {
             id: "2",
-            title: "Talent Sourcing",
-            desc: "Our team leverages multiple channels to identify, attract, and engage the right candidates.",
+            title: "No Risk",
+            desc: "HR outsourcing providers manage tasks like finance, payroll processing, and incentive administration, helping organizations save time and avoid risky affairs.",
         },
         {
             id: "3",
-            title: "Screening & Shortlisting",
-            desc: "We conduct detailed assessments, background checks, and initial interviews to filter top-quality candidates.",
+            title: "Expand Business",
+            desc: "Organizations can be unburdened by focusing on other crucial business operations as per the emerging trends.",
         },
         {
             id: "4",
-            title: "Interview Coordination",
-            desc: "We manage scheduling and communication between candidates and hiring managers for a smooth interview process.",
+            title: "Employee Satisfaction",
+            desc: "Happier employees are more productive and drive better outcomes, making HR outsourcing significant for growing businesses to build a strong culture and healthy work-life environment.",
         },
         {
             id: "5",
-            title: "Selection & Offer Management",
-            desc: "We support final candidate selection, salary negotiation, and offer rollout to ensure acceptance.",
+            title: "Scalability, Adaptability & Flexibility",
+            desc: "Our HR outsourcing service easily adjusts up and down as per the emerging trends, business growth, downsizes, or experiences seasonal changes. ",
         },
         {
             id: "6",
-            title: "Onboarding Support",
-            desc: "We support final candidate selection, salary negotiation, and offer rollout to ensure acceptance.",
+            title: "Access to Expertise",
+            desc: "Get specialized HR professionals, industry best practices, and advanced tools to handle hiring and training",
         },
     ];
 
@@ -89,40 +88,40 @@ export default function HrServices() {
         image: "/images/Software-developement/y-choose-us.png",
         child: [
             {
-                title: "Certified IT Professionals",
-                desc: "We have a team of trained and professional support agents who are certified to handle technical issues."
+                title: "Smart Creativity",
+                desc: "We create a smart strategy with a creative approach to design visuals that look stunning and achieve result"
             },
             {
-                title: "Proactive Monitoring",
-                desc: "Our team anticipates and aims to prevent issues before they might impact your operations rather than just taking action afterwards."
+                title: "Flexible Pricing",
+                desc: "Budget-friendly and transparent pricing options for a hassle-free experience. "
             },
             {
-                title: "Secure & Compliant",
-                desc: "We follow the best industry practices to keep the data of our clients protected and ensure regulatory compliance."
+                title: "Quick Response",
+                desc: "Results are delivered quickly, so your projects stay on schedule without compromising. "
             },
             {
-                title: "Custom SLA’s",
-                desc: "We use analytics and performance insights to create our content decisions for better ROI."
+                title: "Diverse Experience",
+                desc: "We’ve designed for wide sectors from startups to global brands based on their needs."
             },
         ]
     };
 
     const faqs = [
         {
-            question: "What services does Razor Infotech provide?",
-            answer: "We offer numerous solutions, such as IT services, HR management, cloud solutions, cybersecurity, and digital transformation to take your business to a high level."
+            question: "What do you understand by HR Outsourcing Services?",
+            answer: "Human Resource Outsourcing is the practice of hiring a third party to handle all administrative tasks on behalf of another business for growth and development."
         },
         {
-            question: "How do our services benefit companies of different sizes?",
-            answer: "Razor Infotech is beneficial for both small and large-scale companies by offering cost-effective solutions, improving efficiency, and enabling focus on core business development."
+            question: "What services are offered by HR Outsources?",
+            answer: "Some of the services offered by HR outsourcers are: \n Payroll and tax administration \n Recruitment and talent acquisition \n Compliance and risk management \n Training and development"
         },
         {
-            question: "How does Razor Infotech ensure quality and security?",
-            answer: "At Razor Infotech, quality and security are ensured by following certain protocols, safeguarding your data and systems."
+            question: "What are the advantages of HR Outsourcing?",
+            answer: "HR outsourcing helps in improving employee satisfaction, handling major tasks like payroll processing, benefits management, and onboarding."
         },
         {
-            question: "Can we customize solutions based on your business needs?",
-            answer: "Yes, you can customize solutions based on the specific needs by adopting software development and IT-based solutions."
+            question: "What are the main types of Outsourcing?",
+            answer: "The four main types of outsourcing are: \n Onshore outsourcing \n Offshore outsourcing \n Nearshore outsourcing \n Onsite outsourcing"
         },
     ];
 
@@ -201,17 +200,10 @@ export default function HrServices() {
             
             <section className="px-4 sm:px-6 lg:px-8 py-14 lg:py-20 bg-white" aria-labelledby="process-heading">
                 <div className="mx-auto max-w-7xl text-center">
-                    <div className="inline-flex items-center rounded-full bg-green-100 text-green-900 px-4 py-1 text-sm font-medium mb-3">
-                       Building Success Together
-                    </div>
 
                     <h2 id="process-heading" className="text-heading font-bold text-2xl sm:text-3xl md:text-4xl">
-                        Our Recruitment Process Explained
+                       Benefits of Choosing Our HR Outsourcing Services
                     </h2>
-
-                    <p className="text-paragraph mt-3 max-w-2xl mx-auto">
-                      Our step-by-step process ensures your vision becomes a flawless reality.
-                    </p>
 
                     <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                         {recruitmentProcess.map((s) => (

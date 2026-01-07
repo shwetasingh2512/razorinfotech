@@ -40,20 +40,20 @@ export default function ContentCreationServices() {
 
     const faqs = [
         {
-            question: "What types of content creation services do you offer?",
-            answer: "We offer comprehensive content creation including blog posts, articles, social media content, video production, infographics, email marketing, website copy, whitepapers, case studies, and SEO-optimized content tailored to your brand voice and audience."
+            question: "What is the content creation?",
+            answer: "Content creation is a part of digital media, marketing, and branding. Basically, content creation is the process of producing and sharing multiple forms of content in the form of images, text, audio, and video to engage and inform specific audiences."
         },
         {
-            question: "How do you ensure content aligns with our brand voice?",
-            answer: "We start with a thorough brand discovery process to understand your tone, values, and target audience. Our team creates brand guidelines and style guides, then develops content that authentically represents your brand while engaging your specific audience."
+            question: "What are the 4 pillars of content creation?",
+            answer: "The main pillars of content creation are education, entertainment, engagement, and enrichment."
         },
         {
-            question: "How long does it take to create content?",
-            answer: "Timelines vary by content type and complexity. Blog posts typically take 3-5 days, social media content 1-2 days, and video production 2-4 weeks. We provide detailed timelines during project planning and can accommodate rush requests when needed."
+            question: "What content creation services are offered by Razor Infotech?",
+            answer: "Razor Infotech offers different kinds of content creation services, such as blog posts, articles, email newsletters,  website content, infographics, video creation, and social media content."
         },
         {
-            question: "Do you provide SEO optimization with content creation?",
-            answer: "Yes, all our content is SEO-optimized with keyword research, meta descriptions, proper heading structure, internal linking, and readability optimization to improve search rankings and drive organic traffic to your website."
+            question: "What are the 7 steps of content creation?",
+            answer: "Different steps of content creation are: \nDetermining the targeted audience \nResearch and planning \nAnalyze the information, fact-check, and verify \nDraft the content \nProofreading and editing \nImplementing SEO strategy \nPublishing \nGather feedback"
         },
     ];
 

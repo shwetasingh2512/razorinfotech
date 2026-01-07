@@ -48,20 +48,20 @@ export default function FinancialServices() {
 
     const faqs = [
         {
-            question: "What are financial solutions?",
-            answer: "Financial solutions are the tools, support, and plans created to help people and businesses handle, protect, and grow their money."
+            question: "What are the financial services?",
+            answer: "Basically, it is an economical service for managing money, managing a broad range of businesses like banks, insurance, firms, and investment funds to help individuals and companies with banking, lending, and investing. "
         },
         {
-            question: "What does a financial advisor do?",
-            answer: "The main role of a financial advisor is to help in creating a personal plan for your money. It basically saves your time by handling the details, gives you clear and unbiased advice, and protects you from financial risks."
+            question: "What are the basic financial services?",
+            answer: "The basic financial services are accountancy, investment banking, investment management, and personal asset management."
         },
         {
-            question: "What are the advantages of financial solutions?",
-            answer: "It provides convenience, accessibility, reduces costs, and provides personalized experiences for better money management, risk protection, and drives growth for individuals and firms."
+            question: "Are you a fiduciary?",
+            answer: "Yes, we are legally and ethically required to act always for your best interest. However, we do not earn commissions or sell products. "
         },
         {
-            question: "What are the 4 types of financial services? ",
-            answer: "We maintain accuracy through certified accountants, double-entry bookkeeping, monthly reconciliations, automated error detection, and multi-level review processes. Compliance is ensured through continuous monitoring of tax regulations, timely filings, proper documentation, and adherence to GAAP/IFRS standards."
+            question: "What information do I need for the first meeting?",
+            answer: "In your first meeting, just bring your questions and a general idea of your finances."
         },
     ];
 

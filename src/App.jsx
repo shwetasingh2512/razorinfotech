@@ -42,8 +42,14 @@ import Jobcreate from './components/Jobcreate';
 import Admin from './components/Admin';
 import Job from './components/Job';
 import Blogs from './components/Blogs';
+import Blog from './components/Our-Expertise/Blog';
 import AdminBlogs from './components/AdminBlogs';
 import CreateBlogs from './components/CreateBlogs';
+import Socialmediamarketing from './components/Our-Expertise/Socialmediamarketing';
+import Bpo from './components/Our-Expertise/Bpo';
+import GraphicDesign from './components/Our-Expertise/GraphicDesign';
+import Outbound from './components/Our-Expertise/Outbound';
+import Rpo from './components/Our-Expertise/Rpo';
 
 export default function App() {
   const publicRoutes = [
@@ -82,14 +88,20 @@ export default function App() {
     { path: '/online-reputation-market', component: OnlineReputaionMarket },
     { path: '/job/:id', component: Job },
     { path: '/blogs', component: Blogs },
-    { path: '/admin-blogs', component: AdminBlogs },
-    { path: '/create-blog', component: CreateBlogs },
+    { path: '/blog/:id', component: Blog },
+    {path :"/social-media-marketing" , component: Socialmediamarketing},
+    {path :"/bpo" , component: Bpo},
+    {path :"/graphic-design" , component: GraphicDesign},
+    {path :"/Outbound-service" , component: Outbound},
+    {path :"/rpo" , component: Rpo},
   ];
 
 
   const protectedRoutes = [
     { path: '/admin', component: Admin },
     { path: '/jobscreate', component: Jobcreate },
+    { path: '/create-blog', component: CreateBlogs },
+    { path: '/admin-blogs', component: AdminBlogs },
   ];
 
   return (
@@ -97,12 +109,9 @@ export default function App() {
       <AuthProvider>
         <Navbar />
         <Routes>
-          {/* Public Routes */}
           {publicRoutes.map((r, index) => (
             <Route key={index} path={r.path} element={<r.component />} />
           ))}
-
-          {/* Admin Login Route (No Navbar/Footer) */}
           <Route path="/admin-login" element={<AdminLogin />} />
 
           {/* Protected Routes */}

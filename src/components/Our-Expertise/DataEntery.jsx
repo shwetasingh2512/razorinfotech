@@ -87,20 +87,20 @@ export default function DataEntry() {
 
     const faqs = [
         {
-            question: "What types of data entry services does Razor Infotech provide?",
-            answer: "We provide comprehensive data entry including online/offline data entry, image to text conversion, data mining and extraction, database management, form processing, catalog data entry, eCommerce product data entry, medical records digitization, legal document processing, and CRM data management."
+            question: "What is the process of the data entry process?",
+            answer: "The process of data entry process includes: \nCollect and organize data \nInput data \nReview accuracy, consistency \nVerify and ensure data quality \nUpdate to clients"
         },
         {
-            question: "How do you ensure data accuracy and quality?",
-            answer: "We maintain 99.9% accuracy through multi-level quality checks, double data entry verification, automated error detection tools, trained quality assurance teams, sample audits, and continuous process monitoring with detailed accuracy reports."
+            question: "How to choose the best data entry service provider?",
+            answer: "Before choosing the best data entry service provider, it is crucial to check their level of experience, the type of technologies they use, pricing plans, and security."
         },
         {
-            question: "What is the typical turnaround time for data entry projects?",
-            answer: "Turnaround times depend on project volume and complexity. Small projects (up to 1000 records) typically complete within 24-48 hours, medium projects (1000-10,000 records) within 3-5 days, and large-scale projects are estimated based on specific requirements with defined milestones."
+            question: "What kinds of data entry services can be outsourced?",
+            answer: "Common data entry tasks that can be outsourced from paper documents, online images, forms, audios, videos, and e-commerce platforms."
         },
         {
-            question: "How do you protect confidential business data?",
-            answer: "We implement enterprise-grade security including NDA agreements, ISO 27001 compliance, encrypted data transfer (SSL/TLS), secure servers with access controls, confidential data destruction protocols, regular security audits, and GDPR/HIPAA compliance for applicable industries."
+            question: "Which industries benefit from data entry services?",
+            answer: "Data entry service providers serve a wide range of companies such as retail, travel, insurance, finance, and health."
         },
     ];
 
