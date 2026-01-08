@@ -5,24 +5,41 @@ import { IoMail, IoLocationSharp } from "react-icons/io5";
 import logo from "/images/Logo/logo.png";
 
 export default function Footer() {
-  const links = [
+  // const links = [
+  //   { label: "Home", to: "/" },
+  //   { label: "About Us", to: "/about" },
+  //   { label: "Contact Us", to: "/contact" },
+  //   { label: "Products", to: "/products" },
+  //   { label: "Careers", to: "/career" },
+  //   { label: "IT Solutions", to: "/it-solutions" },
+  //   { label: "Software Development", to: "/software-developement" },
+  //   { label: "App Development", to: "/app-developement" },
+  //   { label: "Website Development", to: "/website-developement" },
+  //   { label: "Marketing & Branding", to: "/marketing-branding" },
+  //   { label: "SEO", to: "/seo" },
+  // ];
+
+  const linksCol1 = [
     { label: "Home", to: "/" },
     { label: "About Us", to: "/about" },
     { label: "Contact Us", to: "/contact" },
     { label: "Products", to: "/products" },
     { label: "Careers", to: "/career" },
+  ];
+
+  const linksCol2 = [
     { label: "IT Solutions", to: "/it-solutions" },
     { label: "Software Development", to: "/software-developement" },
     { label: "App Development", to: "/app-developement" },
     { label: "Website Development", to: "/website-developement" },
-    { label: "Marketing & Branding", to: "/marketing-branding" },
+    { label: "Marketing & Branding", to: "/marketing-and-branding" },
     { label: "SEO", to: "/seo" },
   ];
 
   return (
     <footer className="bg-[var(--color-background)] text-[var(--color-paragraph)]">
-      <div className="py-10 sm:py-14 md:py-20 px-4 sm:px-10 md:px-16 lg:px-20 bg-[url('/images/Footer/background-vector.png')] bg-no-repeat bg-cover grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="flex flex-col gap-2 sm:gap-3 px-2 sm:px-5">
+      <div className="py-10 sm:py-14 md:py-20 px-4 sm:px-10 md:px-16 lg:px-30 bg-[url('/images/Footer/background-vector.png')] bg-no-repeat bg-cover grid grid-cols-1 lg:grid-cols-2 gap-8 ">
+        <div className="flex flex-col gap-2 sm:gap-3 px-2 sm:px-5 ">
           <h5 className="text-secondary text-lg sm:text-xl">Start building today!</h5>
           <h2 className="text-xl sm:text-2xl lg:text-3xl text-heading font-semibold max-w-full sm:max-w-xl">
             Get Updated Informed to Subscribe Our Newsletter
@@ -42,7 +59,7 @@ export default function Footer() {
         </form>
       </div>
       <div className="mx-auto max-w-full sm:max-w-3xl md:max-w-5xl lg:max-w-7xl px-4 sm:px-6 md:px-10 py-6 sm:py-10">
-        <div className="grid grid-cols-1 gap-8 sm:gap-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 sm:gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
           <div>
             <img src={logo} alt="Razor Infotech" className="h-8 sm:h-10 w-auto" />
             <p className="mt-2 sm:mt-4 max-w-full sm:max-w-xs">
@@ -67,7 +84,7 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          <div>
+          {/* <div>
             <h4 className="text-base sm:text-lg font-semibold text-[var(--color-heading)]">Quick Links</h4>
             <ul className="mt-3 sm:mt-4 space-y-2 sm:space-y-3">
               {links.map((l) => (
@@ -78,7 +95,40 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+          </div> */}
+          <div>
+            <h4 className="text-lg font-semibold text-[var(--color-heading)] mb-6 sm:mb-8">Quick Links</h4>
+            <ul className="space-y-3 sm:space-y-4">
+              {linksCol1.map((l) => (
+                <li key={l.label}>
+                  <Link 
+                    to={l.to} 
+                    className="text-sm sm:text-base hover:text-[var(--color-secondary)] transition-colors duration-200 block group"
+                  >
+                    <span className="group-hover:translate-x-2 inline-block transition-transform">{l.label}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
+
+          <div>
+            <h4 className="text-lg font-semibold text-[var(--color-heading)] mb-6 sm:mb-8">Services</h4>
+            <ul className="space-y-3 sm:space-y-4">
+              {linksCol2.map((l) => (
+                <li key={l.label}>
+                  <Link 
+                    to={l.to} 
+                    className="text-sm sm:text-base hover:text-[var(--color-secondary)] transition-colors duration-200 block group"
+                  >
+                    <span className="group-hover:translate-x-2 inline-block transition-transform">{l.label}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+
           <div>
             <h4 className="text-base sm:text-lg font-semibold text-[var(--color-heading)]">Office Info.</h4>
             <ul className="mt-3 sm:mt-4 space-y-3 sm:space-y-4">
@@ -109,10 +159,11 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-6 sm:mt-8 border-t border-[var(--color-paragraph)]/20 pt-4 sm:pt-6 text-xs sm:text-sm">
+        
+      </div>
+      <div className="my-3 sm:my-4 border-t border-[var(--color-paragraph)]/20 pt-3 sm:pt-4 text-xs sm:text-sm">
           <p className="text-center">&copy; {new Date().getFullYear()} Copyright by Razor Infotech</p>
         </div>
-      </div>
     </footer>
   );
 }

@@ -14,7 +14,7 @@ export default function Faq({ faqs = [] }) {
       <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-heading mb-3 sm:mb-4">
         FAQ’s
       </h2>
-      <p className="text-center text-paragraph mx-auto max-w-prose mb-6 sm:mb-8">
+      <p className="text-center text-paragraph mx-auto  mb-6 sm:mb-8">
         Most asked questions regarding us for a quick overview of how and what we do.
       </p>
       <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-2xl md:max-w-3xl lg:max-w-5xl items-center">
@@ -22,7 +22,7 @@ export default function Faq({ faqs = [] }) {
           <img
             src="/images/Faq/Faq.jpg"
             alt="FAQ illustration"
-            className="rounded-xl shadow-lg object-cover w-full max-w-sm sm:max-w-md lg:max-w-lg h-auto"
+            className="rounded-xl shadow-lg object-cover w-full max-w-sm sm:max-w-md lg:max-w-lg h-[23rem] lg:h-[28rem]"
             loading="lazy"
           />
         </div>

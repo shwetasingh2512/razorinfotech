@@ -10,6 +10,7 @@ import { FaArrowRightLong, FaEnvelope, FaPhone, FaInstagram, FaXTwitter } from "
 import { IoArrowForwardOutline } from "react-icons/io5";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Link } from "react-router-dom";
 
 // Lazy load heavy components
 const TestimonialCarousel = lazy(() => import("../reusable/TestimonialCarousel"));
@@ -224,7 +225,7 @@ function Home() {
                   <img
                     src={service.image}
                     alt={`${service.title} - ${service.description}`}
-                    className="w-full h-48 sm:h-64 object-cover transform group-hover:scale-105 transition duration-500"
+                    className="w-full h-60 sm:h-72 md:h-[25rem] object-cover transform group-hover:scale-105 transition duration-500"
                     loading="lazy"
                   />
                   <div className="absolute flex items-center gap-2 bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent z-10 p-3 sm:p-4">
@@ -251,7 +252,7 @@ function Home() {
           title="Services That Power Your Hustle"
           description="At Razor Infotech, we believe in providing businesses of every size with innovative, customized solutions for lasting success in the modern-day market. Blending strategy, creativity, and technology to turn your business's ambitious visions into impactful realities with our expertise in the field."
           buttonText="View Our Services"
-          buttonLink="/contact"
+          buttonLink="/about"
           heroImage={Aboutcompany}
           buttonHoverbackground="accent"
           showVector={false}
@@ -317,9 +318,11 @@ function Home() {
           <p className="text-paragraph/60 text-lg max-w-3xl mx-auto mb-6 px-4">
             Human Maximizer connects vision and execution, culture and KPIs, people and performance. It replaces fragmented tools with one powerful system that grows with you.
           </p>
-          <button className="bg-secondary border py-2 pl-5 flex gap-3 items-center rounded-full mx-auto text-white transition group hover:bg-accent hover:text-secondary  " aria-label="Learn more about Human Maximizer">
-            Learn more <span className="p-3 bg-accent/40 group-hover:text-white rounded-full mr-1 group-hover:bg-secondary" aria-hidden="true"><FaArrowRightLong /></span>
-          </button>
+          <Link to="./products" >
+            <button className="bg-secondary border py-2 pl-5 flex gap-3 items-center rounded-full mx-auto text-white transition group hover:bg-accent hover:text-secondary  " aria-label="Learn more about Human Maximizer">
+              Learn more <span className="p-3 bg-accent/40 group-hover:text-white rounded-full mr-1 group-hover:bg-secondary" aria-hidden="true"><FaArrowRightLong /></span>
+            </button>
+          </Link>
           <div className="mt-6 p-4">
             <img
               src="/images/Home/groupofphone.png"
@@ -384,67 +387,69 @@ function Home() {
           <div className="w-full max-w-5xl mx-auto h-[0.5px] bg-gradient-to-r from-transparent via-white/60 to-transparent blur brightness-125 my-10" aria-hidden="true" />
         </section>
 
-        <section className="linear-gradient p-6 sm:p-10 text-center" aria-labelledby="contact-heading">
-          <p className="text-paragraph/60 text-xl mx-auto inline-block py-2 px-6 rounded-full border border-secondary mb-3">
-            Get In Touch
-          </p>
-          <h2 id="contact-heading" className="text-4xl sm:text-5xl my-3 text-heading font-semibold">
-            Hey! Let's Talk
-          </h2>
-          <h5 className="text-paragraph/60 text-xl mb-8">We're here to help – Reach out anytime</h5>
+        <section className="linear-gradient p-6 sm:p-10 " aria-labelledby="contact-heading">
+          <div className="text-center">
+            <p className="text-paragraph/60 text-xl mx-auto inline-block py-2 px-6 rounded-full border border-secondary mb-3">
+              Get In Touch
+            </p>
+            <h2 id="contact-heading" className="text-4xl sm:text-5xl my-3 text-heading font-semibold">
+              Hey! Let's Talk
+            </h2>
+            <h5 className="text-paragraph/60 text-xl mb-8">We're here to help – Reach out anytime</h5>
+          </div>
 
           <div className="bg-accent text-paragraph p-6 sm:p-8 rounded-2xl max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12">
               <form className="space-y-6" aria-label="Contact form" onSubmit={handleFormSubmit}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-heading text-lg" htmlFor="firstName">
+                    <label className="text-heading text-md uppercase font-medium " htmlFor="firstName">
                       First Name
                     </label>
                     <input
                       type="text"
                       id="firstName"
                       name="firstName"
-                      className="bg-transparent border border-[#c3c3c3] rounded-xl px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-secondary"
+                      className="bg-transparent border border-[#c3c3c3] rounded-xl px-4 py-3 mt-2 w-full focus:outline-none focus:ring-2 focus:ring-secondary"
                       required
                     />
                   </div>
                   <div>
-                    <label className="text-heading text-lg" htmlFor="lastName">
+                    <label className="text-heading text-md uppercase font-medium" htmlFor="lastName">
                       Last Name
                     </label>
                     <input
                       type="text"
                       id="lastName"
                       name="lastName"
-                      className="bg-transparent border border-[#c3c3c3] rounded-xl px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-secondary"
+                      className="bg-transparent border border-[#c3c3c3] rounded-xl px-4 py-3 mt-2 w-full focus:outline-none focus:ring-2 focus:ring-secondary"
                       required
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="text-heading text-lg" htmlFor="email">
+                  <label className="text-heading text-md uppercase font-medium" htmlFor="email">
                     Email
                   </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
-                    className="bg-transparent border border-[#c3c3c3] rounded-xl px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-secondary"
+                    className="bg-transparent border border-[#c3c3c3] rounded-xl px-4 py-3 mt-2 w-full focus:outline-none focus:ring-2 focus:ring-secondary"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="text-heading text-lg" htmlFor="message">
+                  <label className="text-heading text-md uppercase font-medium" htmlFor="message">
                     Message
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     rows="4"
-                    className="bg-transparent border border-[#c3c3c3] rounded-xl px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-secondary"
+                    className="bg-transparent border border-[#c3c3c3] rounded-xl px-4 py-3 mt-2 w-full focus:outline-none focus:ring-2 focus:ring-secondary"
                     required
                   />
                 </div>
@@ -459,7 +464,7 @@ function Home() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-secondary border border-[#c3c3c3] rounded-full py-2 text-white transition hover:bg-secondary/90 disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="w-full bg-secondary border border-[#c3c3c3] rounded-full py-4 text-white transition hover:bg-secondary/90 disabled:opacity-60 disabled:cursor-not-allowed font-medium"
                 >
                   {isSubmitting ? 'Sending...' : 'Get started'}
                 </button>

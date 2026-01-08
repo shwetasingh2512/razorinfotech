@@ -18,41 +18,67 @@ const menuData = [
     title: "OUR EXPERTISE",
     children: [
       {
-        title: "BPO SERVICES",
-        children: [
-          { title: "Customer Support Service", path: "/customer-support-services" },
-          { title: "Back Office Services", path: "/back-office-services" },
-          { title: "Content Management Service", path: "/content-management" },
-          { title: "IT Help Desk", path: "/it-help-desk" },
-          { title: "Backend Outsource Service", path: "/backend-outsource" },
-          { title: "Inbound Services", path: "/inbound-services" },
-          { title: "Outbound Services", path: "/outbound-services"},
-          { title: "Omnichannel Services", path: "/omnichanel" },
-          { title: "E - Support Services", path: "/email-support-services" },
-        ],
-      },
-      {
-        title: "HR OUTSOURCE",
-        children: [
-          { title: "HR Services", path: "/hr-services" },
-          { title: "Talent Development", path: "/talent-developement" },
-          { title: "Training", path: "/training" },
-          { title: "RPO", path: "/rpo" },
-        ],
-      },
-      {
-        title: "IT SOLUTIONS",
-        children: [
-          { title: "IT Solutions", path: "/it-solutions" },
+        title: "IT SOLUTIONS", path: "/it-solution",
+        children: [          
+          { title: "Marketing & Branding", path: "/marketing-and-branding",
+          children: [
+            { title: "SEO", path: "/seo" },
+            { title: "App Store Optimization", path: "/app-store-optimization" },
+            { title: "YouTube Marketing", path: "/youtube-marketing" },
+            { title: "Google My Business", path: "/google-my-business" },
+            { title: "Online Reputation", path: "/online-reputation-market" },
+          ],
+          },
           { title: "Software Development", path: "/software-developement" },
           { title: "App Development", path: "/app-developement" },
           { title: "Website Development", path: "/website-developement" },
-          { title: "Data Management", path: "/data-management" },
         ],
       },
       {
+        title: "BPO SERVICES",
+        path: "/bpo-services",
+        children: [
+          { 
+            title: "Customer Support Service", path: "/customer-support-services",
+            children: [
+              { title: "Inbound Services", path: "/inbound-service" },
+              { title: "Outbound Services", path: "/outbound-service"},
+              { title: "Omnichannel Services", path: "/omnichannel-support" },
+              { title: "Email Support Services", path: "/email-support-service" },
+            ],
+          },
+          { 
+            title: "Back Office Services", path: "/back-office-services",
+            children: [
+              { title: "Data Entry Service", path: "/data-entry-service"},
+              { title: "Data Management Service", path: "/data-management-service"},
+              { title: "Document Management Service", path: "/data-management-service"},
+            ],
+          },
+          {
+            title: "Content Management Service", path: "/content-management",
+            children: [
+              { title: "Content Creation Service", path: "/content-creation-service"},
+              { title: "Content Moderation Service", path: "/content-moderation-service"},
+              { title: "Document Management Service", path: "/data-management-service"},
+            ],
+          },
+          { title: "IT Help Desk", path: "/it-help-desk" },
+          { title: "Backend Outsource Service", path: "/backend-outsource" },
+        ],
+      },
+      {
+        title: "HR OUTSOURCE", path: "/hr-outsourcing",
+        children: [
+          { title: "Recruitment Process Outsourcing", path: "/recruitment-process-outsourcing" },
+          { title: "Talent Development", path: "/talent-developement" },
+          { title: "Training and Development", path: "/training-and-development" },
+        ],
+      },
+      
+      {
         title: "LEGAL COMPLIANCE",
-        children: [{ title: "Legal Compliance", path: "/Legal-complience" }],
+        children: [{ title: "Legal Compliance", path: "/legal-compliance" }],
       },
       {
         title: "FINANCIAL SERVICES",
@@ -63,25 +89,8 @@ const menuData = [
         children: [{ title: "Business Consultancy", path: "/business-consultancy" }],
       },
       {
-        title: "MARKETING & BRANDING",
-        children: [
-          { title: "Marketing & Branding", path: "/marketing-branding" },
-          { title: "Content Creation", path: "/content-creation-services" },
-          { title: "Content Moderation", path: "/content-moderation-services" },
-          { title: "SEO", path: "/seo" },
-          { title: "App Store Optimization", path: "/app-store-optimization" },
-          { title: "YouTube Marketing", path: "/youtube" },
-          { title: "Google My Business", path: "/google-my-business" },
-          { title: "Online Reputation", path: "/online-reputation-market" },
-        ],
-      },
-      {
         title: "ANGEL INVESTORS",
-        children: [{ title: "Angel Investor", path: "/angle-investor" }],
-      },
-      {
-        title: "DATA ENTRY",
-        children: [{ title: "Data Entry", path: "/data-entry" }],
+        children: [{ title: "Angel Investor", path: "/angel-investor" }],
       },
     ],
   },
@@ -173,7 +182,7 @@ function Navbar() {
 
   return (
     <header className="border-b border-emerald-100 shadow-sm z-50 w-full bg-white">
-      <div className="mx-auto flex px-4 sm:px-6 md:px-10 lg:px-16 items-center justify-between py-2 sm:py-3">
+      <div className="mx-auto flex items-center justify-between py-2 sm:py-3 max-w-7xl">
         <Link to="/" className="flex items-center gap-2 group">
           <img 
             src={logo} 
@@ -193,7 +202,7 @@ function Navbar() {
                   {menu.path && !kids ? (
                     <Link
                       to={menu.path}
-                      className="inline-flex items-center gap-2 text-slate-700 hover:text-emerald-700 transition-colors duration-200 relative group"
+                      className="inline-flex items-center gap-2 text-slate-700 hover:text-emerald-700 transition-colors duration-200 relative text-base group"
                       onClick={() => setActiveMenu(null)}
                     >
                       {menu.title}
@@ -202,7 +211,7 @@ function Navbar() {
                   ) : (
                     <button
                       type="button"
-                      className={`flex items-center gap-2 transition-colors duration-200 relative group ${
+                      className={`flex items-center gap-2 transition-colors duration-200 relative group text-base ${
                         isActive 
                           ? "text-emerald-700" 
                           : "text-slate-700 hover:text-emerald-700"
@@ -236,7 +245,7 @@ function Navbar() {
                     <>
                       {menu.title === "OUR EXPERTISE" ? (
                         <div 
-                          className="absolute left-0 top-full mt-3 z-50 w-[860px] rounded-2xl border border-emerald-100 bg-white shadow-2xl overflow-hidden animate-fadeIn"
+                          className="absolute -left-[10rem] top-full mt-5 z-50 w-[950px] rounded-2xl border border-emerald-100 bg-[#f0f9f4] shadow-2xl overflow-hidden animate-fadeIn h-[26rem]"
                           style={{
                             animation: "fadeIn 0.2s ease-out"
                           }}
@@ -256,8 +265,9 @@ function Navbar() {
                                   const active = idx === expertiseActiveGroupIdx;
                                   return (
                                     <li key={idx}>
-                                      <button
-                                        type="button"
+                                      <Link
+                                        // type="button"
+                                        to={group.path}
                                         onMouseEnter={() => setExpertiseActiveGroupIdx(idx)}
                                         onClick={() => setExpertiseActiveGroupIdx(idx)}
                                         className={[
@@ -273,7 +283,7 @@ function Navbar() {
                                             active ? "text-emerald-600" : "opacity-50"
                                           }`} 
                                         />
-                                      </button>
+                                      </Link>
                                     </li>
                                   );
                                 })}
@@ -281,7 +291,7 @@ function Navbar() {
                             </div>
 
                             {/* Right content */}
-                            <div className="p-5" style={{ background: ACCENT_GREEN }}>
+                            <div className="p-5 h-[26rem]" style={{ background: ACCENT_GREEN }}>
                               <div className="flex items-center justify-between mb-4">
                                 <div className="text-[13px] font-bold text-slate-800">
                                   {activeGroup?.title || "Services"}
@@ -298,8 +308,8 @@ function Navbar() {
                                 </Link>
                               </div>
 
-                              <div className="grid grid-cols-2 gap-2.5">
-                                {(activeGroup?.children || []).map((item, idx) => (
+                              <div className="grid grid-cols-1 gap-3 ">
+                                {/* {(activeGroup?.children || []).map((item, idx) => (
                                   <Link
                                     key={idx}
                                     to={item.path}
@@ -319,11 +329,64 @@ function Navbar() {
                                       View
                                     </span>
                                   </Link>
-                                ))}
+                                ))} */}
+                                {(activeGroup?.children || []).map((item, idx) => {
+    const hasNested = Array.isArray(item.children) && item.children.length > 0;
+    
+    return (
+      <div key={idx} className="relative group">
+        {/* Main card - clickable to parent page */}
+        <Link
+          to={item.path}
+          onClick={() => setActiveMenu(null)}
+          className="flex items-center justify-between w-[20rem] rounded-lg border border-emerald-200 bg-white p-3 text-[13px] text-slate-700 hover:border-emerald-400 hover:shadow-md transition-all duration-200 hover:text-emerald-800"
+        >
+          <span className="truncate font-medium">{item.title}</span>
+          <div className="flex items-center gap-2">
+            {/* <span className="text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full font-medium">
+              View
+            </span> */}
+            {hasNested && (
+              <FaChevronRight 
+                className="text-emerald-500 text-sm transition-transform duration-200 group-hover:translate-x-1" 
+              />
+            )}
+          </div>
+        </Link>
+
+        {/* Nested dropdown - appears on hover */}
+        {hasNested && (
+          <div className="absolute left-[20rem] -top-[12px] z-10 w-80  rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ml-4 pt-3">
+            <div className="px-4 pb-4">
+              <div className="text-xs font-bold text-emerald-700 uppercase tracking-wider mb-3">
+                {/* Services */}
+              </div>
+              <div className="grid grid-cols-1 gap-2">
+                {item.children.map((subItem, subIdx) => (
+                  <Link
+                    key={subIdx}
+                    to={subItem.path}
+                    onClick={() => setActiveMenu(null)}
+                    className="group/sub flex items-center justify-between rounded-lg border bg-white border-emerald-100 bg-emerald-50/50 px-3 py-2 text-[12px] text-slate-700 hover:border-emerald-300 hover:bg-white hover:shadow-sm transition-all duration-200"
+                  >
+                    <span className="truncate">{subItem.title}</span>
+                    <FaChevronRight className="text-emerald-400 text-xs opacity-0 group-hover/sub:opacity-100 transition-opacity" />
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  })}
+</div>
                               </div>
+
+
                             </div>
                           </div>
-                        </div>
+                        // </div>
                       ) : (
                         <div 
                           className="absolute left-0 top-full mt-3 z-50 min-w-[220px] rounded-xl border border-emerald-100 bg-white p-2 shadow-xl animate-fadeIn"

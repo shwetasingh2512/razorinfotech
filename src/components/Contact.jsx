@@ -133,7 +133,7 @@ export default function Contact() {
         })}
       </script>
 
-      <section className="relative w-full overflow-hidden">
+      <section className=" w-full overflow-hidden">
         <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
           <header className="flex flex-col items-center text-center">
             <p className="inline-flex items-center gap-2 rounded-full border border-[var(--color-paragraph)]/15 bg-[var(--color-secondary-light)] px-4 py-2 text-sm font-medium tracking-wide text-[var(--color-paragraph)]/70">
@@ -147,7 +147,7 @@ export default function Contact() {
             </p>
           </header>
 
-          <div className="mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+          <div className="mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 items-start">
             <form onSubmit={handleSubmit} className="max-w-xl space-y-6" aria-label="Contact form">
               <div>
                 <label 
@@ -230,8 +230,6 @@ export default function Contact() {
                 </button>
               </div>
             </form>
-
-            <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
 
             <div className="relative -order-1 md:order-none">
               <div className="relative overflow-hidden rounded-3xl border border-[var(--color-paragraph)]/15 bg-[var(--color-secondary-light)] shadow-2xl">

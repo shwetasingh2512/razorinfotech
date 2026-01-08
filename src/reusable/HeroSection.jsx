@@ -30,14 +30,14 @@ export default function HeroSection({
         className={`relative mx-auto max-w-full sm:max-w-4xl md:max-w-5xl lg:max-w-7xl flex flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""
           } mt-10 sm:mt-20 z-10 gap-y-10 md:gap-x-10`}
       >
-        <div className="flex flex-col gap-5 w-full md:w-1/2 md:pl-8 px-2">
+        <div className="flex flex-col gap-5 w-full md:w-1/2  px-2">
           {abovetitle && (
             <p className="text-sm sm:text-base tracking-widest font-medium text-secondary uppercase">
               {abovetitle}
             </p>
           )}
 
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:w-lg lg:text-4xl leading-tight font-semibold text-heading max-w-prose mx-auto md:mx-0">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:w-lg lg:text-5xl leading-tight font-semibold text-heading max-w-prose mx-auto md:mx-0">
             {title}
           </h1>
 
@@ -85,7 +85,7 @@ export default function HeroSection({
             <img
               src={heroImage}
               alt="hero"
-              className="w-full max-w-[90%] sm:max-w-sm md:max-w-md lg:max-w-lg h-auto rounded-xl object-cover"
+              className="w-full max-w-[95%] sm:max-w-sm md:max-w-md lg:max-w-xl h-auto rounded-xl object-cover"
             />
           )}
         </div>

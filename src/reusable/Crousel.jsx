@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export default function Crousel({ images }) {
@@ -8,9 +8,35 @@ export default function Crousel({ images }) {
     sliderRef.current.scrollBy({ left: -300, behavior: "smooth" });
   };
 
+  // const scrollRight = () => {
+  //   sliderRef.current.scrollBy({ left: 300, behavior: "smooth" });
+  // };
+
   const scrollRight = () => {
-    sliderRef.current.scrollBy({ left: 300, behavior: "smooth" });
+    if (!sliderRef.current) return;
+
+    const slider = sliderRef.current;
+    const cardWidth = 260;
+    const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+
+    if (slider.scrollLeft + cardWidth >= maxScrollLeft) {
+      // go back to start
+      slider.scrollTo({ left: 0, behavior: "smooth" });
+    } else {
+      slider.scrollBy({ left: cardWidth, behavior: "smooth" });
+    }
   };
+
+  // 3️⃣ NEW: autoplay effect
+  useEffect(() => {
+    if (!sliderRef.current || !images?.length) return;
+
+    const interval = setInterval(() => {
+      scrollRight();
+    }, 3000);       
+
+    return () => clearInterval(interval);
+  }, [images]);  
 
   return (
     <div className="relative w-full">
